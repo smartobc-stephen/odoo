@@ -242,6 +242,7 @@ export class OdooEditor extends EventTarget {
                     }
                 },
                 preHistoryUndo: () => {},
+                beforeAnyCommand: () => {},
                 isHintBlacklisted: () => false,
                 filterMutationRecords: (records) => records,
                 /**
@@ -270,6 +271,7 @@ export class OdooEditor extends EventTarget {
                 useResponsiveFontSizes: true,
                 showResponsiveFontSizesBadges: false,
                 showExtendedTextStylesOptions: false,
+                autoActivateContentEditable: true,
                 // TODO probably move `getCSSVariableValue` and
                 // `convertNumericToUnit` as odoo-editor utils to avoid this
                 getCSSVariableValue: () => null,
@@ -344,8 +346,10 @@ export class OdooEditor extends EventTarget {
         this.editable.setAttribute('dir', this.options.direction);
 
         // Set contenteditable before clone as FF updates the content at this point.
-        this._activateContenteditable();
-
+        this.canActivateContentEditable = this.options.autoActivateContentEditable;
+        if (this.canActivateContentEditable) {
+            this._activateContenteditable();
+        }
         this._collabClientId = this.options.collaborationClientId;
         this._collabClientAvatarUrl = this.options.collaborationClientAvatarUrl;
 
@@ -2086,6 +2090,7 @@ export class OdooEditor extends EventTarget {
      * from outside the odooEditor.
      */
     activateContenteditable() {
+        this.canActivateContentEditable = true;
         this._activateContenteditable();
     }
 
@@ -2237,6 +2242,11 @@ export class OdooEditor extends EventTarget {
         }
         // Ensure empty blocks be given a <br> child.
         if (start) {
+            if (start === this.editable && startBlock.textContent === '\u200B') {
+                const p = document.createElement('p');
+                start.appendChild(p);
+                start = p;
+            }
             fillEmpty(closestBlock(start));
         }
         fillEmpty(closestBlock(range.endContainer));
@@ -2489,6 +2499,9 @@ export class OdooEditor extends EventTarget {
                 return true;
             }
         }
+
+        this.options.beforeAnyCommand();
+
         if (editorCommands[method]) {
             return editorCommands[method](this, ...args);
         }
@@ -2562,6 +2575,7 @@ export class OdooEditor extends EventTarget {
         }
         this.observerActive('_activateContenteditable');
     }
+
     _stopContenteditable() {
         this.observerUnactive('_stopContenteditable');
         if (this.options.isRootEditable) {
@@ -2599,20 +2613,31 @@ export class OdooEditor extends EventTarget {
             return false;
         }
         let range;
-        if (selection.rangeCount > 1) {
-            // Firefox selection in table works with multiple ranges.
-            const startRange = getDeepRange(this.editable, {range: selection.getRangeAt(0)});
-            const endRange = getDeepRange(this.editable, {range: selection.getRangeAt(selection.rangeCount - 1)});
-            range = this.document.createRange();
-            range.setStart(startRange.startContainer, 0);
-            range.setEnd(endRange.startContainer, 0);
-        } else {
+        if (this.isFirefox) {
+            if (selection.rangeCount > 1) {
+                // In Firefox, selecting multiple cells within a table using the mouse can create multiple ranges.
+                // This behavior can cause the original selection (where the selection started) to be lost.
+                // To address this, we reset the selection to the _latestComputedSelection, ensuring that
+                // even when multiple ranges are selected, the original selection remains accessible.
+                this.historyResetLatestComputedSelection(true);
+            } else if (
+                ev &&
+                closestElement(ev.target, 'table') === closestElement(selection.anchorNode, 'table') &&
+                closestElement(ev.target, 'td') !== closestElement(selection.focusNode, 'td')
+            ) {
+                // When we modify a multiple range selection to a single range selection,
+                // Firefox stops updating the selection automatically.
+                // As a result, we need to manually update the selection based on the current target.
+                setSelection(selection.anchorNode, selection.anchorOffset, ev.target, 0);
+            }
             // We need the triple click correction only for a bug in firefox
             // where it gives a selection of a full cell as tr 0 tr 1. The
             // correction makes it so it gives us the cell and not its neighbor.
             // In all other cases we don't want to make that correction so as to
             // avoid flicker when hovering borders.
             range = getDeepRange(this.editable, { correctTripleClick: anchorNode && anchorNode.nodeName === 'TR' });
+        } else {
+            range = getDeepRange(this.editable);
         }
         const startTd = closestElement(range.startContainer, 'td');
         const endTd = closestElement(range.endContainer, 'td');
@@ -2627,7 +2652,7 @@ export class OdooEditor extends EventTarget {
                 this._selectTableCells(range);
                 appliedCustomSelection = true;
             }
-        } else if (!traversedNodes.every(node => node.parentElement && closestElement(node.parentElement, 'table'))) {
+        } else if (!traversedNodes.every(node => node.parentElement && closestElement(node.parentElement, 'table')) && !selection.isCollapsed) {
             // The selection goes through a table but also outside of it ->
             // select the whole table.
             this.observerUnactive('handleSelectionInTable');
@@ -2650,7 +2675,8 @@ export class OdooEditor extends EventTarget {
         } else if (ev && startTd && !isProtected(startTd)) {
             // We're redirected from a mousemove event.
             const selectedNodes = getSelectedNodes(this.editable);
-            const areCellContentsFullySelected = descendants(startTd).filter(d => !isBlock(d)).every(child => selectedNodes.includes(child));
+            const cellContents = descendants(startTd);
+            const areCellContentsFullySelected = cellContents.filter(d => !isBlock(d)).every(child => selectedNodes.includes(child));
             if (areCellContentsFullySelected) {
                 const SENSITIVITY = 5;
                 const rangeRect = range.getBoundingClientRect();
@@ -2662,8 +2688,8 @@ export class OdooEditor extends EventTarget {
                     this._selectTableCells(range);
                     appliedCustomSelection = true;
                 }
-            } else if (!isVisible(startTd) &&
-                ev.clientX - (this._lastMouseClickPosition ? this._lastMouseClickPosition[0] : ev.clientX) >= 15
+            } else if (cellContents.filter(isBlock).every(isEmptyBlock) &&
+                Math.abs(ev.clientX - (this._lastMouseClickPosition ? this._lastMouseClickPosition[0] : ev.clientX)) >= 15
             ) {
                 // Handle selecting an empty cell.
                 this._selectTableCells(range);
@@ -3502,6 +3528,17 @@ export class OdooEditor extends EventTarget {
                 node.before(fontNode);
                 node.replaceChildren(...fontNode.childNodes);
                 fontNode.appendChild(node);
+            } else if (node.nodeName === 'IMG' && node.getAttribute('aria-roledescription') === 'checkbox') {
+                const checklist = node.closest('ul');
+                const closestLi = node.closest('li');
+                if (checklist) {
+                    checklist.classList.add('o_checklist');
+                    if (node.getAttribute('alt') === 'checked') {
+                        closestLi.classList.add('o_checked');
+                    }
+                    node.remove();
+                    node = checklist;
+                }
             }
             // Remove all illegal attributes and classes from the node, then
             // clean its children.
@@ -3700,13 +3737,24 @@ export class OdooEditor extends EventTarget {
                 ev.preventDefault();
                 this._applyCommand('oDeleteForward');
             } else if (
-                (ev.inputType === 'insertParagraph' || isChromeInsertParagraph)
+                (['insertParagraph', 'insertLineBreak'].includes(ev.inputType) || isChromeInsertParagraph)
             ) {
                 this._compositionStep();
                 this.historyRollback();
                 ev.preventDefault();
                 this._handleAutomaticLinkInsertion();
-                if (this._applyCommand('oEnter') === UNBREAKABLE_ROLLBACK_CODE) {
+                getDeepRange(this.editable, { select: true, correctTripleClick: true });
+                // To remove only the anchor cell's content when multiple table cells are selected on Enter,
+                // we need to change the selection to focus only on the anchor cell. This can't be done in `oEnter`
+                // because `deleteRange` responsible for removing content, execute before `oEnter` in `_applyRawCommand`.
+                // Therefore, the anchor cell selection should be adjusted before `_applyRawCommand` is called.
+                const anchorTD = closestElement(newSelection.anchorNode, '.o_selected_td');
+                const focusTD = closestElement(newSelection.focusNode, '.o_selected_td');
+                if (anchorTD && focusTD && closestElement(anchorTD, 'table') === closestElement(focusTD, 'table')) {
+                    this.deselectTable();
+                    setSelection(anchorTD.firstChild, 0, anchorTD.lastChild, nodeSize(anchorTD.lastChild));
+                }
+                if (ev.inputType === 'insertLineBreak' || this._applyCommand('oEnter') === UNBREAKABLE_ROLLBACK_CODE) {
                     this._applyCommand('oShiftEnter');
                 }
             } else if (['insertText', 'insertCompositionText'].includes(ev.inputType)) {
@@ -3966,10 +4014,10 @@ export class OdooEditor extends EventTarget {
             // Tab
             const tabHtml = '<span class="oe-tabs" contenteditable="false">\u0009</span>\u200B';
             const sel = this.document.getSelection();
-            const closestLi = closestElement(sel.anchorNode, 'li');
-            if (closestElement(sel.anchorNode, 'table') && !closestLi) {
+            const closestTableOrLi = closestElement(sel.anchorNode, 'table, li');
+            if (closestTableOrLi && closestTableOrLi.nodeName === 'TABLE') {
                 this._onTabulationInTable(ev);
-            } else if (!ev.shiftKey && sel.isCollapsed && !closestLi) {
+            } else if (!ev.shiftKey && sel.isCollapsed && !closestTableOrLi) {
                 // Indent text (collapsed selection).
                 this.execCommand('insert', parseHTML(this.document, tabHtml));
             } else {
@@ -4043,10 +4091,6 @@ export class OdooEditor extends EventTarget {
             }
             ev.preventDefault();
             ev.stopPropagation();
-        } else if (ev.shiftKey && ev.key === "Enter") {
-            ev.preventDefault();
-            this._handleAutomaticLinkInsertion();
-            this._applyCommand('oShiftEnter');
         } else if (ev.key === ' ') {
             this._handleAutomaticLinkInsertion();
         } else if (IS_KEYBOARD_EVENT_UNDO(ev)) {
@@ -4175,24 +4219,13 @@ export class OdooEditor extends EventTarget {
         // and the toolbar so we need to fix the selection to be based on the
         // editable children. Calling `getDeepRange` ensure the selection is
         // limited to the editable.
-        const containerSelector = '#wrap>*, .oe_structure>*, [contenteditable]';
-        const container =
-            (selection &&
-                closestElement(selection.anchorNode, containerSelector)) ||
-            // In case a suitable container could not be found then the
-            // selection is restricted inside the editable area.
-            this.editable;
         if (
-            selection.anchorNode === container &&
-            selection.focusNode === container &&
+            selection.anchorNode === this.editable &&
+            selection.focusNode === this.editable &&
             selection.anchorOffset === 0 &&
-            selection.focusOffset === [...container.childNodes].length &&
-            // Checks that the container is not an empty editable structure to
-            // avoid calling "getDeepRange" if it is, otherwise it will be
-            // selected again, creating an infine loop.
-            container.childNodes.length
+            selection.focusOffset === [...this.editable.childNodes].length
         ) {
-            getDeepRange(container, {select: true});
+            getDeepRange(this.editable, {select: true});
             // The selection is changed in `getDeepRange` and will therefore
             // re-trigger the _onSelectionChange.
             return;
@@ -4602,7 +4635,10 @@ export class OdooEditor extends EventTarget {
         this._currentMouseState = ev.type;
         this._lastMouseClickPosition = [ev.x, ev.y];
 
-        this._activateContenteditable();
+        if (this.canActivateContentEditable) {
+            this._activateContenteditable();
+        }
+
         // Ignore any changes that might have happened before this point.
         this.observer.takeRecords();
 
@@ -5184,11 +5220,27 @@ export class OdooEditor extends EventTarget {
     }
     _onTableMoveUpClick() {
         if (this._rowUiTarget.previousSibling) {
+            // When moving the second row up, copy the widths of first row's td
+            // elements to second row's td elements, as td widths are only
+            // applied to the first row.
+            if (!this._rowUiTarget.previousSibling.previousSibling) {
+                this._rowUiTarget.childNodes.forEach((cell, index) => {
+                    cell.style.width = this._rowUiTarget.previousSibling.childNodes[index].style.width;
+                });
+            }
             this._rowUiTarget.previousSibling.before(this._rowUiTarget);
         }
     }
     _onTableMoveDownClick() {
         if (this._rowUiTarget.nextSibling) {
+            // When moving the first row down, copy the widths of its td
+            // elements to second row's td elements, as td widths are only
+            // applied to the first row.
+            if (!this._rowUiTarget.previousSibling) {
+                this._rowUiTarget.nextSibling.childNodes.forEach((cell, index) => {
+                    cell.style.width = this._rowUiTarget.childNodes[index].style.width;
+                });
+            }
             this._rowUiTarget.nextSibling.after(this._rowUiTarget);
         }
     }

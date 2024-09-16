@@ -1044,6 +1044,44 @@ QUnit.module("Views", (hooks) => {
         assert.hasClass(target.querySelector(".o_field_widget[name=foo]"), "col-lg-6");
     });
 
+    QUnit.test("field ids are unique (same field name in 2 form views)", async function (assert) {
+        await makeView({
+            type: "form",
+            resModel: "partner",
+            serverData,
+            arch: `
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="foo"/>
+                        </group>
+                        <field name="p">
+                            <form>
+                                <sheet>
+                                    <group>
+                                        <field name="bar"/>
+                                        <field name="foo"/>
+                                    </group>
+                                </sheet>
+                            </form>
+                            <tree>
+                                <field name="foo"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                </form>`,
+            resId: 1,
+        });
+
+        assert.containsOnce(target, ".o_field_widget input#foo_0");
+
+        await click(target, ".o_field_x2many_list_row_add a");
+        assert.containsOnce(target, ".modal .o_form_view");
+        assert.containsOnce(target, ".o_field_widget input#foo_0");
+        assert.containsOnce(target, ".modal .o_field_widget input#foo_0");
+        assert.containsOnce(target, ".modal .o_field_widget input#bar_0");
+    });
+
     QUnit.test("Form and subview with _view_ref contexts", async function (assert) {
         assert.expect(3);
 
@@ -4007,6 +4045,67 @@ QUnit.module("Views", (hooks) => {
         checkOnchange = true;
         await editInput(target, ".o_field_widget[name=foo] input", "tralala");
     });
+
+    QUnit.test(
+        "onchange send relation parent field values (including readonly)",
+        async function (assert) {
+            assert.expect(1);
+
+            serverData.models.user.fields.login = { string: "Login", type: "char" };
+            serverData.models.user.onchanges = {};
+            serverData.models.user.onchanges.name = (obj) => {
+                // like computed field that depends on "name" field
+                obj.login = obj.name.toLowerCase() + "@example.org";
+            };
+            serverData.models.partner.onchanges.qux = () => {};
+
+            let checkOnchange = false;
+            await makeView({
+                type: "form",
+                resModel: "user",
+                serverData,
+                arch: `
+                <form>
+                    <field name="name"/>
+                    <field name="login" readonly="True"/>
+                    <field name="partner_ids">
+                        <tree editable="top">
+                            <field name="qux"/>
+                        </tree>
+                    </field>
+                </form>`,
+                resId: 17,
+                mockRPC(route, args) {
+                    if (args.method === "onchange" && checkOnchange) {
+                        assert.deepEqual(
+                            args.args[1],
+                            {
+                                qux: 12.4,
+                                user_id: {
+                                    id: 17,
+                                    name: "Test",
+                                    login: "test@example.org",
+                                    partner_ids: [
+                                        [0, args.args[1].user_id.partner_ids[0][1], { qux: 0 }],
+                                    ],
+                                },
+                            },
+                            "should send the values (including readonly) for the relational parent field"
+                        );
+                    }
+                },
+            });
+            // trigger an onchange that update a readonly field by modifying user name
+            await editInput(target, ".o_field_widget[name=name] input", "Test");
+
+            // add a o2m row
+            await click(target.querySelector(".o_field_x2many_list_row_add a"));
+
+            // trigger an onchange by modifying foo
+            checkOnchange = true;
+            await editInput(target, ".o_field_one2many .o_field_widget[name=qux] input", "12.4");
+        }
+    );
 
     QUnit.test("evaluate in python field options", async function (assert) {
         assert.expect(3);
@@ -10937,7 +11036,7 @@ QUnit.module("Views", (hooks) => {
         await nextTick();
         assert.deepEqual(
             getNodesTextContent(target.querySelectorAll(".o-tooltip--technical > li")),
-            ["Field:product_id", "Type:many2one", "Context:{}", "Relation:product"]
+            ["Label:Product", "Field:product_id", "Type:many2one", "Context:{}", "Relation:product"]
         );
     });
 

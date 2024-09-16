@@ -10,8 +10,7 @@ from uuid import uuid4
 from dateutil.relativedelta import relativedelta
 
 from odoo import _, api, exceptions, fields, models
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
-from odoo.tools import safe_eval
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT, safe_eval
 from odoo.http import request
 
 _logger = logging.getLogger(__name__)
@@ -83,7 +82,8 @@ class BaseAutomation(models.Model):
     name = fields.Char(string="Automation Rule Name", required=True, translate=True)
     description = fields.Html(string="Description")
     model_id = fields.Many2one(
-        "ir.model", string="Model", required=True, ondelete="cascade", help="Model on which the automation rule runs."
+        "ir.model", string="Model", domain=[("field_id", "!=", False)], required=True, ondelete="cascade",
+        help="Model on which the automation rule runs."
     )
     model_name = fields.Char(related="model_id.model", string="Model Name", readonly=True, inverse="_inverse_model_name")
     model_is_mail_thread = fields.Boolean(related="model_id.is_mail_thread")
@@ -442,6 +442,14 @@ class BaseAutomation(models.Model):
         self._update_registry()
         return res
 
+    def copy(self, default=None):
+        """Copy the actions of the automation while
+        copying the automation itself."""
+        actions = self.action_server_ids.copy_multi()
+        record_copy = super().copy(default)
+        record_copy.action_server_ids = actions
+        return record_copy
+
     def action_rotate_webhook_uuid(self):
         for automation in self:
             automation.webhook_uuid = str(uuid4())
@@ -684,16 +692,12 @@ class BaseAutomation(models.Model):
             # this is a create: all fields are considered modified
             return True
 
-        # Note: old_vals are in the format of read()
+        # note: old_vals are in the record format
         old_vals = self._context['old_values'].get(record.id, {})
 
         def differ(name):
-            field = record._fields[name]
-            return (
-                name in old_vals and
-                field.convert_to_cache(record[name], record, validate=False) !=
-                field.convert_to_cache(old_vals[name], record, validate=False)
-            )
+            return name in old_vals and record[name] != old_vals[name]
+
         return any(differ(field.name) for field in self_sudo.trigger_field_ids)
 
     def _register_hook(self):
@@ -738,8 +742,8 @@ class BaseAutomation(models.Model):
                 pre = {a: a._filter_pre(records) for a in automations}
                 # read old values before the update
                 old_values = {
-                    old_vals.pop('id'): old_vals
-                    for old_vals in (records.read(list(vals)) if vals else [])
+                    record.id: {field_name: record[field_name] for field_name in vals}
+                    for record in records
                 }
                 # call original method
                 write.origin(self.with_env(automations.env), vals, **kw)
@@ -758,8 +762,8 @@ class BaseAutomation(models.Model):
             #
             def _compute_field_value(self, field):
                 # determine fields that may trigger an automation
-                stored_fields = [f for f in self.pool.field_computed[field] if f.store]
-                if not any(stored_fields):
+                stored_fnames = [f.name for f in self.pool.field_computed[field] if f.store]
+                if not stored_fnames:
                     return _compute_field_value.origin(self, field)
                 # retrieve the action rules to possibly execute
                 automations = self.env['base.automation']._get_actions(self, WRITE_TRIGGERS)
@@ -771,8 +775,8 @@ class BaseAutomation(models.Model):
                 pre = {a: a._filter_pre(records) for a in automations}
                 # read old values before the update
                 old_values = {
-                    old_vals.pop('id'): old_vals
-                    for old_vals in (records.read([f.name for f in stored_fields]))
+                    record.id: {fname: record[fname] for fname in stored_fnames}
+                    for record in records
                 }
                 # call original method
                 _compute_field_value.origin(self, field)

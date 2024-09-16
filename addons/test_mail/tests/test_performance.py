@@ -442,7 +442,7 @@ class TestBaseAPIPerformance(BaseMailPerformance):
                 'default_template_id': test_template.id,
             }).create({})
 
-        with self.assertQueryCount(admin=128, employee=131), self.mock_mail_gateway():
+        with self.assertQueryCount(admin=92, employee=95), self.mock_mail_gateway():
             composer._action_send_mail()
 
         self.assertEqual(len(self._new_mails), 10)
@@ -901,7 +901,7 @@ class TestMailAPIPerformance(BaseMailPerformance):
         template = self.env.ref('test_mail.mail_test_container_tpl')
 
         # about 20 (19 ?) queries per additional customer group
-        with self.assertQueryCount(admin=70, employee=68):
+        with self.assertQueryCount(admin=72, employee=71):
             record.message_post_with_source(
                 template,
                 message_type='comment',
