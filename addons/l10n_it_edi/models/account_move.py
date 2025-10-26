@@ -131,7 +131,7 @@ class AccountMove(models.Model):
         for move in others:
             move.l10n_it_edi_is_self_invoice = False
         if purchases:
-            it_tax_report_vj_lines = self.env['account.report.line'].search([
+            it_tax_report_vj_lines = self.env['account.report.line'].sudo().search([
                 ('report_id.country_id.code', '=', 'IT'),
                 ('code', '=like', 'VJ%')
             ])
@@ -244,35 +244,17 @@ class AccountMove(models.Model):
         invoice_lines = []
         lines = self.invoice_line_ids.filtered(lambda l: l.display_type not in ('line_note', 'line_section'))
         base_lines = [invl._convert_to_tax_base_line_dict() for invl in lines]
-        inverse_factor = (-1 if reverse_charge_refund else 1)
-        for num, line in enumerate(base_lines):
-            sign = -1 if line['record'].move_id.is_inbound() else 1
-            line['sequence'] = num
-            line['price_subtotal'] = line['record'].balance * sign if convert_to_euros else line['price_subtotal']
-            line['price_subtotal'] = line['price_subtotal'] * inverse_factor
-            if line['discount'] != 100.0 and line['quantity']:
-                gross_price = line['price_subtotal'] / (1 - line['discount'] / 100.0)
-                line['discount_amount_before_dispatching'] = (gross_price - line['price_subtotal']) * inverse_factor
-                line['gross_price_subtotal'] = line['currency'].round(gross_price * inverse_factor)
-                line['price_unit'] = gross_price / abs(line['quantity'])
-            else:
-                line['gross_price_subtotal'] = line['currency'].round(line['price_unit'] * line['quantity'])
-                line['discount_amount_before_dispatching'] = line['gross_price_subtotal']
-
-        template = self.env['ir.qweb']._load('l10n_it_edi.account_invoice_line_it_FatturaPA')[0]
-        flat_discount_element = template.find('.//ScontoMaggiorazione/Percentuale')
-        if flat_discount_element is not None:
-            dispatch_result = self.env['account.tax']._dispatch_negative_lines(base_lines)
-            base_lines = sorted(
-                dispatch_result['result_lines'] + dispatch_result['orphan_negative_lines'] + dispatch_result['nulled_candidate_lines'],
-                key=itemgetter('sequence')
-            )
-        else:
-            # The template needs to be updated to be able to handle negative lines
-            if any(line['price_subtotal'] < 0 for line in base_lines):
-                raise UserError(_("To handle negative lines, we need you to update your module 'Italy - E-invoicing'"))
-
         for num, line_dict in enumerate(base_lines):
+            if reverse_charge_refund:
+                line_dict['price_subtotal'] = -line_dict['price_subtotal']
+
+            line_dict['subtotal_price_eur'] = line_dict['price_subtotal']/line_dict['rate'] if convert_to_euros else line_dict['price_subtotal']
+
+            if line_dict['discount'] != 100.0 and line_dict['quantity']:
+                line_dict['price_unit'] = line_dict['subtotal_price_eur'] / ((1 - (line_dict['discount'] or 0.0) / 100.0) * abs(line_dict['quantity']))
+            else:
+                line_dict['price_unit'] = line_dict['price_unit'] / line_dict['rate'] if convert_to_euros else line_dict['price_unit']
+
             line = line_dict['record']
             description = line.name
 
@@ -291,11 +273,11 @@ class AccountMove(models.Model):
                 'line': line,
                 'line_number': num + 1,
                 'description': description or 'NO NAME',
-                'subtotal_price_eur': (line_dict['gross_price_subtotal'] - line_dict['discount_amount']) * inverse_factor,
-                'subtotal_price': (line_dict['gross_price_subtotal'] - line_dict['discount_amount']) * inverse_factor * line_dict['rate'],
+                'subtotal_price_eur': line_dict['currency'].round(line_dict['subtotal_price_eur']),
+                'subtotal_price': line_dict['currency'].round(line_dict['price_subtotal']),
                 'unit_price': line_dict['price_unit'],
-                'discount_amount': ((line_dict['discount_amount'] - line_dict['discount_amount_before_dispatching']) / line.quantity) if line.quantity else 0,
-                'vat_tax': line.tax_ids.flatten_taxes_hierarchy().filtered(lambda t: t._l10n_it_filter_kind('vat') and t.amount >= 0),
+                'discount_amount': 0,  # kept because we didn't do a get in the line we removed from the template
+                'vat_tax': line.tax_ids._l10n_it_filter_kind('vat'),
                 'downpayment_moves': downpayment_moves,
                 'discount_type': (
                     'SC' if line.discount > 0
@@ -348,12 +330,10 @@ class AccountMove(models.Model):
 
     def _get_l10n_it_amount_split_payment(self):
         self.ensure_one()
-        amount = 0.0
-        if self.is_invoice(True):
-            for line in [line for line in self.line_ids if line.tax_line_id]:
-                if line.tax_line_id._l10n_it_is_split_payment() and line.credit > 0.0:
-                    amount += line.credit
-        return amount
+        if not self.is_sale_document(False):
+            return 0.0
+        sign = -1 if self.move_type == "out_invoice" else 1
+        return sum(sign * line.balance for line in self.line_ids.filtered(lambda l: l.tax_line_id and l.tax_line_id._l10n_it_is_split_payment()))
 
     def _l10n_it_edi_get_values(self, pdf_values=None):
         self.ensure_one()
@@ -438,6 +418,7 @@ class AccountMove(models.Model):
             'payment_method': 'MP05',
             'tax_details': tax_details,
             'downpayment_moves': downpayment_moves,
+            'reconciled_moves': self._get_reconciled_invoices().filtered(lambda move: move.date <= self.date),
             'rc_refund': reverse_charge_refund,
             'invoice_lines': invoice_lines,
             'tax_lines': tax_lines,
@@ -505,25 +486,21 @@ class AccountMove(models.Model):
             and self.amount_total <= 400
         )
 
-    def _l10n_it_edi_is_fee_statement(self):
+    def _l10n_it_edi_is_professional_fees(self):
         """
             This function returns a boolean value based on the comparison of the lines values with a product.
-            If the total value of the lines associated with services exceeds the total value of the lines associated with goods, the function assumes that the document is a fee statement.
-            This is particularly useful for documents that represent downpayments.
+            If one line has the tag for professional fee then we return True
         """
         self.ensure_one()
-        service_value = 0
-        good_or_conso_value = 0
-        for line in self.invoice_line_ids:
-            if line.display_type in ('line_note', 'line_section'):
-                continue
+        professional_fee_tag = self.env.ref('l10n_it_edi.l10n_it_edi_professional_fees_tag', raise_if_not_found=False)
+        if not professional_fee_tag:
+            return False
 
-            if line.product_id.type == "service":
-                service_value += line.price_total
-            else:
-                good_or_conso_value += line.price_total
-
-        return service_value > good_or_conso_value
+        return any(
+            professional_fee_tag.id in line.account_id.tag_ids.ids
+            for line in self.invoice_line_ids
+            if line.display_type not in ('line_note', 'line_section')
+        )
 
     def _l10n_it_edi_features_for_document_type_selection(self):
         """ Returns a dictionary of features to be compared with the TDxx FatturaPA
@@ -540,7 +517,7 @@ class AccountMove(models.Model):
             'downpayment': self._is_downpayment(),
             'services_or_goods': services_or_goods,
             'goods_in_italy': services_or_goods == 'consu' and self._l10n_it_edi_goods_in_italy(),
-            'fee_statement': self._l10n_it_edi_is_fee_statement(),  # For downpayment
+            'professional_fees': self._l10n_it_edi_is_professional_fees(),
         }
 
     def _l10n_it_edi_document_type_mapping(self):
@@ -551,32 +528,33 @@ class AccountMove(models.Model):
                      'self_invoice': False,
                      'simplified': False,
                      'downpayment': False,
-                     'fee_statement': False},  # Needed because downpayment move will be set as TD01 otherwise
+                     'professional_fees': False},
             'TD02': {'move_types': ['out_invoice'],
                      'import_type': 'in_invoice',
                      'self_invoice': False,
                      'simplified': False,
-                     'downpayment': True},
+                     'downpayment': True,
+                     'professional_fees': False},
             'TD03': {'move_types': ['out_invoice'],
                      'import_type': 'in_invoice',
                      'self_invoice': False,
                      'simplified': False,
-                     'downpayment': False,
-                     'fee_statement': True},
+                     'downpayment': True,
+                     'professional_fees': True},
             'TD04': {'move_types': ['out_refund'],
                      'import_type': 'in_refund',
                      'self_invoice': False,
                      'simplified': False},
-            'TD05': {'move_types': ['out_refund'],
-                     'import_type': 'in_refund',
+            'TD05': {'move_types': ['in_invoice', 'out_invoice'],
+                     'import_type': 'in_invoice',
                      'self_invoice': False,
                      'simplified': False},
             'TD06': {'move_types': ['out_invoice'],
                      'import_type': 'in_invoice',
                      'self_invoice': False,
                      'simplified': False,
-                     'downpayment': True,
-                     'fee_statement': True},
+                     'downpayment': False,
+                     'professional_fees': True},
             'TD07': {'move_types': ['out_invoice'],
                      'import_type': 'in_invoice',
                      'self_invoice': False,
@@ -1024,29 +1002,6 @@ class AccountMove(models.Model):
                 if move_line:
                     message_to_log += self._l10n_it_edi_import_line(element, move_line, extra_info)
 
-            # Global discount summarized in 1 amount
-            if discount_elements := tree.xpath('.//DatiGeneraliDocumento/ScontoMaggiorazione'):
-                taxable_amount = float(self.tax_totals['amount_untaxed'])
-                discounted_amount = taxable_amount
-                for discount_element in discount_elements:
-                    discount_sign = 1
-                    if (discount_type := discount_element.xpath('.//Tipo')) and discount_type[0].text == 'MG':
-                        discount_sign = -1
-                    if discount_amount := get_text(discount_element, './/Importo'):
-                        discounted_amount -= discount_sign * float(discount_amount)
-                        continue
-                    if discount_percentage := get_text(discount_element, './/Percentuale'):
-                        discounted_amount *= 1 - discount_sign * float(discount_percentage) / 100
-
-                general_discount = discounted_amount - taxable_amount
-                sequence = len(elements) + 1
-
-                self.invoice_line_ids = [Command.create({
-                    'sequence': sequence,
-                    'name': 'SCONTO' if general_discount < 0 else 'MAGGIORAZIONE',
-                    'price_unit': general_discount,
-                })]
-
             for element in tree.xpath('.//Allegati'):
                 attachment_64 = self.env['ir.attachment'].create({
                     'name': get_text(element, './/NomeAttachment'),
@@ -1236,24 +1191,33 @@ class AccountMove(models.Model):
                 message = _("The Origin Document Date cannot be in the future.")
                 errors['move_future_origin_document_date'] = build_error(message=message, records=moves)
         if pa_moves := self.filtered(lambda move: len(move.commercial_partner_id.l10n_it_pa_index or '') == 7):
-            if moves := pa_moves.filtered(lambda move: not move.l10n_it_origin_document_type and move.l10n_it_cig and move.l10n_it_cup):
+            if moves := pa_moves.filtered(lambda move: not move.l10n_it_origin_document_type and (move.l10n_it_cig or move.l10n_it_cup)):
                 message = _("CIG/CUP fields of partner(s) are present, please fill out Origin Document Type field in the Electronic Invoicing tab.")
                 errors['move_missing_origin_document_field'] = build_error(message=message, records=moves)
         return errors
 
     def _l10n_it_edi_export_taxes_check(self):
-        if move_lines := self.mapped("invoice_line_ids").filtered(lambda line:
+        return self._l10n_it_edi_check_lines_for_tax_kind('vat', _('VAT'))
+
+    def _l10n_it_edi_check_lines_for_tax_kind(self, kind_code, kind_desc, min_len=1):
+        assert min_len in (0, 1)
+        if self.invoice_line_ids.filtered(lambda line:
             line.display_type == 'product'
-            and len(line.tax_ids.flatten_taxes_hierarchy()._l10n_it_filter_kind('vat')) != 1
+            and not (min_len <= len(line.tax_ids._l10n_it_filter_kind(kind_code)) <= 1)
         ):
             return {
-                'move_only_one_vat_tax_per_line': {
-                    'message': _("Invoices must have exactly one VAT tax set per line."),
+                f'move_{kind_code}_tax_per_line': {
+                    'message': _(
+                        "Invoices must have %s one %s tax set per line.",
+                        _("exactly") if min_len == 1 else _("at most"),
+                        kind_desc
+                    ),
                     **({
                         'action_text': _("View invoice(s)"),
-                        'action': move_lines.mapped("move_id")._get_records_action(name=_("Check taxes on invoice lines")),
+                        'action': self._get_records_action(name=_("Check taxes on invoice lines")),
                     } if len(self) > 1 else {})
-                }}
+                }
+            }
         return {}
 
     def _l10n_it_edi_get_formatters(self):
@@ -1375,6 +1339,7 @@ class AccountMove(models.Model):
         }
 
     def _l10n_it_edi_send(self, attachments_vals):
+        self.env['res.company']._with_locked_records(self)
         files_to_upload = []
         filename_move = {}
 

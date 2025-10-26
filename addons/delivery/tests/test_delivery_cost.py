@@ -1,5 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+from freezegun import freeze_time
+
 from odoo import Command
 from odoo.tests import common, Form
 from odoo.tools import float_compare
@@ -543,11 +545,12 @@ class TestDeliveryCost(common.TransactionCase):
             'currency_id': currency_bells.id,
         })
 
-        self.env['res.currency.rate'].with_company(nook_inc).create({
-            'currency_id': currency_bells.id,
-            'company_rate': 0.5,
-            'inverse_company_rate': 2,
-        })
+        with freeze_time('2000-01-01'):  # Make sure the rate is in the past
+            self.env['res.currency.rate'].with_company(nook_inc).create({
+                'currency_id': currency_bells.id,
+                'company_rate': 0.5,
+                'inverse_company_rate': 2,
+            })
 
         # Company less shipping method
         product_delivery_rule = self.env['product.product'].with_company(nook_inc).create({
@@ -567,7 +570,8 @@ class TestDeliveryCost(common.TransactionCase):
                 'max_value': 0,
                 'variable_factor': 'weight',
                 'list_base_price': 15,
-            })]
+            })],
+            'fixed_margin': 10,
         })
 
         # Create sale using the shipping method
@@ -594,4 +598,4 @@ class TestDeliveryCost(common.TransactionCase):
         # check delivery price was properly converted
         delivery_sol = so.order_line[-1]
         self.assertEqual(delivery_sol.product_id, delivery.product_id)
-        self.assertEqual(delivery_sol.price_subtotal, 7.5)
+        self.assertEqual(delivery_sol.price_subtotal, 12.5)

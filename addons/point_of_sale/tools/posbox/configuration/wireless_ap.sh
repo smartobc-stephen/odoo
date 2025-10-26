@@ -18,7 +18,7 @@ PASSWORD=$(get_conf "wifi_password" "${CONF_FILE}")
 
 # we need to wait to receive an ip address from the dhcp before enable the access point.
 # only if no configuration file for the wifi networks is recorded
-if [ "${ESSID}" ] && [ "${PASSWORD}" ] && [ -z "${FORCE_HOST_AP}" ] ; then
+if ! [ "${ESSID}" ] && [ "${PASSWORD}" ] && [ -z "${FORCE_HOST_AP}" ] ; then
 	while [ "$(hostname -I)" = '' ] && [ "$COUNTER" -le 10 ]; do sleep 2;((COUNTER++)); done
 fi
 
@@ -77,5 +77,6 @@ else
 	killall nginx
 	service nginx restart
 	service dnsmasq stop
+	ip addr del 10.11.12.1/24 dev wlan0 # remove the static ip
 	service odoo restart # As this file is executed on boot, this line is responsible for restarting odoo service on reboot
 fi
