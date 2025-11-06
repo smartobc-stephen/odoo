@@ -3295,17 +3295,22 @@ class AccountMove(models.Model):
 
         # Collect the computed tax_amount_currency/tax_amount from the taxes computation.
         tax_details_per_rep_line = {}
-        for _base_line, _to_update_vals, tax_values_list in to_process:
-            for tax_values in tax_values_list:
-                tax_rep_id = tax_values['tax_repartition_line_id']
-                tax_rep_amounts = tax_details_per_rep_line.setdefault(tax_rep_id, {
-                    'tax_amount_currency': 0.0,
-                    'tax_amount': 0.0,
-                    'distribute_on': [],
-                })
-                tax_rep_amounts['tax_amount_currency'] += tax_values['tax_amount_currency']
-                tax_rep_amounts['tax_amount'] += tax_values['tax_amount']
-                tax_rep_amounts['distribute_on'].append(tax_values)
+        aggregated_taxes = self.env['account.tax'].with_company(self.company_id)._aggregate_taxes(
+            to_process,
+            filter_tax_values_to_apply=filter_tax_values_to_apply,
+        )
+        for tax_index, tax_values in aggregated_taxes['tax_details'].items():
+            group_tax_details = tax_values['group_tax_details']
+            tax_rep_id = group_tax_details[0]['tax_repartition_line'].id
+            tax_rep_amounts = tax_details_per_rep_line.setdefault(tax_rep_id, {
+                'tax_amount_currency': 0.0,
+                'tax_amount': 0.0,
+                'distribute_on': [],
+            })
+            tax_rep_amounts['tax_amount_currency'] += tax_values['tax_amount_currency']
+            tax_rep_amounts['tax_amount'] += tax_values['tax_amount']
+            for tax_details in group_tax_details:
+                tax_rep_amounts['distribute_on'].append(tax_details)
 
         # Dispatch the delta on tax_values.
         for key, currency in (('tax_amount_currency', self.currency_id), ('tax_amount', self.company_currency_id)):
@@ -3928,6 +3933,15 @@ class AccountMove(models.Model):
 
             if move.line_ids.account_id.filtered(lambda account: account.deprecated) and not self._context.get('skip_account_deprecation_check'):
                 raise UserError(_("A line of this move is using a deprecated account, you cannot post it."))
+
+            account_companies = move.line_ids.account_id.company_id
+
+            if not ((move.journal_id.company_id.sudo().child_ids | move.journal_id.company_id) & account_companies == account_companies):
+                raise UserError(_(
+                    "The entry %s (id %s) is using accounts from a different company.",
+                    move.name,
+                    move.id
+                ))
 
         if soft:
             future_moves = self.filtered(lambda move: move.date > fields.Date.context_today(self))

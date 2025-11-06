@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-12 02:56+0000\n"
-"PO-Revision-Date: 2025-10-18 01:40+0000\n"
-"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
+"POT-Creation-Date: 2025-10-30 18:35+0000\n"
+"PO-Revision-Date: 2025-11-03 20:30+0000\n"
+"Last-Translator: \"Patricia Gutiérrez (pagc)\" <pagc@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-17/account/es_419/>\n"
 "Language: es_419\n"
@@ -2204,8 +2204,8 @@ msgstr "Movimientos devengados"
 #: code:addons/account/wizard/accrued_orders.py:0
 #, python-format
 msgid ""
-"Accrual entry created on %(date)s: %(accrual_entry)s.                    And "
-"its reverse entry: %(reverse_entry)s."
+"Accrual entry created on %(date)s: %(accrual_entry)s.                And its "
+"reverse entry: %(reverse_entry)s."
 msgstr ""
 "Asiento de devengo creado el %(date)s: %(accrual_entry)s.                    "
 "Y su asiento de reversión: %(reverse_entry)s."
@@ -5546,7 +5546,7 @@ msgstr "Secuencia de notas de crédito dedicada"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal__payment_sequence
 msgid "Dedicated Payment Sequence"
-msgstr "Secuencia de pago dedicado"
+msgstr "Secuencia de pago dedicada"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal__default_account_id
@@ -18457,6 +18457,15 @@ msgid ""
 "{{ object.company_id.name }} Payment Receipt (Ref {{ object.name or 'n/a' }})"
 msgstr ""
 "{{ object.company_id.name }} Pago recibido (Ref {{ object.name or 'n/a' }})"
+
+#, python-format
+#~ msgid ""
+#~ "Accrual entry created on %(date)s: %(accrual_entry)s.                    "
+#~ "And its reverse entry: %(reverse_entry)s."
+#~ msgstr ""
+#~ "Asiento de devengo creado el %(date)s: "
+#~ "%(accrual_entry)s.                    Y su asiento de reversión: "
+#~ "%(reverse_entry)s."
 
 #, python-format
 #~ msgid ""
