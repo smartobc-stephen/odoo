@@ -8,6 +8,7 @@ import { registry } from "@web/core/registry";
 import * as Order from "@point_of_sale/../tests/tours/helpers/generic_components/OrderWidgetMethods";
 import { inLeftSide, scan_barcode } from "@point_of_sale/../tests/tours/helpers/utils";
 import * as ProductConfiguratorPopup from "@point_of_sale/../tests/tours/helpers/ProductConfiguratorTourMethods";
+import * as TicketScreen from "@point_of_sale/../tests/tours/helpers/TicketScreenTourMethods";
 
 registry.category("web_tour.tours").add("ProductScreenTour", {
     test: true,
@@ -271,5 +272,64 @@ registry.category("web_tour.tours").add("test_table_stand_number_exported", {
             PaymentScreen.clickPaymentMethod("Cash"),
             PaymentScreen.clickValidate(),
             ReceiptScreen.isShown(),
+        ].flat(),
+});
+
+registry.category("web_tour.tours").add("test_products_variants_attribute_value_filtering", {
+    test: true,
+    steps: () =>
+        [
+            ProductScreen.confirmOpeningPopup(),
+            ProductScreen.clickProductInfo("Small Shelf"),
+            ProductScreen.clickProductInfoAttributeValue("Color", "White"),
+            ProductScreen.checkProductsNumber(2),
+            ProductScreen.productIsDisplayed("Small Shelf (Small)"),
+            ProductScreen.productIsDisplayed("Small Shelf (Medium)"),
+            ProductScreen.clickProductInfo("Small Shelf"),
+            ProductScreen.clickProductInfoAttributeValue("Size", "Medium"),
+            ProductScreen.checkProductsNumber(1),
+            ProductScreen.productIsDisplayed("Small Shelf (Medium)"),
+        ].flat(),
+});
+
+registry.category("web_tour.tours").add("test_only_unpaid_orders_are_loaded", {
+    test: true,
+    steps: () =>
+        [
+            // open pos "shop"
+            {
+                content: "start new session",
+                trigger: ".o_kanban_primary_left button:contains('New Session')",
+            },
+            ProductScreen.confirmOpeningPopup(),
+            ProductScreen.addOrderline("Desk Pad", "1"),
+            ProductScreen.saveOrder(),
+            Chrome.clickMenuButton(),
+            {
+                content: "click backend button",
+                trigger: "li.backend-button",
+            },
+            // open pos "shop2"
+            {
+                content: "start another new session",
+                trigger: ".o_kanban_primary_left button:contains('New Session')",
+            },
+            Chrome.clickMenuButton(),
+            Chrome.clickTicketButton(),
+            TicketScreen.selectOrder("-0001"),
+            TicketScreen.loadSelectedOrder(),
+            ProductScreen.isShown(),
+            ProductScreen.clickPayButton(),
+            PaymentScreen.clickPaymentMethod("Bank"),
+            PaymentScreen.clickValidate(),
+            ReceiptScreen.isShown(),
+            Chrome.closeSession(),
+            // reopen pos "shop"
+            {
+                content: "open session",
+                trigger: ".o_kanban_primary_left button:contains('Continue Selling')",
+            },
+            // there should not be any order
+            ProductScreen.orderIsEmpty(),
         ].flat(),
 });

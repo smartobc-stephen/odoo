@@ -13,12 +13,12 @@ from zeep.wsdl import Document
 class TestStructure(TransactionCase):
     @classmethod
     def setUpClass(cls):
-        def check_vies(vat_number):
-            return {'valid': vat_number == 'BE0477472701'}
+        def _check_vies_iap(record):
+            return "valid" if record.vat == 'BE0477472701' else "unassigned"
 
         super().setUpClass()
         cls.env.user.company_id.vat_check_vies = False
-        cls._vies_check_func = check_vies
+        cls._check_vies_iap = _check_vies_iap
 
     def test_peru_ruc_format(self):
         """Only values that has the length of 11 will be checked as RUC, that's what we are proving. The second part
@@ -52,7 +52,7 @@ class TestStructure(TransactionCase):
         })
 
         # reactivate it and correct the vat number
-        with patch('odoo.addons.base_vat.models.res_partner.check_vies', type(self)._vies_check_func):
+        with patch('odoo.addons.base_vat.models.res_partner.ResPartner._check_vies_iap', TestStructure._check_vies_iap):
             self.env.user.company_id.vat_check_vies = True
             with self.assertRaises(ValidationError), self.env.cr.savepoint():
                 company.vat = "BE0987654321"  # VIES refused, don't fallback on other check
@@ -148,6 +148,19 @@ class TestStructure(TransactionCase):
         with self.assertRaisesRegex(ValidationError, msg):
             test_partner.write({'vat': '0123457890-11134'})
 
+    def test_vat_th(self):
+        test_partner = self.env["res.partner"].create({
+            "name": "TH Company",
+            "country_id": self.env.ref("base.th").id,
+        })
+
+        for tin in ['1234545678781', '1-2345-45678-78-1', '0-99-4-000-61772-1']:
+            test_partner.vat = tin
+
+        for tin in ['1234545678782', '1-2345-45678-78-2', '0-99-4-000-61772-2', 'X-99-4-000-61772-1']:
+            with self.assertRaises(ValidationError):
+                test_partner.vat = tin
+
     def test_vat_do(self):
         test_partner = self.env["res.partner"].create({"name": "DO Company", "country_id": self.env.ref("base.do").id})
         # Valid do vat
@@ -171,6 +184,11 @@ class TestStructure(TransactionCase):
         for ubn in ['88117250', '12345600', '90183272']:
             with self.assertRaises(ValidationError):
                 test_partner.vat = ubn
+
+    def test_revised_nri_gstin_format(self):
+        """Test valid NRI GSTIN number is accepted"""
+        in_partner = self.env["res.partner"].create({"name": "IN Company", "country_id": self.env.ref("base.in").id})
+        in_partner.vat = "9922JPN29001OSU"
 
 
 @tagged('-standard', 'external')

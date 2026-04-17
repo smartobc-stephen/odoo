@@ -83,7 +83,7 @@ class TestPointOfSaleHttpCommon(AccountTestInvoicingHttpCommon):
         })
 
         env['res.partner'].create({
-            'name': 'Deco Addict',
+            'name': 'Acme Corporation',
         })
 
         cash_journal = journal_obj.create({
@@ -1402,6 +1402,42 @@ class TestUi(TestPointOfSaleHttpCommon):
         })
         self.main_pos_config.with_user(self.pos_user).open_ui()
         self.start_tour(f"/pos/ui?config_id={self.main_pos_config.id}", 'test_draft_order_deletion_with_printer', login="pos_user")
+
+    def test_products_variants_attribute_value_filtering(self):
+        attribute_color = self.env['product.attribute'].create({'name': 'Color'})
+        attribute_value_white = self.env['product.attribute.value'].create({
+            'name': 'White',
+            'attribute_id': attribute_color.id,
+        })
+        self.env['product.template.attribute.line'].create({
+            'product_tmpl_id': self.small_shelf.product_tmpl_id.id,
+            'attribute_id': attribute_color.id,
+            'value_ids': [(6, 0, attribute_value_white.ids)]
+        })
+
+        attribute_size = self.env['product.attribute'].create({'name': 'Size'})
+        attribute_value_small = self.env['product.attribute.value'].create({
+            'name': 'Small',
+            'attribute_id': attribute_size.id,
+        })
+        attribute_value_medium = self.env['product.attribute.value'].create({
+            'name': 'Medium',
+            'attribute_id': attribute_size.id,
+        })
+        self.env['product.template.attribute.line'].create({
+            'product_tmpl_id': self.small_shelf.product_tmpl_id.id,
+            'attribute_id': attribute_size.id,
+            'value_ids': [(6, 0, [attribute_value_small.id, attribute_value_medium.id])],
+        })
+
+        self.main_pos_config.with_user(self.pos_user).open_ui()
+        self.start_tour("/pos/ui?config_id=%d" % self.main_pos_config.id, 'test_products_variants_attribute_value_filtering', login="pos_user")
+
+    def test_only_unpaid_orders_are_loaded(self):
+        other_pos = self.main_pos_config.copy({"name": "shop2"})
+        self.main_pos_config.trusted_config_ids += other_pos
+        other_pos.trusted_config_ids += self.main_pos_config
+        self.start_tour("/pos/ui?config_id=%d" % self.main_pos_config.id, 'test_only_unpaid_orders_are_loaded', login="pos_admin")
 
 
 # This class just runs the same tests as above but with mobile emulation

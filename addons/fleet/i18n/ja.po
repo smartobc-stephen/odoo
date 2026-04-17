@@ -6,14 +6,14 @@
 # Ryoko Tsuda <ryoko@quartile.co>, 2024, 2025.
 # Junko Augias, 2025
 # Wil Odoo, 2025
-# "Junko Augias (juau)" <juau@odoo.com>, 2025.
+# "Junko Augias (juau)" <juau@odoo.com>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-25 18:36+0000\n"
-"PO-Revision-Date: 2025-11-17 08:58+0000\n"
-"Last-Translator: Ryoko Tsuda <ryoko@quartile.co>\n"
+"POT-Creation-Date: 2025-12-29 18:37+0000\n"
+"PO-Revision-Date: 2026-01-10 08:03+0000\n"
+"Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-17/fleet/"
 "ja/>\n"
 "Language: ja\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_kanban
@@ -132,7 +132,7 @@ msgstr "活動タイプ"
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_type_icon
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__activity_type_icon
 msgid "Activity Type Icon"
-msgstr "活動種別アイコン"
+msgstr "活動タイプアイコン"
 
 #. module: fleet
 #: model:ir.actions.act_window,name:fleet.mail_activity_type_action_config_fleet
@@ -1712,7 +1712,7 @@ msgstr "その他整備"
 #. module: fleet
 #: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle__service_activity__overdue
 msgid "Overdue"
-msgstr "滞納"
+msgstr "期限超過"
 
 #. module: fleet
 #: model:fleet.service.type,name:fleet.type_service_34
@@ -2106,7 +2106,7 @@ msgstr "税金"
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__notes
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
 msgid "Terms and Conditions"
-msgstr "諸条件"
+msgstr "利用規約"
 
 #. module: fleet
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle__country_code

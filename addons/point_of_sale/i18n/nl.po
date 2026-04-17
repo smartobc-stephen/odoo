@@ -12,13 +12,15 @@
 # Larissa Manderfeld, 2025
 # Manon Rondou, 2025
 # "Manon Rondou (ronm)" <ronm@odoo.com>, 2025.
+# Bren Driesen <brdri@odoo.com>, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-13 18:36+0000\n"
-"PO-Revision-Date: 2025-08-27 01:41+0000\n"
-"Last-Translator: \"Manon Rondou (ronm)\" <ronm@odoo.com>\n"
+"POT-Creation-Date: 2026-04-03 18:38+0000\n"
+"PO-Revision-Date: 2026-04-08 13:24+0000\n"
+"Last-Translator: Bren Driesen <brdri@odoo.com>\n"
 "Language-Team: Dutch <https://translate.odoo.com/projects/odoo-17/"
 "point_of_sale/nl/>\n"
 "Language: nl\n"
@@ -26,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: point_of_sale
 #. odoo-python
@@ -181,58 +183,8 @@ msgstr ""
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
-msgid "0.00"
-msgstr "0.00"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.ticket_request_with_code
-msgid "00014-001-0001"
-msgstr "00014-001-0001"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
-msgid "10"
-msgstr "10"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
-msgid "100.00"
-msgstr "100.00"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
-msgid "1000"
-msgstr "1000"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
-msgid "10000"
-msgstr "10000"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
-msgid "10000.00"
-msgstr "10000,00"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
-msgid "123.45"
-msgstr "123.45"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_userlabel
-msgid "1234567890"
-msgstr "1234567890"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
 msgid "2-03-2000 9:00 AM"
 msgstr "2-03-2000 9:00 uur"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
-msgid "45"
-msgstr "45"
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_order__ticket_code
@@ -241,36 +193,6 @@ msgid ""
 msgstr ""
 "5-cijferige alfanumerieke code die kan gebruikt worden door een "
 "portaalgebruiker om een factuur aan te vragen"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
-msgid "5.00"
-msgstr "5.00 uur"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
-msgid "50.00"
-msgstr "50,00"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
-msgid "567789"
-msgstr "567789"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
-msgid "95.00"
-msgstr "95.00 uur"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
-msgid "987657"
-msgstr "987657"
-
-#. module: point_of_sale
-#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
-msgid "99.99"
-msgstr "99,99"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.view_partner_pos_kanban
@@ -1303,7 +1225,7 @@ msgstr "Naam pashouder"
 #: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
 #, python-format
 msgid "Cash"
-msgstr "Kas"
+msgstr "Contant"
 
 #. module: point_of_sale
 #. odoo-python
@@ -1334,7 +1256,7 @@ msgstr "Kasboek"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session__statement_line_ids
 msgid "Cash Lines"
-msgstr "Geldregels"
+msgstr "Contantregels"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
@@ -1862,7 +1784,7 @@ msgstr "Doorgaan"
 #: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_config_kanban
 #: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
 msgid "Continue Selling"
-msgstr "Verkoop hervatten"
+msgstr "Doorgaan met verkopen"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -2265,7 +2187,7 @@ msgstr "Standaard tijdelijke rekening"
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
 msgid "Default journals for orders and invoices"
-msgstr "Standaardjournalen voor orders en facturen"
+msgstr "Standaarddagboeken voor orders en facturen"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
@@ -2788,6 +2710,7 @@ msgid "Finished Importing Orders"
 msgstr "Importeren van orders is voltooid"
 
 #. module: point_of_sale
+#: model:ir.model,name:point_of_sale.model_account_fiscal_position
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order__fiscal_position_id
 msgid "Fiscal Position"
 msgstr "Fiscale positie"
@@ -3428,6 +3351,11 @@ msgid "Kpi Pos Total Value"
 msgstr "KPI Kassa totale waarde"
 
 #. module: point_of_sale
+#: model:product.attribute.value,name:point_of_sale.size_attribute_l
+msgid "L"
+msgstr ""
+
+#. module: point_of_sale
 #: model:product.template,name:point_of_sale.led_lamp_product_template
 msgid "LED Lamp"
 msgstr "LED lamp"
@@ -3667,6 +3595,11 @@ msgstr "Partij/Serienummer(s) verplicht"
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line__pack_lot_ids
 msgid "Lot/serial Number"
 msgstr "Partij/Serienummer"
+
+#. module: point_of_sale
+#: model:product.attribute.value,name:point_of_sale.size_attribute_m
+msgid "M"
+msgstr ""
 
 #. module: point_of_sale
 #: model:product.template,name:point_of_sale.magnetic_board_product_template
@@ -4238,7 +4171,7 @@ msgstr "Alleen afronden op contante betalingen"
 msgid ""
 "Only journals of type 'Cash' or 'Bank' could be used with payment methods."
 msgstr ""
-"Enkel dagboeken van het type 'Cash' of 'Bank' kunnen worden gebruikt met "
+"Enkel dagboeken van het type 'Kas' of 'Bank' kunnen worden gebruikt met "
 "betaalmethodes."
 
 #. module: point_of_sale
@@ -6148,6 +6081,11 @@ msgid "Run Point of Sale JS Tests"
 msgstr "Kassa JS Testen uitvoeren"
 
 #. module: point_of_sale
+#: model:product.attribute.value,name:point_of_sale.size_attribute_s
+msgid "S"
+msgstr "S"
+
+#. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session__message_has_sms_error
 msgid "SMS Delivery error"
 msgstr "SMS fout bij versturen"
@@ -7611,9 +7549,8 @@ msgid ""
 "This cash payment method is already used in another Point of Sale.\n"
 "A new cash payment method should be created for this Point of Sale."
 msgstr ""
-"Deze contacte betaalmethode is reeds gebruikt in een ander Kassasysteem. \n"
-"Een nieuwe contante betaalmethode moet worden aangemaakt voor dit "
-"Kassasysteem."
+"Deze contante betaalmethode wordt reeds gebruikt bij een andere kassa.\n"
+"Een nieuwe contante betaalmethode moet worden aangemaakt voor deze kassa."
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_config__amount_authorized_diff
@@ -8326,6 +8263,11 @@ msgid "With a"
 msgstr "Met een"
 
 #. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+msgid "X"
+msgstr "X"
+
+#. module: point_of_sale
 #. odoo-javascript
 #: code:addons/point_of_sale/static/src/app/store/models.js:0
 #, python-format
@@ -8340,8 +8282,8 @@ msgid ""
 "You are not allowed to change the cash rounding configuration while a pos "
 "session using it is already opened."
 msgstr ""
-"Je mag de afrondingsmethode niet wijzigen terwijl een kassa sessie die "
-"geopend is deze gebruikt."
+"Je kunt de afrondingsmethode niet wijzigen terwijl een open kassasessie deze "
+"gebruikt."
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -8621,6 +8563,11 @@ msgstr ""
 "                                Zorg ervoor dat je"
 
 #. module: point_of_sale
+#: model_terms:ir.ui.view,arch_db:point_of_sale.report_saledetails
+msgid "Z"
+msgstr ""
+
+#. module: point_of_sale
 #. odoo-javascript
 #: code:addons/point_of_sale/static/src/app/screens/partner_list/partner_editor/partner_editor.js:0
 #, python-format
@@ -8732,7 +8679,7 @@ msgstr "voor een order van"
 #: code:addons/point_of_sale/static/src/app/screens/product_screen/product_info_popup/product_info_popup.xml:0
 #, python-format
 msgid "forecasted"
-msgstr "prognose"
+msgstr "voorspeld"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -8837,3 +8784,59 @@ msgstr "gebruikende"
 #, python-format
 msgid "were duplicates of existing orders"
 msgstr "waren duplicaten van bestaande orders"
+
+#. module: point_of_sale
+#. odoo-javascript
+#: code:addons/point_of_sale/static/src/app/generic_components/orderline/orderline.xml:0
+#: code:addons/point_of_sale/static/src/app/navbar/sale_details_button/sales_detail_report.xml:0
+#, python-format
+msgid "x"
+msgstr ""
+
+#~ msgid "0.00"
+#~ msgstr "0.00"
+
+#~ msgid "00014-001-0001"
+#~ msgstr "00014-001-0001"
+
+#~ msgid "10"
+#~ msgstr "10"
+
+#~ msgid "100.00"
+#~ msgstr "100.00"
+
+#~ msgid "1000"
+#~ msgstr "1000"
+
+#~ msgid "10000"
+#~ msgstr "10000"
+
+#~ msgid "10000.00"
+#~ msgstr "10000,00"
+
+#~ msgid "123.45"
+#~ msgstr "123.45"
+
+#~ msgid "1234567890"
+#~ msgstr "1234567890"
+
+#~ msgid "45"
+#~ msgstr "45"
+
+#~ msgid "5.00"
+#~ msgstr "5.00 uur"
+
+#~ msgid "50.00"
+#~ msgstr "50,00"
+
+#~ msgid "567789"
+#~ msgstr "567789"
+
+#~ msgid "95.00"
+#~ msgstr "95.00 uur"
+
+#~ msgid "987657"
+#~ msgstr "987657"
+
+#~ msgid "99.99"
+#~ msgstr "99,99"

@@ -436,7 +436,7 @@ class Web_Editor(http.Controller):
             dict: views, scss, js
         """
         # Related views must be fetched if the user wants the views and/or the style
-        views = request.env["ir.ui.view"].with_context(no_primary_children=True, __views_get_original_hierarchy=[]).get_related_views(key, bundles=bundles)
+        views = request.env["ir.ui.view"].with_context(no_primary_children=True, __views_get_original_hierarchy=[], is_customization_code=False).get_related_views(key, bundles=bundles)
         views = views.read(['name', 'id', 'key', 'xml_id', 'arch', 'active', 'inherit_id'])
 
         scss_files_data_by_bundle = []
@@ -590,10 +590,11 @@ class Web_Editor(http.Controller):
             # empty record set.
             request.env[fields['res_model']].browse(fields['res_id']).check_access_rights('write')
 
-            # Sudo and SUPERUSER_ID because restricted editor will not be able
-            # to copy the record and the mimetype will be forced to plain text.
-            attachment = attachment.with_user(SUPERUSER_ID).sudo().copy(fields)
-            attachment = attachment.with_user(request.env.user.id).sudo(False)
+            # Sudo because restricted editor will not be able to copy the record
+            attachment = attachment.sudo().copy(fields).sudo(False)
+            # Override mimetype with SUPERUSER if it was forced to plain text
+            if attachment.mimetype == 'text/plain' != fields['mimetype']:
+                attachment.with_user(SUPERUSER_ID).mimetype = fields['mimetype']
 
         if alt_data:
             for size, per_type in alt_data.items():

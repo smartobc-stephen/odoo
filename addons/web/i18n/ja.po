@@ -7,14 +7,14 @@
 # Martin Trigaux, 2024
 # Wil Odoo, 2025
 # Junko Augias, 2025
-# "Junko Augias (juau)" <juau@odoo.com>, 2025.
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Junko Augias (juau)" <juau@odoo.com>, 2025, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-16 18:38+0000\n"
-"PO-Revision-Date: 2025-11-20 16:16+0000\n"
+"POT-Creation-Date: 2026-04-03 18:40+0000\n"
+"PO-Revision-Date: 2026-04-14 14:24+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-17/web/ja/>"
 "\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: web
 #. odoo-javascript
@@ -184,153 +184,10 @@ msgstr "+ キー"
 
 #. module: web
 #. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "00"
-msgstr "00"
-
-#. module: web
-#: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
-msgid "07/08/2020"
-msgstr "07/08/2020"
-
-#. module: web
-#: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
-msgid "08/07/2020"
-msgstr "08/07/2020"
-
-#. module: web
-#. odoo-javascript
 #: code:addons/web/static/src/views/fields/formatters.js:0
 #, python-format
 msgid "1 record"
 msgstr "1 レコード"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "1.30"
-msgstr "1.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "10"
-msgstr "10"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "10.30"
-msgstr "10.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "100"
-msgstr "100"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "10:00"
-msgstr "10:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "10:30"
-msgstr "10:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "11"
-msgstr "11"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "11.30"
-msgstr "11.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "11:00"
-msgstr "11:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "11:30"
-msgstr "11:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "12"
-msgstr "12"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "12.30"
-msgstr "12.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "1234"
-msgstr "1234"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "12:00"
-msgstr "12:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "12:30"
-msgstr "12:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "18"
-msgstr "18"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "1:00"
-msgstr "1:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "1:30"
-msgstr "1:30"
 
 #. module: web
 #. odoo-javascript
@@ -343,27 +200,6 @@ msgstr "1位メダル"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
-msgid "2.30"
-msgstr "2.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "2:00"
-msgstr "2:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "2:30"
-msgstr "2:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
 msgid "2nd place medal"
 msgstr "2位メダル"
 
@@ -371,50 +207,8 @@ msgstr "2位メダル"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
-msgid "3.30"
-msgstr "3.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "3:00"
-msgstr "3:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "3:30"
-msgstr "3:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
 msgid "3rd place medal"
 msgstr "3位メダル"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "4.30"
-msgstr "4.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "4:00"
-msgstr "4:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "4:30"
-msgstr "4:30"
 
 #. module: web
 #. odoo-javascript
@@ -429,111 +223,6 @@ msgstr "4WD"
 #, python-format
 msgid "4x4"
 msgstr "4x4"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "5.30"
-msgstr "5.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "5:00"
-msgstr "5:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "5:30"
-msgstr "5:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "6.30"
-msgstr "6.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "6:00"
-msgstr "6:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "6:30"
-msgstr "6:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "7.30"
-msgstr "7.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "7:00"
-msgstr "7:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "7:30"
-msgstr "7:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "8.30"
-msgstr "8.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "8:00"
-msgstr "8:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "8:30"
-msgstr "8:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "9.30"
-msgstr "9.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "9:00"
-msgstr "9:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "9:30"
-msgstr "9:30"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.view_base_document_layout
@@ -609,8 +298,8 @@ msgstr "<span id=\"line_tax_ids\">税 15%</span>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
-msgid "<span itemprop=\"name\">Deco Addict</span>"
-msgstr "<span itemprop=\"name\">Deco Addict</span>"
+msgid "<span itemprop=\"name\">Acme Corporation</span>"
+msgstr "<span itemprop=\"name\">アクメ株式会社</span>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
@@ -755,6 +444,13 @@ msgstr ""
 "@font-face {\n"
 "                        font-family: \"font\";\n"
 "                        src: url(data:font/ttf;base64,"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "A"
+msgstr "A"
 
 #. module: web
 #. odoo-javascript
@@ -968,7 +664,7 @@ msgstr "カスタムグループ追加"
 #: code:addons/web/static/src/core/tree_editor/tree_editor.xml:0
 #, python-format
 msgid "Add New Rule"
-msgstr "新しい規則を追加"
+msgstr "新しいルールを追加"
 
 #. module: web
 #. odoo-javascript
@@ -1082,7 +778,7 @@ msgstr "アフリカ"
 #: code:addons/web/static/src/legacy/js/core/dialog.js:0
 #, python-format
 msgid "Alert"
-msgstr "警告"
+msgstr "アラート"
 
 #. module: web
 #. odoo-javascript
@@ -1375,6 +1071,13 @@ msgstr "アバター"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "B"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "B button (blood type)"
 msgstr "B ボタン (血液型)"
 
@@ -1571,6 +1274,13 @@ msgstr "バイト"
 #, python-format
 msgid "Bytes|Kb|Mb|Gb|Tb|Pb|Eb|Zb|Yb"
 msgstr "Bytes|Kb|Mb|Gb|Tb|Pb|Eb|Zb|Yb"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "C"
+msgstr "C"
 
 #. module: web
 #. odoo-javascript
@@ -2449,7 +2159,7 @@ msgstr "プロパティフィールドを削除する"
 #: code:addons/web/static/src/search/search_bar_menu/search_bar_menu.xml:0
 #, python-format
 msgid "Delete item"
-msgstr "項目を削除する"
+msgstr "項目を削除"
 
 #. module: web
 #. odoo-javascript
@@ -2920,7 +2630,7 @@ msgstr "すべて"
 #: code:addons/web/static/src/views/pivot/pivot_controller.xml:0
 #, python-format
 msgid "Expand all"
-msgstr "全展開"
+msgstr "すべて展開"
 
 #. module: web
 #. odoo-javascript
@@ -4256,6 +3966,13 @@ msgstr "ロゴの2つめのカラー"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "M"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "Mahjong"
 msgstr "麻雀"
 
@@ -4330,7 +4047,7 @@ msgstr "Many2many"
 #: code:addons/web/static/src/views/fields/properties/property_definition.js:0
 #, python-format
 msgid "Many2one"
-msgstr "Many2one"
+msgstr "多対1"
 
 #. module: web
 #. odoo-javascript
@@ -4442,7 +4159,7 @@ msgstr "不一致タイトル"
 #: code:addons/web/static/src/core/errors/error_dialogs.js:0
 #, python-format
 msgid "Missing Record"
-msgstr "ミッシングレコード"
+msgstr "レコードが見つかりません"
 
 #. module: web
 #. odoo-javascript
@@ -4472,7 +4189,7 @@ msgstr "モデル"
 #: code:addons/web/static/src/webclient/actions/debug_items.js:0
 #, python-format
 msgid "Model Record Rules"
-msgstr "モデルレコード規則"
+msgstr "モデルレコードルール"
 
 #. module: web
 #. odoo-javascript
@@ -4526,7 +4243,7 @@ msgstr "月曜日"
 #: code:addons/web/static/src/views/fields/monetary/monetary_field.js:0
 #, python-format
 msgid "Monetary"
-msgstr "金銭"
+msgstr "金額"
 
 #. module: web
 #. odoo-javascript
@@ -4542,14 +4259,14 @@ msgstr "月"
 #: code:addons/web/static/src/views/form/button_box/button_box.xml:0
 #, python-format
 msgid "More"
-msgstr "さらに"
+msgstr "その他"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/views/fields/statusbar/statusbar_field.xml:0
 #, python-format
 msgid "More..."
-msgstr "さらに"
+msgstr "さらに表示"
 
 #. module: web
 #. odoo-javascript
@@ -4715,7 +4432,7 @@ msgstr "新しいプロパティ"
 #: code:addons/web/static/src/core/tree_editor/tree_editor.xml:0
 #, python-format
 msgid "New Rule"
-msgstr "新しい規則"
+msgstr "新しいルール"
 
 #. module: web
 #. odoo-javascript
@@ -5002,6 +4719,13 @@ msgstr "有効ステータスではありません。クリックして変更し
 #, python-format
 msgid "Number of files"
 msgstr "ファイル数"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "O"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -5331,6 +5055,13 @@ msgstr "その他"
 #, python-format
 msgid "Overflow style"
 msgstr "オーバーフロー式"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "P"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -5805,6 +5536,13 @@ msgstr "クイック検索: %s"
 #: model:ir.model,name:web.model_ir_qweb_field_image_url
 msgid "Qweb Field Image"
 msgstr "Qwebフィールド画像"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "R"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -6646,7 +6384,7 @@ msgstr "スマイリー & 感情"
 #: code:addons/web/static/src/model/relational_model/dynamic_list.js:0
 #, python-format
 msgid "Some records could not be duplicated"
-msgstr "重複できないレコードがあります"
+msgstr "一部のレコードは複製できませんでした"
 
 #. module: web
 #. odoo-python
@@ -7189,6 +6927,13 @@ msgstr "時間"
 
 #. module: web
 #. odoo-javascript
+#: code:addons/web/static/src/core/debug/profiling/profiling_item.xml:0
+#, python-format
+msgid "Time Limit (seconds)"
+msgstr "時間制限(秒)"
+
+#. module: web
+#. odoo-javascript
 #: code:addons/web/static/src/views/fields/datetime/datetime_field.js:0
 #, python-format
 msgid "Time interval"
@@ -7463,7 +7208,7 @@ msgstr ""
 #: code:addons/web/static/src/views/list/list_controller.js:0
 #, python-format
 msgid "Unarchive"
-msgstr "アーカイブ取消"
+msgstr "アーカイブ解除"
 
 #. module: web
 #. odoo-javascript
@@ -7788,7 +7533,7 @@ msgstr "ローレコードデータを見る"
 #: code:addons/web/static/src/webclient/actions/debug_items.js:0
 #, python-format
 msgid "View Record Rules"
-msgstr "レコード規則を参照"
+msgstr "レコードルールを参照"
 
 #. module: web
 #. odoo-javascript
@@ -10307,7 +10052,7 @@ msgstr "茶色い四角"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "bubble"
-msgstr "泡"
+msgstr "バブル"
 
 #. module: web
 #. odoo-javascript
@@ -12533,7 +12278,7 @@ msgstr "だんご"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "dark"
-msgstr "暗い"
+msgstr "ダーク"
 
 #. module: web
 #. odoo-javascript
@@ -16996,6 +16741,13 @@ msgstr "赤い封筒"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "i"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "ice"
 msgstr "氷"
 
@@ -20063,7 +19815,7 @@ msgstr "お月見"
 #: code:addons/web/static/src/webclient/settings_form_view/widgets/res_config_invite_users.xml:0
 #, python-format
 msgid "more"
-msgstr "さらに"
+msgstr "その他"
 
 #. module: web
 #. odoo-javascript
@@ -20799,7 +20551,7 @@ msgstr "装飾カバーがついたノート"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "notes"
-msgstr "音符"
+msgstr "メモ"
 
 #. module: web
 #. odoo-javascript
@@ -20847,6 +20599,13 @@ msgstr "ナッツ"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "o"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "ocean"
 msgstr "海"
 
@@ -20876,7 +20635,7 @@ msgstr "おでん"
 #: code:addons/web/static/src/core/tree_editor/tree_editor.xml:0
 #, python-format
 msgid "of the following rules:"
-msgstr "以下の規則の："
+msgstr "以下のルールの："
 
 #. module: web
 #. odoo-javascript
@@ -22579,7 +22338,7 @@ msgstr "プラグ"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "plumber"
-msgstr "技工"
+msgstr "配管工"
 
 #. module: web
 #. odoo-javascript
@@ -23259,6 +23018,13 @@ msgstr "疑問符"
 #, python-format
 msgid "quiet"
 msgstr "静かにの顔"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "r"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -28168,6 +27934,13 @@ msgstr "壺"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "v"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "vague"
 msgstr "波"
 
@@ -29771,6 +29544,13 @@ msgstr "苦笑い"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "x"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "yacht"
 msgstr "ヨット"
 
@@ -30095,3 +29875,296 @@ msgstr "“空”"
 #, python-format
 msgid "ココ"
 msgstr "ココ"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "サ"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "割"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "可"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "合"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "営"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "得"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "指"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "月"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "有"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "満"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "無"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "申"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "祝"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "禁"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "秘"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "空"
+msgstr ""
+
+#, python-format
+#~ msgid "00"
+#~ msgstr "00"
+
+#~ msgid "07/08/2020"
+#~ msgstr "07/08/2020"
+
+#~ msgid "08/07/2020"
+#~ msgstr "08/07/2020"
+
+#, python-format
+#~ msgid "1.30"
+#~ msgstr "1.30"
+
+#, python-format
+#~ msgid "10"
+#~ msgstr "10"
+
+#, python-format
+#~ msgid "10.30"
+#~ msgstr "10.30"
+
+#, python-format
+#~ msgid "100"
+#~ msgstr "100"
+
+#, python-format
+#~ msgid "10:00"
+#~ msgstr "10:00"
+
+#, python-format
+#~ msgid "10:30"
+#~ msgstr "10:30"
+
+#, python-format
+#~ msgid "11"
+#~ msgstr "11"
+
+#, python-format
+#~ msgid "11.30"
+#~ msgstr "11.30"
+
+#, python-format
+#~ msgid "11:00"
+#~ msgstr "11:00"
+
+#, python-format
+#~ msgid "11:30"
+#~ msgstr "11:30"
+
+#, python-format
+#~ msgid "12"
+#~ msgstr "12"
+
+#, python-format
+#~ msgid "12.30"
+#~ msgstr "12.30"
+
+#, python-format
+#~ msgid "1234"
+#~ msgstr "1234"
+
+#, python-format
+#~ msgid "12:00"
+#~ msgstr "12:00"
+
+#, python-format
+#~ msgid "12:30"
+#~ msgstr "12:30"
+
+#, python-format
+#~ msgid "18"
+#~ msgstr "18"
+
+#, python-format
+#~ msgid "1:00"
+#~ msgstr "1:00"
+
+#, python-format
+#~ msgid "1:30"
+#~ msgstr "1:30"
+
+#, python-format
+#~ msgid "2.30"
+#~ msgstr "2.30"
+
+#, python-format
+#~ msgid "2:00"
+#~ msgstr "2:00"
+
+#, python-format
+#~ msgid "2:30"
+#~ msgstr "2:30"
+
+#, python-format
+#~ msgid "3.30"
+#~ msgstr "3.30"
+
+#, python-format
+#~ msgid "3:00"
+#~ msgstr "3:00"
+
+#, python-format
+#~ msgid "3:30"
+#~ msgstr "3:30"
+
+#, python-format
+#~ msgid "4.30"
+#~ msgstr "4.30"
+
+#, python-format
+#~ msgid "4:00"
+#~ msgstr "4:00"
+
+#, python-format
+#~ msgid "4:30"
+#~ msgstr "4:30"
+
+#, python-format
+#~ msgid "5.30"
+#~ msgstr "5.30"
+
+#, python-format
+#~ msgid "5:00"
+#~ msgstr "5:00"
+
+#, python-format
+#~ msgid "5:30"
+#~ msgstr "5:30"
+
+#, python-format
+#~ msgid "6.30"
+#~ msgstr "6.30"
+
+#, python-format
+#~ msgid "6:00"
+#~ msgstr "6:00"
+
+#, python-format
+#~ msgid "6:30"
+#~ msgstr "6:30"
+
+#, python-format
+#~ msgid "7.30"
+#~ msgstr "7.30"
+
+#, python-format
+#~ msgid "7:00"
+#~ msgstr "7:00"
+
+#, python-format
+#~ msgid "7:30"
+#~ msgstr "7:30"
+
+#, python-format
+#~ msgid "8.30"
+#~ msgstr "8.30"
+
+#, python-format
+#~ msgid "8:00"
+#~ msgstr "8:00"
+
+#, python-format
+#~ msgid "8:30"
+#~ msgstr "8:30"
+
+#, python-format
+#~ msgid "9.30"
+#~ msgstr "9.30"
+
+#, python-format
+#~ msgid "9:00"
+#~ msgstr "9:00"
+
+#, python-format
+#~ msgid "9:30"
+#~ msgstr "9:30"
+
+#~ msgid "<span itemprop=\"name\">Deco Addict</span>"
+#~ msgstr "<span itemprop=\"name\">Deco Addict</span>"

@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* purchase_requisition
-# 
+#
 # Translators:
 # Leandro Noijovich <eliel.sorcerer@gmail.com>, 2023
 # Fishfur A Banter <fishfurbanter@gmail.com>, 2023
@@ -24,50 +24,26 @@
 # Ha Ketem <haketem@gmail.com>, 2024
 # or balmas, 2025
 # Yoram Lavi, 2025
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 20:36+0000\n"
+"POT-Creation-Date: 2026-04-03 18:39+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
 "Last-Translator: Yoram Lavi, 2025\n"
 "Language-Team: Hebrew (https://app.transifex.com/odoo/teams/41243/he/)\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: he\n"
-"Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;\n"
-
-#. module: purchase_requisition
-#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisition_document
-msgid "$50"
-msgstr "$50"
+"Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % "
+"1 == 0) ? 1: 2;\n"
 
 #. module: purchase_requisition
 #: model:ir.actions.report,print_report_name:purchase_requisition.action_report_purchase_requisitions
 msgid "'Purchase Agreement - %s' % (object.name)"
 msgstr "'הסכם רכש - %s' % (object.name)"
-
-#. module: purchase_requisition
-#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisition_document
-msgid "2023-08-11"
-msgstr "11/08/2023"
-
-#. module: purchase_requisition
-#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisition_document
-msgid "2023-08-15"
-msgstr "15/08/2023"
-
-#. module: purchase_requisition
-#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisition_document
-msgid "2023-08-20"
-msgstr "20-08-2023"
-
-#. module: purchase_requisition
-#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisition_document
-msgid "2023-09-15"
-msgstr "15/09/2023"
 
 #. module: purchase_requisition
 #: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisition_document
@@ -358,8 +334,8 @@ msgid ""
 "Conversion between Units of Measure can only occur if they belong to the "
 "same category. The conversion will be made based on the ratios."
 msgstr ""
-"המרה בין יחידות מידה יכולה להתרחש רק אם הן שייכות לאותה קטגוריה. ההמרה תיעשה"
-" על בסיס היחס בניהן."
+"המרה בין יחידות מידה יכולה להתרחש רק אם הן שייכות לאותה קטגוריה. ההמרה תיעשה "
+"על בסיס היחס בניהן."
 
 #. module: purchase_requisition
 #: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_create_alternative__copy_products
@@ -375,13 +351,17 @@ msgstr "צור אלטרנטיבה"
 #. module: purchase_requisition
 #: model_terms:ir.ui.view,arch_db:purchase_requisition.purchase_order_form_inherit
 msgid ""
-"Create a call for tender by adding alternative requests for quotation to different vendors.\n"
-"                            Make your choice by selecting the best combination of lead time, OTD and/or total amount.\n"
-"                            By comparing product lines you can also decide to order some products from one vendor and others from another vendor."
+"Create a call for tender by adding alternative requests for quotation to "
+"different vendors.\n"
+"                            Make your choice by selecting the best "
+"combination of lead time, OTD and/or total amount.\n"
+"                            By comparing product lines you can also decide "
+"to order some products from one vendor and others from another vendor."
 msgstr ""
 "צור מכרז ע\"י הוספת בקשות להצעות מחיר אלטרנטיביות לספקים שונים.\n"
 "וודא התחשבות בשילוב הטוב ביותר של מחיר, זמן אספקה ושיעור הגעה היסטורי.\n"
-"לאחר השוואה של שורות המוצרים תוכל לבחור להזמין חלק מהמוצרים מספק אחד וחלק מספק אחר. "
+"לאחר השוואה של שורות המוצרים תוכל לבחור להזמין חלק מהמוצרים מספק אחד וחלק "
+"מספק אחר. "
 
 #. module: purchase_requisition
 #. odoo-python
@@ -496,11 +476,13 @@ msgstr "פונט מדהים למשל עבור משימות fa-tasks"
 #: model_terms:ir.actions.act_window,help:purchase_requisition.action_purchase_requisition
 msgid ""
 "For a blanket order, you can record an agreement for a specific period\n"
-"            (e.g. a year) and you order products within this agreement to benefit\n"
+"            (e.g. a year) and you order products within this agreement to "
+"benefit\n"
 "            from the negotiated prices."
 msgstr ""
 "בהזמנת מסגרת (Blanket Order), ניתן לתעד הסכם עם הספק לתקופה מסוימת מראש \n"
-"           (לדוגמה, שנה) מזמינים מוצרים במסגרת הסכם זה בתנאים שסוכמו מראש לאורך כל תקופת ההסכם \n"
+"           (לדוגמה, שנה) מזמינים מוצרים במסגרת הסכם זה בתנאים שסוכמו מראש "
+"לאורך כל תקופת ההסכם \n"
 "            על פי המחירים במשא ומתן."
 
 #. module: purchase_requisition
@@ -560,14 +542,14 @@ msgstr "אם מסומן, בחלק מההודעות קיימת שגיאת משל�
 #: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition_create_alternative__creation_blocked
 msgid ""
 "If the chosen vendor or if any of the products in the original PO have a "
-"blocking warning then we prevent creation of alternative PO. This is because"
-" normally these fields are cleared w/warning message within form view, but "
-"we cannot recreate that in this case."
+"blocking warning then we prevent creation of alternative PO. This is because "
+"normally these fields are cleared w/warning message within form view, but we "
+"cannot recreate that in this case."
 msgstr ""
 "אם הספק שנבחר או אם לאחד מהמוצרים בהזמנת הרכש המקורית יש אזהרת חסימה, אנו "
-"מונעים את יצירת הזמנת הרכש החלופית. זאת משום שבדרך כלל שדות אלו מתנקים clear"
-" with warningומוצגת הודעת אזהרה במסך הטופס, אך במקרה זה אין לנו אפשרות לשחזר"
-" את ההתנהגות הזו."
+"מונעים את יצירת הזמנת הרכש החלופית. זאת משום שבדרך כלל שדות אלו מתנקים clear "
+"with warningומוצגת הודעת אזהרה במסך הטופס, אך במקרה זה אין לנו אפשרות לשחזר "
+"את ההתנהגות הזו."
 
 #. module: purchase_requisition
 #: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition_create_alternative__copy_products
@@ -956,9 +938,12 @@ msgstr "בחר רק בקשה אחת להצעת מחיר (בלעדית)"
 #. module: purchase_requisition
 #: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition_type__exclusive
 msgid ""
-"Select only one RFQ (exclusive):  when a purchase order is confirmed, cancel the remaining purchase order.\n"
+"Select only one RFQ (exclusive):  when a purchase order is confirmed, cancel "
+"the remaining purchase order.\n"
 "\n"
-"                    Select multiple RFQ (non-exclusive): allows multiple purchase orders. On confirmation of a purchase order it does not cancel the remaining orders"
+"                    Select multiple RFQ (non-exclusive): allows multiple "
+"purchase orders. On confirmation of a purchase order it does not cancel the "
+"remaining orders"
 msgstr ""
 
 #. module: purchase_requisition
@@ -969,8 +954,7 @@ msgstr "רצף"
 #. module: purchase_requisition
 #: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition_type__active
 msgid ""
-"Set active to false to hide the Purchase Agreement Types without removing "
-"it."
+"Set active to false to hide the Purchase Agreement Types without removing it."
 msgstr ""
 
 #. module: purchase_requisition
@@ -1047,8 +1031,7 @@ msgstr "מחירון ספק"
 #: model:ir.model,name:purchase_requisition.model_purchase_order_group
 msgid "Technical model to group PO for call to tenders"
 msgstr ""
-"מודל טכני שמאפשר קיבוץ של דרישות רכש או שורות הזמנה מרובות תחת קול קורא אחד."
-" "
+"מודל טכני שמאפשר קיבוץ של דרישות רכש או שורות הזמנה מרובות תחת קול קורא אחד. "
 
 #. module: purchase_requisition
 #: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
@@ -1071,9 +1054,9 @@ msgstr "הזמנת הרכש המקורית שעבורה נוצרת הזמנת ה
 #: code:addons/purchase_requisition/wizard/purchase_requisition_create_alternative.py:0
 #, python-format
 msgid ""
-"The vendor you have selected or at least one of the products you are copying"
-" from the original order has a blocking warning on it and cannot be selected"
-" to create an alternative."
+"The vendor you have selected or at least one of the products you are copying "
+"from the original order has a blocking warning on it and cannot be selected "
+"to create an alternative."
 msgstr ""
 "הספק שבחרת, או לפחות אחד מהמוצרים שאתה מנסה להעתיק מההזמנה המקורית, כולל "
 "אזהרה חוסמת – ולכן לא ניתן לבחור בו לצורך יצירת חלופה."
@@ -1099,7 +1082,6 @@ msgstr ""
 #. module: purchase_requisition
 #. odoo-python
 #: code:addons/purchase_requisition/wizard/purchase_requisition_create_alternative.py:0
-#: code:addons/purchase_requisition/wizard/purchase_requisition_create_alternative.py:0
 #, python-format
 msgid "This is a blocking warning!\n"
 msgstr "זוהי אזהרה חוסמת!\n"
@@ -1111,7 +1093,8 @@ msgstr "זוהי אזהרה חוסמת!\n"
 msgid ""
 "To close this purchase requisition, cancel related Requests for Quotation.\n"
 "\n"
-"Imagine the mess if someone confirms these duplicates: double the order, double the trouble :)"
+"Imagine the mess if someone confirms these duplicates: double the order, "
+"double the trouble :)"
 msgstr ""
 "כדי לסגור את דרישת הרכש הזו, יש לבטל את בקשות הצעות המחיר הקשורות איליה.\n"
 "\n"
@@ -1229,8 +1212,8 @@ msgstr "מה בהקשר לבקשה להצעת מחיר חלופית ?"
 #. module: purchase_requisition
 #: model:ir.model.fields,help:purchase_requisition.field_purchase_order__has_alternatives
 msgid ""
-"Whether or not this purchase order is linked to another purchase order as an"
-" alternative."
+"Whether or not this purchase order is linked to another purchase order as an "
+"alternative."
 msgstr ""
 "האם הזמנת רכש זו מהווה חלופה להזמנת רכש אחרת, או שאינה מקושרת להזמנות אחרת"
 
@@ -1261,8 +1244,6 @@ msgstr "אתה לא יכול לאשר הסכם '%s' מכיוון שאין שור
 #. module: purchase_requisition
 #. odoo-python
 #: code:addons/purchase_requisition/models/purchase_requisition.py:0
-#: code:addons/purchase_requisition/models/purchase_requisition.py:0
-#: code:addons/purchase_requisition/models/purchase_requisition.py:0
 #, python-format
 msgid "You cannot confirm the blanket order without price."
 msgstr "אתה לא יכול לאשר את הסכם המסגרת ללא מחיר."
@@ -1278,3 +1259,18 @@ msgstr "אתה לא יכול לאשר את הסכם המסגרת ללא כמות
 #: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
 msgid "e.g. PO0025"
 msgstr "למשל PO0025"
+
+#~ msgid "$50"
+#~ msgstr "$50"
+
+#~ msgid "2023-08-11"
+#~ msgstr "11/08/2023"
+
+#~ msgid "2023-08-15"
+#~ msgstr "15/08/2023"
+
+#~ msgid "2023-08-20"
+#~ msgstr "20-08-2023"
+
+#~ msgid "2023-09-15"
+#~ msgstr "15/09/2023"

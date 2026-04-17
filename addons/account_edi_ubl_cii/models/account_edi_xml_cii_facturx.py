@@ -24,6 +24,8 @@ class AccountEdiXmlCII(models.AbstractModel):
     _description = "Factur-x/XRechnung CII 2.2.0"
 
     def _export_invoice_filename(self, invoice):
+        if invoice.commercial_partner_id.country_code == 'DE':
+            return f"{invoice.name.replace('/', '_')}_zugferd.xml"
         return f"{invoice.name.replace('/', '_')}_factur_x.xml"
 
     def _export_invoice_ecosio_schematrons(self):
@@ -296,6 +298,8 @@ class AccountEdiXmlCII(models.AbstractModel):
             bank_detail_node.findtext('{*}PayeePartyCreditorFinancialAccount/{*}IBANID')
             or bank_detail_node.findtext('{*}PayeePartyCreditorFinancialAccount/{*}ProprietaryID')
             for bank_detail_node in bank_detail_nodes
+            if bank_detail_node.findtext('{*}PayeePartyCreditorFinancialAccount/{*}IBANID')
+            or bank_detail_node.findtext('{*}PayeePartyCreditorFinancialAccount/{*}ProprietaryID')
         ]
 
         if bank_details:
@@ -363,6 +367,17 @@ class AccountEdiXmlCII(models.AbstractModel):
         line_nodes = tree.findall('./{*}SupplyChainTradeTransaction/{*}IncludedSupplyChainTradeLineItem')
         if line_nodes is not None:
             for invl_el in line_nodes:
+                # Avoid creating a line if its LineExtensionAmount is missing/empty/zero.
+                line_total_node = invl_el.find('./{*}SpecifiedLineTradeSettlement/{*}SpecifiedTradeSettlementLineMonetarySummation/{*}LineTotalAmount')
+                if line_total_node is None or not (line_total_node.text and line_total_node.text.strip()):
+                    continue
+                try:
+                    if float(line_total_node.text) == 0:
+                        continue
+                except (ValueError, TypeError):
+                    # If the value is not a valid number, skip creating the line.
+                    continue
+
                 invoice_line = invoice.invoice_line_ids.create({'move_id': invoice.id})
                 invl_logs = self._import_fill_invoice_line_form(invoice.journal_id, invl_el, invoice, invoice_line, qty_factor)
                 logs += invl_logs

@@ -3,13 +3,14 @@
 # * l10n_ar
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Fernanda Alvarez (mfar)" <mfar@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-01 07:27+0000\n"
-"PO-Revision-Date: 2025-12-01 15:09+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-04-03 19:05+0000\n"
+"PO-Revision-Date: 2026-02-28 08:03+0000\n"
+"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-17-l10n/l10n_ar/es_419/>\n"
 "Language: es_419\n"
@@ -124,26 +125,6 @@ msgstr "08 - Percepciones por impuestos municipales"
 #: model:ir.model.fields.selection,name:l10n_ar.selection__account_tax_group__l10n_ar_tribute_afip_code__09
 msgid "09 - Other Perceptions"
 msgstr "09 - Otras percepciones"
-
-#. module: l10n_ar
-#: model:ir.model.fields.selection,name:l10n_ar.selection__account_tax_group__l10n_ar_vat_afip_code__4
-msgid "10.5%"
-msgstr "10,5%"
-
-#. module: l10n_ar
-#: model:ir.model.fields.selection,name:l10n_ar.selection__account_tax_group__l10n_ar_vat_afip_code__9
-msgid "2,5%"
-msgstr "2,5%"
-
-#. module: l10n_ar
-#: model:ir.model.fields.selection,name:l10n_ar.selection__account_tax_group__l10n_ar_vat_afip_code__5
-msgid "21%"
-msgstr "21%"
-
-#. module: l10n_ar
-#: model:ir.model.fields.selection,name:l10n_ar.selection__account_tax_group__l10n_ar_vat_afip_code__6
-msgid "27%"
-msgstr "27%"
 
 #. module: l10n_ar
 #: model:ir.model.fields.selection,name:l10n_ar.selection__account_tax_group__l10n_ar_tribute_afip_code__99
@@ -2634,7 +2615,7 @@ msgstr "COMPROBANTES M DEL ANEXO I, APARTADO A, INC. F), R.G. Nº 1415"
 #: code:addons/l10n_ar/models/template_ar_base.py:0
 #, python-format
 msgid "Ventas Preimpreso"
-msgstr ""
+msgstr "Ventas Preimpreso"
 
 #. module: l10n_ar
 #: model:l10n_latam.document.type,name:l10n_ar.dc_cptag
@@ -2717,7 +2698,7 @@ msgstr "Cero"
 #: code:addons/l10n_ar/models/l10n_latam_document_type.py:0
 #, python-format
 msgid "is not a valid value for"
-msgstr "no es un valor valido para"
+msgstr "no es un valor válido para"
 
 #. module: l10n_ar
 #: model:l10n_latam.identification.type,description:l10n_ar.it_ET
@@ -2729,3 +2710,15 @@ msgstr "en trámite"
 #: model_terms:ir.ui.view,arch_db:l10n_ar.view_move_form
 msgid "to"
 msgstr "al"
+
+#~ msgid "10.5%"
+#~ msgstr "10,5%"
+
+#~ msgid "2,5%"
+#~ msgstr "2,5%"
+
+#~ msgid "21%"
+#~ msgstr "21%"
+
+#~ msgid "27%"
+#~ msgstr "27%"

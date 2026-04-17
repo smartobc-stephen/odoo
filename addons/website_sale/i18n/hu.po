@@ -24,13 +24,15 @@
 # Pammer József, 2025
 # "Larissa Manderfeld (lman)" <lman@odoo.com>, 2025.
 # Nagy Géza <geza.nagy@oregional.hu>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Sarbó Gergely <sarbo.gergely@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-12 02:56+0000\n"
-"PO-Revision-Date: 2025-11-27 11:23+0000\n"
-"Last-Translator: Nagy Géza <geza.nagy@oregional.hu>\n"
+"POT-Creation-Date: 2026-04-03 18:38+0000\n"
+"PO-Revision-Date: 2026-04-07 09:24+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hungarian <https://translate.odoo.com/projects/odoo-17/"
 "website_sale/hu/>\n"
 "Language: hu\n"
@@ -38,7 +40,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.products
@@ -88,29 +90,14 @@ msgid "'. Showing results for '"
 msgstr ""
 
 #. module: website_sale
-#: model:ir.model.fields.selection,name:website_sale.selection__website__product_page_image_width__100_pc
-msgid "100 %"
-msgstr "100 %"
-
-#. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "100 percent"
 msgstr "100 százalék"
 
 #. module: website_sale
-#: model:ir.model.fields.selection,name:website_sale.selection__website__product_page_image_width__50_pc
-msgid "50 %"
-msgstr "50 %"
-
-#. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "50 percent"
 msgstr "50 százalék"
-
-#. module: website_sale
-#: model:ir.model.fields.selection,name:website_sale.selection__website__product_page_image_width__66_pc
-msgid "66 %"
-msgstr "66 %"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -136,7 +123,7 @@ msgstr "<b>Közlemény:</b>"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.filter_products_price
 msgid "<b>Price Range</b>"
-msgstr ""
+msgstr "<b>Ár</b>"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.o_wsale_offcanvas
@@ -302,15 +289,6 @@ msgstr ""
 "<span class=\"d-md-none fa fa-shopping-cart\"/>\n"
 "                            <span class=\"d-none d-md-inline\">Kosárba tesz</"
 "span>"
-
-#. module: website_sale
-#: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
-msgid ""
-"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
-"specific.\" groups=\"website.group_multi_website\"/>"
-msgstr ""
-"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
-"specific.\" groups=\"website.group_multi_website\"/>"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -758,7 +736,7 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.address
 msgid "Apartment, suite, etc."
-msgstr ""
+msgstr "Épület, emelet, ajtó, stb."
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.coupon_form
@@ -879,7 +857,7 @@ msgstr "Számlázás"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.address
 msgid "Billing address"
-msgstr ""
+msgstr "Számlázási cím"
 
 #. module: website_sale
 #. odoo-python
@@ -1130,7 +1108,7 @@ msgstr "Város"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.o_wsale_offcanvas
 msgid "Clear Filters"
-msgstr ""
+msgstr "Szűrők nélkül"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.products
@@ -1213,7 +1191,7 @@ msgstr "Vállalat neve"
 #: model:ir.model.fields,field_description:website_sale.field_product_product__compare_list_price
 #: model:ir.model.fields,field_description:website_sale.field_product_template__compare_list_price
 msgid "Compare to Price"
-msgstr ""
+msgstr "Összehasonlító ár"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_res_config_settings__group_product_price_comparison
@@ -1615,7 +1593,7 @@ msgstr "Elvetés"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.coupon_form
 msgid "Discount code..."
-msgstr ""
+msgstr "Kuponkód..."
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
@@ -1652,7 +1630,7 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.product_template_form_view
 msgid "Displayed in bottom of product pages"
-msgstr ""
+msgstr "A terméklap alján kerülnek bemutatásra"
 
 #. module: website_sale
 #: model:ir.model.fields,help:website_sale.field_product_product__base_unit_name
@@ -1733,7 +1711,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model,name:website_sale.model_website_sale_extra_field
 msgid "E-Commerce Extra Info Shown on product page"
-msgstr ""
+msgstr "Webshop extra információk a terméklapon megjelenítve"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.product_document_form
@@ -1854,7 +1832,7 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.extra_info
 msgid "Extra info"
-msgstr ""
+msgstr "Extra információk"
 
 #. module: website_sale
 #. odoo-python
@@ -1981,7 +1959,7 @@ msgstr "Rejtett"
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website__prevent_zero_price_sale
 msgid "Hide 'Add To Cart' when price = 0"
-msgstr ""
+msgstr "Rejtse el a 'Kosárba' gombot, ha az ár 0."
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
@@ -2027,6 +2005,7 @@ msgstr "Ha be van jelölve, akkor néhány üzenetnél kézbesítési hiba lépe
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
 msgid "If product price equals 0, replace 'Add to Cart' by 'Contact us'."
 msgstr ""
+"Ha a termék ára 0, cserélje le a 'Kosárba' gombot a 'Kapcsolat' feliratra."
 
 #. module: website_sale
 #: model:mail.template,description:website_sale.mail_template_sale_cart_recovery
@@ -2496,12 +2475,12 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.products
 msgid "No product defined"
-msgstr ""
+msgstr "Nem található termék"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.products
 msgid "No product defined in this category."
-msgstr ""
+msgstr "Nem található termék ebben a kategóriában."
 
 #. module: website_sale
 #: model_terms:ir.actions.act_window,help:website_sale.website_sale_visitor_product_action
@@ -3787,7 +3766,7 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.address
 msgid "Street and Number"
-msgstr ""
+msgstr "Utca és házszám"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.payment
@@ -3817,17 +3796,17 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "Suggested Accessories"
-msgstr ""
+msgstr "Javasolt kiegészítők"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.suggested_products_list
 msgid "Suggested accessories"
-msgstr ""
+msgstr "Javasolt kiegészítők"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.product_template_form_view
 msgid "Suggested accessories in the eCommerce cart"
-msgstr ""
+msgstr "Javasolt kiegészítők a kosárban"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -3857,7 +3836,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model.fields,help:website_sale.field_sale_order__amount_delivery
 msgid "Tax included or excluded depending on the website configuration."
-msgstr ""
+msgstr "Adóval vagy adó nélkül a weboldal beállításától függően."
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.total
@@ -4177,6 +4156,11 @@ msgid "VAT Included"
 msgstr ""
 
 #. module: website_sale
+#: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
+msgid "Values set here are website-specific."
+msgstr ""
+
+#. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.s_add_to_cart_options
 msgid "Variant"
 msgstr "Változat"
@@ -4408,7 +4392,7 @@ msgstr "Weboldalak"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
 msgid "What should be done on \"Add to Cart\"?"
-msgstr ""
+msgstr "Mi történjen a „Kosárba” gomb megnyomásakor?"
 
 #. module: website_sale
 #: model:ir.model.fields,help:website_sale.field_product_tag__visible_on_ecommerce
@@ -4599,7 +4583,7 @@ msgstr "E-kereskedelem kategóriák"
 #: model:ir.model.fields,field_description:website_sale.field_product_product__description_ecommerce
 #: model:ir.model.fields,field_description:website_sale.field_product_template__description_ecommerce
 msgid "eCommerce Description"
-msgstr ""
+msgstr "Webáruház leírás"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.attribute_tree_view
@@ -4677,3 +4661,24 @@ msgstr "felhasználási feltételeket"
 #: model_terms:ir.ui.view,arch_db:website_sale.confirmation
 msgid "to follow your order."
 msgstr "a rendelés követéséhez."
+
+#. module: website_sale
+#: model_terms:ir.ui.view,arch_db:website_sale.checkout_layout
+msgid "x"
+msgstr ""
+
+#~ msgid "100 %"
+#~ msgstr "100 %"
+
+#~ msgid "50 %"
+#~ msgstr "50 %"
+
+#~ msgid "66 %"
+#~ msgstr "66 %"
+
+#~ msgid ""
+#~ "<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+#~ "specific.\" groups=\"website.group_multi_website\"/>"
+#~ msgstr ""
+#~ "<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+#~ "specific.\" groups=\"website.group_multi_website\"/>"

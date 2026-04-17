@@ -9,14 +9,15 @@
 # Bohdan Lisnenko, 2025
 # Wil Odoo, 2025
 # Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2025
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# Odoo Translation Bot <c3p@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-04 18:36+0000\n"
-"PO-Revision-Date: 2025-12-06 17:01+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-04-03 18:38+0000\n"
+"PO-Revision-Date: 2026-04-09 10:43+0000\n"
+"Last-Translator: Odoo Translation Bot <c3p@odoo.com>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-17/"
 "account/uk/>\n"
 "Language: uk\n"
@@ -24,11 +25,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 "
-"? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && "
-"(n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && "
-"(n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 ))"
-" ? 2: 3);\n"
-"X-Generator: Weblate 5.14.3\n"
+"? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
+"14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
+"100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: account
 #. odoo-python
@@ -331,19 +331,9 @@ msgid "... (%s other)"
 msgstr "... (%s інші)"
 
 #. module: account
-#: model_terms:ir.ui.view,arch_db:account.tax_groups_totals
-msgid "1.05"
-msgstr "1.05"
-
-#. module: account
 #: model:account.payment.term,name:account.account_payment_term_30_days_end_month_the_10
 msgid "10 Days after End of Next Month"
 msgstr "10 днів після кінця наступного місяця"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "100.0"
-msgstr "100.0"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.report_payment_receipt_document
@@ -351,95 +341,14 @@ msgid "100.00 USD"
 msgstr "100.00 USD"
 
 #. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "1000.0"
-msgstr "1000.0"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "11.05"
-msgstr "11.05"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "12345"
-msgstr "12345"
-
-#. module: account
 #: model:account.payment.term,name:account.account_payment_term_15days
 msgid "15 Days"
 msgstr "15 днів"
 
 #. module: account
-#: model:account.tax,name:account.1_purchase_tax_template
-#: model:account.tax,name:account.1_sale_tax_template
-msgid "15%"
-msgstr "15%"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "1500.0"
-msgstr "1500.0"
-
-#. module: account
 #: model:account.payment.term,name:account.account_payment_term_30days_early_discount
 msgid "2/7 Net 30"
 msgstr "2/7 чистих 30"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "20.00"
-msgstr "20.00"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "2021-09-19"
-msgstr "2021-09-19"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_payment_receipt_document
-msgid "2023-01-01"
-msgstr "2023-01-01"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_payment_receipt_document
-msgid "2023-01-05"
-msgstr "2023-01-05"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "2023-08-11"
-msgstr "2023-08-11"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "2023-08-15"
-msgstr "2023-08-15"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "2023-08-31"
-msgstr "2023-08-31"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "2023-09-12"
-msgstr "2023-09-12"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "2023-09-25"
-msgstr "2023-09-25"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "2023-10-31"
-msgstr "2023-10-31"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "2024-01-01"
-msgstr "2024-01-01"
 
 #. module: account
 #: model:account.payment.term,name:account.account_payment_term_21days
@@ -457,18 +366,6 @@ msgid "25.00 USD"
 msgstr "25.00 USD"
 
 #. module: account
-#: model_terms:ir.ui.view,arch_db:account.document_tax_totals_company_currency_template
-#: model_terms:ir.ui.view,arch_db:account.document_tax_totals_template
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "27.00"
-msgstr "27.00"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "3.00"
-msgstr "3.00"
-
-#. module: account
 #: model:account.payment.term,name:account.account_payment_term_30days
 msgid "30 Days"
 msgstr "30 днів"
@@ -484,24 +381,6 @@ msgid "30% Now, Balance 60 Days"
 msgstr "30% зараз, баланс 60 днів"
 
 #. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "30.00"
-msgstr "30.00"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.document_tax_totals_company_currency_template
-#: model_terms:ir.ui.view,arch_db:account.document_tax_totals_template
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "31.05"
-msgstr "31.05"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.document_tax_totals_company_currency_template
-#: model_terms:ir.ui.view,arch_db:account.tax_groups_totals
-msgid "4.05"
-msgstr "4.05"
-
-#. module: account
 #: model:account.payment.term,name:account.account_payment_term_45days
 msgid "45 Days"
 msgstr "45 днів"
@@ -515,16 +394,6 @@ msgstr "50 USD"
 #: model_terms:ir.ui.view,arch_db:account.report_payment_receipt_document
 msgid "50.00 EUR"
 msgstr "50.00 EUR"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "534677881234"
-msgstr "534677881234"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "9.00"
-msgstr "9.00"
 
 #. module: account
 #. odoo-python
@@ -1044,17 +913,6 @@ msgstr "<span class=\"o_stat_text\">Узгоджені елементи</span>"
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_form
 msgid "<span class=\"o_stat_text\">Transaction</span>"
 msgstr "<span class=\"o_stat_text\">Транзакція</span>"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.view_move_form
-msgid ""
-"<span class=\"oe_inline o_form_label mx-3\" "
-"groups=\"base.group_multi_currency\" invisible=\"move_type == 'entry'\"> in "
-"</span>"
-msgstr ""
-"<span class=\"oe_inline o_form_label mx-3\" "
-"groups=\"base.group_multi_currency\" invisible=\"move_type == 'entry'\"> в </"
-"span>"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_partner_bank_form_inherit_account
@@ -3054,6 +2912,11 @@ msgid "Attachments"
 msgstr "Прикріпплення"
 
 #. module: account
+#: model:ir.model.fields,field_description:account.field_account_move_send__attachments_not_supported
+msgid "Attachments Not Supported"
+msgstr "Прикріплення не підтримуються"
+
+#. module: account
 #: model:ir.model.fields,field_description:account.field_account_report_expression__auditable
 msgid "Auditable"
 msgstr "Піддається аудиту"
@@ -3401,6 +3264,13 @@ msgid "Bank of odoo"
 msgstr "Банк odoo"
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid "Bank settings"
+msgstr "Налаштування банку"
+
+#. module: account
 #: model:ir.model,name:account.model_account_setup_bank_manual_config
 msgid "Bank setup manual config"
 msgstr "Ручні налаштування банку"
@@ -3649,6 +3519,13 @@ msgid ""
 msgstr ""
 "Знімаючи відмітку з активного поля ви можете приховати ІНКОТЕРМ який ви не "
 "використовуєте."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/wizard/account_automatic_entry_wizard.py:0
+#, python-format
+msgid "C"
+msgstr ""
 
 #. module: account
 #. odoo-python
@@ -5315,6 +5192,13 @@ msgid "Cut-Off"
 msgstr "Вирізати"
 
 #. module: account
+#. odoo-python
+#: code:addons/account/wizard/account_automatic_entry_wizard.py:0
+#, python-format
+msgid "D"
+msgstr ""
+
+#. module: account
 #: model:account.incoterms,name:account.incoterm_DAP
 msgid "DELIVERED AT PLACE"
 msgstr "DELIVERED AT PLACE"
@@ -5914,6 +5798,11 @@ msgstr "Відображення полів псевдонімів"
 #: model:ir.model.fields,field_description:account.field_account_accrued_orders_wizard__display_amount
 msgid "Display Amount"
 msgstr "Відобразити суму"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_move_send__display_attachments_widget
+msgid "Display Attachments Widget"
+msgstr "Віджет відображення прикріплення"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_line__display_inactive_currency_warning
@@ -6645,6 +6534,11 @@ msgstr "Рахунок нарахувань витрат"
 #: model_terms:ir.ui.view,arch_db:account.view_account_search
 msgid "Expenses"
 msgstr "Витрати"
+
+#. module: account
+#: model:ir.actions.server,name:account.action_move_export_zip
+msgid "Export ZIP"
+msgstr "Експорт ZIP"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_report_column__expression_label
@@ -8989,6 +8883,7 @@ msgstr "Журнал:"
 #: model:ir.model.fields,field_description:account.field_account_report__filter_journals
 #: model:ir.ui.menu,name:account.menu_action_account_journal_form
 #: model:ir.ui.menu,name:account.menu_finance_entries_accounting_miscellaneous
+#: model_terms:ir.ui.view,arch_db:account.view_account_move_line_filter
 msgid "Journals"
 msgstr "Журнали"
 
@@ -10277,6 +10172,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:account.field_account_fiscal_position__note
 msgid "Notes"
 msgstr "Примітки"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid "Nothing to export."
+msgstr "Немає нічого для експорту."
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__res_company__fiscalyear_last_month__11
@@ -14440,6 +14342,17 @@ msgstr ""
 "(%s)."
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid ""
+"The bank account of your company is not trusted. Please ask an admin or "
+"someone with approval rights to check it."
+msgstr ""
+"Банківський рахунок вашої компанії не є надійним. Будь ласка, зверніться до "
+"адміністратора або особи з правами схвалення, щоб перевірити його."
+
+#. module: account
 #: model:ir.model.fields,help:account.field_account_move_line__statement_id
 msgid "The bank statement used for bank reconciliation"
 msgstr "Банківська виписка, використовувана для звірки"
@@ -14499,6 +14412,19 @@ msgid ""
 "The combination of reference model and reference type on the journal is not "
 "implemented"
 msgstr "Поєднання моделі та типу референсу в журналі не реалізовано"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid ""
+"The company bank account (%(account_number)s) linked to this invoice is not "
+"trusted. Go to the Bank Settings, double-check that it is yours or correct "
+"the number, and click on Send Money to trust it."
+msgstr ""
+"Банківський рахунок компанії (%(account_number)s) привʼязаний до цього "
+"рахунку ненадійний. Перейдіть до налаштувань банку, ще раз перевірте, чи це "
+"ваш номер, або виправте його, і натисніть Надіслати гроші, щоб довіряти йому."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_tax_repartition_line__company_id
@@ -17010,6 +16936,13 @@ msgstr ""
 
 #. module: account
 #. odoo-python
+#: code:addons/account/wizard/account_move_send.py:0
+#, python-format
+msgid "You can only generate sales documents."
+msgstr "Ви можете лише створювати документи продажу."
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/account_move_line.py:0
 #, python-format
 msgid "You can only reconcile posted entries."
@@ -17187,6 +17120,13 @@ msgstr ""
 "\n"
 "Подумайте про це як про захист дебіторської заборгованості клієнтів; ваш "
 "фінансовий директор буде вдячний :)"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/wizard/account_move_send.py:0
+#, python-format
+msgid "You can't generate invoices that are not posted."
+msgstr "Ви не можете створювати рахунки-фактури, які не опубліковані."
 
 #. module: account
 #. odoo-python
@@ -17588,6 +17528,13 @@ msgstr "Ви не можете опублікувати запис в зарах
 
 #. module: account
 #. odoo-python
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid "You cannot post an entry with an archived analytic account: %s"
+msgstr "Ви не можете опублікувати запис з архівованим аналітичним рахунком: %s"
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/res_currency.py:0
 #, python-format
 msgid ""
@@ -17661,8 +17608,9 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/models/account_move.py:0
 #, python-format
-msgid "You cannot switch the type of a document which has been posted once."
-msgstr "Ви не можете змінити тип документа, який був опублікований один раз."
+msgid ""
+"You cannot switch the type of a document with an existing sequence number."
+msgstr "Ви не можете змінити тип документа з існуючим порядковим номером."
 
 #. module: account
 #. odoo-python
@@ -17939,6 +17887,13 @@ msgid "close"
 msgstr "закрити"
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid "documents"
+msgstr "документи"
+
+#. module: account
 #: model_terms:ir.ui.view,arch_db:account.report_invoice_document
 msgid "due if paid before"
 msgstr "належним чином, якщо сплачено раніше"
@@ -18052,6 +18007,11 @@ msgstr "було застосовано."
 #: model_terms:ir.ui.view,arch_db:account.view_account_position_form
 msgid "here"
 msgstr "тут"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_move_form
+msgid "in"
+msgstr "в"
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_reconcile_model__payment_tolerance_type__fixed_amount
@@ -18341,6 +18301,104 @@ msgid ""
 msgstr ""
 "{{ object.company_id.name }} Квитанція про оплату (Ref {{ object.name or 'n/"
 "a' }})"
+
+#~ msgid "1.05"
+#~ msgstr "1.05"
+
+#~ msgid "100.0"
+#~ msgstr "100.0"
+
+#~ msgid "1000.0"
+#~ msgstr "1000.0"
+
+#~ msgid "11.05"
+#~ msgstr "11.05"
+
+#~ msgid "12345"
+#~ msgstr "12345"
+
+#~ msgid "15%"
+#~ msgstr "15%"
+
+#~ msgid "1500.0"
+#~ msgstr "1500.0"
+
+#~ msgid "20.00"
+#~ msgstr "20.00"
+
+#~ msgid "2021-09-19"
+#~ msgstr "2021-09-19"
+
+#~ msgid "2023-01-01"
+#~ msgstr "2023-01-01"
+
+#~ msgid "2023-01-05"
+#~ msgstr "2023-01-05"
+
+#~ msgid "2023-08-11"
+#~ msgstr "2023-08-11"
+
+#~ msgid "2023-08-15"
+#~ msgstr "2023-08-15"
+
+#~ msgid "2023-08-31"
+#~ msgstr "2023-08-31"
+
+#~ msgid "2023-09-12"
+#~ msgstr "2023-09-12"
+
+#~ msgid "2023-09-25"
+#~ msgstr "2023-09-25"
+
+#~ msgid "2023-10-31"
+#~ msgstr "2023-10-31"
+
+#~ msgid "2024-01-01"
+#~ msgstr "2024-01-01"
+
+#~ msgid "27.00"
+#~ msgstr "27.00"
+
+#~ msgid "3.00"
+#~ msgstr "3.00"
+
+#~ msgid "30.00"
+#~ msgstr "30.00"
+
+#~ msgid "31.05"
+#~ msgstr "31.05"
+
+#~ msgid "4.05"
+#~ msgstr "4.05"
+
+#~ msgid "534677881234"
+#~ msgstr "534677881234"
+
+#~ msgid "9.00"
+#~ msgstr "9.00"
+
+#, python-format
+#~ msgid ""
+#~ "The company bank account linked to this invoice is not trusted, please "
+#~ "double-check and trust it before confirming, or remove it"
+#~ msgstr ""
+#~ "Банківський рахунок компанії, пов’язаний із цим рахунком-фактурою, не є "
+#~ "надійним. Будь ласка, перевірте ще раз і довірте йому перед "
+#~ "підтвердженням або видаліть його."
+
+#~ msgid ""
+#~ "<span class=\"oe_inline o_form_label mx-3\" "
+#~ "groups=\"base.group_multi_currency\" invisible=\"move_type == 'entry'\"> "
+#~ "in </span>"
+#~ msgstr ""
+#~ "<span class=\"oe_inline o_form_label mx-3\" "
+#~ "groups=\"base.group_multi_currency\" invisible=\"move_type == 'entry'\"> "
+#~ "в </span>"
+
+#, python-format
+#~ msgid "You cannot switch the type of a document which has been posted once."
+#~ msgstr ""
+#~ "Ви не можете змінити тип документа, який був опублікований один раз."
 
 #, python-format
 #~ msgid ""

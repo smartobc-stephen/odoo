@@ -3,13 +3,13 @@
 # * product_extended
 #
 # Translators:
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-12 02:57+0000\n"
-"PO-Revision-Date: 2025-12-06 08:05+0000\n"
+"POT-Creation-Date: 2026-04-03 18:39+0000\n"
+"PO-Revision-Date: 2026-03-07 08:22+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-17/"
 "mrp_account/hi/>\n"
@@ -18,22 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.14.3\n"
-
-#. module: mrp_account
-#: model_terms:ir.ui.view,arch_db:mrp_account.report_wip
-msgid "$1000"
-msgstr ""
-
-#. module: mrp_account
-#: model_terms:ir.ui.view,arch_db:mrp_account.report_wip
-msgid "$5000"
-msgstr ""
-
-#. module: mrp_account
-#: model_terms:ir.ui.view,arch_db:mrp_account.report_wip
-msgid "2023-08-15"
-msgstr "15-08-2023"
+"X-Generator: Weblate 5.16.1\n"
 
 #. module: mrp_account
 #: model_terms:ir.ui.view,arch_db:mrp_account.mrp_production_form_view_inherited
@@ -43,12 +28,12 @@ msgstr ""
 #. module: mrp_account
 #: model_terms:ir.ui.view,arch_db:mrp_account.mrp_production_form_view_inherited
 msgid "<span class=\"o_stat_text\">Valuation</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">वैल्यूएशन</span>"
 
 #. module: mrp_account
 #: model_terms:ir.ui.view,arch_db:mrp_account.report_wip
 msgid "<span style=\"margin-right: 15px;\">Total</span>"
-msgstr ""
+msgstr "<span style=\"margin-right: 15px;\">कुल</span>"
 
 #. module: mrp_account
 #: model_terms:ir.ui.view,arch_db:mrp_account.report_wip
@@ -63,7 +48,7 @@ msgstr "<span>तारीख</span>"
 #. module: mrp_account
 #: model_terms:ir.ui.view,arch_db:mrp_account.report_wip
 msgid "<span>Product</span>"
-msgstr ""
+msgstr "<span>प्रॉडक्ट</span>"
 
 #. module: mrp_account
 #: model_terms:ir.ui.view,arch_db:mrp_account.report_wip
@@ -73,12 +58,12 @@ msgstr "<span>क्वांटिटी</span>"
 #. module: mrp_account
 #: model_terms:ir.ui.view,arch_db:mrp_account.report_wip
 msgid "<span>Ref.</span>"
-msgstr ""
+msgstr "<span>रेफ़रेंस</span>"
 
 #. module: mrp_account
 #: model_terms:ir.ui.view,arch_db:mrp_account.report_wip
 msgid "<span>Unit of Measure</span>"
-msgstr ""
+msgstr "<span>माप की इकाई</span>"
 
 #. module: mrp_account
 #: model_terms:ir.ui.view,arch_db:mrp_account.report_wip
@@ -138,7 +123,7 @@ msgstr "एनालिटिक प्रीसीज़न"
 #. module: mrp_account
 #: model:ir.model,name:mrp_account.model_mrp_bom
 msgid "Bill of Material"
-msgstr ""
+msgstr "बिल ऑफ़ मैटेरियल"
 
 #. module: mrp_account
 #. odoo-python
@@ -151,12 +136,12 @@ msgstr "बिल ऑफ़ मैटिरियल"
 #. module: mrp_account
 #: model:ir.model.fields,field_description:mrp_account.field_account_analytic_account__bom_count
 msgid "BoM Count"
-msgstr ""
+msgstr "बीओएम की संख्या"
 
 #. module: mrp_account
 #: model:ir.model.fields,field_description:mrp_account.field_account_analytic_account__bom_ids
 msgid "Bom"
-msgstr ""
+msgstr "बॉम"
 
 #. module: mrp_account
 #: model:ir.model.fields,field_description:mrp_account.field_account_analytic_line__category
@@ -170,7 +155,7 @@ msgstr "वर्ग"
 #: model_terms:ir.ui.view,arch_db:mrp_account.product_product_view_form_normal_inherit_extended
 #: model_terms:ir.ui.view,arch_db:mrp_account.product_variant_easy_edit_view_bom_inherit
 msgid "Compute Price from BoM"
-msgstr ""
+msgstr "बीओएम से कीमत की गणना करें"
 
 #. module: mrp_account
 #: model_terms:ir.ui.view,arch_db:mrp_account.product_product_ext_form_view2
@@ -180,11 +165,13 @@ msgid ""
 "Compute the price of the product using products and operations of related "
 "bill of materials, for manufactured products only."
 msgstr ""
+"सिर्फ़ मैन्युफ़ैक्चर प्रॉडक्ट के लिए, संबंधित बिल ऑफ़ मैटेरियल के प्रॉडक्ट और ऑपरेशन का इस्तेमाल "
+"करके प्रॉडक्ट की कीमत की गणना करें।"
 
 #. module: mrp_account
 #: model:ir.model.fields,field_description:mrp_account.field_mrp_workcenter__costs_hour_account_ids
 msgid "Costs Hour Account"
-msgstr ""
+msgstr "काम के घंटों की लागत को रिकॉर्ड करने वाला अकाउंट"
 
 #. module: mrp_account
 #: model:ir.model.fields,field_description:mrp_account.field_mrp_bom__distribution_analytic_account_ids
@@ -201,7 +188,7 @@ msgstr "डोमेन"
 #. module: mrp_account
 #: model:ir.model.fields,field_description:mrp_account.field_mrp_production__extra_cost
 msgid "Extra Unit Cost"
-msgstr ""
+msgstr "अतिरिक्त यूनिट की कीमत"
 
 #. module: mrp_account
 #: model:ir.model,name:mrp_account.model_account_move_line
@@ -211,12 +198,12 @@ msgstr "जर्नल आइटम"
 #. module: mrp_account
 #: model_terms:ir.ui.view,arch_db:mrp_account.report_wip
 msgid "Laptop"
-msgstr ""
+msgstr "लैपटॉप"
 
 #. module: mrp_account
 #: model:ir.model,name:mrp_account.model_report_mrp_report_mo_overview
 msgid "MO Overview Report"
-msgstr ""
+msgstr "एमओ की पूरी जानकारी वाली रिपोर्ट"
 
 #. module: mrp_account
 #: model:ir.model.fields.selection,name:mrp_account.selection__account_analytic_applicability__business_domain__manufacturing_order
@@ -235,12 +222,12 @@ msgstr "मैन्युफ़ैक्चरिंग ऑर्डर"
 #. module: mrp_account
 #: model:ir.model.fields,field_description:mrp_account.field_account_analytic_account__production_count
 msgid "Manufacturing Orders Count"
-msgstr ""
+msgstr "मैन्युफ़ैक्चरिंग ऑर्डर की कीमत"
 
 #. module: mrp_account
 #: model:ir.model.fields,field_description:mrp_account.field_mrp_workorder__mo_analytic_account_line_ids
 msgid "Mo Analytic Account Line"
-msgstr ""
+msgstr "एमओ एनालिटिक अकाउंट लाइन"
 
 #. module: mrp_account
 #: model:ir.model,name:mrp_account.model_product_template
@@ -265,7 +252,7 @@ msgstr "उत्पादन"
 #. module: mrp_account
 #: model:ir.model.fields,field_description:mrp_account.field_product_category__property_stock_account_production_cost_id
 msgid "Production Account"
-msgstr ""
+msgstr "प्रॉडक्शन अकाउंट"
 
 #. module: mrp_account
 #: model:ir.model,name:mrp_account.model_mrp_production
@@ -280,7 +267,7 @@ msgstr ""
 #. module: mrp_account
 #: model:ir.model.fields,field_description:mrp_account.field_mrp_production__show_valuation
 msgid "Show Valuation"
-msgstr ""
+msgstr "वैल्यूएशन दिखाएं"
 
 #. module: mrp_account
 #: model:ir.model,name:mrp_account.model_stock_move
@@ -290,7 +277,7 @@ msgstr "चाल स्टॉक"
 #. module: mrp_account
 #: model:ir.model,name:mrp_account.model_stock_rule
 msgid "Stock Rule"
-msgstr ""
+msgstr "स्टॉक रूल"
 
 #. module: mrp_account
 #: model:ir.model.fields,help:mrp_account.field_product_category__property_stock_account_production_cost_id
@@ -300,26 +287,30 @@ msgid ""
 "                If there are any workcenter/employee costs, this value will "
 "remain on the account once the production is completed."
 msgstr ""
+"इस खाते का इस्तेमाल मैन्युफ़ैक्चरिंग ऑर्डर के कॉम्पोनेंट और फ़ाइनल प्रॉडक्ट के मूल्यांकन काउंटरपार्ट "
+"के रूप में किया जाएगा.\n"
+"                अगर कोई वर्कसेंटर/कर्मचारी लागत है, तो प्रॉडक्शन पूरा होने पर यह राशि "
+"खाते में रहेगी।"
 
 #. module: mrp_account
 #: model_terms:ir.ui.view,arch_db:mrp_account.report_wip
 msgid "Units"
-msgstr ""
+msgstr "यूनिट"
 
 #. module: mrp_account
 #: model_terms:ir.ui.view,arch_db:mrp_account.report_wip
 msgid "WIP Report for"
-msgstr ""
+msgstr "के लिए WIP रिपोर्ट"
 
 #. module: mrp_account
 #: model:ir.actions.report,name:mrp_account.wip_report
 msgid "WIP report"
-msgstr ""
+msgstr "WIP रिपोर्ट"
 
 #. module: mrp_account
 #: model:ir.model.fields,field_description:mrp_account.field_mrp_workorder__wc_analytic_account_line_ids
 msgid "Wc Analytic Account Line"
-msgstr ""
+msgstr "Wc एनालिटिक अकाउंट लाइन"
 
 #. module: mrp_account
 #: model:ir.model,name:mrp_account.model_mrp_workcenter
@@ -329,17 +320,17 @@ msgstr "कार्य केंद्र"
 #. module: mrp_account
 #: model:ir.model,name:mrp_account.model_mrp_routing_workcenter
 msgid "Work Center Usage"
-msgstr ""
+msgstr "वर्क सेंटर का इस्तेमाल"
 
 #. module: mrp_account
 #: model:ir.model,name:mrp_account.model_mrp_workorder
 msgid "Work Order"
-msgstr ""
+msgstr "वर्क ऑर्डर"
 
 #. module: mrp_account
 #: model:ir.model.fields,field_description:mrp_account.field_account_analytic_account__workorder_count
 msgid "Work Order Count"
-msgstr ""
+msgstr "वर्क ऑर्डर की संख्या"
 
 #. module: mrp_account
 #. odoo-python
@@ -351,7 +342,7 @@ msgstr "काम के आदेश"
 #. module: mrp_account
 #: model:ir.model.fields,field_description:mrp_account.field_account_analytic_account__workcenter_ids
 msgid "Workcenter"
-msgstr ""
+msgstr "वर्कसेंटर"
 
 #. module: mrp_account
 #. odoo-python
@@ -360,3 +351,6 @@ msgstr ""
 #, python-format
 msgid "[WC] %s"
 msgstr ""
+
+#~ msgid "2023-08-15"
+#~ msgstr "15-08-2023"

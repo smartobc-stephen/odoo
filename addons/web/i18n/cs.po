@@ -20,13 +20,14 @@
 # Vojtěch Olšan, 2025
 # Denis Gobin, 2025
 # Marta Wacławek, 2025
-# "Marta (wacm)" <wacm@odoo.com>, 2025.
+# "Marta (wacm)" <wacm@odoo.com>, 2025, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-16 18:38+0000\n"
-"PO-Revision-Date: 2025-10-15 15:18+0000\n"
+"POT-Creation-Date: 2026-04-03 18:40+0000\n"
+"PO-Revision-Date: 2026-04-09 10:42+0000\n"
 "Last-Translator: \"Marta (wacm)\" <wacm@odoo.com>\n"
 "Language-Team: Czech <https://translate.odoo.com/projects/odoo-17/web/cs/>\n"
 "Language: cs\n"
@@ -35,7 +36,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
 "<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: web
 #. odoo-javascript
@@ -196,153 +197,10 @@ msgstr "+ KLÍČ"
 
 #. module: web
 #. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "00"
-msgstr "00"
-
-#. module: web
-#: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
-msgid "07/08/2020"
-msgstr "07/08/2020"
-
-#. module: web
-#: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
-msgid "08/07/2020"
-msgstr "08/07/2020"
-
-#. module: web
-#. odoo-javascript
 #: code:addons/web/static/src/views/fields/formatters.js:0
 #, python-format
 msgid "1 record"
 msgstr "1 záznam"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "1.30"
-msgstr "1.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "10"
-msgstr "10"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "10.30"
-msgstr "10.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "100"
-msgstr "100"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "10:00"
-msgstr "10:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "10:30"
-msgstr "10:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "11"
-msgstr "11"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "11.30"
-msgstr "11.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "11:00"
-msgstr "11:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "11:30"
-msgstr "11:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "12"
-msgstr "12"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "12.30"
-msgstr "12.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "1234"
-msgstr "1234"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "12:00"
-msgstr "12:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "12:30"
-msgstr "12:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "18"
-msgstr "18"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "1:00"
-msgstr "1:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "1:30"
-msgstr "1:30"
 
 #. module: web
 #. odoo-javascript
@@ -355,27 +213,6 @@ msgstr "1. místo medaile"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
-msgid "2.30"
-msgstr "2.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "2:00"
-msgstr "2:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "2:30"
-msgstr "2:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
 msgid "2nd place medal"
 msgstr "2. místo medaile"
 
@@ -383,50 +220,8 @@ msgstr "2. místo medaile"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
-msgid "3.30"
-msgstr "3.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "3:00"
-msgstr "3:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "3:30"
-msgstr "3:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
 msgid "3rd place medal"
 msgstr "3. místo medaile"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "4.30"
-msgstr "4.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "4:00"
-msgstr "4:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "4:30"
-msgstr "4:30"
 
 #. module: web
 #. odoo-javascript
@@ -441,111 +236,6 @@ msgstr "4WD"
 #, python-format
 msgid "4x4"
 msgstr "4x4"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "5.30"
-msgstr "5.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "5:00"
-msgstr "5:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "5:30"
-msgstr "5:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "6.30"
-msgstr "6.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "6:00"
-msgstr "6:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "6:30"
-msgstr "6:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "7.30"
-msgstr "7.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "7:00"
-msgstr "7:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "7:30"
-msgstr "7:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "8.30"
-msgstr "8.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "8:00"
-msgstr "8:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "8:30"
-msgstr "8:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "9.30"
-msgstr "9.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "9:00"
-msgstr "9:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "9:30"
-msgstr "9:30"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.view_base_document_layout
@@ -621,8 +311,8 @@ msgstr "<span id=\"line_tax_ids\">Daň 15%</span>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
-msgid "<span itemprop=\"name\">Deco Addict</span>"
-msgstr "<span itemprop=\"name\">Deco Addict</span>"
+msgid "<span itemprop=\"name\">Acme Corporation</span>"
+msgstr "<span itemprop=\"name\">Acme Corporation</span>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
@@ -767,6 +457,13 @@ msgstr ""
 "@font-face {\n"
 "                        font-family: \"font\";\n"
 "                        src: url(data:font/ttf;base64,"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "A"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -1387,6 +1084,13 @@ msgstr "Avatar"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "B"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "B button (blood type)"
 msgstr "Tlačítko B (krevní skupina)"
 
@@ -1583,6 +1287,13 @@ msgstr "Bajtů"
 #, python-format
 msgid "Bytes|Kb|Mb|Gb|Tb|Pb|Eb|Zb|Yb"
 msgstr "Bytes|Kb|Mb|Gb|Tb|Pb|Eb|Zb|Yb"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "C"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -2572,7 +2283,7 @@ msgstr "Neukládat změny a pokračovat"
 #: model:ir.model.fields,field_description:web.field_base_document_layout__display_name
 #, python-format
 msgid "Display Name"
-msgstr "Zobrazovací název"
+msgstr "Zobrazovaný název"
 
 #. module: web
 #. odoo-javascript
@@ -3147,7 +2858,7 @@ msgstr "Filtry"
 #: code:addons/web/static/src/views/pivot/pivot_controller.xml:0
 #, python-format
 msgid "Flip axis"
-msgstr "Osa převrácení"
+msgstr "Otočit osu"
 
 #. module: web
 #. odoo-javascript
@@ -4117,7 +3828,7 @@ msgstr "Naposledy změnil:"
 #: code:addons/web/static/src/views/fields/datetime/datetime_field.js:0
 #, python-format
 msgid "Latest accepted date"
-msgstr ""
+msgstr "Poslední přijaté datum"
 
 #. module: web
 #. odoo-javascript
@@ -4197,7 +3908,7 @@ msgstr "nahrát demo data"
 #: code:addons/web/static/src/views/graph/graph_controller.xml:0
 #, python-format
 msgid "Load everything anyway."
-msgstr ""
+msgstr "Načíst vše stejně."
 
 #. module: web
 #. odoo-javascript
@@ -4268,6 +3979,13 @@ msgstr "Doplňková barva loga"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "M"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "Mahjong"
 msgstr "Mahjong"
 
@@ -4283,7 +4001,7 @@ msgstr "Červený drak v Mahjongu"
 #: code:addons/web/static/src/core/errors/error_dialogs.js:0
 #, python-format
 msgid "MailDeliveryException"
-msgstr ""
+msgstr "MailDeliveryException"
 
 #. module: web
 #. odoo-javascript
@@ -4327,7 +4045,7 @@ msgstr "Spravovat filtry"
 #: code:addons/web/static/src/views/fields/many2one_barcode/many2one_barcode_field.js:0
 #, python-format
 msgid "Many2OneBarcode"
-msgstr ""
+msgstr "Many2OneBarcode"
 
 #. module: web
 #. odoo-javascript
@@ -4357,7 +4075,7 @@ msgstr "Párování"
 #: code:addons/web/static/src/views/fields/gauge/gauge_field.js:0
 #, python-format
 msgid "Max value"
-msgstr ""
+msgstr "Maximální hodnota"
 
 #. module: web
 #. odoo-javascript
@@ -4365,7 +4083,7 @@ msgstr ""
 #: code:addons/web/static/src/views/fields/progress_bar/progress_bar_field.js:0
 #, python-format
 msgid "Max value field"
-msgstr ""
+msgstr "Pole maximální hodnoty"
 
 #. module: web
 #. odoo-javascript
@@ -4445,7 +4163,7 @@ msgstr "Mléčná dráha"
 #: code:addons/web/static/src/views/fields/timezone_mismatch/timezone_mismatch_field.js:0
 #, python-format
 msgid "Mismatch title"
-msgstr ""
+msgstr "Nesoulad názvu"
 
 #. module: web
 #. odoo-javascript
@@ -4489,7 +4207,7 @@ msgstr "Přístupová pravidla modelu"
 #: code:addons/web/static/src/views/fields/reference/reference_field.js:0
 #, python-format
 msgid "Model field"
-msgstr ""
+msgstr "Modelové pole"
 
 #. module: web
 #. odoo-javascript
@@ -4522,7 +4240,7 @@ msgstr ""
 #: code:addons/web/static/src/views/fields/domain/domain_field.xml:0
 #, python-format
 msgid "Modify filter"
-msgstr ""
+msgstr "Upravit filtr"
 
 #. module: web
 #. odoo-javascript
@@ -4580,28 +4298,28 @@ msgstr "Hora Fudži"
 #: code:addons/web/static/src/views/fields/properties/property_definition.xml:0
 #, python-format
 msgid "Move this Property down"
-msgstr ""
+msgstr "Přesunout tuto vkastnost dolů"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/views/fields/properties/property_definition.xml:0
 #, python-format
 msgid "Move this Property up"
-msgstr ""
+msgstr "Přesunout tuto vlastnost nahoru"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/views/fields/statusbar/statusbar_field.js:0
 #, python-format
 msgid "Move to %s..."
-msgstr ""
+msgstr "Přesunout na %s..."
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/views/fields/statusbar/statusbar_field.js:0
 #, python-format
 msgid "Move to next %s"
-msgstr ""
+msgstr "Přejít na další %s"
 
 #. module: web
 #. odoo-javascript
@@ -4718,14 +4436,14 @@ msgstr "Nová událost"
 #: code:addons/web/static/src/views/fields/properties/properties_field.xml:0
 #, python-format
 msgid "New Property"
-msgstr ""
+msgstr "Nová vlastnost"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/tree_editor/tree_editor.xml:0
 #, python-format
 msgid "New Rule"
-msgstr ""
+msgstr "Nové pravidlo"
 
 #. module: web
 #. odoo-javascript
@@ -4747,7 +4465,7 @@ msgstr "Nová šablona"
 #: code:addons/web/static/src/views/fields/relational_utils.js:0
 #, python-format
 msgid "New:"
-msgstr ""
+msgstr "Nový:"
 
 #. module: web
 #. odoo-javascript
@@ -4777,28 +4495,28 @@ msgstr "Další (šipka vpravo)"
 #: code:addons/web/static/src/core/datetime/datetime_picker.js:0
 #, python-format
 msgid "Next century"
-msgstr ""
+msgstr "Příští století"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/datetime/datetime_picker.js:0
 #, python-format
 msgid "Next decade"
-msgstr ""
+msgstr "Příští desetiletí"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/datetime/datetime_picker.js:0
 #, python-format
 msgid "Next month"
-msgstr ""
+msgstr "Příští měsíc"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/datetime/datetime_picker.js:0
 #, python-format
 msgid "Next year"
-msgstr ""
+msgstr "Příští rok"
 
 #. module: web
 #. odoo-javascript
@@ -4817,14 +4535,14 @@ msgstr "Ne"
 #: code:addons/web/static/src/views/fields/properties/property_value.xml:0
 #, python-format
 msgid "No Access"
-msgstr ""
+msgstr "Bez přístupu"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/search/properties_group_by_item/properties_group_by_item.xml:0
 #, python-format
 msgid "No Properties"
-msgstr ""
+msgstr "Žádné vlastnosti"
 
 #. module: web
 #. odoo-javascript
@@ -4852,7 +4570,7 @@ msgstr "Žádná barva"
 #: code:addons/web/static/src/core/commands/default_providers.js:0
 #, python-format
 msgid "No command found"
-msgstr ""
+msgstr "Nenalezen žádný příkaz"
 
 #. module: web
 #. odoo-javascript
@@ -4887,7 +4605,7 @@ msgstr "Nebyl nalezen žádný debug příkaz"
 #: code:addons/web/static/src/webclient/barcode/barcode_scanner.js:0
 #, python-format
 msgid "No device can be found."
-msgstr ""
+msgstr "Nelze najít žádné zařízení."
 
 #. module: web
 #. odoo-javascript
@@ -4908,7 +4626,7 @@ msgstr "Žádná shoda nenalezena."
 #: code:addons/web/static/src/webclient/menus/menu_providers.js:0
 #, python-format
 msgid "No menu found"
-msgstr ""
+msgstr "Nenalezeno žádné menu"
 
 #. module: web
 #. odoo-javascript
@@ -4955,7 +4673,7 @@ msgstr "Žádný platný záznam k uložení"
 #: code:addons/web/static/src/webclient/actions/action_service.js:0
 #, python-format
 msgid "No view of type '%s' could be found in the current action."
-msgstr ""
+msgstr "V aktuální akci nebyl nalezen žádný pohled typu \"%s\"."
 
 #. module: web
 #. odoo-javascript
@@ -4990,7 +4708,7 @@ msgstr "Není nastaveno"
 #: code:addons/web/static/src/core/tree_editor/tree_editor_value_editors.js:0
 #, python-format
 msgid "Not a valid %s"
-msgstr ""
+msgstr "Není platné %s"
 
 #. module: web
 #. odoo-javascript
@@ -5011,6 +4729,13 @@ msgstr "Není aktivní stav, klepnutím ho změňte"
 #: code:addons/web/static/src/views/fields/many2many_binary/many2many_binary_field.js:0
 #, python-format
 msgid "Number of files"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "O"
 msgstr ""
 
 #. module: web
@@ -5136,7 +4861,7 @@ msgstr "Odoo S.A."
 #: code:addons/web/static/src/core/errors/error_dialogs.js:0
 #, python-format
 msgid "Odoo Server Error"
-msgstr ""
+msgstr "Chyba serveru Odoo"
 
 #. module: web
 #. odoo-javascript
@@ -5276,7 +5001,7 @@ msgstr "Otevřít vývojářské nástroje"
 #: code:addons/web/static/src/views/list/list_renderer.xml:0
 #, python-format
 msgid "Open in form view"
-msgstr ""
+msgstr "Otevřít v zobrazení formuláře"
 
 #. module: web
 #. odoo-javascript
@@ -5340,6 +5065,13 @@ msgstr "Ostatní"
 #: code:addons/web/static/src/views/fields/progress_bar/progress_bar_field.js:0
 #, python-format
 msgid "Overflow style"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "P"
 msgstr ""
 
 #. module: web
@@ -5818,6 +5550,13 @@ msgstr "QWeb pole obrázek"
 
 #. module: web
 #. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "R"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
 #: code:addons/web/static/src/core/colorpicker/colorpicker.xml:0
 #, python-format
 msgid "RGB"
@@ -5876,6 +5615,10 @@ msgid ""
 "\n"
 "Think twice before you click that 'Delete' button!"
 msgstr ""
+"Jste připraveni nechat svůj záznam zmizet beze stopy? Jste si jisti?\n"
+"Bude navždy pryč!\n"
+"\n"
+"Než kliknete na tlačítko „Odstranit“, dobře si to rozmyslete!"
 
 #. module: web
 #. odoo-javascript
@@ -6543,6 +6286,8 @@ msgstr "Nastavit prioritu..."
 msgid ""
 "Set to true the full range input has to be display by default, even if empty."
 msgstr ""
+"Nastavte na hodnotu true, aby se standardně zobrazoval celý rozsah vstupu, i "
+"když je prázdný."
 
 #. module: web
 #. odoo-javascript
@@ -6932,7 +6677,7 @@ msgstr "DIČ"
 #: code:addons/web/static/src/core/colorlist/colorlist.js:0
 #, python-format
 msgid "Teal"
-msgstr ""
+msgstr "Tyrkysová"
 
 #. module: web
 #. odoo-javascript
@@ -7047,6 +6792,9 @@ msgid ""
 "that must be fixed for the entire database before continuing working. See "
 "browser console or server logs for details."
 msgstr ""
+"Kompilace stylu selhala. Jedná se o chybu správce nebo vývojáře, kterou je "
+"nutné opravit pro celou databázi, než budete pokračovat v práci. Podrobnosti "
+"najdete v konzoli prohlížeče nebo v protokolech serveru."
 
 #. module: web
 #. odoo-javascript
@@ -7056,6 +6804,8 @@ msgid ""
 "There are too many data. The graph only shows a sample. Use the filters to "
 "refine the scope."
 msgstr ""
+"Je zde příliš mnoho dat. Graf zobrazuje pouze vzorek. Použijte filtry k "
+"upřesnění rozsahu."
 
 #. module: web
 #. odoo-python
@@ -7135,7 +6885,7 @@ msgstr "Tento soubor je neplatný. Vyberte obrázek."
 #: code:addons/web/static/src/search/search_bar_menu/search_bar_menu.js:0
 #, python-format
 msgid "This filter is global and will be removed for everyone."
-msgstr ""
+msgstr "Tento filtr je globální a bude odstraněn pro všechny."
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.preview_externalreport
@@ -7155,6 +6905,7 @@ msgid ""
 "This record belongs to a different parent so you can not change this "
 "property."
 msgstr ""
+"Tento záznam patří jinému nadřazenému , takže tuto vlastnost nelze změnit."
 
 #. module: web
 #. odoo-javascript
@@ -7183,6 +6934,13 @@ msgstr "Čt"
 #, python-format
 msgid "Time"
 msgstr "Čas"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/debug/profiling/profiling_item.xml:0
+#, python-format
+msgid "Time Limit (seconds)"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -7246,7 +7004,7 @@ msgstr "Přepnout"
 #: code:addons/web/static/src/search/control_panel/control_panel.xml:0
 #, python-format
 msgid "Toggle Dropdown"
-msgstr ""
+msgstr "Přepnout rozbalovací nabídku"
 
 #. module: web
 #. odoo-javascript
@@ -7637,6 +7395,9 @@ msgid ""
 "Use to override the display value (e.g. if your progress bar is a computed "
 "percentage but you want to display the actual field value instead)."
 msgstr ""
+"Použijte k přepsání zobrazené hodnoty (např. pokud je váš ukazatel průběhu "
+"vypočítán jako procento, ale vy chcete místo toho zobrazit skutečnou hodnotu "
+"pole)."
 
 #. module: web
 #. odoo-javascript
@@ -7909,6 +7670,7 @@ msgid ""
 "Whether or not this Property Field is displayed in the Calendar, Cards & "
 "Kanban views"
 msgstr ""
+"Zda se toto pole vlastnosti zobrazuje v zobrazení Kalendáře, Karty a Kanban"
 
 #. module: web
 #. odoo-javascript
@@ -8040,6 +7802,7 @@ msgstr ""
 msgid ""
 "You need to select a model before opening the dynamic placeholder selector."
 msgstr ""
+"Před otevřením dynamického výběru zástupných symbolů je třeba vybrat model."
 
 #. module: web
 #. odoo-javascript
@@ -16985,6 +16748,13 @@ msgstr "hóngbāo"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "i"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "ice"
 msgstr "led"
 
@@ -20836,6 +20606,13 @@ msgstr "ořechy"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "o"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "ocean"
 msgstr "oceán"
 
@@ -23058,7 +22835,7 @@ msgstr "proroctví"
 #: code:addons/web/static/src/views/fields/many2many_tags_avatar/many2many_tags_avatar_field.xml:0
 #, python-format
 msgid "props.placeholder"
-msgstr ""
+msgstr "props.placeholder"
 
 #. module: web
 #. odoo-javascript
@@ -23248,6 +23025,13 @@ msgstr "otázka"
 #, python-format
 msgid "quiet"
 msgstr "klid"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "r"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -28157,6 +27941,13 @@ msgstr "urna"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "v"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "vague"
 msgstr "vágní"
 
@@ -29760,6 +29551,13 @@ msgstr "ironický"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "x"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "yacht"
 msgstr "jachta"
 
@@ -30084,3 +29882,296 @@ msgstr "“volné místo”"
 #, python-format
 msgid "ココ"
 msgstr "ココ"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "サ"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "割"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "可"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "合"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "営"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "得"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "指"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "月"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "有"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "満"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "無"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "申"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "祝"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "禁"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "秘"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "空"
+msgstr ""
+
+#, python-format
+#~ msgid "00"
+#~ msgstr "00"
+
+#~ msgid "07/08/2020"
+#~ msgstr "07/08/2020"
+
+#~ msgid "08/07/2020"
+#~ msgstr "08/07/2020"
+
+#, python-format
+#~ msgid "1.30"
+#~ msgstr "1.30"
+
+#, python-format
+#~ msgid "10"
+#~ msgstr "10"
+
+#, python-format
+#~ msgid "10.30"
+#~ msgstr "10.30"
+
+#, python-format
+#~ msgid "100"
+#~ msgstr "100"
+
+#, python-format
+#~ msgid "10:00"
+#~ msgstr "10:00"
+
+#, python-format
+#~ msgid "10:30"
+#~ msgstr "10:30"
+
+#, python-format
+#~ msgid "11"
+#~ msgstr "11"
+
+#, python-format
+#~ msgid "11.30"
+#~ msgstr "11.30"
+
+#, python-format
+#~ msgid "11:00"
+#~ msgstr "11:00"
+
+#, python-format
+#~ msgid "11:30"
+#~ msgstr "11:30"
+
+#, python-format
+#~ msgid "12"
+#~ msgstr "12"
+
+#, python-format
+#~ msgid "12.30"
+#~ msgstr "12.30"
+
+#, python-format
+#~ msgid "1234"
+#~ msgstr "1234"
+
+#, python-format
+#~ msgid "12:00"
+#~ msgstr "12:00"
+
+#, python-format
+#~ msgid "12:30"
+#~ msgstr "12:30"
+
+#, python-format
+#~ msgid "18"
+#~ msgstr "18"
+
+#, python-format
+#~ msgid "1:00"
+#~ msgstr "1:00"
+
+#, python-format
+#~ msgid "1:30"
+#~ msgstr "1:30"
+
+#, python-format
+#~ msgid "2.30"
+#~ msgstr "2.30"
+
+#, python-format
+#~ msgid "2:00"
+#~ msgstr "2:00"
+
+#, python-format
+#~ msgid "2:30"
+#~ msgstr "2:30"
+
+#, python-format
+#~ msgid "3.30"
+#~ msgstr "3.30"
+
+#, python-format
+#~ msgid "3:00"
+#~ msgstr "3:00"
+
+#, python-format
+#~ msgid "3:30"
+#~ msgstr "3:30"
+
+#, python-format
+#~ msgid "4.30"
+#~ msgstr "4.30"
+
+#, python-format
+#~ msgid "4:00"
+#~ msgstr "4:00"
+
+#, python-format
+#~ msgid "4:30"
+#~ msgstr "4:30"
+
+#, python-format
+#~ msgid "5.30"
+#~ msgstr "5.30"
+
+#, python-format
+#~ msgid "5:00"
+#~ msgstr "5:00"
+
+#, python-format
+#~ msgid "5:30"
+#~ msgstr "5:30"
+
+#, python-format
+#~ msgid "6.30"
+#~ msgstr "6.30"
+
+#, python-format
+#~ msgid "6:00"
+#~ msgstr "6:00"
+
+#, python-format
+#~ msgid "6:30"
+#~ msgstr "6:30"
+
+#, python-format
+#~ msgid "7.30"
+#~ msgstr "7.30"
+
+#, python-format
+#~ msgid "7:00"
+#~ msgstr "7:00"
+
+#, python-format
+#~ msgid "7:30"
+#~ msgstr "7:30"
+
+#, python-format
+#~ msgid "8.30"
+#~ msgstr "8.30"
+
+#, python-format
+#~ msgid "8:00"
+#~ msgstr "8:00"
+
+#, python-format
+#~ msgid "8:30"
+#~ msgstr "8:30"
+
+#, python-format
+#~ msgid "9.30"
+#~ msgstr "9.30"
+
+#, python-format
+#~ msgid "9:00"
+#~ msgstr "9:00"
+
+#, python-format
+#~ msgid "9:30"
+#~ msgstr "9:30"
+
+#~ msgid "<span itemprop=\"name\">Deco Addict</span>"
+#~ msgstr "<span itemprop=\"name\">Deco Addict</span>"

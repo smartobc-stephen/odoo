@@ -77,6 +77,12 @@ class AccountMoveSend(models.TransientModel):
         store=True,
         readonly=False,
     )
+    # Technical field to display or not the attachment button
+    display_attachments_widget = fields.Boolean(
+        compute='_compute_display_attachments_widget',
+    )
+    # Technical field to display or not a warning icon besides attachments not supported
+    attachments_not_supported = fields.Json(compute='_compute_attachments_not_supported')
 
     @api.model
     def default_get(self, fields_list):
@@ -241,6 +247,10 @@ class AccountMoveSend(models.TransientModel):
             for attachment in mail_template.attachment_ids
         ]
 
+    def _get_invoice_edi_format(self):
+        # To extends
+        return False
+
     # -------------------------------------------------------------------------
     # COMPUTE METHODS
     # -------------------------------------------------------------------------
@@ -331,6 +341,16 @@ class AccountMoveSend(models.TransientModel):
                 )
             else:
                 wizard.mail_attachments_widget = []
+
+    @api.depends('checkbox_send_mail')
+    def _compute_display_attachments_widget(self):
+        for wizard in self:
+            wizard.display_attachments_widget = wizard.checkbox_send_mail
+
+    @api.depends('display_attachments_widget', 'mail_attachments_widget')
+    def _compute_attachments_not_supported(self):
+        for wizard in self:
+            wizard.attachments_not_supported = {}
 
     @api.model
     def _format_error_text(self, error):
@@ -441,6 +461,8 @@ class AccountMoveSend(models.TransientModel):
         """
         # create an attachment that will become 'invoice_pdf_report_file'
         # note: Binary is used for security reason
+        if 'pdf_attachment_values' not in invoice_data:
+            return
         invoice_sudo = invoice.sudo()
         invoice_sudo.message_main_attachment_id = self.sudo().env['ir.attachment'].create(invoice_data['pdf_attachment_values'])
         invoice_sudo.invalidate_recordset(fnames=['invoice_pdf_report_id', 'invoice_pdf_report_file'])
@@ -625,6 +647,21 @@ class AccountMoveSend(models.TransientModel):
         return
 
     @api.model
+    def _check_move_constrains(self, moves):
+        for move in moves:
+            if move_constraints := self._get_move_constraints(move):
+                raise UserError(next(iter(move_constraints.values()), None))
+
+    @api.model
+    def _get_move_constraints(self, move):
+        constraints = {}
+        if move.state != 'posted':
+            constraints['not_posted'] = _("You can't generate invoices that are not posted.")
+        if not move.is_sale_document(include_receipts=True):
+            constraints['not_sale_document'] = _("You can only generate sales documents.")
+        return constraints
+
+    @api.model
     def _generate_invoice_documents(self, invoices_data, allow_fallback_pdf=False):
         """ Generate the invoice PDF and electronic documents.
         :param allow_fallback_pdf:  In case of error when generating the documents for invoices, generate a
@@ -632,7 +669,7 @@ class AccountMoveSend(models.TransientModel):
         :param invoices_data:   The collected data for invoices so far.
         """
         for invoice, invoice_data in invoices_data.items():
-            if self._need_invoice_document(invoice):
+            if self.with_context(invoice_data=invoice_data)._need_invoice_document(invoice):
                 self._hook_invoice_document_before_pdf_report_render(invoice, invoice_data)
                 invoice_data['blocking_error'] = invoice_data.get('error') \
                                                  and not (allow_fallback_pdf and invoice_data.get('error_but_continue'))
@@ -652,7 +689,7 @@ class AccountMoveSend(models.TransientModel):
             if not invoice_data.get('error') or invoice_data.get('error_but_continue')
         }
         for invoice, invoice_data in invoices_data_pdf.items():
-            if self._need_invoice_document(invoice) and not invoice_data.get('error'):
+            if self.with_context(invoice_data=invoice_data)._need_invoice_document(invoice) and not invoice_data.get('error'):
                 self._prepare_invoice_pdf_report(invoice, invoice_data)
                 self._hook_invoice_document_after_pdf_report_render(invoice, invoice_data)
 
@@ -677,7 +714,7 @@ class AccountMoveSend(models.TransientModel):
 
         # Create and link the generated documents to the invoice if the web-service didn't failed.
         for invoice, invoice_data in invoices_data_web_service.items():
-            if self._need_invoice_document(invoice) and (not invoice_data.get('error') or allow_fallback_pdf):
+            if self.with_context(invoice_data=invoice_data)._need_invoice_document(invoice) and (not invoice_data.get('error') or allow_fallback_pdf):
                 self._link_invoice_documents(invoice, invoice_data)
 
     @api.model

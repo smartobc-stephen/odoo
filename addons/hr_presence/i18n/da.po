@@ -6,13 +6,13 @@
 # lhmflexerp <lhm@flexerp.dk>, 2023
 # Sanne Kristensen <sanne@vkdata.dk>, 2024
 # Martin Trigaux, 2025
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-22 18:36+0000\n"
-"PO-Revision-Date: 2025-11-20 17:35+0000\n"
+"POT-Creation-Date: 2025-12-29 18:37+0000\n"
+"PO-Revision-Date: 2026-03-24 12:56+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-17/"
 "hr_presence/da/>\n"
@@ -21,16 +21,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: hr_presence
 #: model:mail.template,body_html:hr_presence.mail_template_presence
 msgid ""
 "<div>\n"
-"                    Dear <t t-out=\"object.name or ''\">Abigail Peterson</t>,<br><br>\n"
-"                    Exception made if there was a mistake of ours, it seems that you are not at your office and there is not request of time off from you.<br>\n"
-"                    Please, take appropriate measures in order to carry out this work absence.<br>\n"
-"                    Do not hesitate to contact your manager or the human resource department.\n"
+"                    Dear <t t-out=\"object.name or ''\">Abigail Peterson</t>,"
+"<br><br>\n"
+"                    Exception made if there was a mistake of ours, it seems "
+"that you are not at your office and there is not request of time off from "
+"you.<br>\n"
+"                    Please, take appropriate measures in order to carry out "
+"this work absence.<br>\n"
+"                    Do not hesitate to contact your manager or the human "
+"resource department.\n"
 "                    <br>Best Regards,<br><br>\n"
 "                </div>\n"
 "            "
@@ -105,23 +110,25 @@ msgstr "Medarbejdere"
 #: model:sms.template,body:hr_presence.sms_template_data_hr_presence
 #, python-format
 msgid ""
-"Exception made if there was a mistake of ours, it seems that you are not at your office and there is not request of time off from you.\n"
+"Exception made if there was a mistake of ours, it seems that you are not at "
+"your office and there is not request of time off from you.\n"
 "Please, take appropriate measures in order to carry out this work absence.\n"
 "Do not hesitate to contact your manager or the human resource department."
 msgstr ""
-"Vi undskylder hvis vi tager fejl, men det ser ud til, at du ikke er på dit kontor, og du har ikke sendt nogen anmodning om at holde fri.\n"
+"Vi undskylder hvis vi tager fejl, men det ser ud til, at du ikke er på dit "
+"kontor, og du har ikke sendt nogen anmodning om at holde fri.\n"
 "Vær venlig at tage de nødvendige handlinger, for at oprette dette fravær.\n"
 "Tøv ikke med at kontakte din leder, eller HR afdelingen."
 
 #. module: hr_presence
 #: model:ir.actions.server,name:hr_presence.ir_cron_presence_control_ir_actions_server
 msgid "HR Presence: cron"
-msgstr ""
+msgstr "HR-tilstedeværelse: cron"
 
 #. module: hr_presence
 #: model:mail.template,name:hr_presence.mail_template_presence
 msgid "HR: Employee Absence email"
-msgstr ""
+msgstr "HR: E-mail om medarbejderfravær"
 
 #. module: hr_presence
 #: model:ir.model.fields,field_description:hr_presence.field_res_company__hr_presence_last_compute_date
@@ -188,9 +195,11 @@ msgstr "Send SMS tekst besked"
 #. module: hr_presence
 #: model:mail.template,description:hr_presence.mail_template_presence
 msgid ""
-"Sent manually in presence module when an employee wasn't working despite not"
-" being off"
+"Sent manually in presence module when an employee wasn't working despite not "
+"being off"
 msgstr ""
+"Sendt manuelt i Tilstedeværelsesmodulet, når en medarbejder ikke har været "
+"på arbejde, selv om der ikke er registreret fri"
 
 #. module: hr_presence
 #: model_terms:ir.ui.view,arch_db:hr_presence.hr_employee_view_kanban
@@ -240,8 +249,6 @@ msgstr "Brugeres log"
 
 #. module: hr_presence
 #. odoo-python
-#: code:addons/hr_presence/models/hr_employee.py:0
-#: code:addons/hr_presence/models/hr_employee.py:0
 #: code:addons/hr_presence/models/hr_employee.py:0
 #, python-format
 msgid "You don't have the right to do this. Please contact an Administrator."

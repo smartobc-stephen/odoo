@@ -8,15 +8,15 @@
 # Yoshi Tashiro (Quartile) <tashiro@roomsfor.hk>, 2024
 # Wil Odoo, 2024
 # Junko Augias, 2025
-# "Junko Augias (juau)" <juau@odoo.com>, 2025.
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Junko Augias (juau)" <juau@odoo.com>, 2025, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-25 18:36+0000\n"
-"PO-Revision-Date: 2025-11-27 11:23+0000\n"
-"Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
+"POT-Creation-Date: 2026-04-03 18:38+0000\n"
+"PO-Revision-Date: 2026-04-04 08:06+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-17/stock/"
 "ja/>\n"
 "Language: ja\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: stock
 #. odoo-python
@@ -49,6 +49,17 @@ msgid ""
 msgstr ""
 "\n"
 "（%s）が以下のロケーションに存在する：%s"
+
+#. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_move.py:0
+#, python-format
+msgid ""
+"\n"
+"Package: %s"
+msgstr ""
+"\n"
+"梱包:%s"
 
 #. module: stock
 #. odoo-python
@@ -191,7 +202,7 @@ msgstr "'在庫棚卸シート'"
 #. module: stock
 #: model:ir.actions.report,print_report_name:stock.action_report_delivery
 msgid "'Delivery Slip - %s - %s' % (object.partner_id.name or '', object.name)"
-msgstr "'配送伝票 - %s - %s' % (object.partner_id.name or '', object.name)"
+msgstr "'納品伝票 - %s - %s' % (object.partner_id.name or '', object.name)"
 
 #. module: stock
 #: model:ir.actions.report,print_report_name:stock.action_report_location_barcode
@@ -343,41 +354,9 @@ msgid "1 Week"
 msgstr "1週間"
 
 #. module: stock
-#: model_terms:ir.ui.view,arch_db:stock.report_generic_barcode
-msgid "1234567890"
-msgstr "1234567890"
-
-#. module: stock
-#: model_terms:ir.ui.view,arch_db:stock.report_lot_label
-msgid "12345678901"
-msgstr "12345678901"
-
-#. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__stock_picking_type__product_label_format__2x7xprice
 msgid "2 x 7 with price"
 msgstr "2 x 7 価格あり"
-
-#. module: stock
-#: model_terms:ir.ui.view,arch_db:stock.report_package_barcode
-msgid "2021-9-01"
-msgstr "2021-9-01"
-
-#. module: stock
-#: model_terms:ir.ui.view,arch_db:stock.report_package_barcode_small
-msgid "2023-01-01"
-msgstr "2023-01-01"
-
-#. module: stock
-#: model_terms:ir.ui.view,arch_db:stock.report_picking
-msgid "2023-09-24"
-msgstr "2023-09-24"
-
-#. module: stock
-#: model_terms:ir.ui.view,arch_db:stock.report_delivery_document
-#: model_terms:ir.ui.view,arch_db:stock.report_package_barcode
-#: model_terms:ir.ui.view,arch_db:stock.report_picking
-msgid "3.00"
-msgstr "3.00"
 
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__lot_label_layout__print_format__4x12
@@ -404,11 +383,6 @@ msgstr "4 x 12 価格あり"
 #: model:ir.model.fields.selection,name:stock.selection__stock_picking_type__product_label_format__4x7xprice
 msgid "4 x 7 with price"
 msgstr "4 x 7 価格あり"
-
-#. module: stock
-#: model_terms:ir.ui.view,arch_db:stock.report_package_barcode
-msgid "54326786758"
-msgstr "54326786758"
 
 #. module: stock
 #. odoo-python
@@ -518,7 +492,7 @@ msgstr ""
 "            </strong>\n"
 "        </t>\n"
 "        <br><br>\n"
-"        詳細は添付の配送オーダーをご覧下さい。<br><br>\n"
+"        詳細は添付の出荷オーダーをご覧下さい。<br><br>\n"
 "        ありがとうございました。\n"
 "        <t t-if=\"user.signature\">\n"
 "            <br>\n"
@@ -616,7 +590,7 @@ msgstr "<span class=\"o_stat_text\">プロダクト移動</span>"
 #: model_terms:ir.ui.view,arch_db:stock.product_form_view_procurement_button
 #: model_terms:ir.ui.view,arch_db:stock.product_template_form_view_procurement_button
 msgid "<span class=\"o_stat_text\">Putaway Rules</span>"
-msgstr "<span class=\"o_stat_text\">入庫規則</span>"
+msgstr "<span class=\"o_stat_text\">入庫ルール</span>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_warehouse
@@ -864,7 +838,7 @@ msgstr "バーコードは１つの梱包タイプに対して１つのみ割り
 #. module: stock
 #: model:ir.model.constraint,message:stock.constraint_stock_warehouse_orderpoint_product_location_check
 msgid "A replenishment rule already exists for this product on this location."
-msgstr "このロケーションのこのプロダクトについて補充規則が既に存在します。"
+msgstr "このロケーションのこのプロダクトについて補充ルールが既に存在します。"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_product_product__detailed_type
@@ -939,7 +913,7 @@ msgstr "活動状態"
 #: model:ir.model.fields,field_description:stock.field_stock_lot__activity_type_icon
 #: model:ir.model.fields,field_description:stock.field_stock_picking__activity_type_icon
 msgid "Activity Type Icon"
-msgstr "活動種別アイコン"
+msgstr "活動タイプアイコン"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_picking_view_activity
@@ -1320,7 +1294,7 @@ msgstr "自動"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_picking_type__auto_print_delivery_slip
 msgid "Auto Print Delivery Slip"
-msgstr "配送伝票の自動印刷"
+msgstr "納品伝票の自動印刷"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_picking_type__auto_print_lot_labels
@@ -1458,12 +1432,12 @@ msgstr "バーコードデモ"
 #. module: stock
 #: model:ir.ui.menu,name:stock.menu_wms_barcode_nomenclature_all
 msgid "Barcode Nomenclatures"
-msgstr "バーコード表現規則"
+msgstr "バーコード表現ルール"
 
 #. module: stock
 #: model:ir.model,name:stock.model_barcode_rule
 msgid "Barcode Rule"
-msgstr "バーコード規則"
+msgstr "バーコードルール"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_res_config_settings__module_stock_barcode
@@ -1539,8 +1513,8 @@ msgstr ""
 msgid ""
 "By unchecking the active field, you may hide a location without deleting it."
 msgstr ""
-"アクティブな項目のチェックを外すことで、ロケーションを削除することなしに非表"
-"示にできます。"
+"有効な項目のチェックを外すことで、ロケーションを削除することなしに非表示にで"
+"きます。"
 
 #. module: stock
 #. odoo-python
@@ -1616,7 +1590,7 @@ msgstr "製品ごとの容量"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.res_config_settings_view_form
 msgid "Categorize your locations for smarter putaway rules"
-msgstr "より適した入庫規則のためにロケーションをカテゴリ分けする"
+msgstr "より適した入庫ルールのためにロケーションをカテゴリ分けする"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_product_replenish__product_uom_category_id
@@ -1857,8 +1831,8 @@ msgid ""
 "install)</strong>"
 msgstr ""
 "DHLで配送費用を計算し発送します<br/>\n"
-"                                    "
-"<strong>(ホーム&gt;アプリからインストールしてください)</strong>"
+"                                    <strong>(ホーム&gt;アプリからインストール"
+"してください)</strong>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.res_config_settings_view_form
@@ -1878,8 +1852,8 @@ msgid ""
 "install)</strong>"
 msgstr ""
 "FedExで配送費用を計算し発送します<br/>\n"
-"                                    "
-"<strong>(ホーム&gt;アプリからインストールしてください)</strong>"
+"                                    <strong>(ホーム&gt;アプリからインストール"
+"してください)</strong>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.res_config_settings_view_form
@@ -1904,8 +1878,8 @@ msgid ""
 "install)</strong>"
 msgstr ""
 "UPSで配送費用を計算し発送します<br/>\n"
-"                                    "
-"<strong>(ホーム&gt;アプリからインストールしてください)</strong>"
+"                                    <strong>(ホーム&gt;アプリからインストール"
+"してください)</strong>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.res_config_settings_view_form
@@ -1920,8 +1894,8 @@ msgid ""
 "install)</strong>"
 msgstr ""
 "USPSで配送費用を計算し発送します<br/>\n"
-"                                    "
-"<strong>(ホーム&gt;アプリからインストールしてください)</strong>"
+"                                    <strong>(ホーム&gt;アプリからインストール"
+"してください)</strong>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.res_config_settings_view_form
@@ -2166,8 +2140,8 @@ msgid ""
 "Create new putaway rules to dispatch automatically specific products to "
 "their appropriate destination location upon receptions."
 msgstr ""
-"新しい入庫規則を作成して、入荷時に特定のプロダクトを適切な配送先の場所に自動"
-"的に発送します。"
+"新しい入庫ルールを作成して、入荷時に特定のプロダクトを適切な配送先の場所に自"
+"動的に発送します。"
 
 #. module: stock
 #: model_terms:ir.actions.act_window,help:stock.action_product_stock_view
@@ -2621,8 +2595,8 @@ msgid ""
 "Define a minimum stock rule so that Odoo automatically creates requests for "
 "quotations or confirmed manufacturing orders to resupply your stock."
 msgstr ""
-"最小在庫規則を定義して、在庫を補充するための見積依頼または製造オーダのドラフ"
-"トをOdooが自動的に作成するようにします。"
+"最小在庫ルールを定義して、在庫を補充するための見積依頼または製造オーダのドラ"
+"フトをOdooが自動的に作成するようにします。"
 
 #. module: stock
 #: model_terms:ir.actions.act_window,help:stock.action_warehouse_form
@@ -2766,7 +2740,7 @@ msgstr "配送ルート"
 #: model:ir.actions.report,name:stock.action_report_delivery
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_type_form
 msgid "Delivery Slip"
-msgstr "配送伝票"
+msgstr "納品伝票"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_procurement_group__move_type
@@ -2785,14 +2759,14 @@ msgstr ""
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_lot__delivery_count
 msgid "Delivery order count"
-msgstr "配送オーダカウント"
+msgstr "出荷オーダカウント"
 
 #. module: stock
 #. odoo-python
 #: code:addons/stock/models/stock_lot.py:0
 #, python-format
 msgid "Delivery orders of %s"
-msgstr "以下の配送オーダ：%s"
+msgstr "以下の出荷オーダ：%s"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move__product_uom_qty
@@ -2854,7 +2828,7 @@ msgstr "説明"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_template_property_form
 msgid "Description for Delivery Orders"
-msgstr "配送オーダ用説明"
+msgstr "出荷オーダ用説明"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_template_property_form
@@ -2875,7 +2849,7 @@ msgstr "ピッキングの説明"
 #: model:ir.model.fields,field_description:stock.field_product_product__description_pickingout
 #: model:ir.model.fields,field_description:stock.field_product_template__description_pickingout
 msgid "Description on Delivery Orders"
-msgstr "配送オーダ用説明"
+msgstr "出荷オーダ用説明"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_product_product__description_picking
@@ -3037,7 +3011,7 @@ msgstr "インポートロットを表示"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_res_config_settings__group_lot_on_delivery_slip
 msgid "Display Lots & Serial Numbers on Delivery Slips"
-msgstr "ロット/シリアル番号を配送伝票に表示"
+msgstr "ロット/シリアル番号を納品伝票に表示"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_lot_label_layout__display_name
@@ -3093,7 +3067,7 @@ msgstr "表示名"
 #. module: stock
 #: model:res.groups,name:stock.group_lot_on_delivery_slip
 msgid "Display Serial & Lot Number in Delivery Slips"
-msgstr "配送伝票にシリアル/ロット番号表示"
+msgstr "納品伝票にシリアル/ロット番号表示"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.package_level_tree_view_picking
@@ -3242,8 +3216,7 @@ msgstr ""
 "Odooバーコードアプリでペースの速い体験をお楽しみください。それは非常に速く、"
 "安定したインターネット接続がなくても機能します。在庫調整、バッチピッキング、"
 "ロットまたはパレットの移動、在庫不足チェックなど、すべてのフローをサポートし"
-"ます。'アプリ'メニューに移動して、バーコードインターフェイスをアクティブにし"
-"ます。"
+"ます。'アプリ'メニューに移動して、バーコードインターフェイスを有効にします。"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_product_product__tracking
@@ -3936,8 +3909,8 @@ msgid ""
 "If the active field is set to False, it will allow you to hide the "
 "orderpoint without removing it."
 msgstr ""
-"アクティブな項目がFalseにセットされている場合は、発注点を削除することなく非表"
-"示にできます。"
+"有効化フィールドをFalseに設定すると、補充ルールを削除せずに非表示にすることが"
+"できます。"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_route__active
@@ -3945,8 +3918,8 @@ msgid ""
 "If the active field is set to False, it will allow you to hide the route "
 "without removing it."
 msgstr ""
-"このアクティブ項目をFalseに設定すると、ルートは削除することなく非表示にするこ"
-"とができます。"
+"この有効項目をFalseに設定すると、ルートは削除することなく非表示にすることがで"
+"きます。"
 
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__stock_storage_category__allow_new_product__empty
@@ -3978,7 +3951,7 @@ msgid ""
 "of a picking when it is validated."
 msgstr ""
 "このチェックボックスにチェックを入れると、Odooはピッキングが認証されると自動"
-"的に配送伝票を印刷します。"
+"的に納品伝票を印刷します。"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_picking_type__auto_print_lot_labels
@@ -4161,7 +4134,7 @@ msgstr "在庫あり"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_warehouse__in_type_id
 msgid "In Type"
-msgstr "入荷タイプ"
+msgstr "入庫タイプ"
 
 #. module: stock
 #: model_terms:res.company,invoice_terms_html:stock.res_company_1
@@ -4345,7 +4318,7 @@ msgstr "無効なドメイン右オペランド '%s'。整数/浮動型である
 #, python-format
 msgid ""
 "Invalid rule's configuration, the following rule causes an endless loop: %s"
-msgstr "規則の設定が無効です。以下の規則は無限ループを引き起こします:%s"
+msgstr "ルールの設定が無効です。以下のルールは無限ループを引き起こします:%s"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_quant__inventory_quantity_auto_apply
@@ -4633,12 +4606,12 @@ msgstr "ノートパソコン"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_move_line_view_search
 msgid "Last 12 Months"
-msgstr "過去12か月"
+msgstr "直近12か月"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_move_line_view_search
 msgid "Last 3 Months"
-msgstr "過去3か月"
+msgstr "直近3か月"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_move_line_view_search
@@ -5064,7 +5037,7 @@ msgstr "ロット/シリアル番号"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.res_config_settings_view_form
 msgid "Lots & Serial numbers will appear on the delivery slip"
-msgstr "配送伝票にロット/シリアル番号が表示されます"
+msgstr "納品伝票にロット/シリアル番号が表示されます"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move_line__lots_visible
@@ -5113,7 +5086,7 @@ msgstr "在庫数が少ないですか？補充しましょう！"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_warehouse__mto_pull_id
 msgid "MTO rule"
-msgstr "MTO規則"
+msgstr "MTOルール"
 
 #. module: stock
 #: model:res.groups,name:stock.group_tracking_owner
@@ -5276,7 +5249,7 @@ msgstr "最小在庫ルール"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_product_product__orderpoint_ids
 msgid "Minimum Stock Rules"
-msgstr "最小在庫規則"
+msgstr "最小在庫ルール"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_product_label_layout__move_ids
@@ -5369,12 +5342,12 @@ msgstr "調達ロットサイズ"
 #. module: stock
 #: model:ir.model.constraint,message:stock.constraint_stock_storage_category_capacity_unique_package_type
 msgid "Multiple capacity rules for one package type."
-msgstr "1つのパッケージタイプに複数の容量規則"
+msgstr "1つのパッケージタイプに複数の容量ルール"
 
 #. module: stock
 #: model:ir.model.constraint,message:stock.constraint_stock_storage_category_capacity_unique_product
 msgid "Multiple capacity rules for one product."
-msgstr "1つのプロダクトに複数の容量規則"
+msgstr "1つのプロダクトに複数の容量ルール"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_lot__my_activity_date_deadline
@@ -5525,7 +5498,7 @@ msgstr "影響を受ける次の転送(複数):"
 #: code:addons/stock/report/report_stock_reception.py:0
 #, python-format
 msgid "No %s selected or a delivery order selected"
-msgstr "%sが選択されていないか、または配送オーダが選択されています。"
+msgstr "%sが選択されていないか、または出荷オーダが選択されています。"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_backorder_confirmation
@@ -5612,7 +5585,7 @@ msgstr ""
 #. module: stock
 #: model_terms:ir.actions.act_window,help:stock.action_putaway_tree
 msgid "No putaway rule found. Let's create one!"
-msgstr "入庫規則が見つかりません。作ってみましょう!"
+msgstr "入庫ルールが見つかりません。作ってみましょう!"
 
 #. module: stock
 #: model_terms:ir.actions.act_window,help:stock.action_picking_tree_incoming
@@ -5622,7 +5595,7 @@ msgstr "入荷が見つかりません。作成しましょう！"
 #. module: stock
 #: model_terms:ir.actions.act_window,help:stock.action_orderpoint
 msgid "No reordering rule found"
-msgstr "再オーダ規則が見つかりません"
+msgstr "再オーダルールが見つかりません"
 
 #. module: stock
 #. odoo-python
@@ -5632,8 +5605,8 @@ msgid ""
 "No rule has been found to replenish %r in %r.\n"
 "Verify the routes configuration on the product."
 msgstr ""
-" %rに%rを補充する規則は見つかりませんでした。プロダクトのルート構成を確認しま"
-"す。"
+"%rに%rを補充するルールは見つかりませんでした。プロダクトのルート構成を確認し"
+"ます。"
 
 #. module: stock
 #. odoo-python
@@ -5986,7 +5959,7 @@ msgstr "%sにより署名されたオーダ"
 #: model:ir.model.fields,field_description:stock.field_stock_orderpoint_snooze__orderpoint_ids
 #: model:ir.model.fields,field_description:stock.field_stock_replenishment_info__orderpoint_id
 msgid "Orderpoint"
-msgstr "オーダポイント"
+msgstr "補充ルール"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_move_form
@@ -6947,7 +6920,7 @@ msgstr "調達グループの展開"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_rule__propagate_carrier
 msgid "Propagation of carrier"
-msgstr "運送会社の展開"
+msgstr "配送業者の展開"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_lot__lot_properties
@@ -6969,12 +6942,12 @@ msgstr "以下からプル:"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_stock_rule
 msgid "Pull Rule"
-msgstr "プル規則"
+msgstr "プルルール"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_stock_rule
 msgid "Push Rule"
-msgstr "プッシュ規則"
+msgstr "プッシュルール"
 
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__stock_rule__action__push
@@ -6995,7 +6968,7 @@ msgstr "製品の梱包 (小包、箱等) および追跡"
 #. module: stock
 #: model:ir.model,name:stock.model_stock_putaway_rule
 msgid "Putaway Rule"
-msgstr "入庫規則"
+msgstr "入庫ルール"
 
 #. module: stock
 #. odoo-python
@@ -7014,7 +6987,7 @@ msgstr "入庫規則"
 #: model_terms:ir.ui.view,arch_db:stock.view_putaway_search
 #, python-format
 msgid "Putaway Rules"
-msgstr "入庫規則"
+msgstr "入庫ルール"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_stock_rule
@@ -7024,7 +6997,7 @@ msgstr "入庫:"
 #. module: stock
 #: model:ir.actions.act_window,name:stock.action_putaway_tree
 msgid "Putaways Rules"
-msgstr "入庫規則"
+msgstr "入庫ルール"
 
 #. module: stock
 #: model:ir.model.constraint,message:stock.constraint_stock_warehouse_orderpoint_qty_multiple_check
@@ -7062,7 +7035,7 @@ msgstr "品質ワークシート"
 #: model:ir.model.fields,field_description:stock.field_stock_warn_insufficient_qty__quant_ids
 #: model:ir.model.fields,field_description:stock.field_stock_warn_insufficient_qty_scrap__quant_ids
 msgid "Quant"
-msgstr "Quant"
+msgstr "在庫数量"
 
 #. module: stock
 #. odoo-python
@@ -7197,12 +7170,13 @@ msgid ""
 "Otherwise, this includes goods arriving to any Stock Location with "
 "'internal' type."
 msgstr ""
-"計画された入荷製品の数量。\n"
-"単一の在庫場所のコンテキストでは、これには、この場所またはその子のいずれかに"
-"到着する製品が含まれます。\n"
-"単一の倉庫の場合、これには、この倉庫またはその子の在庫場所に到着する製品が含"
-"まれます。\n"
-"それ以外の場合、これには'内部'タイプの在庫場所に到着する製品が含まれます。"
+"予定されている入庫プロダクトの数量。\n"
+"単一の在庫ロケーションのコンテキストでは、このロケーション、またはその子ロ"
+"ケーションに入庫予定の商品が含まれます。\n"
+"単一の倉庫のコンテキストでは、この倉庫の在庫ロケーション、またはその子ロケー"
+"ションに入庫予定の商品が含まれます。\n"
+"それ以外の場合、タイプが '内部'のすべての在庫ロケーションに入庫予定の商品が含"
+"まれます。"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_product_product__outgoing_qty
@@ -7521,12 +7495,12 @@ msgstr "並べ替えルール"
 #: model_terms:ir.ui.view,arch_db:stock.view_warehouse_orderpoint_form
 #: model_terms:ir.ui.view,arch_db:stock.view_warehouse_orderpoint_tree_editable
 msgid "Reordering Rules"
-msgstr "再オーダ規則"
+msgstr "再オーダルール"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.warehouse_orderpoint_search
 msgid "Reordering Rules Search"
-msgstr "再オーダ規則検索"
+msgstr "再オーダルール検索"
 
 #. module: stock
 #. odoo-javascript
@@ -7900,7 +7874,7 @@ msgstr ""
 #: code:addons/stock/models/stock_rule.py:0
 #, python-format
 msgid "Rule %s belongs to %s while the route belongs to %s."
-msgstr "規則 %sは %sに属し、ルートは %sに属します。"
+msgstr "ルール %sは %sに属し、ルートは %sに属します。"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_rule__rule_message
@@ -7915,17 +7889,17 @@ msgstr "ルールメッセージ"
 #: model_terms:ir.ui.view,arch_db:stock.view_stock_rule_form
 #: model_terms:ir.ui.view,arch_db:stock.view_stock_rule_tree
 msgid "Rules"
-msgstr "規則"
+msgstr "ルール"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_putaway_search
 msgid "Rules on Categories"
-msgstr "カテゴリに関する規則"
+msgstr "カテゴリに関するルール"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_putaway_search
 msgid "Rules on Products"
-msgstr "製品に関する規則"
+msgstr "製品に関するルール"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_warehouse_orderpoint__rule_ids
@@ -8366,7 +8340,7 @@ msgid ""
 "customer. Apply shipping connector from delivery methods."
 msgstr ""
 "配送コネクターを使用すると、正確な配送コストを計算し、配送ラベルを印刷し、倉"
-"庫での運送会社のピッキングを要求して顧客に配送できます。配送方法から配送コネ"
+"庫での配送業者のピッキングを要求して顧客に配送できます。配送方法から配送コネ"
 "クターを適用します。"
 
 #. module: stock
@@ -8519,17 +8493,17 @@ msgstr "サイズ: 長さ × 幅 × 高さ"
 #: model_terms:ir.ui.view,arch_db:stock.view_warehouse_orderpoint_tree_editable
 #, python-format
 msgid "Snooze"
-msgstr "一時停止"
+msgstr "補充延期"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_orderpoint_snooze__snoozed_until
 msgid "Snooze Date"
-msgstr "一時停止日"
+msgstr "延期期限"
 
 #. module: stock
 #: model:ir.model,name:stock.model_stock_orderpoint_snooze
 msgid "Snooze Orderpoint"
-msgstr "オーダポイント一時停止"
+msgstr "補充ルールを一時停止"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_orderpoint_snooze__predefined_date
@@ -8551,7 +8525,7 @@ msgstr ""
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move_line__origin
 msgid "Source"
-msgstr "移動元"
+msgstr "参照元"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move__origin
@@ -8559,7 +8533,7 @@ msgstr "移動元"
 #: model:ir.model.fields,field_description:stock.field_stock_scrap__origin
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_internal_search
 msgid "Source Document"
-msgstr "参照元"
+msgstr "参照元ドキュメント"
 
 #. module: stock
 #. odoo-python
@@ -8616,7 +8590,7 @@ msgstr "スター付き製品"
 #: model:ir.model.fields,field_description:stock.field_report_stock_quantity__state
 #: model:ir.model.fields,field_description:stock.field_stock_package_level__state
 msgid "State"
-msgstr "都道府県・州"
+msgstr "状態"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move__state
@@ -8760,17 +8734,17 @@ msgstr "棚卸数在庫要求"
 #: model:ir.model,name:stock.model_stock_rule
 #: model:ir.model.fields,field_description:stock.field_stock_move__rule_id
 msgid "Stock Rule"
-msgstr "在庫規則"
+msgstr "在庫ルール"
 
 #. module: stock
 #: model:ir.actions.act_window,name:stock.action_stock_rules_report
 msgid "Stock Rules Report"
-msgstr "在庫規則レポート"
+msgstr "在庫ルールレポート"
 
 #. module: stock
 #: model:ir.model,name:stock.model_stock_rules_report
 msgid "Stock Rules report"
-msgstr "在庫規則レポート"
+msgstr "在庫ルールレポート"
 
 #. module: stock
 #: model:ir.model,name:stock.model_stock_track_confirmation
@@ -8810,7 +8784,7 @@ msgstr "在庫梱包タイプ"
 #. module: stock
 #: model:ir.model,name:stock.model_report_stock_report_stock_rule
 msgid "Stock rule report"
-msgstr "在庫規則レポート"
+msgstr "在庫ルールレポート"
 
 #. module: stock
 #: model:ir.model,name:stock.model_stock_replenishment_info
@@ -9265,7 +9239,7 @@ msgid ""
 "The stock will be reserved for operations waiting for availability and the "
 "reordering rules will be triggered."
 msgstr ""
-"利用可能在庫待ちのオペレーションに在庫を引き当て、再オーダ規則をトリガしま"
+"利用可能在庫待ちのオペレーションに在庫を引き当て、再オーダルールをトリガしま"
 "す。"
 
 #. module: stock
@@ -9450,7 +9424,7 @@ msgstr ""
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_template_property_form
 msgid "This note is added to delivery orders."
-msgstr "このメモは配送オーダに追加されます。"
+msgstr "このメモは出荷オーダに追加されます。"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_template_property_form
@@ -9871,7 +9845,7 @@ msgstr "トリガー"
 #: model:ir.model.fields.selection,name:stock.selection__stock_rule__procure_method__make_to_order
 #: model_terms:ir.ui.view,arch_db:stock.report_stock_rule
 msgid "Trigger Another Rule"
-msgstr "他の規則をトリガー"
+msgstr "他のルールをトリガー"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_stock_rule
@@ -10109,8 +10083,8 @@ msgid ""
 "Use GS1 nomenclature datamatrix whenever barcodes are printed for lots and "
 "serial numbers."
 msgstr ""
-"ロット番号やシリアル番号のバーコードを印刷する場合は、GS1表現規則データマトリ"
-"クスを使用"
+"ロット番号やシリアル番号のバーコードを印刷する場合は、GS1表現ルールデータマト"
+"リクスを使用"
 
 #. module: stock
 #: model:res.groups,name:stock.group_reception_report
@@ -10557,7 +10531,7 @@ msgstr ""
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_rule__propagate_carrier
 msgid "When ticked, carrier of shipment will be propagated."
-msgstr "チェックを入れると、運送会社が展開されます。"
+msgstr "チェックを入れると、配送業者が展開されます。"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_rule__propagate_cancel
@@ -10743,8 +10717,7 @@ msgstr "すでに使用されているプロダクトタイプを変更するこ
 #, python-format
 msgid "You can not create a snoozed orderpoint that is not manually triggered."
 msgstr ""
-"手動でトリガされていない一時停止済のオーダポイントを作成することはできませ"
-"ん。"
+"手動トリガでない補充ルールに対しては、一時停止を設定することはできません。"
 
 #. module: stock
 #. odoo-python
@@ -10814,8 +10787,8 @@ msgid ""
 "You can only snooze manual orderpoints. You should rather archive 'auto-"
 "trigger' orderpoints if you do not want them to be triggered."
 msgstr ""
-"一時停止できるのは手動オーダポイントのみです。トリガさせたくない場合は、'自動"
-"トリガ' オーダーポイントをアーカイブして下さい。"
+"一時停止できるのは手動の補充ルールのみです。「自動でトリガー」される補充ルー"
+"ルを無効にしたい場合は、アーカイブすることをおすすめします。"
 
 #. module: stock
 #. odoo-python
@@ -11137,8 +11110,7 @@ msgid ""
 "You need to activate storage locations to be able to do internal operation "
 "types."
 msgstr ""
-"内部オペレーションタイプを実行するため、保管場所をアクティブにする必要があり"
-"ます。"
+"内部オペレーションタイプを実行するため、保管場所を有効にする必要があります。"
 
 #. module: stock
 #. odoo-python
@@ -11185,8 +11157,8 @@ msgid ""
 "You still have some active reordering rules on this product. Please archive "
 "or delete them first."
 msgstr ""
-"この製品には、まだいくつかのアクティブな並べ替えルールがあります。最初にアー"
-"カイブまたは削除してください。"
+"この製品には、まだいくつかの有効な並べ替えルールがあります。最初にアーカイブ"
+"または削除してください。"
 
 #. module: stock
 #. odoo-javascript
@@ -11415,7 +11387,7 @@ msgstr "report_stock_quantity_graph"
 #: code:addons/stock/static/src/stock_forecasted/forecasted_details.xml:0
 #, python-format
 msgid "reserved"
-msgstr "引当済"
+msgstr "予約済"
 
 #. module: stock
 #. odoo-javascript
@@ -11455,7 +11427,28 @@ msgstr "単位"
 msgid ""
 "{{ object.company_id.name }} Delivery Order (Ref {{ object.name or 'n/a' }})"
 msgstr ""
-"{{ object.company_id.name }} 配送オーダ (Ref {{ object.name or 'n/a' }})"
+"{{ object.company_id.name }} 出荷オーダ (Ref {{ object.name or 'n/a' }})"
+
+#~ msgid "1234567890"
+#~ msgstr "1234567890"
+
+#~ msgid "12345678901"
+#~ msgstr "12345678901"
+
+#~ msgid "2021-9-01"
+#~ msgstr "2021-9-01"
+
+#~ msgid "2023-01-01"
+#~ msgstr "2023-01-01"
+
+#~ msgid "2023-09-24"
+#~ msgstr "2023-09-24"
+
+#~ msgid "3.00"
+#~ msgstr "3.00"
+
+#~ msgid "54326786758"
+#~ msgstr "54326786758"
 
 #, python-format
 #~ msgid ""

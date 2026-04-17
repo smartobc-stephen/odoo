@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* web
+# * web
 #
 # Translators:
 # Vacaru Adrian <adrian.vacaru@gmail.com>, 2024
@@ -19,21 +19,24 @@
 # Dorin Hongu <dhongu@gmail.com>, 2025
 # Wil Odoo, 2025
 # Larisa_nexterp, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# Odoo Translation Bot <c3p@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-16 18:38+0000\n"
-"PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Larisa_nexterp, 2025\n"
-"Language-Team: Romanian (https://app.transifex.com/odoo/teams/41243/ro/)\n"
+"POT-Creation-Date: 2026-04-03 18:40+0000\n"
+"PO-Revision-Date: 2026-04-09 10:43+0000\n"
+"Last-Translator: Odoo Translation Bot <c3p@odoo.com>\n"
+"Language-Team: Romanian <https://translate.odoo.com/projects/odoo-17/web/ro/>"
+"\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
-"2:1));\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: web
 #. odoo-javascript
@@ -194,153 +197,10 @@ msgstr "+ CHEIE"
 
 #. module: web
 #. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "00"
-msgstr "00"
-
-#. module: web
-#: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
-msgid "07/08/2020"
-msgstr "07/08/2020"
-
-#. module: web
-#: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
-msgid "08/07/2020"
-msgstr "08/07/2020"
-
-#. module: web
-#. odoo-javascript
 #: code:addons/web/static/src/views/fields/formatters.js:0
 #, python-format
 msgid "1 record"
 msgstr "o înregistrare"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "1.30"
-msgstr "1.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "10"
-msgstr "10"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "10.30"
-msgstr "10.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "100"
-msgstr "100"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "10:00"
-msgstr "10:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "10:30"
-msgstr "10:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "11"
-msgstr "11"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "11.30"
-msgstr "11.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "11:00"
-msgstr "11:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "11:30"
-msgstr "11:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "12"
-msgstr "12"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "12.30"
-msgstr "12.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "1234"
-msgstr "1234"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "12:00"
-msgstr "12:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "12:30"
-msgstr "12:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "18"
-msgstr "18"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "1:00"
-msgstr "1:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "1:30"
-msgstr "1:30"
 
 #. module: web
 #. odoo-javascript
@@ -353,27 +213,6 @@ msgstr "1st place medal"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
-msgid "2.30"
-msgstr "2.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "2:00"
-msgstr "2:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "2:30"
-msgstr "2:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
 msgid "2nd place medal"
 msgstr "2nd place medal"
 
@@ -381,50 +220,8 @@ msgstr "2nd place medal"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
-msgid "3.30"
-msgstr "3.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "3:00"
-msgstr "3:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "3:30"
-msgstr "3:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
 msgid "3rd place medal"
 msgstr "3rd place medal"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "4.30"
-msgstr "4.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "4:00"
-msgstr "4:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "4:30"
-msgstr "4:30"
 
 #. module: web
 #. odoo-javascript
@@ -439,111 +236,6 @@ msgstr "4WD"
 #, python-format
 msgid "4x4"
 msgstr "4x4"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "5.30"
-msgstr "5.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "5:00"
-msgstr "5:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "5:30"
-msgstr "5:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "6.30"
-msgstr "6.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "6:00"
-msgstr "6:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "6:30"
-msgstr "6:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "7.30"
-msgstr "7.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "7:00"
-msgstr "7:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "7:30"
-msgstr "7:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "8.30"
-msgstr "8.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "8:00"
-msgstr "8:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "8:30"
-msgstr "8:30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "9.30"
-msgstr "9.30"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "9:00"
-msgstr "9:00"
-
-#. module: web
-#. odoo-javascript
-#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
-#, python-format
-msgid "9:30"
-msgstr "9:30"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.view_base_document_layout
@@ -619,8 +311,8 @@ msgstr "<span id=\"line_tax_ids\">Tax 15%</span>"
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
-msgid "<span itemprop=\"name\">Deco Addict</span>"
-msgstr "<span itemprop=\"name\">Deco Addict</span>"
+msgid "<span itemprop=\"name\">Acme Corporation</span>"
+msgstr ""
 
 #. module: web
 #: model_terms:ir.ui.view,arch_db:web.report_invoice_wizard_preview
@@ -765,6 +457,13 @@ msgstr ""
 "@font-face {\n"
 "                        font-family: \"font\";\n"
 "                        src: url(data:font/ttf;base64,"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "A"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -1386,6 +1085,13 @@ msgstr "Avatar"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "B"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "B button (blood type)"
 msgstr "Buton B (tipul de sânge)"
 
@@ -1584,6 +1290,13 @@ msgstr "Octeți"
 #, python-format
 msgid "Bytes|Kb|Mb|Gb|Tb|Pb|Eb|Zb|Yb"
 msgstr "Bytes|Kb|Mb|Gb|Tb|Pb|Eb|Zb|Yb"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "C"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -4280,6 +3993,13 @@ msgstr "Logo Culoare secundară"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "M"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "Mahjong"
 msgstr "Mahjong"
 
@@ -5031,6 +4751,13 @@ msgstr "Numărul de fișiere"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "O"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "O button (blood type)"
 msgstr "O buton (tip sanguin)"
 
@@ -5357,6 +5084,13 @@ msgstr "Altele"
 #, python-format
 msgid "Overflow style"
 msgstr "Stil de depășire"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "P"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -5841,6 +5575,13 @@ msgstr "Căutare rapidă: %s"
 #: model:ir.model,name:web.model_ir_qweb_field_image_url
 msgid "Qweb Field Image"
 msgstr "Imagine Câmp Qweb"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "R"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -7036,7 +6777,7 @@ msgstr "Domeniul nu ar trebui să implice valori non-literal"
 #: code:addons/web/static/src/core/utils/files.js:0
 #, python-format
 msgid "The file is not an image, resizing is not possible"
-msgstr ""
+msgstr "Fișierul nu este o imagine, redimensionarea nu este posibilă"
 
 #. module: web
 #. odoo-javascript
@@ -7055,7 +6796,7 @@ msgstr ""
 #: code:addons/web/static/src/core/utils/files.js:0
 #, python-format
 msgid "The resizing of the image failed"
-msgstr ""
+msgstr "Redimensionarea imaginii a eșuat"
 
 #. module: web
 #. odoo-javascript
@@ -7227,6 +6968,13 @@ msgstr "Joi"
 #, python-format
 msgid "Time"
 msgstr "Data"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/debug/profiling/profiling_item.xml:0
+#, python-format
+msgid "Time Limit (seconds)"
+msgstr "Limită de timp (secunde)"
 
 #. module: web
 #. odoo-javascript
@@ -9122,14 +8870,14 @@ msgstr "balet"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "ballet flat"
-msgstr ""
+msgstr "balerină"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "ballet shoes"
-msgstr ""
+msgstr "pantofi de balet"
 
 #. module: web
 #. odoo-javascript
@@ -17043,6 +16791,13 @@ msgstr "plic roșu (hóngbāo)"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "i"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "ice"
 msgstr "gheață"
 
@@ -17443,7 +17198,7 @@ msgstr "este între"
 #: code:addons/web/static/src/core/tree_editor/tree_editor_operator_editor.js:0
 #, python-format
 msgid "is in"
-msgstr ""
+msgstr "este în"
 
 #. module: web
 #. odoo-javascript
@@ -17457,7 +17212,7 @@ msgstr "nu este"
 #: code:addons/web/static/src/core/tree_editor/tree_editor_operator_editor.js:0
 #, python-format
 msgid "is not in"
-msgstr ""
+msgstr "nu este în"
 
 #. module: web
 #. odoo-javascript
@@ -17478,14 +17233,14 @@ msgstr "este setat"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "islam"
-msgstr ""
+msgstr "islam"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "island"
-msgstr ""
+msgstr "insulă"
 
 #. module: web
 #. odoo-javascript
@@ -17499,35 +17254,35 @@ msgstr "încă se încarcă..."
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "jack"
-msgstr ""
+msgstr "cric"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "jack-o-lantern"
-msgstr ""
+msgstr "lanternă de Halloween"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "jack-o’-lantern"
-msgstr ""
+msgstr "jack-o'-lantern"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "jacket"
-msgstr ""
+msgstr "jachetă"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "jar"
-msgstr ""
+msgstr "borcan"
 
 #. module: web
 #. odoo-javascript
@@ -20894,6 +20649,13 @@ msgstr "nuci"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "o"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "ocean"
 msgstr "ocean"
 
@@ -21401,35 +21163,35 @@ msgstr "pachet"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "packing"
-msgstr ""
+msgstr "ambalare"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "pad"
-msgstr ""
+msgstr "pad"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "paddle"
-msgstr ""
+msgstr "vâslă"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "padlock"
-msgstr ""
+msgstr "lacăt"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "paella"
-msgstr ""
+msgstr "paella"
 
 #. module: web
 #. odoo-javascript
@@ -21443,14 +21205,14 @@ msgstr "pagină"
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "page facing up"
-msgstr ""
+msgstr "pagină cu fața în sus"
 
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
 msgid "page with curl"
-msgstr ""
+msgstr "pagină cu buclă"
 
 #. module: web
 #. odoo-javascript
@@ -23306,6 +23068,13 @@ msgstr "întrebare"
 #, python-format
 msgid "quiet"
 msgstr "liniște"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "r"
+msgstr ""
 
 #. module: web
 #. odoo-javascript
@@ -28215,6 +27984,13 @@ msgstr "urnă"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "v"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "vague"
 msgstr "vag"
 
@@ -29818,6 +29594,13 @@ msgstr "ironic"
 #. odoo-javascript
 #: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
 #, python-format
+msgid "x"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
 msgid "yacht"
 msgstr "iaht"
 
@@ -30142,3 +29925,296 @@ msgstr "„loc disponibil”"
 #, python-format
 msgid "ココ"
 msgstr "aici"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "サ"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "割"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "可"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "合"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "営"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "得"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "指"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "月"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "有"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "満"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "無"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "申"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "祝"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "禁"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "秘"
+msgstr ""
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/emoji_picker/emoji_data.js:0
+#, python-format
+msgid "空"
+msgstr ""
+
+#, python-format
+#~ msgid "00"
+#~ msgstr "00"
+
+#~ msgid "07/08/2020"
+#~ msgstr "07/08/2020"
+
+#~ msgid "08/07/2020"
+#~ msgstr "08/07/2020"
+
+#, python-format
+#~ msgid "1.30"
+#~ msgstr "1.30"
+
+#, python-format
+#~ msgid "10"
+#~ msgstr "10"
+
+#, python-format
+#~ msgid "10.30"
+#~ msgstr "10.30"
+
+#, python-format
+#~ msgid "100"
+#~ msgstr "100"
+
+#, python-format
+#~ msgid "10:00"
+#~ msgstr "10:00"
+
+#, python-format
+#~ msgid "10:30"
+#~ msgstr "10:30"
+
+#, python-format
+#~ msgid "11"
+#~ msgstr "11"
+
+#, python-format
+#~ msgid "11.30"
+#~ msgstr "11.30"
+
+#, python-format
+#~ msgid "11:00"
+#~ msgstr "11:00"
+
+#, python-format
+#~ msgid "11:30"
+#~ msgstr "11:30"
+
+#, python-format
+#~ msgid "12"
+#~ msgstr "12"
+
+#, python-format
+#~ msgid "12.30"
+#~ msgstr "12.30"
+
+#, python-format
+#~ msgid "1234"
+#~ msgstr "1234"
+
+#, python-format
+#~ msgid "12:00"
+#~ msgstr "12:00"
+
+#, python-format
+#~ msgid "12:30"
+#~ msgstr "12:30"
+
+#, python-format
+#~ msgid "18"
+#~ msgstr "18"
+
+#, python-format
+#~ msgid "1:00"
+#~ msgstr "1:00"
+
+#, python-format
+#~ msgid "1:30"
+#~ msgstr "1:30"
+
+#, python-format
+#~ msgid "2.30"
+#~ msgstr "2.30"
+
+#, python-format
+#~ msgid "2:00"
+#~ msgstr "2:00"
+
+#, python-format
+#~ msgid "2:30"
+#~ msgstr "2:30"
+
+#, python-format
+#~ msgid "3.30"
+#~ msgstr "3.30"
+
+#, python-format
+#~ msgid "3:00"
+#~ msgstr "3:00"
+
+#, python-format
+#~ msgid "3:30"
+#~ msgstr "3:30"
+
+#, python-format
+#~ msgid "4.30"
+#~ msgstr "4.30"
+
+#, python-format
+#~ msgid "4:00"
+#~ msgstr "4:00"
+
+#, python-format
+#~ msgid "4:30"
+#~ msgstr "4:30"
+
+#, python-format
+#~ msgid "5.30"
+#~ msgstr "5.30"
+
+#, python-format
+#~ msgid "5:00"
+#~ msgstr "5:00"
+
+#, python-format
+#~ msgid "5:30"
+#~ msgstr "5:30"
+
+#, python-format
+#~ msgid "6.30"
+#~ msgstr "6.30"
+
+#, python-format
+#~ msgid "6:00"
+#~ msgstr "6:00"
+
+#, python-format
+#~ msgid "6:30"
+#~ msgstr "6:30"
+
+#, python-format
+#~ msgid "7.30"
+#~ msgstr "7.30"
+
+#, python-format
+#~ msgid "7:00"
+#~ msgstr "7:00"
+
+#, python-format
+#~ msgid "7:30"
+#~ msgstr "7:30"
+
+#, python-format
+#~ msgid "8.30"
+#~ msgstr "8.30"
+
+#, python-format
+#~ msgid "8:00"
+#~ msgstr "8:00"
+
+#, python-format
+#~ msgid "8:30"
+#~ msgstr "8:30"
+
+#, python-format
+#~ msgid "9.30"
+#~ msgstr "9.30"
+
+#, python-format
+#~ msgid "9:00"
+#~ msgstr "9:00"
+
+#, python-format
+#~ msgid "9:30"
+#~ msgstr "9:30"
+
+#~ msgid "<span itemprop=\"name\">Deco Addict</span>"
+#~ msgstr "<span itemprop=\"name\">Deco Addict</span>"

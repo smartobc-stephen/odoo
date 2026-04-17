@@ -495,7 +495,9 @@ class AccountMoveLine(models.Model):
     def _compute_name(self):
         def get_name(line):
             values = []
-            if line.partner_id.lang:
+            if line.move_id.partner_id.lang:
+                product = line.product_id.with_context(lang=line.move_id.partner_id.lang)
+            elif line.partner_id.lang:
                 product = line.product_id.with_context(lang=line.partner_id.lang)
             else:
                 product = line.product_id
@@ -719,14 +721,24 @@ class AccountMoveLine(models.Model):
         order_string = self.env.cr.mogrify(sql_order).decode()
         from_clause, where_clause, where_clause_params = query.get_sql()
         sql = """
-            SELECT account_move_line.id, SUM(account_move_line.balance) OVER (
-                ORDER BY %(order_by)s
-                ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
-            )
-            FROM %(from)s
-            WHERE %(where)s
-        """ % {'from': from_clause, 'where': where_clause or 'TRUE', 'order_by': order_string}
-        self.env.cr.execute(sql, where_clause_params)
+            SELECT aml.id, aml.cumulated_balance
+            FROM (
+                SELECT
+                    account_move_line.id,
+                    SUM(account_move_line.balance) OVER (
+                        ORDER BY %(order_by)s
+                        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+                    ) AS cumulated_balance
+                FROM %(from)s
+                WHERE %(where)s
+            ) aml
+            WHERE aml.id = ANY(%%s)
+        """ % {
+            'from': from_clause,
+            'where': where_clause or 'TRUE',
+            'order_by': order_string,
+        }
+        self.env.cr.execute(sql, where_clause_params + [self.ids])
         result = {r[0]: r[1] for r in self.env.cr.fetchall()}
         for record in self:
             record.cumulated_balance = result[record.id]
@@ -1618,7 +1630,6 @@ class AccountMoveLine(models.Model):
                         )
 
         lines.move_id._synchronize_business_models(['line_ids'])
-        lines._check_constrains_account_id_journal_id()
         return lines
 
     def write(self, vals):
@@ -2907,7 +2918,7 @@ class AccountMoveLine(models.Model):
 
         # ==== Create the move ====
         exchange_moves = self.env['account.move'].create(exchange_move_values_list)
-        exchange_moves._post(soft=False)
+        exchange_moves.with_context(validate_analytic=False)._post(soft=False)
 
         # ==== Reconcile ====
         reconciliation_plan = []
@@ -3348,17 +3359,24 @@ class AccountMoveLine(models.Model):
         return self._filter_reconciled_by_number(self._reconciled_by_number())
 
     def _get_attachment_domains(self):
-        self.ensure_one()
         domains = [[
             ('res_model', '=', 'account.move'),
-            ('res_id', '=', self.move_id.id),
+            ('res_id', 'in', self.move_id.ids),
             ('res_field', 'in', (False, 'invoice_pdf_report_file')),
         ]]
         if self.statement_id:
-            domains.append([('res_model', '=', 'account.bank.statement'), ('res_id', '=', self.statement_id.id)])
+            domains.append([('res_model', '=', 'account.bank.statement'), ('res_id', 'in', self.statement_id.ids)])
         if self.payment_id:
-            domains.append([('res_model', '=', 'account.payment'), ('res_id', '=', self.payment_id.id)])
+            domains.append([('res_model', '=', 'account.payment'), ('res_id', 'in', self.payment_id.ids)])
         return domains
+
+    @api.model
+    def _get_attachment_by_record(self, id_model2attachments, move_line):
+        return (
+            id_model2attachments.get(('account.move', move_line.move_id.id))
+            or id_model2attachments.get(('account.bank.statement', move_line.statement_id.id))
+            or id_model2attachments.get(('account.payment', move_line.payment_id.id))
+        )
 
     @api.model
     def _get_tax_exigible_domain(self):

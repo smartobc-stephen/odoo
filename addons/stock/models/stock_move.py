@@ -1037,7 +1037,7 @@ Please change the quantity done or the rounding precision of your unit of measur
         float_precision = {f_name: (self.env['stock.move']._fields[f_name].get_digits(self.env) or (False, 2))[1] for f_name in float_fields}
         if 'price_unit' in float_fields:
             price_unit_prec = self.env['decimal.precision'].precision_get('Product Price')
-            currency_precision = self.company_id.currency_id.decimal_places
+            currency_precision = min(self.company_id.mapped('currency_id.decimal_places')) if self.company_id else False
             float_precision['price_unit'] = min(currency_precision, price_unit_prec) if currency_precision else price_unit_prec
 
         def _get_formatted_float_fields(move, f_name, precision):
@@ -1960,7 +1960,12 @@ Please change the quantity done or the rounding precision of your unit of measur
                 .move_line_ids.filtered(lambda ml: ml.picked).mapped('result_package_id')\
                 .filtered(lambda p: p.quant_ids and len(p.quant_ids) > 1):
             if len(result_package.quant_ids.filtered(lambda q: float_compare(q.quantity, 0.0, precision_rounding=q.product_uom_id.rounding) > 0).mapped('location_id')) > 1:
-                raise UserError(_('You cannot move the same package content more than once in the same transfer or split the same package into two location.'))
+                error_msg = _(
+                    'You cannot move the same package content more than once in the same transfer'
+                    ' or split the same package into two location.'
+                )
+                package_msg = _("\nPackage: %s", result_package.name)
+                raise UserError(error_msg + package_msg)
         if any(ml.package_id and ml.package_id == ml.result_package_id for ml in moves_todo.move_line_ids):
             self.env['stock.quant']._unlink_zero_quants()
         picking = moves_todo.mapped('picking_id')

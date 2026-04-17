@@ -691,6 +691,17 @@ export class PosStore extends Reactive {
             return;
         }
         this.loadOpenOrders(this.open_orders_json);
+
+        const openIds = new Set(this.open_orders_json.map((o) => o.id));
+        for (const order of [...this.get_order_list()]) {
+            if (order.server_id && !openIds.has(order.server_id)) {
+                this.removeOrder(order, false);
+            }
+        }
+        if (!this.get_order_list().includes(this.selectedOrder)) {
+            this.selectedOrder = null;
+            this.set_start_order();
+        }
     }
     async _loadMissingProducts(orders) {
         const missingProductIds = new Set([]);
@@ -1877,6 +1888,14 @@ export class PosStore extends Reactive {
         }
         await this._loadMissingPricelistItems(products);
         this._loadProductProduct(products);
+    }
+    async getProductById(productId) {
+        let product = this.db.get_product_by_id(productId);
+        if (!product) {
+            await this._addProducts([productId], false);
+            product = this.db.get_product_by_id(productId);
+        }
+        return product;
     }
     async _loadProductByIds(productIds) {
         return await this.orm.call("pos.session", "get_pos_ui_product_product_by_params", [

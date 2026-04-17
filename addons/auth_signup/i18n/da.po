@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* auth_signup
+# * auth_signup
 #
 # Translators:
 # Martin Trigaux, 2023
@@ -8,25 +8,22 @@
 # Sanne Kristensen <sanne@vkdata.dk>, 2024
 # Sammi Iversen <sammi@vkdata.dk>, 2025
 # Wil Odoo, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-09 18:38+0000\n"
-"PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Wil Odoo, 2025\n"
-"Language-Team: Danish (https://app.transifex.com/odoo/teams/41243/da/)\n"
+"POT-Creation-Date: 2026-04-03 18:39+0000\n"
+"PO-Revision-Date: 2026-04-07 09:20+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Danish <https://translate.odoo.com/projects/odoo-17/"
+"auth_signup/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#. module: auth_signup
-#: model_terms:ir.ui.view,arch_db:auth_signup.reset_password_email
-msgid "+1 650-123-4567"
-msgstr "+1 650-123-4567"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: auth_signup
 #: model_terms:ir.ui.view,arch_db:auth_signup.reset_password_email
@@ -51,11 +48,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:auth_signup.reset_password_email
 msgid "--<br/>Mitchell Admin"
 msgstr "--<br/>Mitchell Admin"
-
-#. module: auth_signup
-#: model_terms:ir.ui.view,arch_db:auth_signup.alert_login_new_device
-msgid "111.222.333.444"
-msgstr "111.222.333.444"
 
 #. module: auth_signup
 #: model_terms:ir.ui.view,arch_db:auth_signup.reset_password_email
@@ -696,6 +688,8 @@ msgid ""
 "Could not contact the mail server, please check your outgoing email server "
 "configuration"
 msgstr ""
+"Det var ikke muligt at oprette forbindelse til mailserveren. Kontrollér "
+"konfigurationen af din udgående mailserver"
 
 #. module: auth_signup
 #. odoo-python
@@ -754,6 +748,8 @@ msgid ""
 "If you do not expect this, you can safely ignore this email.<br/><br/>\n"
 "                                Thanks,"
 msgstr ""
+"Hvis du ikke ønsker dette, kan du blot ignorere denne e-mail.<br/><br/>\n"
+"                                Tak!"
 
 #. module: auth_signup
 #: model_terms:ir.ui.view,arch_db:auth_signup.alert_login_new_device
@@ -761,6 +757,8 @@ msgid ""
 "If you don't recognize it, you should change your password immediately via "
 "this link:<br/>"
 msgstr ""
+"Hvis du ikke genkender den, bør du straks ændre din adgangskode via dette "
+"link:<br/>"
 
 #. module: auth_signup
 #. odoo-python
@@ -799,14 +797,14 @@ msgstr "Der blev fundet flere konti til dette login"
 #: code:addons/auth_signup/models/res_users.py:0
 #, python-format
 msgid "Near %(city)s, %(region)s, %(country)s"
-msgstr ""
+msgstr "I nærheden af %(city)s, %(region)s, %(country)s"
 
 #. module: auth_signup
 #. odoo-python
 #: code:addons/auth_signup/models/res_users.py:0
 #, python-format
 msgid "Near %(region)s, %(country)s"
-msgstr ""
+msgstr "I nærheden af %(region)s, %(country)s"
 
 #. module: auth_signup
 #: model:ir.model.fields.selection,name:auth_signup.selection__res_users__state__new
@@ -853,7 +851,7 @@ msgstr "På invitation"
 #. module: auth_signup
 #: model_terms:ir.ui.view,arch_db:auth_signup.alert_login_new_device
 msgid "Otherwise, you can safely ignore this email."
-msgstr ""
+msgstr "Ellers kan du trygt ignorere denne e-mail."
 
 #. module: auth_signup
 #: model_terms:ir.ui.view,arch_db:auth_signup.fields
@@ -895,7 +893,7 @@ msgstr "Drevet af"
 #. module: auth_signup
 #: model_terms:ir.ui.view,arch_db:auth_signup.login_successful
 msgid "Registration successful."
-msgstr ""
+msgstr "Tilmelding gennemført."
 
 #. module: auth_signup
 #: model:mail.template,subject:auth_signup.mail_template_data_unregistered_users
@@ -1061,6 +1059,8 @@ msgid ""
 "There was an error when trying to deliver your Email, please check your "
 "configuration"
 msgstr ""
+"Der opstod en fejl under levering af din e-mail. Kontrollér venligst din "
+"konfiguration"
 
 #. module: auth_signup
 #: model_terms:ir.ui.view,arch_db:auth_signup.res_config_settings_view_form
@@ -1109,7 +1109,7 @@ msgstr "Dit navn"
 #. module: auth_signup
 #: model_terms:ir.ui.view,arch_db:auth_signup.reset_password_email
 msgid "YourCompany"
-msgstr ""
+msgstr "DinVirksomhed"
 
 #. module: auth_signup
 #: model_terms:ir.ui.view,arch_db:auth_signup.alert_login_new_device
@@ -1139,6 +1139,12 @@ msgid ""
 msgstr ""
 "{{ object.create_uid.name }} fra {{ object.company_id.name }} inviterer dig "
 "til at forbinde med Odoo"
+
+#~ msgid "+1 650-123-4567"
+#~ msgstr "+1 650-123-4567"
+
+#~ msgid "111.222.333.444"
+#~ msgstr "111.222.333.444"
 
 #~ msgid ""
 #~ "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-"

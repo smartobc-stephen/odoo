@@ -3,13 +3,13 @@
 # * website_sale
 #
 # Oakarmin Iron <oakarminiron@gmail.com>, 2025.
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-12 02:56+0000\n"
-"PO-Revision-Date: 2025-11-20 16:31+0000\n"
+"POT-Creation-Date: 2026-04-03 18:38+0000\n"
+"PO-Revision-Date: 2026-04-07 09:27+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Burmese <https://translate.odoo.com/projects/odoo-17/"
 "website_sale/my/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.products
@@ -68,28 +68,13 @@ msgid "'. Showing results for '"
 msgstr ""
 
 #. module: website_sale
-#: model:ir.model.fields.selection,name:website_sale.selection__website__product_page_image_width__100_pc
-msgid "100 %"
-msgstr ""
-
-#. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "100 percent"
 msgstr ""
 
 #. module: website_sale
-#: model:ir.model.fields.selection,name:website_sale.selection__website__product_page_image_width__50_pc
-msgid "50 %"
-msgstr ""
-
-#. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "50 percent"
-msgstr ""
-
-#. module: website_sale
-#: model:ir.model.fields.selection,name:website_sale.selection__website__product_page_image_width__66_pc
-msgid "66 %"
 msgstr ""
 
 #. module: website_sale
@@ -270,13 +255,6 @@ msgid ""
 "<span class=\"d-md-none fa fa-shopping-cart\"/>\n"
 "                            <span class=\"d-none d-md-inline\">Add to cart</"
 "span>"
-msgstr ""
-
-#. module: website_sale
-#: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
-msgid ""
-"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
-"specific.\" groups=\"website.group_multi_website\"/>"
 msgstr ""
 
 #. module: website_sale
@@ -737,7 +715,7 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
 msgid "Assignment"
-msgstr ""
+msgstr "အဆိုင်းမန့်"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
@@ -978,7 +956,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_sale.product_template_view_tree_website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "Categories"
-msgstr ""
+msgstr "အမျိုးအစားများ"
 
 #. module: website_sale
 #: model_terms:ir.actions.act_window,help:website_sale.product_public_category_action
@@ -1133,7 +1111,7 @@ msgstr "အရောင်"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "Columns"
-msgstr ""
+msgstr "ကော်လံများ"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.s_dynamic_snippet_products_template_options
@@ -1816,12 +1794,12 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_sale_extra_field__label
 msgid "Field Label"
-msgstr ""
+msgstr "Field လေဘယ်"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_sale_extra_field__name
 msgid "Field Name"
-msgstr ""
+msgstr "Field အမည်"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -2071,7 +2049,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website_sale.field_res_config_settings__module_account
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
 msgid "Invoicing"
-msgstr ""
+msgstr "ပြေစာထုတ်ခြင်း"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
@@ -2906,7 +2884,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model,name:website_sale.model_product_image
 msgid "Product Image"
-msgstr ""
+msgstr "ပစ္စည်း ရုပ်ပုံ"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.product_image_view_kanban
@@ -3352,7 +3330,7 @@ msgstr "အရောင်းများ"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.sale_report_view_pivot_website
 msgid "Sales Analysis"
-msgstr ""
+msgstr "အရောင်း ဆန်းစစ်ချက်"
 
 #. module: website_sale
 #: model:ir.model,name:website_sale.model_sale_report
@@ -3669,7 +3647,7 @@ msgstr ""
 #. module: website_sale
 #: model:product.ribbon,html:website_sale.sold_out_ribbon
 msgid "Sold out"
-msgstr ""
+msgstr "ရောင်းထွက်သွားပြီ"
 
 #. module: website_sale
 #. odoo-python
@@ -4095,6 +4073,11 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.tax_indication
 msgid "VAT Included"
+msgstr ""
+
+#. module: website_sale
+#: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
+msgid "Values set here are website-specific."
 msgstr ""
 
 #. module: website_sale
@@ -4584,4 +4567,9 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.confirmation
 msgid "to follow your order."
+msgstr ""
+
+#. module: website_sale
+#: model_terms:ir.ui.view,arch_db:website_sale.checkout_layout
+msgid "x"
 msgstr ""

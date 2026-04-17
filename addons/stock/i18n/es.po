@@ -9,13 +9,15 @@
 # Wil Odoo, 2024
 # Larissa Manderfeld, 2025
 # "Larissa Manderfeld (lman)" <lman@odoo.com>, 2025.
+# "Noemi Pla Garcia (nopl)" <nopl@odoo.com>, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-25 18:36+0000\n"
-"PO-Revision-Date: 2025-08-29 01:40+0000\n"
-"Last-Translator: \"Larissa Manderfeld (lman)\" <lman@odoo.com>\n"
+"POT-Creation-Date: 2026-04-03 18:38+0000\n"
+"PO-Revision-Date: 2026-04-04 08:05+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-17/stock/es/"
 ">\n"
 "Language: es\n"
@@ -24,7 +26,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
 "0) ? 1 : 2);\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: stock
 #. odoo-python
@@ -50,6 +52,17 @@ msgid ""
 msgstr ""
 "\n"
 "(%s) existe en la ubicación %s"
+
+#. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_move.py:0
+#, python-format
+msgid ""
+"\n"
+"Package: %s"
+msgstr ""
+"\n"
+"Paquete: %s"
 
 #. module: stock
 #. odoo-python
@@ -358,41 +371,9 @@ msgid "1 Week"
 msgstr "1 Semana"
 
 #. module: stock
-#: model_terms:ir.ui.view,arch_db:stock.report_generic_barcode
-msgid "1234567890"
-msgstr "1234567890"
-
-#. module: stock
-#: model_terms:ir.ui.view,arch_db:stock.report_lot_label
-msgid "12345678901"
-msgstr "12345678901"
-
-#. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__stock_picking_type__product_label_format__2x7xprice
 msgid "2 x 7 with price"
 msgstr "2 x 7 con precio"
-
-#. module: stock
-#: model_terms:ir.ui.view,arch_db:stock.report_package_barcode
-msgid "2021-9-01"
-msgstr "01-09-2021"
-
-#. module: stock
-#: model_terms:ir.ui.view,arch_db:stock.report_package_barcode_small
-msgid "2023-01-01"
-msgstr "01-01-2023"
-
-#. module: stock
-#: model_terms:ir.ui.view,arch_db:stock.report_picking
-msgid "2023-09-24"
-msgstr "24-09-2023"
-
-#. module: stock
-#: model_terms:ir.ui.view,arch_db:stock.report_delivery_document
-#: model_terms:ir.ui.view,arch_db:stock.report_package_barcode
-#: model_terms:ir.ui.view,arch_db:stock.report_picking
-msgid "3.00"
-msgstr "3,00"
 
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__lot_label_layout__print_format__4x12
@@ -419,11 +400,6 @@ msgstr "4 x 12 con precio"
 #: model:ir.model.fields.selection,name:stock.selection__stock_picking_type__product_label_format__4x7xprice
 msgid "4 x 7 with price"
 msgstr "4 x 7 con precio"
-
-#. module: stock
-#: model_terms:ir.ui.view,arch_db:stock.report_package_barcode
-msgid "54326786758"
-msgstr "54326786758"
 
 #. module: stock
 #. odoo-python
@@ -3560,7 +3536,7 @@ msgstr "Fecha pronosticada prevista"
 #: code:addons/stock/static/src/stock_forecasted/forecasted_details.xml:0
 #, python-format
 msgid "Forecasted Inventory"
-msgstr "Inventario pronosticado"
+msgstr "Inventario previsto"
 
 #. module: stock
 #. odoo-python
@@ -3571,7 +3547,7 @@ msgstr "Inventario pronosticado"
 #: model:ir.model.fields,field_description:stock.field_stock_move__availability
 #, python-format
 msgid "Forecasted Quantity"
-msgstr "Cantidad pronosticada"
+msgstr "Cantidad prevista"
 
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__report_stock_quantity__state__in
@@ -3591,7 +3567,7 @@ msgstr "Informe pronosticado"
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__report_stock_quantity__state__forecast
 msgid "Forecasted Stock"
-msgstr "Stock pronosticado"
+msgstr "Stock previsto"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_location__forecast_weight
@@ -8551,7 +8527,7 @@ msgstr "Mostrar operaciones detalladas"
 #: model:ir.model.fields,field_description:stock.field_product_product__show_forecasted_qty_status_button
 #: model:ir.model.fields,field_description:stock.field_product_template__show_forecasted_qty_status_button
 msgid "Show Forecasted Qty Status Button"
-msgstr "Mostrar botón de estado de cantidad pronosticada"
+msgstr "Mostrar botón de estado de cantidad prevista"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_package_level__show_lots_m2o
@@ -9243,7 +9219,7 @@ msgstr "Se han generado las siguientes órdenes de reposición"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_product_replenish
 msgid "The forecasted quantity of"
-msgstr "La cantidad pronosticada de"
+msgstr "La cantidad prevista de"
 
 #. module: stock
 #. odoo-javascript
@@ -9871,7 +9847,7 @@ msgstr "Demanda total"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.product_product_stock_tree
 msgid "Total Forecasted"
-msgstr "Total pronosticado"
+msgstr "Total previsto"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.product_product_stock_tree
@@ -11686,6 +11662,27 @@ msgid ""
 msgstr ""
 "{{ object.company_id.name }} Orden de entrega (Ref {{ object.name or 'n/"
 "a' }})"
+
+#~ msgid "1234567890"
+#~ msgstr "1234567890"
+
+#~ msgid "12345678901"
+#~ msgstr "12345678901"
+
+#~ msgid "2021-9-01"
+#~ msgstr "01-09-2021"
+
+#~ msgid "2023-01-01"
+#~ msgstr "01-01-2023"
+
+#~ msgid "2023-09-24"
+#~ msgstr "24-09-2023"
+
+#~ msgid "3.00"
+#~ msgstr "3,00"
+
+#~ msgid "54326786758"
+#~ msgstr "54326786758"
 
 #, python-format
 #~ msgid ""

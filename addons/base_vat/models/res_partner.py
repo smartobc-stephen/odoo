@@ -1,18 +1,20 @@
 import datetime
+import logging
 import string
 import re
+import requests
+import secrets
+import uuid
+
 import stdnum
-from stdnum.eu.vat import check_vies
-from stdnum.exceptions import InvalidComponent, InvalidChecksum, InvalidFormat
+from stdnum.exceptions import InvalidChecksum, InvalidFormat
 from stdnum.util import clean
 from stdnum import luhn
 
-import logging
-
-from odoo import api, models, fields, tools, _
-from odoo.tools import zeep
+from odoo import api, models, fields, _
+from odoo.tools import hash_sign
 from odoo.tools.misc import ustr
-from odoo.exceptions import ValidationError
+from odoo.exceptions import ValidationError, UserError
 
 
 _logger = logging.getLogger(__name__)
@@ -76,7 +78,8 @@ _ref_vat = {
     'si': 'SI12345679',
     'sk': 'SK2022749619',
     'sm': 'SM24165',
-    'tr': _('17291716060 (NIN) or 1729171602 (VKN)'),
+    'th': '1234545678781',
+    'tr': _('11111111111 (NIN) or 2222222222 (VKN)'),
     'uy': _("Example: '219999830019' (format: 12 digits, all numbers, valid check digit)"),
     've': 'V-12345678-1, V123456781, V-12.345.678-1',
     'xi': 'XI123456782',
@@ -214,22 +217,110 @@ class ResPartner(models.Model):
             if partner.parent_id and partner.parent_id.vies_vat_to_check == partner.vies_vat_to_check:
                 partner.vies_valid = partner.parent_id.vies_valid
                 continue
-            try:
-                _logger.info('Calling VIES service to check VAT for validation: %s', partner.vies_vat_to_check)
-                vies_valid = check_vies(partner.vies_vat_to_check, timeout=10)
-                partner.vies_valid = vies_valid['valid']
-            except (OSError, InvalidComponent, zeep.exceptions.Fault) as e:
-                if partner._origin.id:
-                    msg = ""
-                    if isinstance(e, OSError):
-                        msg = _("Connection with the VIES server failed. The VAT number %s could not be validated.", partner.vies_vat_to_check)
-                    elif isinstance(e, InvalidComponent):
-                        msg = _("The VAT number %s could not be interpreted by the VIES server.", partner.vies_vat_to_check)
-                    elif isinstance(e, zeep.exceptions.Fault):
-                        msg = _('The request for VAT validation was not processed. VIES service has responded with the following error: %s', e.message)
-                    partner._origin.message_post(body=msg)
-                _logger.warning("The VAT number %s failed VIES check.", partner.vies_vat_to_check)
-                partner.vies_valid = False
+            status = partner._check_vies_iap()
+            partner._update_vies_status(status)
+
+    @api.model
+    def _get_iap_vies_credentials(self):
+        """
+        Return a couple (identifier, token) that is going to identify this db to IAP such that only
+        this one can request updates on a previously asked VIES check.
+        If they exist, we simply return them. If they don't, we create them in another cursor to
+        avoid the current transaction to be rolled back after the record has been created on IAP.
+        """
+        # No existing cron = no way for db to pull updates, thus no need to bother IAP
+        if not self.env.ref('base_vat.vies_iap_check_update', raise_if_not_found=False):
+            return "dummy_identifier", "dummy_token"  # ignored by IAP, same as neutralized
+
+        IrConfigParam = self.env['ir.config_parameter'].sudo()
+        identifier = IrConfigParam.get_param('iap_vies.client_identifier')
+        token = IrConfigParam.get_param('iap_vies.client_token')
+        if identifier and token:
+            return identifier, token
+
+        identifier = str(uuid.uuid4())
+        token = secrets.token_urlsafe()
+        with self.env.registry.cursor() as new_cursor:
+            IrConfigParamNewCursor = self.env(cr=new_cursor)['ir.config_parameter'].sudo()
+            IrConfigParamNewCursor.set_param('iap_vies.client_identifier', identifier)
+            IrConfigParamNewCursor.set_param('iap_vies.client_token', token)
+
+        return identifier, token
+
+    @api.model
+    def _get_iap_vies_endpoint(self):
+        prod, test = 'https://vies.api.odoo.com', 'https://vies.test.odoo.com'
+        default_endpoint = test if self.env.ref('base.module_base_vat').demo else prod
+        endpoint = self.env['ir.config_parameter'].sudo().get_param('iap_vies.endpoint', default_endpoint)
+        if endpoint not in (prod, test):
+            raise UserError(_('Invalid IAP VIES endpoint'))
+        return endpoint
+
+    def _check_vies_iap(self):
+        """Called when VAT is manually edited"""
+        self.ensure_one()
+        endpoint = self._get_iap_vies_endpoint()
+        client_identifier, client_token = self._get_iap_vies_credentials()
+        try:
+            req = requests.post(
+                endpoint + '/api/vies/1/check_validity',
+                data={
+                    "vat": self.vat,
+                    "db_uuid": self.env['ir.config_parameter'].sudo().get_param('database.uuid'),
+                    "client_identifier": client_identifier,
+                    "client_token": client_token,
+                    "webhook_url": self.get_base_url() + '/base_vat/1/webhook_update_vies',
+                    "webhook_token": hash_sign(self.sudo().env, "vies_check", self.vat, expiration_hours=24),  # See BaseVatWebhookController
+                },
+                timeout=20,
+            )
+            req.raise_for_status()
+        except requests.exceptions.RequestException:
+            _logger.exception("VIES check: call to IAP failed")
+            return "fault"
+        resp = req.json()
+        if not resp.get("status"):
+            _logger.error("VIES check: no status returned. Response: %s", resp)
+            return "fault"
+        return resp["status"]
+
+    @api.model
+    def _cron_check_vies_iap(self):
+        """Called by cron to check if IAP has any update on a previously requested VAT that was pending"""
+        endpoint = self._get_iap_vies_endpoint()
+        client_identifier, client_token = self._get_iap_vies_credentials()
+        try:
+            req = requests.post(
+                endpoint + '/api/vies/1/check_update',
+                data={
+                    "db_uuid": self.env['ir.config_parameter'].sudo().get_param('database.uuid'),
+                    "client_identifier": client_identifier,
+                    "client_token": client_token,
+                },
+                timeout=10,
+            )
+            req.raise_for_status()
+        except requests.exceptions.RequestException:
+            _logger.exception("Error while contacting IAP VIES")
+            return
+        resp = req.json()
+        _logger.info("IAP VIES check response: %s", resp)
+        for company_vat, company_status in resp.items():
+            partner = self.search([("vat", "=", company_vat)])
+            partner._update_vies_status(company_status)
+
+    def _update_vies_status(self, status):
+        self.vies_valid = status == "valid"
+        _logger.info("VIES status updated to %s for partner ids: %s", status, self.ids)
+        msg = None
+        if status == "pending":
+            msg = _("The VIES check is pending. The status will be updated soon.")
+        elif status == "fault":
+            msg = _("The VIES check failed. Please check the Tax ID manually.")
+        elif status in ("valid", "unassigned"):
+            msg = _("The Intra-Community validity has been updated.")
+        if msg:
+            self._message_log_batch(bodies={p._origin.id: msg for p in self if p._origin.id})
 
     @api.model
     def _run_vat_test(self, vat_number, default_country, partner_is_company=True):
@@ -714,6 +805,7 @@ class ResPartner(models.Model):
             all_gstin_re = [
                 r'[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[Zz1-9A-Ja-j]{1}[0-9a-zA-Z]{1}', # Normal, Composite, Casual GSTIN
                 r'[0-9]{4}[A-Z]{3}[0-9]{5}[UO]{1}[N][A-Z0-9]{1}', #UN/ON Body GSTIN
+                r'[0-9]{4}[A-Z]{3}[0-9]{5}[A-Z]{3}',  # Revised NRI GSTIN
                 r'[0-9]{4}[a-zA-Z]{3}[0-9]{5}[N][R][0-9a-zA-Z]{1}', #NRI GSTIN
                 r'[0-9]{2}[a-zA-Z]{4}[a-zA-Z0-9]{1}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[DK]{1}[0-9a-zA-Z]{1}', #TDS GSTIN
                 r'[0-9]{2}[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}[1-9A-Za-z]{1}[C]{1}[0-9a-zA-Z]{1}' #TCS GSTIN
@@ -793,6 +885,10 @@ class ResPartner(models.Model):
             return False
 
         return True
+
+    def check_vat_th(self, vat):
+        check_func = stdnum.util.get_cc_module('th', 'tin').is_valid
+        return check_func(vat)
 
     def check_vat_de(self, vat):
         is_valid_vat = stdnum.util.get_cc_module("de", "vat").is_valid

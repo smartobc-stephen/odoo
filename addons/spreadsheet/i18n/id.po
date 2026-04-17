@@ -6,13 +6,13 @@
 # Wil Odoo, 2023
 # Abe Manyo, 2025
 #
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-16 18:38+0000\n"
-"PO-Revision-Date: 2025-11-22 21:21+0000\n"
+"POT-Creation-Date: 2026-04-03 18:40+0000\n"
+"PO-Revision-Date: 2026-01-24 17:01+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-17/"
 "spreadsheet/id/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -183,6 +183,13 @@ msgstr "2 kolom"
 #, python-format
 msgid "2 rows"
 msgstr "2 bari"
+
+#. module: spreadsheet
+#. odoo-javascript
+#: code:addons/spreadsheet/static/src/o_spreadsheet/o_spreadsheet.xml:0
+#, python-format
+msgid "A"
+msgstr ""
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -474,6 +481,13 @@ msgstr "Absolute value"
 #, python-format
 msgid "Absolute value of a number."
 msgstr "Absolute value angka."
+
+#. module: spreadsheet
+#. odoo-javascript
+#: code:addons/spreadsheet/static/src/actions/spreadsheet_download_action.js:0
+#, python-format
+msgid "Access Error"
+msgstr "Akses Eror"
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -2643,10 +2657,7 @@ msgid "Does not contain"
 msgstr "Tidak berisi"
 
 #. module: spreadsheet
-#. odoo-javascript
-#: code:addons/spreadsheet/static/src/public_readonly_app/public_readonly.js:0
 #: model_terms:ir.ui.view,arch_db:spreadsheet.public_spreadsheet_layout
-#, python-format
 msgid "Download"
 msgstr "Unduh"
 
@@ -3198,6 +3209,8 @@ msgstr ""
 msgid ""
 "Function [[FUNCTION_NAME]] expects number values for %s, but got a boolean."
 msgstr ""
+"Fungsi [[FUNCTION_NAME]] mengharapkan value angka untuk %s, tapi mendapatkan "
+"boolean."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -3206,6 +3219,8 @@ msgstr ""
 msgid ""
 "Function [[FUNCTION_NAME]] expects number values for %s, but got a string."
 msgstr ""
+"Fungsi [[FUNCTION_NAME]] mengharapkan value angka untuk %s, tapi mendapatkan "
+"string."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -3215,6 +3230,8 @@ msgid ""
 "Function [[FUNCTION_NAME]] expects number values for %s, but got an empty "
 "value."
 msgstr ""
+"Fungsi [[FUNCTION_NAME]] mengharapkan value angka untuk %s, tapi mendapatkan "
+"value kosong."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -10675,7 +10692,7 @@ msgstr "Perubahan value dari key value"
 #: code:addons/spreadsheet/static/src/o_spreadsheet/o_spreadsheet.js:0
 #, python-format
 msgid "Value for parameter %s is missing in [[FUNCTION_NAME]]."
-msgstr ""
+msgstr "Value untuk parameter %s tidak ada di [[FUNCTION_NAME]]."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -11281,6 +11298,22 @@ msgstr "Anda tidak dapat membuat filter yang tumpang tindih."
 
 #. module: spreadsheet
 #. odoo-javascript
+#: code:addons/spreadsheet/static/src/actions/spreadsheet_download_action.js:0
+#, python-format
+msgid ""
+"You don't have the rights to export data. Please contact an Administrator."
+msgstr ""
+"Anda tidak memiliki hak untuk mengekspor data. Silakan hubungi Administrator."
+
+#. module: spreadsheet
+#. odoo-javascript
+#: code:addons/spreadsheet/static/src/o_spreadsheet/o_spreadsheet.xml:0
+#, python-format
+msgid "Z"
+msgstr ""
+
+#. module: spreadsheet
+#. odoo-javascript
 #: code:addons/spreadsheet/static/src/pivot/pivot_functions.js:0
 #, python-format
 msgid "[[FUNCTION_NAME]] cannot be called from the spreadsheet."
@@ -11322,6 +11355,8 @@ msgid ""
 "[[FUNCTION_NAME]] expects the provided values of %(argName)s to be a non-"
 "empty matrix."
 msgstr ""
+"[[FUNCTION_NAME]] mengharapkan value yang disediakan dari %(argName)s untuk "
+"merupakan matrix non-empty."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -11514,6 +11549,13 @@ msgstr "hari ini"
 #, python-format
 msgid "tomorrow"
 msgstr "besok"
+
+#. module: spreadsheet
+#. odoo-javascript
+#: code:addons/spreadsheet/static/src/public_readonly_app/public_readonly.xml:0
+#, python-format
+msgid "x"
+msgstr ""
 
 #. module: spreadsheet
 #. odoo-javascript

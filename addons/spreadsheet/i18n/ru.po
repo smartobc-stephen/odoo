@@ -22,13 +22,13 @@
 # Nadia Martynova, 2024
 # Ilya Rozhkov, 2024
 # Anastasiia Koroleva, 2025
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-16 18:38+0000\n"
-"PO-Revision-Date: 2025-11-15 17:02+0000\n"
+"POT-Creation-Date: 2026-04-03 18:40+0000\n"
+"PO-Revision-Date: 2026-04-15 15:03+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Russian <https://translate.odoo.com/projects/odoo-17/"
 "spreadsheet/ru/>\n"
@@ -37,9 +37,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || ("
-"n%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 5.12.2\n"
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -201,6 +201,13 @@ msgstr "2 колонки"
 #, python-format
 msgid "2 rows"
 msgstr "2 строки"
+
+#. module: spreadsheet
+#. odoo-javascript
+#: code:addons/spreadsheet/static/src/o_spreadsheet/o_spreadsheet.xml:0
+#, python-format
+msgid "A"
+msgstr "A"
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -493,6 +500,13 @@ msgstr "Абсолютное значение"
 #, python-format
 msgid "Absolute value of a number."
 msgstr "Абсолютное значение числа."
+
+#. module: spreadsheet
+#. odoo-javascript
+#: code:addons/spreadsheet/static/src/actions/spreadsheet_download_action.js:0
+#, python-format
+msgid "Access Error"
+msgstr "Ошибка доступа"
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -2686,10 +2700,7 @@ msgid "Does not contain"
 msgstr "Не содержит"
 
 #. module: spreadsheet
-#. odoo-javascript
-#: code:addons/spreadsheet/static/src/public_readonly_app/public_readonly.js:0
 #: model_terms:ir.ui.view,arch_db:spreadsheet.public_spreadsheet_layout
-#, python-format
 msgid "Download"
 msgstr "Скачать"
 
@@ -11361,6 +11372,21 @@ msgstr "Нельзя создавать перекрывающиеся филь�
 
 #. module: spreadsheet
 #. odoo-javascript
+#: code:addons/spreadsheet/static/src/actions/spreadsheet_download_action.js:0
+#, python-format
+msgid ""
+"You don't have the rights to export data. Please contact an Administrator."
+msgstr "У вас нет прав на экспорт данных. Обратитесь к администратору."
+
+#. module: spreadsheet
+#. odoo-javascript
+#: code:addons/spreadsheet/static/src/o_spreadsheet/o_spreadsheet.xml:0
+#, python-format
+msgid "Z"
+msgstr ""
+
+#. module: spreadsheet
+#. odoo-javascript
 #: code:addons/spreadsheet/static/src/pivot/pivot_functions.js:0
 #, python-format
 msgid "[[FUNCTION_NAME]] cannot be called from the spreadsheet."
@@ -11602,6 +11628,13 @@ msgstr "сегодня"
 #, python-format
 msgid "tomorrow"
 msgstr "завтра"
+
+#. module: spreadsheet
+#. odoo-javascript
+#: code:addons/spreadsheet/static/src/public_readonly_app/public_readonly.xml:0
+#, python-format
+msgid "x"
+msgstr ""
 
 #. module: spreadsheet
 #. odoo-javascript

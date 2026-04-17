@@ -92,6 +92,14 @@ export function clickOrderline(productName, quantity = "1.0") {
         },
     ];
 }
+export function clickProductInfoAttributeValue(attributeName, attributeValue) {
+    return [
+        {
+            content: `Choose the attribute ${attributeValue} for ${attributeName}`,
+            trigger: `.product-info-popup .section-variants div:contains("${attributeName}") + div .searchable:contains("${attributeValue}")`,
+        },
+    ];
+}
 export function clickSubcategory(name) {
     return [
         {
@@ -521,6 +529,21 @@ export function checkOrderlinesNumber(number) {
     ];
 }
 
+export function checkProductsNumber(number) {
+    return [
+        {
+            content: `check products number should be ${number}`,
+            trigger: `.product-list .product`,
+            run: () => {
+                const productsCount = $(".product-list .product").length;
+                if (productsCount !== number) {
+                    throw new Error(`Expected ${number} products, got ${productsCount}`);
+                }
+            },
+        },
+    ];
+}
+
 export function checkTaxAmount(number) {
     return inLeftSide([
         {
@@ -547,4 +570,20 @@ export function doubleClickOrder(name) {
             run: 'dblclick',
         },
     ];
+}
+
+export function saveOrder() {
+    return inLeftSide(
+        [
+            {
+                content: "click more button",
+                trigger: ".mobile-more-button",
+                mobile: true,
+            },
+            {
+                content: "click save button",
+                trigger: '.control-buttons .control-button:contains("Save")',
+            },
+        ].flat()
+    );
 }

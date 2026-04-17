@@ -1046,6 +1046,10 @@ Attempting to double-book your time off won't magically make your vacation 2x be
         return super(HolidaysRequest, self.with_context(leave_skip_date_check=True)).unlink()
 
     def copy_data(self, default=None):
+        if len(self.employee_ids) == 1:
+            if default is None:
+                default = {}
+            default['employee_ids'] = self.employee_ids
         if default and 'request_date_from' in default and 'request_date_to' in default:
             return super().copy_data(default)
         elif self.state in {"cancel", "refuse"}:  # No overlap constraint in these cases
@@ -1737,6 +1741,8 @@ Attempting to double-book your time off won't magically make your vacation 2x be
         ]
         if day_period:
             domain.append(('day_period', '=', day_period))
+        domain += ['|', ("date_from", "<=", request_date_from), ("date_from", "=", False)]
+        domain += ['|', ("date_to", ">=", request_date_from), ("date_to", "=", False)]
         attendances = self.env['resource.calendar.attendance']._read_group(domain,
             ['week_type', 'dayofweek', 'day_period'],
             ['hour_from:min', 'hour_to:max'])
@@ -1746,7 +1752,9 @@ Attempting to double-book your time off won't magically make your vacation 2x be
 
         default_value = DummyAttendance(0, 0, 0, 'morning', False)
 
-        if self.resource_calendar_id.two_weeks_calendar:
+        # We will not take into account the entire logic of two_weeks_calendar if there are no attendances, for example, because
+        # we are trying to create a leave with a date before to the start date defined in the employee's calendar.
+        if self.resource_calendar_id.two_weeks_calendar and attendances:
             # find week type of start_date
             start_week_type = self.env['resource.calendar.attendance'].get_week_type(request_date_from)
             attendance_actual_week = [att for att in attendances if att.week_type is False or int(att.week_type) == start_week_type]

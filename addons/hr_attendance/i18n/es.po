@@ -10,13 +10,14 @@
 # Larissa Manderfeld, 2025
 # "Larissa Manderfeld (lman)" <lman@odoo.com>, 2025.
 # "Noemi Pla Garcia (nopl)" <nopl@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 12:31+0000\n"
-"PO-Revision-Date: 2025-12-06 08:04+0000\n"
-"Last-Translator: \"Noemi Pla Garcia (nopl)\" <nopl@odoo.com>\n"
+"POT-Creation-Date: 2026-02-20 18:36+0000\n"
+"PO-Revision-Date: 2026-02-21 17:01+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-17/"
 "hr_attendance/es/>\n"
 "Language: es\n"
@@ -46,20 +47,26 @@ msgstr "%s: (%s-%s)"
 msgid ""
 "<br/>\n"
 "                            <span>\n"
-"                                If your address is compromised, you can refresh it to generate a new one.\n"
+"                                If your address is compromised, you can "
+"refresh it to generate a new one.\n"
 "                            </span>\n"
 "                            <br/>"
 msgstr ""
 "<br/>\n"
 "                            <span>\n"
-"                                Si su dirección está comprometida, puede actualizarla para generar una nueva.\n"
+"                                Si su dirección está comprometida, puede "
+"actualizarla para generar una nueva.\n"
 "                            </span>\n"
 "                            <br/>"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.view_hr_attendance_kanban
-msgid "<i class=\"fa fa-calendar\" aria-label=\"Period\" role=\"img\" title=\"Period\"/>"
-msgstr "<i class=\"fa fa-calendar\" aria-label=\"Period\" role=\"img\" title=\"Period\"/>"
+msgid ""
+"<i class=\"fa fa-calendar\" aria-label=\"Period\" role=\"img\" "
+"title=\"Period\"/>"
+msgstr ""
+"<i class=\"fa fa-calendar\" aria-label=\"Period\" role=\"img\" "
+"title=\"Period\"/>"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_user_view_form
@@ -91,10 +98,12 @@ msgstr ""
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_employees_view_kanban
 msgid ""
-"<span id=\"oe_hr_attendance_status\" class=\"fa fa-circle text-warning me-1\" role=\"img\" aria-label=\"Not available\" title=\"Not available\">\n"
+"<span id=\"oe_hr_attendance_status\" class=\"fa fa-circle text-warning "
+"me-1\" role=\"img\" aria-label=\"Not available\" title=\"Not available\">\n"
 "                                    </span>"
 msgstr ""
-"<span id=\"oe_hr_attendance_status\" class=\"fa fa-circle text-warning me-1\" role=\"img\" aria-label=\"Not available\" title=\"Not available\">\n"
+"<span id=\"oe_hr_attendance_status\" class=\"fa fa-circle text-warning "
+"me-1\" role=\"img\" aria-label=\"Not available\" title=\"Not available\">\n"
 "                                    </span>"
 
 #. module: hr_attendance
@@ -136,10 +145,12 @@ msgstr "Active el recuento de horas extras de los empleados."
 #. module: hr_attendance
 #: model_terms:ir.actions.act_window,help:hr_attendance.hr_employee_attendance_action_kanban
 msgid ""
-"Add a few employees to be able to select an employee here and perform his check in / check out.\n"
+"Add a few employees to be able to select an employee here and perform his "
+"check in / check out.\n"
 "                To create employees go to the Employees menu."
 msgstr ""
-"Añada algunos empleados para poder seleccionar un empleado aquí y registrar su entrada y salida.\n"
+"Añada algunos empleados para poder seleccionar un empleado aquí y registrar "
+"su entrada y salida.\n"
 "                Para crear empleados, vaya al menú de Empleados."
 
 #. module: hr_attendance
@@ -170,8 +181,8 @@ msgid ""
 "Allow a period of time (around working hours) where extra time will not be "
 "counted, in benefit of the company"
 msgstr ""
-"Permita un periodo de tiempo (en horas laborables) en el que el tiempo extra"
-" no se contará, en beneficio de la empresa."
+"Permita un periodo de tiempo (en horas laborables) en el que el tiempo extra "
+"no se contará, en beneficio de la empresa."
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.res_config_settings_view_form
@@ -179,8 +190,8 @@ msgid ""
 "Allow a period of time (around working hours) where extra time will not be "
 "deducted, in benefit of the employee"
 msgstr ""
-"Permita un periodo de tiempo (en horas laborables) en el que el tiempo extra"
-" no se deducirá, en beneficio del empleado"
+"Permita un periodo de tiempo (en horas laborables) en el que el tiempo extra "
+"no se deducirá, en beneficio del empleado"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_user_view_form
@@ -208,6 +219,13 @@ msgstr "Número de archivos adjuntos"
 #, python-format
 msgid "Attendance"
 msgstr "Asistencia"
+
+#. module: hr_attendance
+#. odoo-javascript
+#: code:addons/hr_attendance/static/src/components/attendance_menu/attendance_menu.js:0
+#, python-format
+msgid "Attendance Error"
+msgstr "Error de asistencia"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_res_company__attendance_from_systray
@@ -338,7 +356,6 @@ msgstr ""
 #. module: hr_attendance
 #. odoo-python
 #: code:addons/hr_attendance/models/hr_attendance.py:0
-#: code:addons/hr_attendance/models/hr_attendance.py:0
 #, python-format
 msgid ""
 "Cannot create new attendance record for %(empl_name)s, the employee was "
@@ -397,14 +414,12 @@ msgstr "Salida"
 #. module: hr_attendance
 #. odoo-javascript
 #: code:addons/hr_attendance/static/src/components/attendance_menu/attendance_menu.xml:0
-#: code:addons/hr_attendance/static/src/components/attendance_menu/attendance_menu.xml:0
 #, python-format
 msgid "Check in"
 msgstr "Registrar entrada"
 
 #. module: hr_attendance
 #. odoo-javascript
-#: code:addons/hr_attendance/static/src/components/attendance_menu/attendance_menu.xml:0
 #: code:addons/hr_attendance/static/src/components/attendance_menu/attendance_menu.xml:0
 #, python-format
 msgid "Check out"
@@ -483,6 +498,13 @@ msgid "Configuration"
 msgstr "Configuración"
 
 #. module: hr_attendance
+#. odoo-javascript
+#: code:addons/hr_attendance/static/src/components/attendance_menu/attendance_menu.js:0
+#, python-format
+msgid "Connection lost. Check in/out could not be recorded."
+msgstr "Conexión perdida. No se ha podido registrar la entrada/salida."
+
+#. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_res_company__hr_attendance_overtime
 #: model:ir.model.fields,field_description:hr_attendance.field_res_config_settings__hr_attendance_overtime
 msgid "Count Extra Hours"
@@ -558,8 +580,7 @@ msgstr "Mostrar horas extras"
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.res_config_settings_view_form
 msgid "Display Extra Hours in Kiosk mode and on User profile."
-msgstr ""
-"Muestre horas extras en el modo de quiosco y en el perfil del usuario."
+msgstr "Muestre horas extras en el modo de quiosco y en el perfil del usuario."
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.res_config_settings_view_form
@@ -582,10 +603,11 @@ msgstr "Tiempo en pantalla"
 #: code:addons/hr_attendance/models/hr_attendance.py:0
 #, python-format
 msgid ""
-"Do not have access, user cannot edit the attendances that are not his own."
+"Do not have access, user cannot edit the attendances that are not their own "
+"or if they are not the attendance manager of the employee."
 msgstr ""
-"No tiene acceso, el usuario no puede editar las asistencias que no son "
-"suyas."
+"No tiene acceso, así que el usuario no puede editar las asistencias que no "
+"son suyas ni las de los empleados de los que no sea responsable."
 
 #. module: hr_attendance
 #. odoo-javascript
@@ -695,9 +717,6 @@ msgstr "Generar una nueva URL para el modo de quiosco"
 #. odoo-javascript
 #: code:addons/hr_attendance/static/src/components/greetings/greetings.xml:0
 #: code:addons/hr_attendance/static/src/components/manual_selection/manual_selection.xml:0
-#: code:addons/hr_attendance/static/src/components/manual_selection/manual_selection.xml:0
-#: code:addons/hr_attendance/static/src/components/pin_code/pin_code.xml:0
-#: code:addons/hr_attendance/static/src/components/pin_code/pin_code.xml:0
 #: code:addons/hr_attendance/static/src/components/pin_code/pin_code.xml:0
 #, python-format
 msgid "Go back"
@@ -705,7 +724,6 @@ msgstr "Atrás"
 
 #. module: hr_attendance
 #. odoo-javascript
-#: code:addons/hr_attendance/static/src/components/greetings/greetings.xml:0
 #: code:addons/hr_attendance/static/src/components/greetings/greetings.xml:0
 #, python-format
 msgid "Goodbye"
@@ -1066,6 +1084,11 @@ msgid "Reporting"
 msgstr "Informes"
 
 #. module: hr_attendance
+#: model:ir.model,name:hr_attendance.model_resource_calendar_leaves
+msgid "Resource Time Off Detail"
+msgstr "Detalle de las ausencias del recurso"
+
+#. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance__message_has_sms_error
 msgid "SMS Delivery error"
 msgstr "Error de envío del SMS"
@@ -1085,8 +1108,6 @@ msgstr "Escáner"
 #. module: hr_attendance
 #. odoo-javascript
 #: code:addons/hr_attendance/static/src/components/manual_selection/manual_selection.xml:0
-#: code:addons/hr_attendance/static/src/components/manual_selection/manual_selection.xml:0
-#: code:addons/hr_attendance/static/src/components/manual_selection/manual_selection.xml:0
 #, python-format
 msgid "Search..."
 msgstr "Buscar…"
@@ -1105,7 +1126,6 @@ msgstr "Ajustes"
 
 #. module: hr_attendance
 #. odoo-javascript
-#: code:addons/hr_attendance/static/src/components/pin_code/pin_code.xml:0
 #: code:addons/hr_attendance/static/src/components/pin_code/pin_code.xml:0
 #, python-format
 msgid "Sign out"
@@ -1147,8 +1167,8 @@ msgid ""
 "The user set in Attendance will access the attendance of the employee "
 "through the dedicated app and will be able to edit them."
 msgstr ""
-"El usuario configurado en Asistencias podrá acceder a las asistencias de los"
-" empleados a través de la aplicación dedicada y podrá editarlos."
+"El usuario configurado en Asistencias podrá acceder a las asistencias de los "
+"empleados a través de la aplicación dedicada y podrá editarlos."
 
 #. module: hr_attendance
 #: model:res.groups,comment:hr_attendance.group_hr_attendance_own_reader
@@ -1205,7 +1225,6 @@ msgstr "Total de hoy"
 
 #. module: hr_attendance
 #. odoo-python
-#: code:addons/hr_attendance/controllers/main.py:0
 #: code:addons/hr_attendance/controllers/main.py:0
 #, python-format
 msgid "Unknown"
@@ -1327,3 +1346,10 @@ msgstr "registrar entrada"
 #, python-format
 msgid "check out"
 msgstr "registrar salida"
+
+#, python-format
+#~ msgid ""
+#~ "Do not have access, user cannot edit the attendances that are not his own."
+#~ msgstr ""
+#~ "No tiene acceso, el usuario no puede editar las asistencias que no son "
+#~ "suyas."

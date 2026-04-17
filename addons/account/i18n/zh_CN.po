@@ -14,14 +14,15 @@
 # 何彬 <vnsoft.he@gmail.com>, 2025
 # Wil Odoo, 2025
 # liAnGjiA <liangjia@qq.com>, 2025
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# "Chloe Wang (chwa)" <chwa@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-04 18:36+0000\n"
-"PO-Revision-Date: 2025-12-06 17:01+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-04-03 18:38+0000\n"
+"PO-Revision-Date: 2026-04-09 10:44+0000\n"
+"Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-17/account/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -29,7 +30,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: account
 #. odoo-python
@@ -326,19 +327,9 @@ msgid "... (%s other)"
 msgstr "......（%s 其它）"
 
 #. module: account
-#: model_terms:ir.ui.view,arch_db:account.tax_groups_totals
-msgid "1.05"
-msgstr "1.05"
-
-#. module: account
 #: model:account.payment.term,name:account.account_payment_term_30_days_end_month_the_10
 msgid "10 Days after End of Next Month"
 msgstr "下月结束后 10 天"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "100.0"
-msgstr "100.0"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.report_payment_receipt_document
@@ -346,95 +337,14 @@ msgid "100.00 USD"
 msgstr "100.00 美元"
 
 #. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "1000.0"
-msgstr "1000.0"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "11.05"
-msgstr "11.05"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "12345"
-msgstr "12345"
-
-#. module: account
 #: model:account.payment.term,name:account.account_payment_term_15days
 msgid "15 Days"
 msgstr "15 天"
 
 #. module: account
-#: model:account.tax,name:account.1_purchase_tax_template
-#: model:account.tax,name:account.1_sale_tax_template
-msgid "15%"
-msgstr "15%"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "1500.0"
-msgstr "1500.0"
-
-#. module: account
 #: model:account.payment.term,name:account.account_payment_term_30days_early_discount
 msgid "2/7 Net 30"
 msgstr "7 天內付清享 2% 折扣，期限 30 天"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "20.00"
-msgstr "20.00"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "2021-09-19"
-msgstr "2021 年 9 月 19 日"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_payment_receipt_document
-msgid "2023-01-01"
-msgstr "2023 年 1 月 1 日"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_payment_receipt_document
-msgid "2023-01-05"
-msgstr "2023 年 1 月 5 日"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "2023-08-11"
-msgstr "2023 年 8 月 11 日"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "2023-08-15"
-msgstr "2023 年 8 月 15 日"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "2023-08-31"
-msgstr "2023 年 8 月 31 日"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "2023-09-12"
-msgstr "2023 年 9 月 12 日"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "2023-09-25"
-msgstr "2023 年 9 月 25 日"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "2023-10-31"
-msgstr "2023 年 10 月 31 日"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "2024-01-01"
-msgstr "2024年 1 月 1 日"
 
 #. module: account
 #: model:account.payment.term,name:account.account_payment_term_21days
@@ -452,18 +362,6 @@ msgid "25.00 USD"
 msgstr "25.00 美元"
 
 #. module: account
-#: model_terms:ir.ui.view,arch_db:account.document_tax_totals_company_currency_template
-#: model_terms:ir.ui.view,arch_db:account.document_tax_totals_template
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "27.00"
-msgstr "27.00"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "3.00"
-msgstr "3.00"
-
-#. module: account
 #: model:account.payment.term,name:account.account_payment_term_30days
 msgid "30 Days"
 msgstr "30 天"
@@ -479,24 +377,6 @@ msgid "30% Now, Balance 60 Days"
 msgstr "立即支付 30%，60 天内支付余款"
 
 #. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "30.00"
-msgstr "30.00"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.document_tax_totals_company_currency_template
-#: model_terms:ir.ui.view,arch_db:account.document_tax_totals_template
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "31.05"
-msgstr "31.05"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.document_tax_totals_company_currency_template
-#: model_terms:ir.ui.view,arch_db:account.tax_groups_totals
-msgid "4.05"
-msgstr "4.05"
-
-#. module: account
 #: model:account.payment.term,name:account.account_payment_term_45days
 msgid "45 Days"
 msgstr "45 天"
@@ -510,16 +390,6 @@ msgstr "50 美元"
 #: model_terms:ir.ui.view,arch_db:account.report_payment_receipt_document
 msgid "50.00 EUR"
 msgstr "50.00 欧元"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_statement
-msgid "534677881234"
-msgstr "534677881234"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
-msgid "9.00"
-msgstr "9.00"
 
 #. module: account
 #. odoo-python
@@ -1034,17 +904,6 @@ msgstr "<span class=\"o_stat_text\">已对账项目</span>"
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_form
 msgid "<span class=\"o_stat_text\">Transaction</span>"
 msgstr "<span class=\"o_stat_text\">交易</span>"
-
-#. module: account
-#: model_terms:ir.ui.view,arch_db:account.view_move_form
-msgid ""
-"<span class=\"oe_inline o_form_label mx-3\" "
-"groups=\"base.group_multi_currency\" invisible=\"move_type == 'entry'\"> in "
-"</span>"
-msgstr ""
-"<span class=\"oe_inline o_form_label mx-3\" "
-"groups=\"base.group_multi_currency\" invisible=\"move_type == 'entry'\">于 </"
-"span>"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_partner_bank_form_inherit_account
@@ -3001,6 +2860,11 @@ msgid "Attachments"
 msgstr "附件"
 
 #. module: account
+#: model:ir.model.fields,field_description:account.field_account_move_send__attachments_not_supported
+msgid "Attachments Not Supported"
+msgstr ""
+
+#. module: account
 #: model:ir.model.fields,field_description:account.field_account_report_expression__auditable
 msgid "Auditable"
 msgstr "可审计"
@@ -3344,6 +3208,13 @@ msgid "Bank of odoo"
 msgstr "Odoo 银行"
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid "Bank settings"
+msgstr ""
+
+#. module: account
 #: model:ir.model,name:account.model_account_setup_bank_manual_config
 msgid "Bank setup manual config"
 msgstr "银行设置手动配置"
@@ -3581,6 +3452,13 @@ msgstr "不勾选该启用的字段，可以隐藏而非删除财政状况。"
 msgid ""
 "By unchecking the active field, you may hide an INCOTERM you will not use."
 msgstr "取消勾选该启用的字段，可以隐藏用不到的国际贸易术语。"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/wizard/account_automatic_entry_wizard.py:0
+#, python-format
+msgid "C"
+msgstr ""
 
 #. module: account
 #. odoo-python
@@ -5206,6 +5084,13 @@ msgid "Cut-Off"
 msgstr "Cut-Off"
 
 #. module: account
+#. odoo-python
+#: code:addons/account/wizard/account_automatic_entry_wizard.py:0
+#, python-format
+msgid "D"
+msgstr ""
+
+#. module: account
 #: model:account.incoterms,name:account.incoterm_DAP
 msgid "DELIVERED AT PLACE"
 msgstr "交付地点"
@@ -5795,6 +5680,11 @@ msgstr "显示别名字段"
 #: model:ir.model.fields,field_description:account.field_account_accrued_orders_wizard__display_amount
 msgid "Display Amount"
 msgstr "显示金额"
+
+#. module: account
+#: model:ir.model.fields,field_description:account.field_account_move_send__display_attachments_widget
+msgid "Display Attachments Widget"
+msgstr ""
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_line__display_inactive_currency_warning
@@ -6513,6 +6403,11 @@ msgstr "应计费用科目"
 #: model_terms:ir.ui.view,arch_db:account.view_account_search
 msgid "Expenses"
 msgstr "费用"
+
+#. module: account
+#: model:ir.actions.server,name:account.action_move_export_zip
+msgid "Export ZIP"
+msgstr "导出ZIP"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_report_column__expression_label
@@ -8767,6 +8662,7 @@ msgstr "日记账："
 #: model:ir.model.fields,field_description:account.field_account_report__filter_journals
 #: model:ir.ui.menu,name:account.menu_action_account_journal_form
 #: model:ir.ui.menu,name:account.menu_finance_entries_accounting_miscellaneous
+#: model_terms:ir.ui.view,arch_db:account.view_account_move_line_filter
 msgid "Journals"
 msgstr "日记账"
 
@@ -10030,6 +9926,13 @@ msgstr "请注意，创建供应商退款通知的最简单方法是直接从供
 #: model:ir.model.fields,field_description:account.field_account_fiscal_position__note
 msgid "Notes"
 msgstr "凭单"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid "Nothing to export."
+msgstr ""
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__res_company__fiscalyear_last_month__11
@@ -14082,6 +13985,15 @@ msgid ""
 msgstr "银行日记账中的银行账户须属于同一公司（%s）。"
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid ""
+"The bank account of your company is not trusted. Please ask an admin or "
+"someone with approval rights to check it."
+msgstr ""
+
+#. module: account
 #: model:ir.model.fields,help:account.field_account_move_line__statement_id
 msgid "The bank statement used for bank reconciliation"
 msgstr "用于银行对账的银行对账单"
@@ -14135,6 +14047,16 @@ msgid ""
 "The combination of reference model and reference type on the journal is not "
 "implemented"
 msgstr "日记账中的参考模型和参考类型组合未实施"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid ""
+"The company bank account (%(account_number)s) linked to this invoice is not "
+"trusted. Go to the Bank Settings, double-check that it is yours or correct "
+"the number, and click on Send Money to trust it."
+msgstr ""
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_tax_repartition_line__company_id
@@ -16489,6 +16411,13 @@ msgstr "只能更改已过账日记账项目的期间/科目。"
 
 #. module: account
 #. odoo-python
+#: code:addons/account/wizard/account_move_send.py:0
+#, python-format
+msgid "You can only generate sales documents."
+msgstr "您只能生成销售文件。"
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/account_move_line.py:0
 #, python-format
 msgid "You can only reconcile posted entries."
@@ -16648,6 +16577,13 @@ msgstr ""
 "不能删除科目 %s，因为它已经用于联系人。\n"
 "\n"
 "就当是保护客户的应收账款吧；您的首席财务官会非常感激的:)"
+
+#. module: account
+#. odoo-python
+#: code:addons/account/wizard/account_move_send.py:0
+#, python-format
+msgid "You can't generate invoices that are not posted."
+msgstr "您无法生成未过账的发票。"
 
 #. module: account
 #. odoo-python
@@ -16995,6 +16931,13 @@ msgstr "不能在已归档日记账（%(journal)s）中过账分录"
 
 #. module: account
 #. odoo-python
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid "You cannot post an entry with an archived analytic account: %s"
+msgstr ""
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/res_currency.py:0
 #, python-format
 msgid ""
@@ -17056,8 +16999,9 @@ msgstr "如果部分对账未结，则不能将科目切换为防止对账。"
 #. odoo-python
 #: code:addons/account/models/account_move.py:0
 #, python-format
-msgid "You cannot switch the type of a document which has been posted once."
-msgstr "You cannot switch the type of a document which has been posted once."
+msgid ""
+"You cannot switch the type of a document with an existing sequence number."
+msgstr ""
 
 #. module: account
 #. odoo-python
@@ -17314,6 +17258,13 @@ msgid "close"
 msgstr "关闭"
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_move.py:0
+#, python-format
+msgid "documents"
+msgstr "文档"
+
+#. module: account
 #: model_terms:ir.ui.view,arch_db:account.report_invoice_document
 msgid "due if paid before"
 msgstr "如果之前支付则为到期"
@@ -17419,6 +17370,11 @@ msgstr "已套用。"
 #: model_terms:ir.ui.view,arch_db:account.view_account_position_form
 msgid "here"
 msgstr "此处"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.view_move_form
+msgid "in"
+msgstr "在"
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_reconcile_model__payment_tolerance_type__fixed_amount
@@ -17693,6 +17649,95 @@ msgstr "{{ object.company_id.name }}发票(Ref {{ object.name or 'n/a' }})"
 msgid ""
 "{{ object.company_id.name }} Payment Receipt (Ref {{ object.name or 'n/a' }})"
 msgstr "{{ object.company_id.name }}付款收据(Ref {{ object.name or 'n/a' }})"
+
+#~ msgid "1.05"
+#~ msgstr "1.05"
+
+#~ msgid "100.0"
+#~ msgstr "100.0"
+
+#~ msgid "1000.0"
+#~ msgstr "1000.0"
+
+#~ msgid "11.05"
+#~ msgstr "11.05"
+
+#~ msgid "12345"
+#~ msgstr "12345"
+
+#~ msgid "15%"
+#~ msgstr "15%"
+
+#~ msgid "1500.0"
+#~ msgstr "1500.0"
+
+#~ msgid "20.00"
+#~ msgstr "20.00"
+
+#~ msgid "2021-09-19"
+#~ msgstr "2021 年 9 月 19 日"
+
+#~ msgid "2023-01-01"
+#~ msgstr "2023 年 1 月 1 日"
+
+#~ msgid "2023-01-05"
+#~ msgstr "2023 年 1 月 5 日"
+
+#~ msgid "2023-08-11"
+#~ msgstr "2023 年 8 月 11 日"
+
+#~ msgid "2023-08-15"
+#~ msgstr "2023 年 8 月 15 日"
+
+#~ msgid "2023-08-31"
+#~ msgstr "2023 年 8 月 31 日"
+
+#~ msgid "2023-09-12"
+#~ msgstr "2023 年 9 月 12 日"
+
+#~ msgid "2023-09-25"
+#~ msgstr "2023 年 9 月 25 日"
+
+#~ msgid "2023-10-31"
+#~ msgstr "2023 年 10 月 31 日"
+
+#~ msgid "2024-01-01"
+#~ msgstr "2024年 1 月 1 日"
+
+#~ msgid "27.00"
+#~ msgstr "27.00"
+
+#~ msgid "3.00"
+#~ msgstr "3.00"
+
+#~ msgid "30.00"
+#~ msgstr "30.00"
+
+#~ msgid "31.05"
+#~ msgstr "31.05"
+
+#~ msgid "4.05"
+#~ msgstr "4.05"
+
+#~ msgid "534677881234"
+#~ msgstr "534677881234"
+
+#~ msgid "9.00"
+#~ msgstr "9.00"
+
+#~ msgid ""
+#~ "<span class=\"oe_inline o_form_label mx-3\" "
+#~ "groups=\"base.group_multi_currency\" invisible=\"move_type == 'entry'\"> "
+#~ "in </span>"
+#~ msgstr ""
+#~ "<span class=\"oe_inline o_form_label mx-3\" "
+#~ "groups=\"base.group_multi_currency\" invisible=\"move_type == 'entry'\">"
+#~ "于 </span>"
+
+#, python-format
+#~ msgid "You cannot switch the type of a document which has been posted once."
+#~ msgstr ""
+#~ "You cannot switch the type of a document which has been posted once."
 
 #, python-format
 #~ msgid ""

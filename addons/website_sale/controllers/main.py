@@ -1786,9 +1786,16 @@ class WebsiteSale(payment_portal.PaymentPortal):
     )
     def express_checkout_shipping_address_compute_taxes(self):
         order_sudo = request.website.sale_get_order()
-        order_sudo._recompute_taxes()
+        try:
+            order_sudo.with_context(is_express_checkout_flow=True)._recompute_taxes()
+        except UserError:
+            return {'external_tax_error': True}
 
-        return payment_utils.to_minor_currency_units(order_sudo.amount_total, order_sudo.currency_id)
+        amount_without_delivery = order_sudo._compute_amount_total_without_delivery()
+
+        return payment_utils.to_minor_currency_units(
+            amount_without_delivery, order_sudo.currency_id
+        )
 
     def _get_shop_payment_errors(self, order):
         """ Check that there is no error that should block the payment.
@@ -2125,7 +2132,12 @@ class CustomerPortal(sale_portal.CustomerPortal):
         :return: The payment-specific values.
         :rtype: dict
         """
-        website_id = website_id or order_sudo.website_id.id
+        if not website_id:
+            if order_sudo.website_id:
+                website_id = order_sudo.website_id.id
+            elif request.website:
+                website_id = request.website.id
+
         return super()._get_payment_values(order_sudo, website_id=website_id, **kwargs)
 
     def _sale_reorder_get_line_context(self):

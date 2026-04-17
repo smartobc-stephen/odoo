@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
 
+from difflib import SequenceMatcher
+
 from odoo import api, Command, fields, models, _
 from odoo.exceptions import ValidationError
 from odoo.osv import expression
 from odoo.tools import format_amount
 
 ACCOUNT_DOMAIN = "['&', ('deprecated', '=', False), ('account_type', 'not in', ('asset_receivable','liability_payable','asset_cash','liability_credit_card','off_balance'))]"
+
 
 class ProductCategory(models.Model):
     _inherit = "product.category"
@@ -51,9 +54,22 @@ class ProductTemplate(models.Model):
 
     def _get_product_accounts(self):
         return {
-            'income': self.property_account_income_id or self.categ_id.property_account_income_categ_id,
-            'expense': self.property_account_expense_id or self.categ_id.property_account_expense_categ_id
+            'income': self.property_account_income_id or self._get_category_account('property_account_income_categ_id'),
+            'expense': self.property_account_expense_id or self._get_category_account('property_account_expense_categ_id')
         }
+
+    def _get_category_account(self, field_name):
+        """
+        Return the first account defined on the product category hierarchy
+        for the given field.
+        """
+        categ = self.categ_id
+        while categ:
+            account = categ[field_name]
+            if account:
+                return account
+            categ = categ.parent_id
+        return self.env['account.account']
 
     def _get_asset_accounts(self):
         res = {}
@@ -285,6 +301,30 @@ class ProductProduct(models.Model):
         :param extra_domain:    Any extra domain to add to the search.
         :returns:               A product or an empty recordset if not found.
         '''
+
+        def find_product_by_name_similarity(base_domain):
+            """ Returns the first product whose name similarity ratio with the provided name is at least 90%. """
+
+            # Get similarity threshold from system parameter, fallback to 0.9 if missing, invalid, or out of range (0, 1].
+            try:
+                similarity_threshold = float(
+                    self.env['ir.config_parameter'].sudo().get_param('account.product_name_similarity_threshold', '0.9')
+                )
+                if similarity_threshold <= 0.0 or similarity_threshold > 1.0:
+                    similarity_threshold = 0.9
+            except ValueError:
+                similarity_threshold = 0.9
+
+            products = self.search(
+                expression.AND([
+                    [('name', 'ilike', name)],
+                    base_domain,
+                ]),
+            )
+            for product in products:
+                if SequenceMatcher(None, name.lower(), product.name.lower()).ratio() >= similarity_threshold:
+                    return product
+
         if name and '\n' in name:
             # cut Sales Description from the name
             name = name.split('\n')[0]
@@ -294,21 +334,28 @@ class ProductProduct(models.Model):
         if default_code:
             domains.append([('default_code', '=', default_code)])
         if name:
-            domains += [[('name', '=', name)], [('name', 'ilike', name)]]
+            domains.append([('name', '=ilike', name)])
 
         company = company or self.env.company
         for company_domain in (
             [*self.env['res.partner']._check_company_domain(company), ('company_id', '!=', False)],
             [('company_id', '=', False)],
         ):
-            products = self.env['product.product'].search(
-                expression.AND([
-                    expression.OR(domains),
-                    company_domain,
-                    extra_domain,
-                ]),
-            )
+            base_domain = expression.AND([company_domain, extra_domain])
             for domain in domains:
-                if products_by_domain := products.filtered_domain(domain):
-                    return products_by_domain[0]
+                product = self.env['product.product'].search(
+                    expression.AND([
+                        domain,
+                        base_domain,
+                    ]),
+                    limit=1,
+                )
+                # We need a single product. Exit early if one is found (implements the priority logic).
+                if product:
+                    return product
+
+            # checking length to avoid matching unrelated products whose names merely contain that short string
+            if name and len(name) > 4 and (product := find_product_by_name_similarity(base_domain)):
+                return product
+
         return self.env['product.product']

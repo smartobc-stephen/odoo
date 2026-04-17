@@ -8,13 +8,15 @@
 # Wil Odoo, 2024
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2025
 # Fernanda Alvarez, 2025
-# "Fernanda Alvarez (mfar)" <mfar@odoo.com>, 2025.
+# "Fernanda Alvarez (mfar)" <mfar@odoo.com>, 2025, 2026.
+# "Patricia Gutiérrez (pagc)" <pagc@odoo.com>, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-03 02:34+0000\n"
-"PO-Revision-Date: 2025-12-06 08:05+0000\n"
+"POT-Creation-Date: 2026-04-03 18:38+0000\n"
+"PO-Revision-Date: 2026-04-08 17:41+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-17/mail/es_419/>\n"
@@ -22,9 +24,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0)"
-" ? 1 : 2);\n"
-"X-Generator: Weblate 5.14.3\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
+"0) ? 1 : 2);\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: mail
 #. odoo-python
@@ -68,7 +70,7 @@ msgstr "\" no se sigue más."
 #: code:addons/mail/models/mail_activity.py:0
 #, python-format
 msgid "\"%(activity_name)s: %(summary)s\" assigned to you"
-msgstr "Le asignaron \"%(activity_name)s:%(summary)s\""
+msgstr "Te asignaron \"%(activity_name)s: %(summary)s\""
 
 #. module: mail
 #. odoo-javascript
@@ -1333,7 +1335,7 @@ msgstr ""
 #. module: mail
 #: model:ir.model.fields.selection,name:mail.selection__mail_activity_plan_template__responsible_type__on_demand
 msgid "Ask at launch"
-msgstr "Preguntar en el lanzamiento"
+msgstr "Preguntar al iniciar"
 
 #. module: mail
 #. odoo-javascript
@@ -1775,7 +1777,7 @@ msgstr "Navegador predeterminado"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_partner_device__endpoint
 msgid "Browser endpoint"
-msgstr "Punto de conexión del navegador "
+msgstr "Punto de conexión del navegador"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_partner_device__keys
@@ -3765,20 +3767,33 @@ msgstr ""
 #: code:addons/mail/models/mail_render_mixin.py:0
 #, python-format
 msgid ""
-"Failed to render QWeb template: %(template_src)s\n"
+"Failed to render QWeb template for %(template_label)s\n"
+"Target Model: %(model_name)s\n"
+"Language context: %(lang_context)s\n"
+"Error: %(error_details)s\n"
 "\n"
-"%(template_traceback)s)"
+"Template Source Snippet:\n"
+"%(template_src)s"
 msgstr ""
-"Error al renderizar la plantilla QWeb: %(template_src)s\n"
+"Ocurrió un error al renderizar la plantilla QWeb para %(template_label)s\n"
+"Modelo objetivo: %(model_name)s\n"
+"Contexto de idioma: %(lang_context)s\n"
+"Error: %(error_details)s\n"
 "\n"
-"%(template_traceback)s)"
+"Fragmento o snippet de origen de la plantilla:\n"
+"%(template_src)s"
 
 #. module: mail
 #. odoo-python
 #: code:addons/mail/models/mail_render_mixin.py:0
 #, python-format
-msgid "Failed to render inline_template template: %(template_txt)s"
-msgstr "Error al visualizar la plantilla inline_template: %(template_txt)s"
+msgid ""
+"Failed to render inline_template template: %(template_txt)s\n"
+"Error details: %(error)s"
+msgstr ""
+"Ocurrió un error al renderizar la plantilla inline_template: %(template_txt)"
+"s\n"
+"Detalles del error: %(error)s"
 
 #. module: mail
 #. odoo-python
@@ -4518,8 +4533,8 @@ msgid ""
 "ID of the parent record holding the alias (example: project holding the task "
 "creation alias)"
 msgstr ""
-"ID del registro principal que tiene el alias "
-"(por ejemplo, el proyecto que contiene el alias para la creación de tareas)"
+"ID del registro principal que tiene el alias (por ejemplo, el proyecto que "
+"contiene el alias para la creación de tareas)"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_guest__im_status
@@ -5171,11 +5186,11 @@ msgid ""
 "- auth: The auth value should be treated as a secret and not shared outside "
 "of Odoo"
 msgstr ""
-"Se refiere a las claves de navegador que la notificación utiliza: \n"
-"- p256dh: es la clave pública de suscripción que el navegador genera. El "
+"Se refiere a las claves del navegador que usa la notificación: \n"
+"- p256dh: es la clave pública de suscripción que genera el navegador. El "
 "navegador mantendrá \n"
-"          la clave privada como secreto y la usará para desencriptar la "
-"carga efectiva.\n"
+"          la clave privada en secreto y la usará para descifrar la carga "
+"útil.\n"
 "- auth: el valor auth debe tratarse como secreto y no se debe compartir "
 "fuera de Odoo."
 
@@ -5717,6 +5732,13 @@ msgstr "Restablecer plantilla de correo"
 
 #. module: mail
 #. odoo-python
+#: code:addons/mail/models/mail_render_mixin.py:0
+#, python-format
+msgid "Mail Template: '%(name)s' (ID: %(record_id)s)"
+msgstr "Plantilla de correo: \"%(name)s\" (ID: %(record_id)s)"
+
+#. module: mail
+#. odoo-python
 #: code:addons/mail/wizard/mail_template_reset.py:0
 #, python-format
 msgid "Mail Templates have been reset"
@@ -5885,6 +5907,13 @@ msgstr "Marcar como no leído"
 #, python-format
 msgid "Mark as done"
 msgstr "Marcar como hecho"
+
+#. module: mail
+#. odoo-python
+#: code:addons/mail/models/mail_render_mixin.py:0
+#, python-format
+msgid "Mass Mailing Template: '%(name)s' (ID: %(record_id)s)"
+msgstr "Plantilla de correo masivo: \"%(name)s\" (ID: %(record_id)s)"
 
 #. module: mail
 #. odoo-javascript
@@ -6488,6 +6517,13 @@ msgstr "Todavía no hay ninguna conversación..."
 #, python-format
 msgid "No history messages"
 msgstr "No hay mensajes en el historial"
+
+#. module: mail
+#. odoo-python
+#: code:addons/mail/models/mail_render_mixin.py:0
+#, python-format
+msgid "No language detected in context"
+msgstr "No detectamos ningún idioma en el contexto"
 
 #. module: mail
 #. odoo-python
@@ -9235,6 +9271,13 @@ msgstr "Descripción de la plantilla"
 #. odoo-python
 #: code:addons/mail/models/mail_render_mixin.py:0
 #, python-format
+msgid "Template name not identified"
+msgstr "Nombre de la plantilla no identificado"
+
+#. module: mail
+#. odoo-python
+#: code:addons/mail/models/mail_render_mixin.py:0
+#, python-format
 msgid ""
 "Template rendering should be called only using on a list of IDs; received "
 "%(res_ids)r instead."
@@ -9474,8 +9517,8 @@ msgid ""
 msgstr ""
 "El modelo (tipo de documento de Odoo) al que corresponde este alias. "
 "Cualquier correo entrante que no sea respuesta a un registro existente "
-"creará un nuevo registro de este modelo "
-"(por ejemplo, una tarea en el proyecto)."
+"creará un nuevo registro de este modelo (por ejemplo, una tarea en el "
+"proyecto)."
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_alias__alias_name
@@ -9493,7 +9536,7 @@ msgstr ""
 #: code:addons/mail/wizard/mail_activity_schedule.py:0
 #, python-format
 msgid "The plan \"%(plan_name)s\" cannot be launched:"
-msgstr "No se puede poner en marcha el plan \"%(plan_name)s\":"
+msgstr "No es posible iniciar el plan \"%(plan_name)s\":"
 
 #. module: mail
 #. odoo-python
@@ -10132,6 +10175,20 @@ msgid "Unmute Channel"
 msgstr "Desactivar silencio del canal"
 
 #. module: mail
+#. odoo-python
+#: code:addons/mail/models/mail_render_mixin.py:0
+#, python-format
+msgid "Unnamed Mail Template"
+msgstr "Plantilla de correo sin nombre"
+
+#. module: mail
+#. odoo-python
+#: code:addons/mail/models/mail_render_mixin.py:0
+#, python-format
+msgid "Unnamed Mailing"
+msgstr "Correo sin nombre"
+
+#. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/core/common/message_card_list.xml:0
 #: code:addons/mail/static/src/discuss/message_pin/common/message_patch.js:0
@@ -10724,7 +10781,7 @@ msgstr "Escriba sus comentarios"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_compose_message_wizard_form
 msgid "Write your message here..."
-msgstr "Escriba su mensaje aquí..."
+msgstr "Escribe tu mensaje aquí..."
 
 #. module: mail
 #. odoo-python
@@ -10951,12 +11008,12 @@ msgstr ""
 #: code:addons/mail/models/mail_thread.py:0
 #, python-format
 msgid "You have been assigned to %s"
-msgstr "Le asignaron %s"
+msgstr "Te asignaron %s"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.message_user_assigned
 msgid "You have been assigned to the"
-msgstr "Le asignaron:"
+msgstr "Te asignaron"
 
 #. module: mail
 #. odoo-javascript
@@ -11722,6 +11779,23 @@ msgstr "{{ object.partner_id.lang }}"
 #, python-format
 msgid "“%(member_name)s” in “%(channel_name)s”"
 msgstr "“%(member_name)s” en “%(channel_name)s”"
+
+#. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/core/web/activity.js:0
+#, python-format
+msgid "“%s”"
+msgstr "“%s”"
+
+#, python-format
+#~ msgid ""
+#~ "Failed to render QWeb template: %(template_src)s\n"
+#~ "\n"
+#~ "%(template_traceback)s)"
+#~ msgstr ""
+#~ "Error al renderizar la plantilla QWeb: %(template_src)s\n"
+#~ "\n"
+#~ "%(template_traceback)s)"
 
 #~ msgid "The channel type cannot be empty"
 #~ msgstr "El tipo de canal no puede estar vacío"

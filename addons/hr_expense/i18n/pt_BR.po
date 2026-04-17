@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-07 18:36+0000\n"
+"POT-Creation-Date: 2026-04-03 18:38+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
 "Last-Translator: Wil Odoo, 2025\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/odoo/teams/"
@@ -22,26 +22,6 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
 "1000000 == 0 ? 1 : 2;\n"
-
-#. module: hr_expense
-#: model_terms:ir.ui.view,arch_db:hr_expense.report_expense_sheet
-msgid "$100.00"
-msgstr "$100,00"
-
-#. module: hr_expense
-#: model_terms:ir.ui.view,arch_db:hr_expense.report_expense_sheet
-msgid "$120.00"
-msgstr "$120,00"
-
-#. module: hr_expense
-#: model_terms:ir.ui.view,arch_db:hr_expense.report_expense_sheet
-msgid "$500.00"
-msgstr "$500,00"
-
-#. module: hr_expense
-#: model_terms:ir.ui.view,arch_db:hr_expense.report_expense_sheet
-msgid "$600.00"
-msgstr "$600,00"
 
 #. module: hr_expense
 #. odoo-python
@@ -94,11 +74,6 @@ msgstr ""
 #, python-format
 msgid "1 %(exp_cur)s = %(rate)s %(comp_cur)s"
 msgstr "1 %(exp_cur)s = %(rate)s %(comp_cur)s"
-
-#. module: hr_expense
-#: model_terms:ir.ui.view,arch_db:hr_expense.report_expense_sheet
-msgid "2023-08-11"
-msgstr "2023-08-11"
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.product_product_expense_form_view
@@ -2107,6 +2082,15 @@ msgid "Team Approver"
 msgstr "Aprovador da equipe"
 
 #. module: hr_expense
+#. odoo-python
+#: code:addons/hr_expense/models/ir_actions_report.py:0
+#, python-format
+msgid ""
+"The attachment (%s) has not been added to the report due to the following "
+"error: '%s'"
+msgstr ""
+
+#. module: hr_expense
 #: model:ir.model.fields,help:hr_expense.field_res_company__expense_journal_id
 #: model:ir.model.fields,help:hr_expense.field_res_config_settings__expense_journal_id
 msgid "The company's default journal used when an employee expense is created."
@@ -2664,3 +2648,18 @@ msgstr "em avaliação"
 #: model_terms:ir.ui.view,arch_db:hr_expense.res_config_settings_view_form
 msgid "use OCR to fill data from a picture of the bill"
 msgstr "use o OCR para preencher os dados a partir de uma foto da fatura"
+
+#~ msgid "$100.00"
+#~ msgstr "$100,00"
+
+#~ msgid "$120.00"
+#~ msgstr "$120,00"
+
+#~ msgid "$500.00"
+#~ msgstr "$500,00"
+
+#~ msgid "$600.00"
+#~ msgstr "$600,00"
+
+#~ msgid "2023-08-11"
+#~ msgstr "2023-08-11"

@@ -7,13 +7,15 @@
 # Marta Wacławek, 2025
 #
 # Łukasz Grzenkowicz <lukasz.grzenkowicz@4biznes.eu>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# "Marta (wacm)" <wacm@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-04 18:36+0000\n"
-"PO-Revision-Date: 2025-08-12 01:11+0000\n"
-"Last-Translator: Łukasz Grzenkowicz <lukasz.grzenkowicz@4biznes.eu>\n"
+"POT-Creation-Date: 2026-04-10 18:36+0000\n"
+"PO-Revision-Date: 2026-04-14 14:24+0000\n"
+"Last-Translator: \"Marta (wacm)\" <wacm@odoo.com>\n"
 "Language-Team: Polish <https://translate.odoo.com/projects/odoo-17/"
 "account_peppol/pl/>\n"
 "Language: pl\n"
@@ -23,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
 "(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
 "n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.mail_notification_layout_with_responsible_signature_and_peppol
@@ -123,7 +125,7 @@ msgstr "Przeniesienie konta Wyślij"
 #. module: account_peppol
 #: model:ir.model.fields,field_description:account_peppol.field_res_config_settings__account_peppol_edi_mode
 msgid "Account Peppol Edi Mode"
-msgstr ""
+msgstr "Tryb EDI konta Peppol"
 
 #. module: account_peppol
 #: model:ir.model.fields,field_description:account_peppol.field_account_move_send__account_peppol_edi_mode_info
@@ -133,7 +135,7 @@ msgstr "Informacje o trybie konta Peppol Edi"
 #. module: account_peppol
 #: model:ir.model.fields,field_description:account_peppol.field_res_config_settings__account_peppol_mode_constraint
 msgid "Account Peppol Mode Constraint"
-msgstr ""
+msgstr "Tryb ograniczenia konta Peppol"
 
 #. module: account_peppol
 #: model:ir.model.fields,field_description:account_peppol.field_account_journal__is_peppol_journal
@@ -170,20 +172,6 @@ msgstr ""
 "wyrejestruj się."
 
 #. module: account_peppol
-#. odoo-python
-#: code:addons/account_peppol/models/res_config_settings.py:0
-#, python-format
-msgid "Can't cancel registration with this status: %s"
-msgstr "Nie można anulować rejestracji z tym statusem: %s"
-
-#. module: account_peppol
-#. odoo-python
-#: code:addons/account_peppol/models/res_config_settings.py:0
-#, python-format
-msgid "Can't deregister with this status: %s"
-msgstr "Nie można się wyrejestrować z tym statusem: %s"
-
-#. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.account_peppol_view_move_form
 msgid "Cancel PEPPOL"
 msgstr "Anuluj PEPPOL"
@@ -205,11 +193,6 @@ msgstr "Anulowano"
 #, python-format
 msgid "Cannot cancel an entry that has already been sent to PEPPOL"
 msgstr "Nie można anulować wpisu, który został już wysłany do PEPPOL"
-
-#. module: account_peppol
-#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__not_valid_format
-msgid "Cannot receive this format"
-msgstr "Nie może otrzymać tego formatu"
 
 #. module: account_peppol
 #. odoo-python
@@ -245,7 +228,7 @@ msgstr "Firmy"
 #. module: account_peppol
 #: model:ir.model,name:account_peppol.model_res_config_settings
 msgid "Config Settings"
-msgstr "Ustawienia konfiguracji"
+msgstr "Konfiguracja ustawień"
 
 #. module: account_peppol
 #. odoo-javascript
@@ -346,6 +329,15 @@ msgid "Incoming Invoices Journal"
 msgstr "Dziennik faktur przychodzących"
 
 #. module: account_peppol
+#. odoo-python
+#: code:addons/account_peppol/wizard/account_move_send.py:0
+#, python-format
+msgid "Invoice %s is too big to send via peppol (64MB limit)"
+msgstr ""
+"Faktura %s jest zbyt duża, aby wysłać ją za pośrednictwem systemu PEPPOL "
+"(limit 64 MB)"
+
+#. module: account_peppol
 #: model:ir.model.fields,field_description:account_peppol.field_res_partner__is_peppol_edi_format
 #: model:ir.model.fields,field_description:account_peppol.field_res_users__is_peppol_edi_format
 msgid "Is Peppol Edi Format"
@@ -401,19 +393,9 @@ msgid "Not registered"
 msgstr "Nie zarejestrowany"
 
 #. module: account_peppol
-#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__not_valid
-msgid "Not valid"
-msgstr "Nieważne"
-
-#. module: account_peppol
 #: model:ir.model.fields.selection,name:account_peppol.selection__res_company__account_peppol_proxy_state__not_verified
 msgid "Not verified"
 msgstr "Nie zweryfikowano"
-
-#. module: account_peppol
-#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__not_verified
-msgid "Not verified yet"
-msgstr "Jeszcze nie zweryfikowane"
 
 #. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.mail_notification_layout_with_responsible_signature_and_peppol
@@ -475,6 +457,21 @@ msgid "PEPPOL: update participant status"
 msgstr "PEPPOL: aktualizacja statusu uczestnika"
 
 #. module: account_peppol
+#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__not_valid_format
+msgid "Partner cannot receive format"
+msgstr "Partner nie może odebrać formatu"
+
+#. module: account_peppol
+#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__not_valid
+msgid "Partner is not on Peppol"
+msgstr "Partner nie jest zarejestrowany w systemie Peppol"
+
+#. module: account_peppol
+#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__valid
+msgid "Partner is on Peppol"
+msgstr "Partner jest w Peppol"
+
+#. module: account_peppol
 #: model:ir.model.fields.selection,name:account_peppol.selection__res_company__account_peppol_proxy_state__pending
 msgid "Pending"
 msgstr "Oczekujące"
@@ -503,7 +500,7 @@ msgstr "Punkt końcowy Peppol"
 #: model:ir.model.fields,field_description:account_peppol.field_account_move__peppol_is_demo_uuid
 #: model:ir.model.fields,field_description:account_peppol.field_account_payment__peppol_is_demo_uuid
 msgid "Peppol Is Demo Uuid"
-msgstr ""
+msgstr "Demo uuid Peppol"
 
 #. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.account_peppol_view_account_invoice_filter
@@ -516,6 +513,11 @@ msgstr "Peppol gotowy"
 #, python-format
 msgid "Peppol Ready invoices"
 msgstr "Faktury Peppol gotowe"
+
+#. module: account_peppol
+#: model:ir.model.fields,field_description:account_peppol.field_res_config_settings__peppol_use_parent_company
+msgid "Peppol Use Parent Company"
+msgstr "Użyj firmy nadrzędnej Peppol"
 
 #. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.res_partner_view_tree
@@ -536,12 +538,6 @@ msgid "Peppol e-address (EAS)"
 msgstr "Adres elektroniczny Peppol (EAS)"
 
 #. module: account_peppol
-#: model:ir.model.fields,field_description:account_peppol.field_res_partner__account_peppol_verification_label
-#: model:ir.model.fields,field_description:account_peppol.field_res_users__account_peppol_verification_label
-msgid "Peppol endpoint validity"
-msgstr "Poprawność punktu końcowego Peppol"
-
-#. module: account_peppol
 #. odoo-python
 #: code:addons/account_peppol/models/account_edi_proxy_user.py:0
 #, python-format
@@ -554,6 +550,8 @@ msgid "Peppol ready invoices"
 msgstr "Faktury Peppol gotowe"
 
 #. module: account_peppol
+#: model:ir.model.fields,field_description:account_peppol.field_res_partner__account_peppol_verification_label
+#: model:ir.model.fields,field_description:account_peppol.field_res_users__account_peppol_verification_label
 #: model_terms:ir.ui.view,arch_db:account_peppol.account_peppol_view_account_invoice_filter
 msgid "Peppol status"
 msgstr "Status Peppol"
@@ -593,12 +591,10 @@ msgstr ""
 #, python-format
 msgid ""
 "Please enter the mobile number in the correct international format.\n"
-"For example: +32123456789, where +32 is the country code.\n"
-"Currently, only European countries are supported."
+"For example: +32123456789, where +32 is the country code."
 msgstr ""
 "Wprowadź numer telefonu komórkowego w prawidłowym formacie międzynarodowym.\n"
-"Na przykład: +32123456789, gdzie +32 to kod kraju.\n"
-"Obecnie obsługiwane są tylko kraje europejskie."
+"Na przykład: +32123456789, gdzie +32 to kod kraju."
 
 #. module: account_peppol
 #. odoo-python
@@ -688,6 +684,13 @@ msgid "Skipped"
 msgstr "Pominięte"
 
 #. module: account_peppol
+#. odoo-python
+#: code:addons/account_peppol/wizard/account_move_send.py:0
+#, python-format
+msgid "Some attachments could not be sent with the XML:"
+msgstr "Niektóre załączniki nie mogły zostać wysłane wraz z plikiem XML:"
+
+#. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.res_config_settings_view_form
 msgid ""
 "Start sending and receiving documents via Peppol as soon as your "
@@ -701,7 +704,7 @@ msgstr ""
 #: code:addons/account_peppol/static/src/components/res_config_settings_buttons/res_config_settings_buttons.js:0
 #, python-format
 msgid "Switch to Live"
-msgstr ""
+msgstr "Przełącz na wersję live"
 
 #. module: account_peppol
 #. odoo-python
@@ -719,6 +722,9 @@ msgid ""
 "                                        By clicking the button below I "
 "accept that Odoo may process my e-invoices."
 msgstr ""
+"Tryb testowy pozwala na rejestrację użytkownika w testowej sieci Peppol.\n"
+"                                        Poprzez kliknięcie przycisku poniżej "
+"akceptuję, że Odoo może przetwarzać moje e-faktury."
 
 #. module: account_peppol
 #. odoo-python
@@ -733,13 +739,6 @@ msgstr "Numer identyfikacyjny punktu końcowego Peppol jest nieprawidłowy."
 #, python-format
 msgid "The Peppol service that is used is likely to be %s."
 msgstr "Usługa Peppol, która jest używana, to prawdopodobnie %s."
-
-#. module: account_peppol
-#. odoo-python
-#: code:addons/account_peppol/wizard/account_move_send.py:0
-#, python-format
-msgid "The document has been sent to the Peppol Access Point for processing"
-msgstr "Dokument został wysłany do punktu dostępu Peppol w celu przetworzenia"
 
 #. module: account_peppol
 #. odoo-python
@@ -764,6 +763,28 @@ msgstr ""
 "Następujący partnerzy nie są poprawnie skonfigurowani do otrzymywania "
 "dokumentów Peppol. Sprawdź i zweryfikuj ich punkt końcowy Peppol i format "
 "elektronicznego fakturowania: %s"
+
+#. module: account_peppol
+#. odoo-python
+#: code:addons/account_peppol/wizard/account_move_send.py:0
+#, python-format
+msgid ""
+"The invoice has been sent to the Peppol Access Point. The following "
+"attachments were sent with the XML:"
+msgstr ""
+"Faktura została wysłana do punktu dostępowego Peppol. Wraz z plikiem XML "
+"przesłano następujące załączniki:"
+
+#. module: account_peppol
+#. odoo-python
+#: code:addons/account_peppol/wizard/account_move_send.py:0
+#, python-format
+msgid ""
+"The partner has indicated it does not accept this document type, so you "
+"cannot send this invoice via Peppol."
+msgstr ""
+"Partner wskazał, że nie akceptuje tego typu dokumentów, więc nie możesz "
+"wysłać tej faktury przez Peppol."
 
 #. module: account_peppol
 #. odoo-python
@@ -834,6 +855,16 @@ msgstr "Ta faktura została także"
 #. odoo-python
 #: code:addons/account_peppol/models/res_config_settings.py:0
 #, python-format
+msgid ""
+"This peppol identification is already used by %(parent_name)s. Please use "
+"something else."
+msgstr ""
+"Ten identyfikator Peppol jest już używany przez %(parent_name)s. Użyj innego."
+
+#. module: account_peppol
+#. odoo-python
+#: code:addons/account_peppol/models/res_config_settings.py:0
+#, python-format
 msgid "This verification code has expired. Please request a new one."
 msgstr "Kod weryfikacyjny wygasł. Poproś o nowy."
 
@@ -852,6 +883,11 @@ msgstr ""
 #, python-format
 msgid "Too many attempts to request an SMS code. Please try again later."
 msgstr "Zbyt wiele prób zażądania kodu SMS. Spróbuj ponownie później."
+
+#. module: account_peppol
+#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__not_verified
+msgid "Unchecked"
+msgstr "Niezaznaczone"
 
 #. module: account_peppol
 #: model:ir.model.fields,help:account_peppol.field_res_company__peppol_endpoint
@@ -885,35 +921,30 @@ msgstr ""
 "być wybierane z interfejsu użytkownika"
 
 #. module: account_peppol
-#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__valid
-msgid "Valid"
-msgstr "Ważny"
-
-#. module: account_peppol
 #. odoo-javascript
 #: code:addons/account_peppol/static/src/components/res_config_settings_buttons/res_config_settings_buttons.js:0
 #, python-format
 msgid "Validate registration"
-msgstr ""
+msgstr "Potwierdź rejestrację"
 
 #. module: account_peppol
 #. odoo-javascript
 #: code:addons/account_peppol/static/src/components/res_config_settings_buttons/res_config_settings_buttons.js:0
 #, python-format
 msgid "Validate registration (Demo)"
-msgstr ""
+msgstr "Potwierdź rejestrację (Demo)"
 
 #. module: account_peppol
 #. odoo-javascript
 #: code:addons/account_peppol/static/src/components/res_config_settings_buttons/res_config_settings_buttons.js:0
 #, python-format
 msgid "Validate registration (Test)"
-msgstr ""
+msgstr "Potwierdź rejestrację (Test)"
 
 #. module: account_peppol
 #: model:ir.model.fields.selection,name:account_peppol.selection__res_company__account_peppol_proxy_state__sent_verification
 msgid "Verification code sent"
-msgstr ""
+msgstr "Wysłano kod weryfikacyjny"
 
 #. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.res_partner_form_account_peppol
@@ -930,7 +961,7 @@ msgstr "Zweryfikuj Peppol"
 #: code:addons/account_peppol/static/src/components/res_config_settings_buttons/res_config_settings_buttons.xml:0
 #, python-format
 msgid "Verify mobile number"
-msgstr ""
+msgstr "Zweryfikuj mój numer komórkowy"
 
 #. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.res_partner_form_account_peppol
@@ -946,7 +977,21 @@ msgstr "Ostrzeżenie"
 #. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.res_config_settings_view_form
 msgid "We sent a verification code to"
+msgstr "Wysłaliśmy kod weryfikacyjny do"
+
+#. module: account_peppol
+#. odoo-python
+#: code:addons/account_peppol/models/account_journal.py:0
+#, python-format
+msgid ""
+"You can't change the type of a journal used for Peppol invoice reception toa "
+"type different than 'Purchase'.\n"
+"Please change the journal used for Peppol reception before changing the type "
+"of this journal."
 msgstr ""
+"Nie można zmienić typu dziennika używanego do odbioru faktur Peppol na inny "
+"typ niż \"Zakup\".\n"
+"Zmień dziennik używany do odbioru Peppol przed zmianą typu tego dziennika."
 
 #. module: account_peppol
 #. odoo-javascript
@@ -970,7 +1015,7 @@ msgstr "Na ten numer telefonu otrzymasz kod weryfikacyjny"
 #: code:addons/account_peppol/models/res_config_settings.py:0
 #, python-format
 msgid "Your Peppol activation code in Odoo is"
-msgstr ""
+msgstr "Twój kod aktywacji peppol w Odoo to"
 
 #. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.res_config_settings_view_form
@@ -1006,6 +1051,34 @@ msgstr "aby wysyłać faktury, ale ta"
 #: model_terms:ir.ui.view,arch_db:account_peppol.mail_notification_layout_with_responsible_signature_and_peppol
 msgid "uses"
 msgstr "używa"
+
+#, python-format
+#~ msgid "Can't cancel registration with this status: %s"
+#~ msgstr "Nie można anulować rejestracji z tym statusem: %s"
+
+#, python-format
+#~ msgid "Can't deregister with this status: %s"
+#~ msgstr "Nie można się wyrejestrować z tym statusem: %s"
+
+#~ msgid "Cannot receive this format"
+#~ msgstr "Nie może otrzymać tego formatu"
+
+#~ msgid "Not valid"
+#~ msgstr "Nieważne"
+
+#~ msgid "Not verified yet"
+#~ msgstr "Jeszcze nie zweryfikowane"
+
+#~ msgid "Peppol endpoint validity"
+#~ msgstr "Poprawność punktu końcowego Peppol"
+
+#~ msgid "Valid"
+#~ msgstr "Ważny"
+
+#, python-format
+#~ msgid "The document has been sent to the Peppol Access Point for processing"
+#~ msgstr ""
+#~ "Dokument został wysłany do punktu dostępu Peppol w celu przetworzenia"
 
 #, python-format
 #~ msgid "Your confirmation code is"

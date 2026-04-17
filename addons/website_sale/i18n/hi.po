@@ -2,13 +2,13 @@
 # This file contains the translation of the following modules:
 # * website_sale
 #
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-12 02:56+0000\n"
-"PO-Revision-Date: 2025-11-25 13:22+0000\n"
+"POT-Creation-Date: 2026-04-03 18:38+0000\n"
+"PO-Revision-Date: 2026-04-07 09:27+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-17/"
 "website_sale/hi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.products
@@ -67,28 +67,13 @@ msgid "'. Showing results for '"
 msgstr ""
 
 #. module: website_sale
-#: model:ir.model.fields.selection,name:website_sale.selection__website__product_page_image_width__100_pc
-msgid "100 %"
-msgstr ""
-
-#. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "100 percent"
 msgstr ""
 
 #. module: website_sale
-#: model:ir.model.fields.selection,name:website_sale.selection__website__product_page_image_width__50_pc
-msgid "50 %"
-msgstr ""
-
-#. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "50 percent"
-msgstr ""
-
-#. module: website_sale
-#: model:ir.model.fields.selection,name:website_sale.selection__website__product_page_image_width__66_pc
-msgid "66 %"
 msgstr ""
 
 #. module: website_sale
@@ -214,7 +199,7 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.address
 msgid "<i class=\"fw-light fa fa-angle-left me-2\"/>Discard"
-msgstr ""
+msgstr "<i class=\"fw-light fa fa-angle-left me-2\"/>खारिज करें"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.products_attributes
@@ -229,7 +214,7 @@ msgstr "<option value=\"\">देश...</option>"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.address
 msgid "<option value=\"\">State / Province...</option>"
-msgstr ""
+msgstr "<option value=\"\">राज्य / प्रांत...</option>"
 
 #. module: website_sale
 #. odoo-python
@@ -271,13 +256,6 @@ msgid ""
 "<span class=\"d-md-none fa fa-shopping-cart\"/>\n"
 "                            <span class=\"d-none d-md-inline\">Add to cart</"
 "span>"
-msgstr ""
-
-#. module: website_sale
-#: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
-msgid ""
-"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
-"specific.\" groups=\"website.group_multi_website\"/>"
 msgstr ""
 
 #. module: website_sale
@@ -482,6 +460,8 @@ msgid ""
 "This description will be copied to every Sales Order, Delivery Order and "
 "Customer Invoice/Credit Note"
 msgstr ""
+"प्रॉडक्ट का वह विवरण जिसे आप अपने ग्राहकों को बताना चाहते हैं. यह विवरण हर सेल्स ऑर्डर, "
+"डिलीवरी ऑर्डर और कस्टमर इनवॉइस/क्रेडिट नोट पर कॉपी किया जाएगा"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.product
@@ -591,7 +571,7 @@ msgstr "जोड़ें"
 #: code:addons/website_sale/static/src/xml/website_sale_reorder_modal.xml:0
 #, python-format
 msgid "Add To Cart"
-msgstr ""
+msgstr "कार्ट में जोड़ें"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_res_config_settings__add_to_cart_action
@@ -666,7 +646,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_sale.products_categories_list
 #: model_terms:ir.ui.view,arch_db:website_sale.s_dynamic_snippet_products_template_options
 msgid "All Products"
-msgstr ""
+msgstr "सभी प्रॉडक्ट"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website__all_pricelist_ids
@@ -721,7 +701,7 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.address
 msgid "Apartment, suite, etc."
-msgstr ""
+msgstr "अपार्टमेंट, सुइट वगैरह।"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.coupon_form
@@ -755,7 +735,7 @@ msgstr "अटैचमेंट की संख्या"
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "Attributes"
-msgstr ""
+msgstr "एट्रिब्यूट"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
@@ -842,7 +822,7 @@ msgstr "बिलिंग"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.address
 msgid "Billing address"
-msgstr ""
+msgstr "बिलिंग के लिए पते"
 
 #. module: website_sale
 #. odoo-python
@@ -864,6 +844,9 @@ msgid ""
 "purchase amount, period). Rewards can be discounts (% or amount) or free "
 "products."
 msgstr ""
+"कई प्रकार के प्रोग्रामों के साथ अपनी बिक्री बढ़ाएं: कूपन, प्रचार, गिफ्ट कार्ड, लॉयल्टी. कुछ "
+"खास शर्तें तय की जा सकती हैं (प्रॉडक्ट, ग्राहक, न्यूनतम खरीद राशि, अवधि). पुरस्कार छूट (% "
+"o राशि) या मुफ्त प्रॉडक्ट हो सकते हैं।"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -929,7 +912,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_image__can_image_1024_be_zoomed
 msgid "Can Image 1024 be zoomed"
-msgstr ""
+msgstr "क्या इमेज 1024 को ज़ूम किया जा सकता है"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_delivery_carrier__can_publish
@@ -940,7 +923,7 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "Cards"
-msgstr ""
+msgstr "कार्ड्स"
 
 #. module: website_sale
 #: model:ir.model.fields.selection,name:website_sale.selection__website__product_page_image_layout__carousel
@@ -1027,6 +1010,8 @@ msgid ""
 "Changing VAT number is not allowed once document(s) have been issued for "
 "your account. Please contact us directly for this operation."
 msgstr ""
+"एक बार आपके खाते के लिए दस्तावेज़ जारी हो जाने के बाद वैट नंबर बदलना मान्य नहीं है. इस "
+"प्रक्रिया के लिए कृपया हमसे सीधे संपर्क करें।"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.address
@@ -1061,7 +1046,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_public_category__child_id
 msgid "Children Categories"
-msgstr ""
+msgstr "चिल्ड्रेन कैटगरी"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.payment_delivery
@@ -1300,8 +1285,8 @@ msgid ""
 "light\"/>"
 msgstr ""
 "चेकआउट पर जाएं\n"
-"                                    <i class="
-"\"fa fa-angle-right ms-2 fw-light\"/>"
+"                                    <i class=\"fa fa-angle-right ms-2 fw-"
+"light\"/>"
 
 #. module: website_sale
 #. odoo-python
@@ -1329,7 +1314,7 @@ msgstr "बनाएँ"
 #. module: website_sale
 #: model_terms:ir.actions.act_window,help:website_sale.product_template_action_website
 msgid "Create a new product"
-msgstr ""
+msgstr "नया प्रॉडक्ट बनाएं"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_image__create_uid
@@ -1481,7 +1466,7 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.actions.act_window,help:website_sale.product_public_category_action
 msgid "Define a new category"
-msgstr ""
+msgstr "एक नई कैटगरी तय करें"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -1532,7 +1517,7 @@ msgstr ""
 #. module: website_sale
 #: model:product.public.category,name:website_sale.public_category_desks
 msgid "Desks"
-msgstr ""
+msgstr "डेस्क"
 
 #. module: website_sale
 #: model:ir.model.fields,help:website_sale.field_product_product__website_sequence
@@ -1614,8 +1599,8 @@ msgstr ""
 #, python-format
 msgid "Do not have access, skip this data for user's digest email"
 msgstr ""
-"अगर किसी डेटा तक ऐक्सेस नहीं है, तो उस डेटा को उपयोगकर्ता को भेजे जाने वाले डाइजेस्ट ईमेल में"
-" शामिल न करें."
+"अगर किसी डेटा तक ऐक्सेस नहीं है, तो उस डेटा को उपयोगकर्ता को भेजे जाने वाले डाइजेस्ट ईमेल "
+"में शामिल न करें."
 
 #. module: website_sale
 #. odoo-javascript
@@ -1666,7 +1651,7 @@ msgstr ""
 #: code:addons/website_sale/models/website_snippet_filter.py:0
 #, python-format
 msgid "Drawer"
-msgstr ""
+msgstr "ड्रॉअर"
 
 #. module: website_sale
 #: model:product.public.category,name:website_sale.public_category_drawers
@@ -1729,7 +1714,7 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.address_kanban
 msgid "Edit this address"
-msgstr ""
+msgstr "इस पते में बदलाव करें"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.address
@@ -1758,7 +1743,7 @@ msgstr ""
 #: code:addons/website_sale/models/product_public_category.py:0
 #, python-format
 msgid "Error! You cannot create recursive categories."
-msgstr ""
+msgstr "गड़बड़ी! किसी कैटेगरी को खुद का ही हिस्सा या पैरेंट नहीं बनाया जा सकता।"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -1824,7 +1809,7 @@ msgstr "फ़ील्ड"
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_sale_extra_field__label
 msgid "Field Label"
-msgstr ""
+msgstr "फ़ील्ड लेबल"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_sale_extra_field__name
@@ -1886,7 +1871,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model.fields,help:website_sale.field_product_public_category__sequence
 msgid "Gives the sequence order when displaying a list of product categories."
-msgstr ""
+msgstr "प्रॉडक्ट कैटेगरी की लिस्ट में कौन पहले दिखेगा, यह उसका क्रम तय करता है।"
 
 #. module: website_sale
 #. odoo-javascript
@@ -1992,6 +1977,9 @@ msgid ""
 "backend. If you wish to change your name or email address, please do so in "
 "the account settings or contact your administrator."
 msgstr ""
+"अगर आप किसी बाहरी व्यक्ति के लिए ऑर्डर दे रहे हैं, तो कृपया अपना ऑर्डर बैकएंड के माध्यम से "
+"दें. अगर आप अपना नाम या ईमेल पता बदलना चाहते हैं, तो कृपया खाता से जुड़ी सेटिंग में ऐसा करें "
+"या अपने एडमिन से संपर्क करें।"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.payment
@@ -2211,7 +2199,7 @@ msgstr "पिछले साल"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "Layout"
-msgstr ""
+msgstr "लेआउट"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -2388,7 +2376,7 @@ msgstr "नया"
 #. module: website_sale
 #: model:ir.actions.act_window,name:website_sale.product_product_action_add
 msgid "New Product"
-msgstr ""
+msgstr "नया प्रॉडक्ट"
 
 #. module: website_sale
 #: model:product.ribbon,html:website_sale.new_ribbon
@@ -2672,7 +2660,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_public_category__parent_id
 msgid "Parent Category"
-msgstr ""
+msgstr "पैरंट कैटगरी"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_public_category__parent_path
@@ -2757,7 +2745,7 @@ msgstr "फ़ोन नंबर"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "Pills"
-msgstr ""
+msgstr "पिल्स"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.view_product_image_form
@@ -2888,7 +2876,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model,name:website_sale.model_product_attribute
 msgid "Product Attribute"
-msgstr ""
+msgstr "प्रॉडक्ट एट्रिब्यूट"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.shop_product_carousel
@@ -2909,12 +2897,12 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model,name:website_sale.model_product_document
 msgid "Product Document"
-msgstr ""
+msgstr "प्रॉडक्ट डॉक्यूमेंट"
 
 #. module: website_sale
 #: model:ir.model,name:website_sale.model_product_image
 msgid "Product Image"
-msgstr ""
+msgstr "प्रॉडक्ट इमेज"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.product_image_view_kanban
@@ -2976,7 +2964,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.model,name:website_sale.model_product_tag
 msgid "Product Tag"
-msgstr ""
+msgstr "प्रॉडक्ट टैग"
 
 #. module: website_sale
 #: model:ir.ui.menu,name:website_sale.product_catalog_product_tags
@@ -2997,17 +2985,17 @@ msgstr "उत्पाद  प्रारूप"
 #. module: website_sale
 #: model:ir.model,name:website_sale.model_product_template_attribute_line
 msgid "Product Template Attribute Line"
-msgstr ""
+msgstr "प्रॉडक्ट टेम्प्लेट एट्रिब्यूट लाइन"
 
 #. module: website_sale
 #: model:ir.model,name:website_sale.model_product_template_attribute_value
 msgid "Product Template Attribute Value"
-msgstr ""
+msgstr "प्रॉडक्ट टेम्प्लेट एट्रिब्यूट वैल्यू"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_public_category__product_tmpl_ids
 msgid "Product Tmpl"
-msgstr ""
+msgstr "प्रॉडक्ट टेम्प्लेट"
 
 #. module: website_sale
 #: model:ir.model,name:website_sale.model_product_product
@@ -3065,7 +3053,7 @@ msgstr "प्रॉडक्ट"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "Products List"
-msgstr ""
+msgstr "प्रॉडक्ट लिस्ट"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -3095,7 +3083,7 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "Promo Code"
-msgstr ""
+msgstr "प्रोमो कोड"
 
 #. module: website_sale
 #. odoo-python
@@ -3200,7 +3188,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 #: model_terms:ir.ui.view,arch_db:website_sale.snippets_options_web_editor
 msgid "Re-order"
-msgstr ""
+msgstr "दोबारा ऑर्डर करें"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_res_config_settings__website_sale_enabled_portal_reorder_button
@@ -3265,7 +3253,7 @@ msgstr "हटाएं"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "Replace"
-msgstr ""
+msgstr "रिप्लेस करें"
 
 #. module: website_sale
 #: model:ir.model.fields,help:website_sale.field_delivery_carrier__website_id
@@ -3471,12 +3459,12 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
 msgid "Send after"
-msgstr ""
+msgstr "के बाद भेजें"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.sale_order_view_form_cart_recovery
 msgid "Send by Email"
-msgstr ""
+msgstr "ईमेल के ज़रिए भेजें"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website__send_abandoned_cart_email
@@ -3723,7 +3711,7 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.address
 msgid "Street and Number"
-msgstr ""
+msgstr "सड़क और नंबर"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.payment
@@ -4005,7 +3993,7 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "Top"
-msgstr ""
+msgstr "टॉप"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -4106,9 +4094,14 @@ msgid "VAT Included"
 msgstr ""
 
 #. module: website_sale
+#: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
+msgid "Values set here are website-specific."
+msgstr ""
+
+#. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.s_add_to_cart_options
 msgid "Variant"
-msgstr ""
+msgstr "वैरिएंट"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_product__ribbon_id
@@ -4212,7 +4205,7 @@ msgstr "चेतावनी"
 #. module: website_sale
 #: model:product.template,name:website_sale.product_product_1_product_template
 msgid "Warranty"
-msgstr ""
+msgstr "वारंटी"
 
 #. module: website_sale
 #: model:product.template,description_sale:website_sale.product_product_1_product_template
@@ -4491,7 +4484,7 @@ msgstr "bpost शिपिंग के तरीके"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.product_product_view_form_add
 msgid "e.g. Cheese Burger"
-msgstr ""
+msgstr "जैसे, चीज़ बर्गर"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.s_dynamic_snippet_products_template_options
@@ -4592,4 +4585,9 @@ msgstr ""
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.confirmation
 msgid "to follow your order."
+msgstr ""
+
+#. module: website_sale
+#: model_terms:ir.ui.view,arch_db:website_sale.checkout_layout
+msgid "x"
 msgstr ""

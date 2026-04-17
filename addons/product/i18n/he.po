@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* product
-# 
+#
 # Translators:
 # Fishfur A Banter <fishfurbanter@gmail.com>, 2023
 # Jonathan Spier, 2023
@@ -30,20 +30,21 @@
 # Yedidel Elhayany, 2025
 # Yoram Lavi, 2025
 # or balmas, 2025
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-07 20:36+0000\n"
+"POT-Creation-Date: 2026-04-03 18:39+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
 "Last-Translator: or balmas, 2025\n"
 "Language-Team: Hebrew (https://app.transifex.com/odoo/teams/41243/he/)\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: he\n"
-"Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % "
+"1 == 0) ? 1: 2;\n"
 
 #. module: product
 #. odoo-python
@@ -70,22 +71,13 @@ msgid "# Products"
 msgstr "מס' מוצרים"
 
 #. module: product
-#: model_terms:ir.ui.view,arch_db:product.report_pricelist_page
-msgid "$14.00"
-msgstr ""
-
-#. module: product
-#: model_terms:ir.ui.view,arch_db:product.report_pricelist_page
-msgid "$15.00"
-msgstr "$15.00"
-
-#. module: product
 #. odoo-python
 #: code:addons/product/models/product_pricelist_item.py:0
 #, python-format
 msgid ""
 "%(base)s with a %(discount)s %% discount and %(surcharge)s extra fee\n"
-"Example: %(amount)s * %(discount_charge)s + %(price_surcharge)s → %(total_amount)s"
+"Example: %(amount)s * %(discount_charge)s + %(price_surcharge)s → "
+"%(total_amount)s"
 msgstr ""
 "%(base)s עם %(discount)s %% הנחה ו%(surcharge)s תשלום נוסף\n"
 "דוגמה: %(amount)s* %(discount_charge)s+%(price_surcharge)s→%(total_amount)s"
@@ -151,15 +143,20 @@ msgstr ""
 #. module: product
 #: model:ir.model.fields,help:product.field_product_attribute__create_variant
 msgid ""
-"- Instantly: All possible variants are created as soon as the attribute and its values are added to a product.\n"
-"        - Dynamically: Each variant is created only when its corresponding attributes and values are added to a sales order.\n"
+"- Instantly: All possible variants are created as soon as the attribute and "
+"its values are added to a product.\n"
+"        - Dynamically: Each variant is created only when its corresponding "
+"attributes and values are added to a sales order.\n"
 "        - Never: Variants are never created for the attribute.\n"
-"        Note: the variants creation mode cannot be changed once the attribute is used on at least one product."
+"        Note: the variants creation mode cannot be changed once the "
+"attribute is used on at least one product."
 msgstr ""
 "- מיידי: כל הורינאטים האפשריים נוצרים ברגע שהתכונה וערכיה מתווספים למוצר. \n"
-"- באופן דינמי: כל וריאנט נוצר רק כאשר התכונות והערכים התואמים שלו מתווספים להזמנת לקוח.\n"
+"- באופן דינמי: כל וריאנט נוצר רק כאשר התכונות והערכים התואמים שלו מתווספים "
+"להזמנת לקוח.\n"
 "- אף פעם: וריאנטים אף פעם לא נוצרים עבור התכונה.\n"
-" הערה: לא ניתן לשנות את מצב יצירת הוריאטנים לאחר השימוש בתכונה על מוצר אחד לפחות."
+" הערה: לא ניתן לשנות את מצב יצירת הוריאטנים לאחר השימוש בתכונה על מוצר אחד "
+"לפחות."
 
 #. module: product
 #: model:product.attribute.value,name:product.product_attribute_value_5
@@ -167,19 +164,9 @@ msgid "1 year"
 msgstr "שנה ראשונה"
 
 #. module: product
-#: model_terms:ir.ui.view,arch_db:product.report_packagingbarcode
-msgid "10"
-msgstr "10"
-
-#. module: product
 #: model_terms:ir.ui.view,arch_db:product.report_pricelist_page
 msgid "10 Units"
 msgstr "10 יחידות "
-
-#. module: product
-#: model_terms:ir.ui.view,arch_db:product.report_packagingbarcode
-msgid "123456789012"
-msgstr "123456789012"
 
 #. module: product
 #: model:product.template,description_sale:product.product_product_4_product_template
@@ -222,8 +209,12 @@ msgstr ""
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_pricelist_view_kanban
-msgid "<i class=\"fa fa-money\" role=\"img\" aria-label=\"Currency\" title=\"Currency\"/>"
-msgstr "<i class=\"fa fa-money\" role=\"img\" aria-label=\"Currency\" title=\"Currency\"/>"
+msgid ""
+"<i class=\"fa fa-money\" role=\"img\" aria-label=\"Currency\" "
+"title=\"Currency\"/>"
+msgstr ""
+"<i class=\"fa fa-money\" role=\"img\" aria-label=\"Currency\" "
+"title=\"Currency\"/>"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_template_form_view
@@ -231,7 +222,8 @@ msgid ""
 "<span class=\"o_stat_text\" invisible=\"pricelist_item_count == 1\">\n"
 "                                        Extra Prices\n"
 "                                    </span>\n"
-"                                    <span class=\"o_stat_text\" invisible=\"pricelist_item_count != 1\">\n"
+"                                    <span class=\"o_stat_text\" "
+"invisible=\"pricelist_item_count != 1\">\n"
 "                                        Extra Price\n"
 "                                    </span>"
 msgstr ""
@@ -311,8 +303,8 @@ msgstr "ברקוד יכול להיות משויך לאריזה אחת בלבד."
 #: model:ir.model.fields,help:product.field_product_product__description_sale
 #: model:ir.model.fields,help:product.field_product_template__description_sale
 msgid ""
-"A description of the Product that you want to communicate to your customers."
-" This description will be copied to every Sales Order, Delivery Order and "
+"A description of the Product that you want to communicate to your customers. "
+"This description will be copied to every Sales Order, Delivery Order and "
 "Customer Invoice/Credit Note"
 msgstr ""
 "תיאור של המוצר שברצונך להעביר ללקוחות שלך. תיאור זה יועתק לכל הזמנת לקוח, "
@@ -328,10 +320,14 @@ msgstr "אריזה אחרת כבר משתמשת בברקוד הזה."
 #. module: product
 #: model_terms:ir.actions.act_window,help:product.product_pricelist_action2
 msgid ""
-"A price is a set of sales prices or rules to compute the price of sales order lines based on products, product categories, dates and ordered quantities.\n"
-"            This is the perfect tool to handle several pricings, seasonal discounts, etc."
+"A price is a set of sales prices or rules to compute the price of sales "
+"order lines based on products, product categories, dates and ordered "
+"quantities.\n"
+"            This is the perfect tool to handle several pricings, seasonal "
+"discounts, etc."
 msgstr ""
-"מחירון הוא אוסף של מחירי מכירה או כללים לחישוב המחיר של שורות הזמנה במכירה, בהתבסס על מוצרים, קטגוריות מוצרים, תאריכים וכמויות מוזמנות.\n"
+"מחירון הוא אוסף של מחירי מכירה או כללים לחישוב המחיר של שורות הזמנה במכירה, "
+"בהתבסס על מוצרים, קטגוריות מוצרים, תאריכים וכמויות מוזמנות.\n"
 "         זהו הכלי המושלם לניהול מחירים שונים, הנחות עונתיות ועוד."
 
 #. module: product
@@ -345,13 +341,14 @@ msgstr "מוצר כבר משתמש בברקוד"
 #: model:ir.model.fields,help:product.field_product_product__detailed_type
 #: model:ir.model.fields,help:product.field_product_template__detailed_type
 msgid ""
-"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A storable product is a product for which you manage stock. The Inventory "
+"app has to be installed.\n"
 "A consumable product is a product for which stock is not managed.\n"
 "A service is a non-material product you provide."
 msgstr ""
 "מוצר מנוהל מלאי הוא מוצר שעבורו מתבצע ניהול מלאי במערכת. יש להתקין את יישום "
-"המלאי.מוצר לא מנוהל מלאי הוא מוצר אשר לא מתבצע עבורו ניהול מלאי במערכת.שירות"
-" הוא מוצר לא חומרי שאתה מספק."
+"המלאי.מוצר לא מנוהל מלאי הוא מוצר אשר לא מתבצע עבורו ניהול מלאי במערכת.שירות "
+"הוא מוצר לא חומרי שאתה מספק."
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_document__access_token
@@ -492,7 +489,8 @@ msgstr "אפשר למשתמשים להזין ערכים מותאמים אישי�
 #: model:ir.model.fields,help:product.field_res_config_settings__group_sale_pricelist
 msgid ""
 "Allows to manage different prices based on rules per category of customers.\n"
-"                Example: 10% for retailers, promotion of 5 EUR on this product, etc."
+"                Example: 10% for retailers, promotion of 5 EUR on this "
+"product, etc."
 msgstr ""
 "מאפשר לנהל מחירים שונים על פי כללים לכל קטגוריית לקוחות.\n"
 "דוגמא: 10% לקמעונאים, קידום של 5 אירו על מוצר זה וכו '."
@@ -865,8 +863,7 @@ msgid ""
 "Consumables are physical products for which you don't manage the inventory "
 "level: they are always available."
 msgstr ""
-"חומרים מתכלים הם מוצרים פיזיים שעבורם אינך מנהל את רמת המלאי: הם תמיד "
-"זמינים."
+"חומרים מתכלים הם מוצרים פיזיים שעבורם אינך מנהל את רמת המלאי: הם תמיד זמינים."
 
 #. module: product
 #: model:ir.model,name:product.model_res_partner
@@ -1334,8 +1331,8 @@ msgstr "הוסף עמלות נוספות"
 #. module: product
 #: model:ir.model.fields,help:product.field_product_template_attribute_value__price_extra
 msgid ""
-"Extra price for the variant with this attribute value on sale price. eg. 200"
-" price extra, 1000 + 200 = 1200."
+"Extra price for the variant with this attribute value on sale price. eg. 200 "
+"price extra, 1000 + 200 = 1200."
 msgstr ""
 "מחיר נוסף עבור הוריאנט עם ערך תכונה זה במחיר המכירה. למשל. 200 מחיר נוסף, "
 "1000 + 200 = 1200."
@@ -1403,10 +1400,12 @@ msgstr "פונט מדהים למשל עבור משימות fa-tasks"
 #. module: product
 #: model:ir.model.fields,help:product.field_product_pricelist_item__min_quantity
 msgid ""
-"For the rule to apply, bought/sold quantity must be greater than or equal to the minimum quantity specified in this field.\n"
+"For the rule to apply, bought/sold quantity must be greater than or equal to "
+"the minimum quantity specified in this field.\n"
 "Expressed in the default unit of measure of the product."
 msgstr ""
-"כדי שהכלל יחול, הכמות שנרכשה / נמכרה חייבת להיות גדולה או שווה לכמות המינימלית שצוינה בשדה זה.\n"
+"כדי שהכלל יחול, הכמות שנרכשה / נמכרה חייבת להיות גדולה או שווה לכמות "
+"המינימלית שצוינה בשדה זה.\n"
 "מבוטאת ביחידת מידה ברירת המחדל של המוצר."
 
 #. module: product
@@ -1834,8 +1833,8 @@ msgstr ""
 #. module: product
 #: model:ir.model.fields,help:product.field_product_template_attribute_value__exclude_for
 msgid ""
-"Make this attribute value not compatible with other values of the product or"
-" some attribute values of optional and accessory products."
+"Make this attribute value not compatible with other values of the product or "
+"some attribute values of optional and accessory products."
 msgstr ""
 "הפוך את ערך התכונה הזה לא תואם לערכים אחרים של המוצר או לערכי תכונות של "
 "מוצרים אופציונליים ואביזרים נלווים."
@@ -2075,8 +2074,8 @@ msgstr "מנורת שולחן"
 #: code:addons/product/models/product_template_attribute_line.py:0
 #, python-format
 msgid ""
-"On the product %(product)s you cannot associate the value %(value)s with the"
-" attribute %(attribute)s because they do not match."
+"On the product %(product)s you cannot associate the value %(value)s with the "
+"attribute %(attribute)s because they do not match."
 msgstr ""
 "במוצר %(product)s אינך יכול לשייך את הערך %(value)s עם התכונה %(attribute)s "
 "כי הם לא תואמים."
@@ -2321,7 +2320,6 @@ msgstr "תמחור"
 
 #. module: product
 #. odoo-javascript
-#: code:addons/product/static/src/js/pricelist_report/product_pricelist_report.xml:0
 #: code:addons/product/static/src/js/pricelist_report/product_pricelist_report.xml:0
 #, python-format
 msgid "Print"
@@ -2737,8 +2735,8 @@ msgstr "מזהה"
 #. module: product
 #: model_terms:ir.actions.act_window,help:product.product_supplierinfo_type_action
 msgid ""
-"Register the prices requested by your vendors for each product, based on the"
-" quantity and the period."
+"Register the prices requested by your vendors for each product, based on the "
+"quantity and the period."
 msgstr ""
 "רשום את המחירים המבוקשים על ידי הספקים שלך עבור כל מוצר, בהתבסס על הכמות "
 "וזמן האספקה."
@@ -3060,8 +3058,7 @@ msgid ""
 "The default Unit of Measure and the purchase Unit of Measure must be in the "
 "same category."
 msgstr ""
-"יחידת המידה המוגדרת כברירת מחדל ויחידת המידה לרכש חייבות להיות באותה "
-"קטגוריה."
+"יחידת המידה המוגדרת כברירת מחדל ויחידת המידה לרכש חייבות להיות באותה קטגוריה."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_attribute__display_type
@@ -3101,8 +3098,8 @@ msgstr "מספר המוצרים בקטגוריה זו (לא מתחשב בתתי 
 #: code:addons/product/models/product_template.py:0
 #, python-format
 msgid ""
-"The number of variants to generate is above allowed limit. You should either"
-" not generate variants for each combination or generate them on demand from "
+"The number of variants to generate is above allowed limit. You should either "
+"not generate variants for each combination or generate them on demand from "
 "the sales order. To do so, open the form view of attributes and change the "
 "mode of *Create Variants*."
 msgstr ""
@@ -3142,8 +3139,8 @@ msgstr "שיטת העיגול חייבת להיות חיובית בהחלט."
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product__lst_price
 msgid ""
-"The sale price is managed from the product template. Click on the 'Configure"
-" Variants' button to set the extra attribute prices."
+"The sale price is managed from the product template. Click on the 'Configure "
+"Variants' button to set the extra attribute prices."
 msgstr ""
 "מחיר המכירה מנוהל מתבנית המוצר. לחץ על הלחצן 'הגדר וריאנטים' כדי לקבוע את "
 "מחירי התכונות הנוספים."
@@ -3155,8 +3152,7 @@ msgstr ""
 msgid ""
 "The value %(value)s is not defined for the attribute %(attribute)s on the "
 "product %(product)s."
-msgstr ""
-"הערך %(value)s אינו מוגדר עבור התכונה %(attribute)s במוצר %(product)s."
+msgstr "הערך %(value)s אינו מוגדר עבור התכונה %(attribute)s במוצר %(product)s."
 
 #. module: product
 #. odoo-python
@@ -3233,8 +3229,8 @@ msgid ""
 "This vendor's product code will be used when printing a request for "
 "quotation. Keep empty to use the internal one."
 msgstr ""
-"קוד המוצר של ספק זה ישמש בעת הדפסת בקשה להצעת מחיר. השאר ריק כדי להשתמש בקוד"
-" הפנימי."
+"קוד המוצר של ספק זה ישמש בעת הדפסת בקשה להצעת מחיר. השאר ריק כדי להשתמש בקוד "
+"הפנימי."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_supplierinfo__product_name
@@ -3242,8 +3238,8 @@ msgid ""
 "This vendor's product name will be used when printing a request for "
 "quotation. Keep empty to use the internal one."
 msgstr ""
-"שם המוצר הזה של הספק ישמש בעת הדפסת בקשה להצעת מחיר. השאר ריק כדי להשתמש בשם"
-" הפנימי."
+"שם המוצר הזה של הספק ישמש בעת הדפסת בקשה להצעת מחיר. השאר ריק כדי להשתמש בשם "
+"הפנימי."
 
 #. module: product
 #: model:product.template,description_sale:product.consu_delivery_01_product_template
@@ -3407,7 +3403,8 @@ msgstr "מחיר ערך נוסף"
 #: model:ir.model.fields,help:product.field_product_template__standard_price
 msgid ""
 "Value of the product (automatically computed in AVCO).\n"
-"        Used to value the product when the purchase cost is not known (e.g. inventory adjustment).\n"
+"        Used to value the product when the purchase cost is not known (e.g. "
+"inventory adjustment).\n"
 "        Used to compute margins on sale orders."
 msgstr ""
 
@@ -3586,11 +3583,11 @@ msgstr "אזהרות"
 #. module: product
 #: model_terms:product.template,website_description:product.product_product_4_product_template
 msgid ""
-"We pay special attention to detail, which is why our desks are of a superior"
-" quality."
+"We pay special attention to detail, which is why our desks are of a superior "
+"quality."
 msgstr ""
-"אנו מקדישים תשומת לב מיוחדת לפרטים, וזו הסיבה ששולחנות הכתיבה שלנו הם באיכות"
-" מעולה."
+"אנו מקדישים תשומת לב מיוחדת לפרטים, וזו הסיבה ששולחנות הכתיבה שלנו הם באיכות "
+"מעולה."
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product__weight
@@ -3637,7 +3634,8 @@ msgid ""
 "You are setting a Decimal Accuracy less precise than the UOMs:\n"
 "%s\n"
 "This may cause inconsistencies in computations.\n"
-"Please increase the rounding of those units of measure, or the digits of this Decimal Accuracy."
+"Please increase the rounding of those units of measure, or the digits of "
+"this Decimal Accuracy."
 msgstr ""
 "אתה מגדיר דיוק עשרוני פחות מדויק מה-UOMs:\n"
 "%s\n"
@@ -3656,8 +3654,7 @@ msgid ""
 "You can assign pricelists to your customers or select one when creating a "
 "new sales quotation."
 msgstr ""
-"ניתן לשייך מחירון ללקוחות שלך או לבחור אחד בעת ​​יצירת הצעת מחיר חדשה "
-"למכירה."
+"ניתן לשייך מחירון ללקוחות שלך או לבחור אחד בעת ​​יצירת הצעת מחיר חדשה למכירה."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_document__type
@@ -3694,10 +3691,12 @@ msgstr "אינך יכול לשייך את המחירון הראשי כמחירו
 #: code:addons/product/models/product_attribute.py:0
 #, python-format
 msgid ""
-"You cannot change the Variants Creation Mode of the attribute %(attribute)s because it is used on the following products:\n"
+"You cannot change the Variants Creation Mode of the attribute %(attribute)s "
+"because it is used on the following products:\n"
 "%(products)s"
 msgstr ""
-"אינך יכול לשנות את מצב היצירה של וריאנטים של התכונה %(attribute)s מכיוון שהוא בשימוש במוצרים הבאים:\n"
+"אינך יכול לשנות את מצב היצירה של וריאנטים של התכונה %(attribute)s מכיוון "
+"שהוא בשימוש במוצרים הבאים:\n"
 "%(products)s"
 
 #. module: product
@@ -3705,8 +3704,8 @@ msgstr ""
 #: code:addons/product/models/product_attribute_value.py:0
 #, python-format
 msgid ""
-"You cannot change the attribute of the value %(value)s because it is used on"
-" the following products: %(products)s"
+"You cannot change the attribute of the value %(value)s because it is used on "
+"the following products: %(products)s"
 msgstr ""
 
 #. module: product
@@ -3736,8 +3735,7 @@ msgstr "אינך יכול ליצור קטגוריות רקורסיביות."
 
 #. module: product
 #: model:ir.model.constraint,message:product.constraint_product_attribute_value_value_company_uniq
-msgid ""
-"You cannot create two values with the same name for the same attribute."
+msgid "You cannot create two values with the same name for the same attribute."
 msgstr "אינך יכול ליצור שני ערכים עם אותו שם לאותה תכונה."
 
 #. module: product
@@ -3754,7 +3752,6 @@ msgstr ""
 #. module: product
 #. odoo-python
 #: code:addons/product/models/product_category.py:0
-#: code:addons/product/models/product_category.py:0
 #, python-format
 msgid "You cannot delete the %s product category."
 msgstr "לא ניתן למחוק את קטגורית המוצרים%s."
@@ -3764,7 +3761,8 @@ msgstr "לא ניתן למחוק את קטגורית המוצרים%s."
 #: code:addons/product/models/product_attribute.py:0
 #, python-format
 msgid ""
-"You cannot delete the attribute %(attribute)s because it is used on the following products:\n"
+"You cannot delete the attribute %(attribute)s because it is used on the "
+"following products:\n"
 "%(products)s"
 msgstr ""
 "אינך יכול למחוק את התכונה %(attribute)s מכיוון שהוא בשימוש במוצרים הבאים:\n"
@@ -3775,9 +3773,11 @@ msgstr ""
 #: code:addons/product/models/product_attribute_value.py:0
 #, python-format
 msgid ""
-"You cannot delete the value %(value)s because it is used on the following products:\n"
+"You cannot delete the value %(value)s because it is used on the following "
+"products:\n"
 "%(products)s\n"
-" If the value has been associated to a product in the past, you will not be able to delete it."
+" If the value has been associated to a product in the past, you will not be "
+"able to delete it."
 msgstr ""
 
 #. module: product
@@ -3816,15 +3816,14 @@ msgstr ""
 #: code:addons/product/models/product_template_attribute_line.py:0
 #, python-format
 msgid ""
-"You cannot move the attribute %(attribute)s from the product %(product_src)s"
-" to the product %(product_dest)s."
+"You cannot move the attribute %(attribute)s from the product %(product_src)s "
+"to the product %(product_dest)s."
 msgstr ""
 "אינך יכול להעביר את התכונה %(attribute)s ממוצר %(product_src)s למוצר "
 "%(product_dest)s."
 
 #. module: product
 #. odoo-python
-#: code:addons/product/models/product_template_attribute_value.py:0
 #: code:addons/product/models/product_template_attribute_value.py:0
 #, python-format
 msgid ""
@@ -3839,7 +3838,8 @@ msgstr ""
 #, python-format
 msgid ""
 "You must define a product for everything you sell or purchase,\n"
-"                            whether it's a storable product, a consumable or a service."
+"                            whether it's a storable product, a consumable or "
+"a service."
 msgstr ""
 
 #. module: product
@@ -3857,21 +3857,27 @@ msgstr ""
 msgid ""
 "You must define a product for everything you sell or purchase,\n"
 "                whether it's a storable product, a consumable or a service.\n"
-"                The product form contains information to simplify the sale process:\n"
-"                price, notes in the quotation, accounting data, procurement methods, etc."
+"                The product form contains information to simplify the sale "
+"process:\n"
+"                price, notes in the quotation, accounting data, procurement "
+"methods, etc."
 msgstr ""
 "עליך להגדיר מוצר לכל מה שאתה מוכר או רוכש,\n"
-"                בין אם מדובר במוצר מנוהל מלאי, מוצר לא מנוהל מלאי או בשירות.\n"
+"                בין אם מדובר במוצר מנוהל מלאי, מוצר לא מנוהל מלאי או "
+"בשירות.\n"
 "                טופס המוצר מכיל מידע כדי לפשט את תהליך המכירה:\n"
 "                מחיר, הערות בהצעת המחיר, נתונים חשבונאיים, שיטות רכש וכו '."
 
 #. module: product
 #: model_terms:ir.actions.act_window,help:product.product_normal_action_sell
 msgid ""
-"You must define a product for everything you sell, whether it's a physical product,\n"
+"You must define a product for everything you sell, whether it's a physical "
+"product,\n"
 "                a consumable or a service you offer to customers.\n"
-"                The product form contains information to simplify the sale process:\n"
-"                price, notes in the quotation, accounting data, procurement methods, etc."
+"                The product form contains information to simplify the sale "
+"process:\n"
+"                price, notes in the quotation, accounting data, procurement "
+"methods, etc."
 msgstr ""
 "עליך להגדיר מוצר לכל מה שאתה מוכר, בין אם זה מוצר מנוהל מלאי,\n"
 "                מוצר לא מנוהל מלאי או שירות שאתה מציע ללקוחות.\n"
@@ -3950,3 +3956,12 @@ msgstr "תבנית המוצר."
 #: model_terms:ir.ui.view,arch_db:product.product_supplierinfo_form_view
 msgid "to"
 msgstr "ל"
+
+#~ msgid "$15.00"
+#~ msgstr "$15.00"
+
+#~ msgid "10"
+#~ msgstr "10"
+
+#~ msgid "123456789012"
+#~ msgstr "123456789012"

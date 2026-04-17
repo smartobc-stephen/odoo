@@ -1,20 +1,22 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* spreadsheet
+# * spreadsheet
 #
 # Translators:
 # Tadeusz Karpiński <tadeuszkarpinski@gmail.com>, 2023
 # Wil Odoo, 2023
 # Marta Wacławek, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# "Marta (wacm)" <wacm@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-16 18:38+0000\n"
-"PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Marta Wacławek, 2025\n"
-"Language-Team: Polish (https://app.transifex.com/odoo/teams/41243/pl/)\n"
+"POT-Creation-Date: 2026-04-03 18:40+0000\n"
+"PO-Revision-Date: 2026-04-15 15:01+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Polish <https://translate.odoo.com/projects/odoo-17/"
+"spreadsheet/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,6 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
 "(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
 "n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -183,6 +186,13 @@ msgstr "2 kolumny"
 #, python-format
 msgid "2 rows"
 msgstr "2 wiersze"
+
+#. module: spreadsheet
+#. odoo-javascript
+#: code:addons/spreadsheet/static/src/o_spreadsheet/o_spreadsheet.xml:0
+#, python-format
+msgid "A"
+msgstr "A"
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -476,6 +486,13 @@ msgstr "Wartość bezwzględna"
 #, python-format
 msgid "Absolute value of a number."
 msgstr "Wartość bezwzględna liczby."
+
+#. module: spreadsheet
+#. odoo-javascript
+#: code:addons/spreadsheet/static/src/actions/spreadsheet_download_action.js:0
+#, python-format
+msgid "Access Error"
+msgstr "Błąd dostępu"
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -2648,10 +2665,7 @@ msgid "Does not contain"
 msgstr "Nie zawiera"
 
 #. module: spreadsheet
-#. odoo-javascript
-#: code:addons/spreadsheet/static/src/public_readonly_app/public_readonly.js:0
 #: model_terms:ir.ui.view,arch_db:spreadsheet.public_spreadsheet_layout
-#, python-format
 msgid "Download"
 msgstr "Pobierz"
 
@@ -3209,6 +3223,8 @@ msgstr ""
 msgid ""
 "Function [[FUNCTION_NAME]] expects number values for %s, but got a boolean."
 msgstr ""
+"Funkcja [[FUNCTION_NAME]] oczekuje wartości liczbowych dla %s, ale otrzymała "
+"wartość logiczną."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -3217,6 +3233,8 @@ msgstr ""
 msgid ""
 "Function [[FUNCTION_NAME]] expects number values for %s, but got a string."
 msgstr ""
+"Funkcja [[FUNCTION_NAME]] oczekuje wartości liczbowych dla %s, ale otrzymała "
+"ciąg znaków."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -3226,6 +3244,8 @@ msgid ""
 "Function [[FUNCTION_NAME]] expects number values for %s, but got an empty "
 "value."
 msgstr ""
+"Funkcja [[FUNCTION_NAME]] oczekuje wartości liczbowych dla %s, ale otrzymała "
+"pustą wartość."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -3235,6 +3255,8 @@ msgid ""
 "Function [[FUNCTION_NAME]] expects the parameter '%s' to be a single value "
 "or a single cell reference, not a range."
 msgstr ""
+"Funkcja [[FUNCTION_NAME]] oczekuje, że parametr „%s ” będzie pojedynczą "
+"wartością lub odwołaniem do pojedynczej komórki, a nie zakresem."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -4760,6 +4782,7 @@ msgstr "Przesuń w prawo"
 #, python-format
 msgid "Name not found. You may not have the required access rights."
 msgstr ""
+"Nazwa nie została znaleziona. Być może nie masz wymaganych uprawnień dostępu."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -6536,7 +6559,7 @@ msgstr "Brakuje argumentu. Podaj wartość"
 #: code:addons/spreadsheet/static/src/o_spreadsheet/o_spreadsheet.js:0
 #, python-format
 msgid "The argument square_matrix must be a matrix of numbers."
-msgstr ""
+msgstr "Argument square_matrix musi być macierzą liczb."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -6565,7 +6588,7 @@ msgstr "Warunki argumentów muszą mieć te same wymiary."
 #: code:addons/spreadsheet/static/src/o_spreadsheet/o_spreadsheet.js:0
 #, python-format
 msgid "The arguments matrix1 and matrix2 must be matrices of numbers."
-msgstr ""
+msgstr "Argumenty matrix1 i matrix2 muszą być macierzami liczb."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -6867,6 +6890,7 @@ msgstr ""
 #, python-format
 msgid "The columns arguments must be between 1 and %s (got %s)."
 msgstr ""
+"Argumenty kolumn muszą mieścić się w przedziale od 1 do %s (otrzymano %s)."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -7394,6 +7418,7 @@ msgid ""
 "The first and second arguments of [[FUNCTION_NAME]] must be non-empty "
 "matrices."
 msgstr ""
+"Pierwszy i drugi argument [[FUNCTION_NAME]] muszą być macierzami niepustymi."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -8103,7 +8128,7 @@ msgstr "Stopa nominalna (%s) musi być ściśle większa niż 0."
 #: code:addons/spreadsheet/static/src/o_spreadsheet/o_spreadsheet.js:0
 #, python-format
 msgid "The number columns (%s) must be positive."
-msgstr ""
+msgstr "Liczba kolumn (%s) musi być dodatnia."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -8358,7 +8383,7 @@ msgstr "Liczba pi."
 #: code:addons/spreadsheet/static/src/o_spreadsheet/o_spreadsheet.js:0
 #, python-format
 msgid "The number rows (%s) must be positive."
-msgstr ""
+msgstr "Liczba rzędów (%s) musi być dodatnia."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -9065,7 +9090,7 @@ msgstr ""
 #: code:addons/spreadsheet/static/src/o_spreadsheet/o_spreadsheet.js:0
 #, python-format
 msgid "The rows arguments must be between 1 and %s (got %s)."
-msgstr ""
+msgstr "Argumenty rzędów muszą być pomiędzy 1 a %s (otrzymano %s)."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -10675,7 +10700,7 @@ msgstr "Zmiana wartości z wartości klucza"
 #: code:addons/spreadsheet/static/src/o_spreadsheet/o_spreadsheet.js:0
 #, python-format
 msgid "Value for parameter %s is missing in [[FUNCTION_NAME]]."
-msgstr ""
+msgstr "W [[FUNCTION_NAME]] brakuje wartości parametru %s."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -11278,6 +11303,22 @@ msgstr "Nie można tworzyć nakładających się filtrów."
 
 #. module: spreadsheet
 #. odoo-javascript
+#: code:addons/spreadsheet/static/src/actions/spreadsheet_download_action.js:0
+#, python-format
+msgid ""
+"You don't have the rights to export data. Please contact an Administrator."
+msgstr ""
+"Nie masz uprawnień do eksportowania danych. Skontaktuj się z administratorem."
+
+#. module: spreadsheet
+#. odoo-javascript
+#: code:addons/spreadsheet/static/src/o_spreadsheet/o_spreadsheet.xml:0
+#, python-format
+msgid "Z"
+msgstr ""
+
+#. module: spreadsheet
+#. odoo-javascript
 #: code:addons/spreadsheet/static/src/pivot/pivot_functions.js:0
 #, python-format
 msgid "[[FUNCTION_NAME]] cannot be called from the spreadsheet."
@@ -11319,6 +11360,8 @@ msgid ""
 "[[FUNCTION_NAME]] expects the provided values of %(argName)s to be a non-"
 "empty matrix."
 msgstr ""
+"[[FUNCTION_NAME]] oczekuje, że podane wartości %(argName)s będą niepustą "
+"macierzą."
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -11368,7 +11411,7 @@ msgstr "i"
 #: code:addons/spreadsheet/static/src/o_spreadsheet/o_spreadsheet.xml:0
 #, python-format
 msgid "and value or formula"
-msgstr ""
+msgstr "i wartość lub formuła"
 
 #. module: spreadsheet
 #. odoo-javascript
@@ -11509,6 +11552,13 @@ msgstr "dziś"
 #, python-format
 msgid "tomorrow"
 msgstr "jutro"
+
+#. module: spreadsheet
+#. odoo-javascript
+#: code:addons/spreadsheet/static/src/public_readonly_app/public_readonly.xml:0
+#, python-format
+msgid "x"
+msgstr "x"
 
 #. module: spreadsheet
 #. odoo-javascript

@@ -1,30 +1,29 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* stock_landed_costs
-# 
+# * stock_landed_costs
+#
 # Translators:
 # erpgo translator <jumshud@erpgo.az>, 2024
 # Jumshud Sultanov <cumshud@gmail.com>, 2024
-# 
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-29 10:44+0000\n"
-"PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Jumshud Sultanov <cumshud@gmail.com>, 2024\n"
-"Language-Team: Azerbaijani (https://app.transifex.com/odoo/teams/41243/az/)\n"
+"POT-Creation-Date: 2025-12-29 18:37+0000\n"
+"PO-Revision-Date: 2026-03-07 08:24+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Azerbaijani <https://translate.odoo.com/projects/odoo-17/"
+"stock_landed_costs/az/>\n"
+"Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: az\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.1\n"
 
 #. module: stock_landed_costs
 #. odoo-python
-#: code:addons/stock_landed_costs/models/stock_landed_cost.py:0
-#: code:addons/stock_landed_costs/models/stock_landed_cost.py:0
-#: code:addons/stock_landed_costs/models/stock_landed_cost.py:0
 #: code:addons/stock_landed_costs/models/stock_landed_cost.py:0
 #, python-format
 msgid " already out"
@@ -32,7 +31,8 @@ msgstr ""
 
 #. module: stock_landed_costs
 #: model_terms:ir.ui.view,arch_db:stock_landed_costs.stock_landed_cost_view_kanban
-msgid "<i class=\"fa fa-clock-o\" title=\"Date\" role=\"img\" aria-label=\"Date\"/>"
+msgid ""
+"<i class=\"fa fa-clock-o\" title=\"Date\" role=\"img\" aria-label=\"Date\"/>"
 msgstr ""
 
 #. module: stock_landed_costs
@@ -43,11 +43,13 @@ msgstr ""
 #. module: stock_landed_costs
 #: model:ir.model.fields,help:stock_landed_costs.field_account_move_line__product_type
 msgid ""
-"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A storable product is a product for which you manage stock. The Inventory "
+"app has to be installed.\n"
 "A consumable product is a product for which stock is not managed.\n"
 "A service is a non-material product you provide."
 msgstr ""
-"Saxlanması mümkün olan məhsul ethiyatlarını idarə etdiyiniz məhsuldur. Anbar tətbiqi quraşdırılmalıdır.\n"
+"Saxlanması mümkün olan məhsul ethiyatlarını idarə etdiyiniz məhsuldur. Anbar "
+"tətbiqi quraşdırılmalıdır.\n"
 "Sərfiyyat məhsulu ehtiyatları idarə olunmayan məhsuldur.\n"
 "Xidmət təqdim etdiyiniz qeyri- maddi məhsuldur."
 
@@ -94,7 +96,7 @@ msgstr ""
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_valuation_adjustment_lines__additional_landed_cost
 msgid "Additional Landed Cost"
-msgstr ""
+msgstr "Əlavə Çatdırılma Xərci"
 
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_landed_cost__target_model
@@ -184,16 +186,18 @@ msgid ""
 "Cost and adjustments lines do not match. You should maybe recompute the "
 "landed costs."
 msgstr ""
+"Xərc və düzəliş sətirləri uyğun deyil. Bəlkə də çatdırılma xərclərini "
+"yenidən hesablamağınız lazımdır."
 
 #. module: stock_landed_costs
 #: model_terms:ir.ui.view,arch_db:stock_landed_costs.account_view_move_form_inherited
 msgid "Create Landed Costs"
-msgstr ""
+msgstr "Çatdırılma Xərcləri yarat"
 
 #. module: stock_landed_costs
 #: model_terms:ir.actions.act_window,help:stock_landed_costs.action_stock_landed_cost
 msgid "Create a new landed cost"
-msgstr ""
+msgstr "Yeni bir çatdırılma xərci yarat"
 
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_landed_cost__create_uid
@@ -238,7 +242,7 @@ msgstr ""
 #: model:ir.model.fields,help:stock_landed_costs.field_product_product__split_method_landed_cost
 #: model:ir.model.fields,help:stock_landed_costs.field_product_template__split_method_landed_cost
 msgid "Default Split Method when used for Landed Cost"
-msgstr ""
+msgstr "Çatdırılma Xərcləri üçün istifadə edildikdə Defolt Bölünmə Metodu"
 
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_landed_cost_lines__name
@@ -346,6 +350,8 @@ msgid ""
 "Indicates whether the product is a landed cost: when receiving a vendor "
 "bill, you can allocate this cost on preceding receipts."
 msgstr ""
+"Məhsulun çatdırılma xərci olub-olmadığını göstərir: təchizatçı qaiməsi "
+"alarkən bu xərci əvvəlki qəbullara bölüşdürə bilərsiniz."
 
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_landed_cost__message_is_follower
@@ -355,13 +361,13 @@ msgstr "İzləyicidir"
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_account_move_line__is_landed_costs_line
 msgid "Is Landed Costs Line"
-msgstr ""
+msgstr "Çatdırılma Xərcləri Sətridir"
 
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_product_product__landed_cost_ok
 #: model:ir.model.fields,field_description:stock_landed_costs.field_product_template__landed_cost_ok
 msgid "Is a Landed Cost"
-msgstr ""
+msgstr "Çatdırılma Xərcidir"
 
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_landed_cost__description
@@ -390,7 +396,7 @@ msgstr "Jurnal Sətirləri"
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_valuation_layer__stock_landed_cost_id
 #: model_terms:ir.ui.view,arch_db:stock_landed_costs.view_stock_landed_cost_form
 msgid "Landed Cost"
-msgstr ""
+msgstr "Maya Dəyərinə Əlavə Xərclər"
 
 #. module: stock_landed_costs
 #: model:ir.actions.act_window,name:stock_landed_costs.action_stock_landed_cost
@@ -411,12 +417,12 @@ msgstr "Malın Anbarda Dəyəri"
 #: model:ir.model.fields,field_description:stock_landed_costs.field_account_move__landed_costs_visible
 #: model:ir.model.fields,field_description:stock_landed_costs.field_account_payment__landed_costs_visible
 msgid "Landed Costs Visible"
-msgstr ""
+msgstr "Çatdırılma Xərcləri Görünəndir"
 
 #. module: stock_landed_costs
 #: model:mail.message.subtype,description:stock_landed_costs.mt_stock_landed_cost_open
 msgid "Landed cost validated"
-msgstr ""
+msgstr "Çatdırılma xərci təsdiqləndi"
 
 #. module: stock_landed_costs
 #: model_terms:ir.actions.act_window,help:stock_landed_costs.action_stock_landed_cost
@@ -424,6 +430,8 @@ msgid ""
 "Landed costs allow you to include additional costs (shipment, insurance, "
 "customs duties, etc) into the cost of the product."
 msgstr ""
+"Çatdırılma xərcləri sizə əlavə xərcləri (göndəriş, sığorta, gömrük rüsumları "
+"və s.) məhsulun maya dəyərinə daxil etməyə imkan verir."
 
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_landed_cost__write_uid
@@ -472,8 +480,6 @@ msgstr "Ad"
 
 #. module: stock_landed_costs
 #. odoo-python
-#: code:addons/stock_landed_costs/models/stock_landed_cost.py:0
-#: code:addons/stock_landed_costs/models/stock_landed_cost.py:0
 #: code:addons/stock_landed_costs/models/stock_landed_cost.py:0
 #, python-format
 msgid "New"
@@ -529,7 +535,7 @@ msgstr "Çatdırılma xətası olan mesajların sayı"
 #: code:addons/stock_landed_costs/models/stock_landed_cost.py:0
 #, python-format
 msgid "Only draft landed costs can be validated"
-msgstr ""
+msgstr "Yalnız qaralama vəziyyətində olan çatdırılma xərcləri təsdiqlənə bilər"
 
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_valuation_adjustment_lines__former_cost
@@ -633,12 +639,12 @@ msgstr ""
 #. module: stock_landed_costs
 #: model:ir.model,name:stock_landed_costs.model_stock_landed_cost
 msgid "Stock Landed Cost"
-msgstr ""
+msgstr "Anbar Çatdırılma Xərci"
 
 #. module: stock_landed_costs
 #: model:ir.model,name:stock_landed_costs.model_stock_landed_cost_lines
 msgid "Stock Landed Cost Line"
-msgstr ""
+msgstr "Anbar Çatdırılma Xərci Sətri"
 
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_valuation_adjustment_lines__move_id
@@ -685,6 +691,8 @@ msgid ""
 "Validated landed costs cannot be cancelled, but you could create negative "
 "landed costs to reverse them"
 msgstr ""
+"Təsdiqlənmiş çatdırılma xərcləri ləğv edilə bilməz, lakin onları geri "
+"çevirmək üçün mənfi çatdırılma xərcləri yarada bilərsiniz"
 
 #. module: stock_landed_costs
 #: model:ir.model,name:stock_landed_costs.model_stock_valuation_adjustment_lines
@@ -730,12 +738,17 @@ msgid ""
 "You cannot apply landed costs on the chosen %s(s). Landed costs can only be "
 "applied for products with FIFO or average costing method."
 msgstr ""
+"Seçilmiş %s(lər)ə çatdırılma xərcləri tətbiq edilə bilməz. Çatdırılma "
+"xərcləri yalnız FIFO və ya orta maya dəyəri metodu ilə işləyən məhsullara "
+"tətbiq oluna bilər."
 
 #. module: stock_landed_costs
 #. odoo-python
 #: code:addons/stock_landed_costs/models/product.py:0
 #, python-format
 msgid ""
-"You cannot change the product type or disable landed cost option because the"
-" product is used in an account move line."
+"You cannot change the product type or disable landed cost option because the "
+"product is used in an account move line."
 msgstr ""
+"Məhsul mühasibat yazısı sətrində istifadə olunduğu üçün məhsulun növünü "
+"dəyişə və ya çatdırılma xərci seçimindən imtina edə bilməzsiniz."

@@ -705,6 +705,8 @@ class TestSaleStock(TestSaleCommon, ValuationReconciliationTestCommon):
         return_picking.button_validate()
         # Checks the delivery amount (must be 0).
         self.assertEqual(sale_order.order_line.qty_delivered, 0)
+        self.assertEqual(sale_order.order_line.invoice_status, 'no')
+        self.assertEqual(sale_order.invoice_status, 'no')
 
     def test_12_return_without_refund(self):
         """ Do the exact thing than in `test_11_return_with_refund` except we
@@ -1930,6 +1932,18 @@ class TestSaleStock(TestSaleCommon, ValuationReconciliationTestCommon):
         ship02.move_ids.write({'quantity': 7, 'picked': True})
         ship02.button_validate()
         self.assertEqual(so.delivery_status, 'full')
+
+    def test_delivery_removed_lines(self):
+        """
+        Tests if removing all lines in delivery unlinks from sale order it originated from.
+        It shouldn't as user has no way of creating new delivery or relinking
+        """
+        so = self._get_new_sale_order(product=self.product_a)
+        so.action_confirm()
+
+        ship = so.picking_ids
+        ship.move_ids.unlink()
+        self.assertEqual(so, ship.sale_id)
 
     def test_return_from_customer_multi_step(self):
         """

@@ -26,6 +26,7 @@ class TestUBLROCommon(TestUBLCommon):
             'acc_type': 'iban',
             'partner_id': cls.company_data['company'].partner_id.id,
             'acc_number': 'RO98RNCB1234567890123456',
+            'allow_out_payment': True,
         })
 
         cls.partner_a = cls.env['res.partner'].create({
@@ -37,7 +38,7 @@ class TestUBLROCommon(TestUBLCommon):
             'vat': 'RO1234567897',
             'phone': '+40 123 456 780',
             'street': "Rolling Roast, 88",
-            'bank_ids': [(0, 0, {'acc_number': 'RO98RNCB1234567890123456'})],
+            'bank_ids': [(0, 0, {'acc_number': 'RO98RNCB1234567890123456', 'allow_out_payment': True})],
             'ref': 'ref_partner_a',
         })
 
@@ -69,6 +70,11 @@ class TestUBLROCommon(TestUBLCommon):
             ],
         )
 
+    def get_attachment(self, move):
+        self.assertTrue(move.ubl_cii_xml_id)
+        self.assertEqual(move.ubl_cii_xml_id.name[-11:], "cius_ro.xml")
+        return move.ubl_cii_xml_id
+
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
 class TestUBLRO(TestUBLROCommon):
@@ -76,11 +82,6 @@ class TestUBLRO(TestUBLROCommon):
     ####################################################
     # Test export - import
     ####################################################
-
-    def get_attachment(self, move):
-        self.assertTrue(move.ubl_cii_xml_id)
-        self.assertEqual(move.ubl_cii_xml_id.name[-11:], "cius_ro.xml")
-        return move.ubl_cii_xml_id
 
     def test_export_invoice(self):
         invoice = self.create_move("out_invoice")

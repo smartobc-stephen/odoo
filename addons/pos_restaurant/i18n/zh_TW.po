@@ -7,13 +7,13 @@
 # Wil Odoo, 2025
 # Tony Ng, 2025
 #
-# "Tony Ng (ngto)" <ngto@odoo.com>, 2025.
+# "Tony Ng (ngto)" <ngto@odoo.com>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-10 10:33+0000\n"
-"PO-Revision-Date: 2025-08-20 01:11+0000\n"
+"POT-Creation-Date: 2026-04-03 18:38+0000\n"
+"PO-Revision-Date: 2026-03-14 08:10+0000\n"
 "Last-Translator: \"Tony Ng (ngto)\" <ngto@odoo.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
 "projects/odoo-17/pos_restaurant/zh_Hant/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: pos_restaurant
 #: model_terms:ir.ui.view,arch_db:pos_restaurant.view_restaurant_floor_kanban
@@ -37,7 +37,8 @@ msgstr "<strong>銷售點:</strong>"
 #. module: pos_restaurant
 #: model_terms:ir.actions.act_window,help:pos_restaurant.action_restaurant_floor_form
 msgid ""
-"A restaurant floor represents the place where customers are served, this is where you can\n"
+"A restaurant floor represents the place where customers are served, this is "
+"where you can\n"
 "                define and position the tables."
 msgstr ""
 "餐廳樓層代表服務客戶的位置，\n"
@@ -52,8 +53,6 @@ msgstr "啟用"
 #. module: pos_restaurant
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
 #: code:addons/pos_restaurant/static/src/app/floor_screen/floor_screen.xml:0
 #, python-format
 msgid "Add"
@@ -111,7 +110,6 @@ msgstr "付款後加入小費"
 
 #. module: pos_restaurant
 #. odoo-javascript
-#: code:addons/pos_restaurant/static/src/overrides/components/payment_screen/payment_screen_payment_lines/payment_screen_payment_lines.xml:0
 #: code:addons/pos_restaurant/static/src/overrides/components/payment_screen/payment_screen_payment_lines/payment_screen_payment_lines.xml:0
 #, python-format
 msgid "Adjust Amount"
@@ -243,9 +241,6 @@ msgstr "已封鎖操作"
 #. module: pos_restaurant
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Blue"
 msgstr "藍色"
@@ -289,8 +284,6 @@ msgstr "雞肉咖喱三明治"
 #. module: pos_restaurant
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Close"
 msgstr "關閉"
@@ -325,8 +318,6 @@ msgstr "配置設定"
 #. module: pos_restaurant
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Copy"
 msgstr "複製"
@@ -345,8 +336,6 @@ msgstr "建立於"
 
 #. module: pos_restaurant
 #. odoo-javascript
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Delete"
@@ -411,7 +400,6 @@ msgstr "芬達"
 
 #. module: pos_restaurant
 #. odoo-javascript
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Fill"
@@ -484,9 +472,6 @@ msgstr "菇類"
 #. module: pos_restaurant
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Green"
 msgstr "綠色"
@@ -498,9 +483,6 @@ msgstr "綠茶"
 
 #. module: pos_restaurant
 #. odoo-javascript
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Grey"
@@ -549,8 +531,8 @@ msgstr "冰茶"
 #. module: pos_restaurant
 #: model:ir.model.fields,help:pos_restaurant.field_restaurant_table__active
 msgid ""
-"If false, the table is deactivated and will not be available in the point of"
-" sale"
+"If false, the table is deactivated and will not be available in the point of "
+"sale"
 msgstr "如果為 false，餐桌將會被取消而且會在POS停用"
 
 #. module: pos_restaurant
@@ -599,16 +581,12 @@ msgstr "最後更新於"
 #. module: pos_restaurant
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Light grey"
 msgstr "淺灰色"
 
 #. module: pos_restaurant
 #. odoo-javascript
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Loading"
@@ -706,9 +684,6 @@ msgstr "開啟"
 #. module: pos_restaurant
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Orange"
 msgstr "橙色"
@@ -740,7 +715,6 @@ msgstr "番茄肉醬意粉"
 
 #. module: pos_restaurant
 #. odoo-javascript
-#: code:addons/pos_restaurant/static/src/overrides/components/product_screen/actionpad_widget/actionpad_widget.xml:0
 #: code:addons/pos_restaurant/static/src/overrides/components/product_screen/actionpad_widget/actionpad_widget.xml:0
 #: code:addons/pos_restaurant/static/src/overrides/components/product_screen/product_screen.xml:0
 #, python-format
@@ -811,18 +785,12 @@ msgstr "列印"
 #. module: pos_restaurant
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Purple"
 msgstr "紫色"
 
 #. module: pos_restaurant
 #. odoo-javascript
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Red"
@@ -844,8 +812,6 @@ msgstr "移除餐桌的操作無法還原"
 
 #. module: pos_restaurant
 #. odoo-javascript
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Rename"
@@ -899,7 +865,6 @@ msgstr "圓"
 #. module: pos_restaurant
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Round Shape"
 msgstr "圓形形狀"
@@ -922,8 +887,6 @@ msgstr "玉泉汽水"
 #. module: pos_restaurant
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_table__seats
 #, python-format
 msgid "Seats"
@@ -945,11 +908,10 @@ msgstr "付款後設定小費"
 #: code:addons/pos_restaurant/static/src/overrides/components/ticket_screen/ticket_screen.xml:0
 #, python-format
 msgid "Settle"
-msgstr "解決"
+msgstr "支付餘額"
 
 #. module: pos_restaurant
 #. odoo-javascript
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #: model:ir.model.fields,field_description:pos_restaurant.field_restaurant_table__shape
 #, python-format
@@ -988,7 +950,6 @@ msgstr "方形"
 #. module: pos_restaurant
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Square Shape"
 msgstr "方形形狀"
@@ -1011,7 +972,6 @@ msgstr "切換平面圖檢視"
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #: code:addons/pos_restaurant/static/src/overrides/components/ticket_screen/ticket_screen.js:0
-#: code:addons/pos_restaurant/static/src/overrides/components/ticket_screen/ticket_screen.xml:0
 #: code:addons/pos_restaurant/static/src/overrides/components/ticket_screen/ticket_screen.xml:0
 #: model:ir.model.fields,field_description:pos_restaurant.field_pos_order__table_id
 #, python-format
@@ -1076,8 +1036,8 @@ msgstr "此POS營業點服務的餐廳樓層。"
 #: code:addons/pos_restaurant/static/src/app/floor_screen/floor_screen.js:0
 #, python-format
 msgid ""
-"The table already contains an order. Do you want to proceed and transfer the"
-" order here?"
+"The table already contains an order. Do you want to proceed and transfer the "
+"order here?"
 msgstr "這餐桌已經有點單了，您要繼續並將訂單轉移到這裡嗎?"
 
 #. module: pos_restaurant
@@ -1087,8 +1047,7 @@ msgstr "本訂單所服務的餐桌"
 
 #. module: pos_restaurant
 #: model:ir.model.fields,help:pos_restaurant.field_restaurant_table__color
-msgid ""
-"The table's color, expressed as a valid 'background' CSS property value"
+msgid "The table's color, expressed as a valid 'background' CSS property value"
 msgstr "餐桌顏色，以 CSS 屬性 background 的有效數值表示"
 
 #. module: pos_restaurant
@@ -1099,8 +1058,8 @@ msgstr "餐桌顯示高度，以像素 px 表示"
 #. module: pos_restaurant
 #: model:ir.model.fields,help:pos_restaurant.field_restaurant_table__position_h
 msgid ""
-"The table's horizontal position from the left side to the table's center, in"
-" pixels"
+"The table's horizontal position from the left side to the table's center, in "
+"pixels"
 msgstr "餐桌的橫向位置－從左側到餐桌中心位置, 以像素點表示"
 
 #. module: pos_restaurant
@@ -1126,16 +1085,12 @@ msgstr "這個訂單還沒有同步到服務器。請確認它已被同步,然�
 #. module: pos_restaurant
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Tint"
 msgstr "色調"
 
 #. module: pos_restaurant
 #. odoo-javascript
-#: code:addons/pos_restaurant/static/src/overrides/components/ticket_screen/ticket_screen.xml:0
 #: code:addons/pos_restaurant/static/src/overrides/components/ticket_screen/ticket_screen.xml:0
 #, python-format
 msgid "Tip"
@@ -1179,9 +1134,6 @@ msgstr "轉移"
 #. module: pos_restaurant
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Turquoise"
 msgstr "藍綠色"
@@ -1218,9 +1170,6 @@ msgstr "水"
 #. module: pos_restaurant
 #. odoo-javascript
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "White"
 msgstr "白"
@@ -1232,9 +1181,6 @@ msgstr "寬"
 
 #. module: pos_restaurant
 #. odoo-javascript
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
-#: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #: code:addons/pos_restaurant/static/src/app/floor_screen/edit_bar.xml:0
 #, python-format
 msgid "Yellow"
@@ -1289,21 +1235,6 @@ msgstr "您無法刪除PoS營業點中使用的餐桌，請先關閉營業點."
 
 #. module: pos_restaurant
 #. odoo-javascript
-#: code:addons/pos_restaurant/static/src/app/tip_receipt/tip_receipt.xml:0
-#: code:addons/pos_restaurant/static/src/app/tip_receipt/tip_receipt.xml:0
-#, python-format
-msgid "________________________"
-msgstr "________________________"
-
-#. module: pos_restaurant
-#. odoo-javascript
-#: code:addons/pos_restaurant/static/src/app/tip_receipt/tip_receipt.xml:0
-#, python-format
-msgid "______________________________________________"
-msgstr "______________________________________________"
-
-#. module: pos_restaurant
-#. odoo-javascript
 #: code:addons/pos_restaurant/static/src/overrides/components/receipt_screen/order_receipt/order_receipt.xml:0
 #, python-format
 msgid "at table"
@@ -1329,3 +1260,11 @@ msgstr "項目"
 #, python-format
 msgid "or book the table for later"
 msgstr "或預訂餐桌供稍後享用"
+
+#, python-format
+#~ msgid "________________________"
+#~ msgstr "________________________"
+
+#, python-format
+#~ msgid "______________________________________________"
+#~ msgstr "______________________________________________"

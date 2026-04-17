@@ -20,13 +20,13 @@
 # hish, 2022
 # Baskhuu Lodoikhuu <baskhuujacara@gmail.com>, 2022
 # Гэрэлтцог Цогтбаатар, 2023
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-12 02:56+0000\n"
-"PO-Revision-Date: 2025-11-20 16:26+0000\n"
+"POT-Creation-Date: 2026-04-03 18:38+0000\n"
+"PO-Revision-Date: 2026-03-25 14:50+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Mongolian <https://translate.odoo.com/projects/odoo-17/"
 "website_sale/mn/>\n"
@@ -35,7 +35,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.products
@@ -85,29 +85,14 @@ msgid "'. Showing results for '"
 msgstr "'. Дараахийн үр дүнг харуулж байна '"
 
 #. module: website_sale
-#: model:ir.model.fields.selection,name:website_sale.selection__website__product_page_image_width__100_pc
-msgid "100 %"
-msgstr ""
-
-#. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "100 percent"
 msgstr "100 хувь"
 
 #. module: website_sale
-#: model:ir.model.fields.selection,name:website_sale.selection__website__product_page_image_width__50_pc
-msgid "50 %"
-msgstr ""
-
-#. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "50 percent"
 msgstr "50 хувь"
-
-#. module: website_sale
-#: model:ir.model.fields.selection,name:website_sale.selection__website__product_page_image_width__66_pc
-msgid "66 %"
-msgstr ""
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -302,16 +287,6 @@ msgid ""
 "                            <span class=\"d-none d-md-inline\">Add to cart</"
 "span>"
 msgstr ""
-
-#. module: website_sale
-#: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
-msgid ""
-"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
-"specific.\" groups=\"website.group_multi_website\"/>"
-msgstr ""
-"<span class=\"fa fa-lg fa-globe\" title="
-"\"Values set here are website-specific.\" groups="
-"\"website.group_multi_website\"/>"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -908,6 +883,11 @@ msgid ""
 "purchase amount, period). Rewards can be discounts (% or amount) or free "
 "products."
 msgstr ""
+"Купон, урамшуулал, бэлгийн карт, үнэнч хэрэглэгчийн хөтөлбөр зэрэг олон "
+"төрлийн хөтөлбөрөөр борлуулалтаа нэмэгдүүлээрэй. Тусгай нөхцөлүүдийг "
+"(бүтээгдэхүүн, харилцагч, худалдан авалтын доод дүн, хугацаа) тохируулах "
+"боломжтой. Урамшуулал нь хөнгөлөлт (% эсвэл мөнгөн дүнгээр) эсвэл үнэгүй "
+"бүтээгдэхүүн байж болно."
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -1354,8 +1334,8 @@ msgid ""
 "light\"/>"
 msgstr ""
 "Захиалга үргэлжлүүлэх\n"
-"                                    <i class="
-"\"fa fa-angle-right ms-2 fw-light\"/>"
+"                                    <i class=\"fa fa-angle-right ms-2 fw-"
+"light\"/>"
 
 #. module: website_sale
 #. odoo-python
@@ -1810,7 +1790,7 @@ msgstr "Шинэ бүтээгдэхүүнээ нэрлэнэ үү"
 #: code:addons/website_sale/models/product_public_category.py:0
 #, python-format
 msgid "Error! You cannot create recursive categories."
-msgstr ""
+msgstr "Алдаа! Та давталттай ангилал үүсгэх боломжгүй."
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -4181,6 +4161,11 @@ msgid "VAT Included"
 msgstr ""
 
 #. module: website_sale
+#: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
+msgid "Values set here are website-specific."
+msgstr ""
+
+#. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.s_add_to_cart_options
 msgid "Variant"
 msgstr "Хувилбар"
@@ -4563,7 +4548,7 @@ msgstr "Бүсийн Код"
 #. module: website_sale
 #: model:ir.ui.menu,name:website_sale.menu_delivery_zip_prefix
 msgid "Zip Prefix"
-msgstr ""
+msgstr "Зип угтвар"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
@@ -4683,6 +4668,18 @@ msgstr "нэр томъёо &amp; нөхцлүүд"
 #: model_terms:ir.ui.view,arch_db:website_sale.confirmation
 msgid "to follow your order."
 msgstr "үйлдэл хийсний дараа захиалга үүсгэх."
+
+#. module: website_sale
+#: model_terms:ir.ui.view,arch_db:website_sale.checkout_layout
+msgid "x"
+msgstr ""
+
+#~ msgid ""
+#~ "<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+#~ "specific.\" groups=\"website.group_multi_website\"/>"
+#~ msgstr ""
+#~ "<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+#~ "specific.\" groups=\"website.group_multi_website\"/>"
 
 #~ msgid "<b>Your order: </b>"
 #~ msgstr "<b>Таны захиалга: </b>"

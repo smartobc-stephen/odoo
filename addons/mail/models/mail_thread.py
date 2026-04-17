@@ -29,13 +29,14 @@ from markupsafe import Markup, escape
 from odoo import _, api, exceptions, fields, models, tools, registry, SUPERUSER_ID, Command
 from odoo.exceptions import MissingError, AccessError
 from odoo.osv import expression
-from odoo.tools import email_normalize, is_html_empty, html_escape, html2plaintext, parse_contact_from_email
+from odoo.tools import email_normalize, is_html_empty, html_escape, html2plaintext, parse_contact_from_email, SQL
 from odoo.tools.misc import clean_context, split_every
 
 from requests import Session
 from ..web_push import push_to_end_point, DeviceUnreachableError, ENCRYPTION_BLOCK_OVERHEAD, ENCRYPTION_HEADER_SIZE, MAX_PAYLOAD_SIZE
 
 MAX_DIRECT_PUSH = 5
+BAD_CONTENT_TYPES = ('binary/octet-stream', '*/*', 'bin/plain')  # replaced by application/octet-stream
 
 _logger = logging.getLogger(__name__)
 
@@ -1400,10 +1401,18 @@ class MailThread(models.AbstractModel):
         if strip_attachments:
             msg_dict.pop('attachments', None)
 
-        existing_msg_ids = self.env['mail.message'].search([('message_id', '=', msg_dict['message_id'])], limit=1)
-        if existing_msg_ids:
+        msg_id = msg_dict.get('message_id')
+        is_duplicate = bool(self.env['mail.message'].search_count([('message_id', '=', msg_id)], limit=1))
+        if not is_duplicate and msg_id:
+            # Synchronize concurrent transactions for the same message_id to make the duplicate check reliable.
+            # Use pg_try_advisory_xact_lock: if another transaction is already processing the same message_id,
+            # treat it as a duplicate.
+            self.env.cr.execute(SQL('SELECT pg_try_advisory_xact_lock(hashtext(%s))', msg_id))
+            is_duplicate = not self.env.cr.fetchone()[0]
+
+        if is_duplicate:
             _logger.info('Ignored mail from %s to %s with Message-Id %s: found duplicated Message-Id during processing',
-                         msg_dict.get('email_from'), msg_dict.get('to'), msg_dict.get('message_id'))
+                         msg_dict.get('email_from'), msg_dict.get('to'), msg_id)
             return False
 
         if self._detect_loop_headers(msg_dict):
@@ -1569,8 +1578,8 @@ class MailThread(models.AbstractModel):
                     # the parent email that might be added at the end
                     # (e.g. for outlook / yahoo bounce email)
                     break
-                if part.get_content_type() == 'binary/octet-stream':
-                    _logger.warning("Message containing an unexpected Content-Type 'binary/octet-stream', assuming 'application/octet-stream'")
+                if (bad_content_type := part.get_content_type()) in BAD_CONTENT_TYPES:
+                    _logger.warning("Message containing an unexpected Content-Type %r, assuming 'application/octet-stream'", bad_content_type)
                     part.replace_header('Content-Type', 'application/octet-stream')
                 if part.get_content_type() == 'multipart/alternative':
                     alternative = True
@@ -4382,16 +4391,18 @@ class MailThread(models.AbstractModel):
         res = {'hasWriteAccess': False, 'hasReadAccess': True}
         if not self:
             res['hasReadAccess'] = False
+            res['canPostOnReadonly'] = False
             return res
-        res['canPostOnReadonly'] = self._mail_post_access == 'read'
 
         self.ensure_one()
+        res['canPostOnReadonly'] = self._get_mail_message_access(self.ids, 'create') == "read"
         try:
             self.check_access_rights("write")
             self.check_access_rule("write")
             res['hasWriteAccess'] = True
         except AccessError:
             pass
+
         if 'activities' in request_list:
             res['activities'] = self.with_context(active_test=True).activity_ids.activity_format()
         if 'attachments' in request_list:

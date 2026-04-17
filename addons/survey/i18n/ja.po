@@ -7,13 +7,14 @@
 # Yoshi Tashiro (Quartile) <tashiro@roomsfor.hk>, 2024
 # Junko Augias, 2025
 # Wil Odoo, 2025
-# "Junko Augias (juau)" <juau@odoo.com>, 2025.
+# "Junko Augias (juau)" <juau@odoo.com>, 2025, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-09 18:38+0000\n"
-"PO-Revision-Date: 2025-11-13 09:18+0000\n"
+"POT-Creation-Date: 2026-04-03 18:38+0000\n"
+"PO-Revision-Date: 2026-02-14 08:07+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-17/survey/"
 "ja/>\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__question_count
@@ -33,36 +34,6 @@ msgstr "質問"
 #: model:ir.model.fields,field_description:survey.field_survey_question__random_questions_count
 msgid "# Questions Randomly Picked"
 msgstr "無作為に選ばれた質問数"
-
-#. module: survey
-#: model:survey.question.answer,value:survey.vendor_certification_page_2_question_1_choice_4
-msgid "$100"
-msgstr "$100"
-
-#. module: survey
-#: model:survey.question.answer,value:survey.vendor_certification_page_2_question_1_choice_1
-msgid "$20"
-msgstr "$20"
-
-#. module: survey
-#: model:survey.question.answer,value:survey.vendor_certification_page_2_question_1_choice_5
-msgid "$200"
-msgstr "$200"
-
-#. module: survey
-#: model:survey.question.answer,value:survey.vendor_certification_page_2_question_1_choice_6
-msgid "$300"
-msgstr "$300"
-
-#. module: survey
-#: model:survey.question.answer,value:survey.vendor_certification_page_2_question_1_choice_2
-msgid "$50"
-msgstr "$50"
-
-#. module: survey
-#: model:survey.question.answer,value:survey.vendor_certification_page_2_question_1_choice_3
-msgid "$80"
-msgstr "$80"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_progression
@@ -110,11 +81,6 @@ msgid "'Certification - %s' % (object.survey_id.display_name)"
 msgstr "'検定 - %s' % (object.survey_id.display_name)"
 
 #. module: survey
-#: model_terms:ir.ui.view,arch_db:survey.certification_report_view_general
-msgid "0000000010"
-msgstr "0000000010"
-
-#. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p4_q2_sug2
 msgid "10 kg"
 msgstr "10 kg"
@@ -125,29 +91,14 @@ msgid "100 years"
 msgstr "100 years"
 
 #. module: survey
-#: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p3_q1_sug3
-msgid "1055"
-msgstr "1055"
-
-#. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p3_q3_sug3
 msgid "116 years"
 msgstr "116 years"
 
 #. module: survey
-#: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p3_q1_sug1
-msgid "1227"
-msgstr "1227"
-
-#. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p3_q3_sug4
 msgid "127 years"
 msgstr "127 years"
-
-#. module: survey
-#: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p3_q1_sug2
-msgid "1324"
-msgstr "1324"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p2_q1_sug1
@@ -158,11 +109,6 @@ msgstr "1450 km"
 #: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p4_q2_sug3
 msgid "16.2 kg"
 msgstr "16.2 kg"
-
-#. module: survey
-#: model_terms:ir.ui.view,arch_db:survey.certification_report_view_general
-msgid "2023-08-18"
-msgstr "2023-08-18"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p2_q1_sug2
@@ -284,8 +230,8 @@ msgstr ""
 "    <table style=\"width:600px;margin:5px auto;\">\n"
 "        <tbody>\n"
 "            <tr><td>\n"
-"                <!-- アンケート調査を作成した会社のロゴを使用します(複数会社"
-"のケースに対応するため) -->\n"
+"                <!-- アンケート調査を作成した会社のロゴを使用します(マルチカ"
+"ンパニーのケースに対応するため) -->\n"
 "                <a href=\"/\"><img t-if=\"not "
 "object.survey_id.create_uid.company_id.uses_default_logo\" t-attf-src=\"/"
 "logo.png?company={{ object.survey_id.create_uid.company_id.id }}\" "
@@ -971,7 +917,7 @@ msgstr "活動状態"
 #: model:ir.model.fields,field_description:survey.field_survey_survey__activity_type_icon
 #: model:ir.model.fields,field_description:survey.field_survey_user_input__activity_type_icon
 msgid "Activity Type Icon"
-msgstr "活動種別アイコン"
+msgstr "活動タイプアイコン"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_survey_view_form
@@ -996,7 +942,7 @@ msgstr "ライブで質問を共有することで、プレゼンテーション
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__emails
 msgid "Additional emails"
-msgstr "追加の電子メール"
+msgstr "追加のメールアドレス"
 
 #. module: survey
 #: model:res.groups,name:survey.group_survey_manager
@@ -1219,7 +1165,7 @@ msgstr "参加者はすぐに答えると、より多くのポイントを取得
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__author_id
 msgid "Author"
-msgstr "著作者"
+msgstr "作成者"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_survey__certification_mail_template_id
@@ -1640,7 +1586,7 @@ msgstr "条件付きの質問が含まれています"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__body
 msgid "Contents"
-msgstr "内容"
+msgstr "本文"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_fill_form_in_progress
@@ -1899,7 +1845,7 @@ msgstr "説明"
 #. module: survey
 #: model:survey.question.answer,value:survey.vendor_certification_page_2_question_2_choice_2
 msgid "Desk Combination"
-msgstr "デスクコンビネーション"
+msgstr "デスクの組み合わせ"
 
 #. module: survey
 #: model:ir.actions.act_window,name:survey.survey_user_input_line_action
@@ -2009,7 +1955,7 @@ msgstr "ライブセッションを終了"
 #: model:ir.model.fields,field_description:survey.field_survey_survey__description_done
 #: model_terms:ir.ui.view,arch_db:survey.survey_survey_view_form
 msgid "End Message"
-msgstr "最後のメッセージ"
+msgstr "終了メッセージ"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input__end_datetime
@@ -2056,7 +2002,7 @@ msgstr "既存のパートナー"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__existing_emails
 msgid "Existing emails"
-msgstr "既存の電子メール"
+msgstr "既存のメール"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_demo_burger_quiz_p2_q3_sug2
@@ -2140,7 +2086,7 @@ msgstr "食事の好み"
 #: code:addons/survey/models/survey_question.py:0
 #, python-format
 msgid "For this question, you can only select one answer."
-msgstr ""
+msgstr "この質問では、選択できる回答は 1 つだけです。"
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_user_input_line__answer_type__text_box
@@ -2449,7 +2395,8 @@ msgstr "識別トークン"
 msgid ""
 "If Number is selected, it will display the number of questions answered on "
 "the total number of question to answer."
-msgstr "数が選択されている場合、それは答えへの質問の総数に答えた質問の数が表示されま"
+msgstr ""
+"数が選択されている場合、それは答えへの質問の総数に答えた質問の数が表示されま"
 "す。"
 
 #. module: survey
@@ -2855,7 +2802,7 @@ msgstr "リーダーボード"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_access_error
 msgid "Leave"
-msgstr "解除"
+msgstr "戻る"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.vendor_certification_page_1_question_3_choice_4
@@ -3067,7 +3014,7 @@ msgstr "最小文字数"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__validation_min_float_value
 msgid "Minimum value"
-msgstr "最低数"
+msgstr "最小値"
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_survey__certification_report_layout__modern_blue
@@ -3997,7 +3944,7 @@ msgstr "必要なスコア (%)"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__existing_text
 msgid "Resend Comment"
-msgstr "再送コメント"
+msgstr "コメントを再送信"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_form
@@ -4819,8 +4766,9 @@ msgstr "次のメールアドレスはすでに招待を受けています"
 msgid ""
 "The following recipients have no user account: %s. You should create user "
 "accounts for them or allow external signup in configuration."
-msgstr "受信者:%sは、ユーザーアカウントを持っていません。それらのユーザーにアカウント"
-"を作成するか、外部連携での登録を可能にすべきです。"
+msgstr ""
+"次の受信者にはユーザアカウントがありません：%s。ユーザアカウントを作成する"
+"か、設定で外部ユーザのサインアップを許可してください。"
 
 #. module: survey
 #: model:survey.question.answer,value:survey.survey_feedback_p2_q2_row1
@@ -5902,3 +5850,36 @@ msgid ""
 msgstr ""
 "⚠️この質問は、いくつかの、あるいはすべてのトリガーの前に置かれ、スキップするこ"
 "ともできます。"
+
+#~ msgid "$100"
+#~ msgstr "$100"
+
+#~ msgid "$20"
+#~ msgstr "$20"
+
+#~ msgid "$200"
+#~ msgstr "$200"
+
+#~ msgid "$300"
+#~ msgstr "$300"
+
+#~ msgid "$50"
+#~ msgstr "$50"
+
+#~ msgid "$80"
+#~ msgstr "$80"
+
+#~ msgid "0000000010"
+#~ msgstr "0000000010"
+
+#~ msgid "1055"
+#~ msgstr "1055"
+
+#~ msgid "1227"
+#~ msgstr "1227"
+
+#~ msgid "1324"
+#~ msgstr "1324"
+
+#~ msgid "2023-08-18"
+#~ msgstr "2023-08-18"

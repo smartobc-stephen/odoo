@@ -429,6 +429,7 @@ publicWidget.registry.cookies_bar = PopupWidget.extend({
      * @override
      */
     start() {
+        this.el.querySelector(".modal").addEventListener("keydown", this._onKeydown);
         this._super(...arguments);
 
         this.isCookiePolicyPage = window.location.pathname === "/cookie-policy";
@@ -502,6 +503,7 @@ publicWidget.registry.cookies_bar = PopupWidget.extend({
             this.toggleEl.removeEventListener("click", this._onToggleCookiesBar);
             this.toggleEl.remove();
         }
+        this.el.querySelector(".modal").removeEventListener("keydown", this._onKeydown);
         this._super(...arguments);
     },
 
@@ -539,8 +541,6 @@ publicWidget.registry.cookies_bar = PopupWidget.extend({
      * @private
      */
     _toggleCookiesBar() {
-        this.cookieValue = cookie.get(this.el.id);
-
         const popupEl = this.el.querySelector(".modal");
         $(popupEl).modal("toggle");
         // As we're using Bootstrap's events, the PopupWidget prevents the modal
@@ -607,6 +607,11 @@ publicWidget.registry.cookies_bar = PopupWidget.extend({
      * @override
      */
     _onHideModal() {
+        // cookieValue starts as true and is only replaced after consent.
+        // If it is still true here, the modal closed without a choice.
+        if (this.cookieValue === true) {
+            return;
+        }
         this._super(...arguments);
         const params = new URLSearchParams(window.location.search);
         const trackingFields = {
@@ -621,7 +626,18 @@ publicWidget.registry.cookies_bar = PopupWidget.extend({
             }
         }
         setUtmsHtmlDataset();
-    }
+    },
+    /**
+     * @private
+     * @param {KeyboardEvent} ev
+     */
+    _onKeydown: (ev) => {
+        if (ev.key === "Escape") {
+            // Circumvent Bootstrap's keydown behavior which triggers a UI
+            // glitch.
+            ev.stopImmediatePropagation();
+        }
+    },
 });
 
 export default PopupWidget;

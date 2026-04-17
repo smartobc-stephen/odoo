@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* account_peppol
+# * account_peppol
 #
 # Translators:
 # Ali Reza Feizi Derakhshi, 2023
@@ -10,20 +10,22 @@
 # Hamed Mohammadi <hamed@dehongi.com>, 2024
 # Mostafa Barmshory <mostafa.barmshory@gmail.com>, 2024
 # Hanna Kheradroosta, 2024
-#
+# Odoo Translation Bot <c3p@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-04 18:36+0000\n"
-"PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Hanna Kheradroosta, 2024\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"POT-Creation-Date: 2026-04-10 18:36+0000\n"
+"PO-Revision-Date: 2026-04-09 10:45+0000\n"
+"Last-Translator: Odoo Translation Bot <c3p@odoo.com>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-17/"
+"account_peppol/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.mail_notification_layout_with_responsible_signature_and_peppol
@@ -167,20 +169,6 @@ msgstr ""
 "لغو ثبت‌نام ارائه دهید."
 
 #. module: account_peppol
-#. odoo-python
-#: code:addons/account_peppol/models/res_config_settings.py:0
-#, python-format
-msgid "Can't cancel registration with this status: %s"
-msgstr "امکان لغو ثبت‌نام با این وضعیت وجود ندارد: %s"
-
-#. module: account_peppol
-#. odoo-python
-#: code:addons/account_peppol/models/res_config_settings.py:0
-#, python-format
-msgid "Can't deregister with this status: %s"
-msgstr "امکان لغو ثبت‌نام با این وضعیت وجود ندارد: %s"
-
-#. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.account_peppol_view_move_form
 msgid "Cancel PEPPOL"
 msgstr "لغو PEPPOL"
@@ -202,11 +190,6 @@ msgstr "لغو شده"
 #, python-format
 msgid "Cannot cancel an entry that has already been sent to PEPPOL"
 msgstr "امکان لغو سندی که قبلاً به PEPPOL ارسال شده است وجود ندارد"
-
-#. module: account_peppol
-#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__not_valid_format
-msgid "Cannot receive this format"
-msgstr "امکان دریافت این قالب وجود ندارد"
 
 #. module: account_peppol
 #. odoo-python
@@ -342,6 +325,13 @@ msgid "Incoming Invoices Journal"
 msgstr "دفتر روزنامه‌ی فاکتور های آینده"
 
 #. module: account_peppol
+#. odoo-python
+#: code:addons/account_peppol/wizard/account_move_send.py:0
+#, python-format
+msgid "Invoice %s is too big to send via peppol (64MB limit)"
+msgstr ""
+
+#. module: account_peppol
 #: model:ir.model.fields,field_description:account_peppol.field_res_partner__is_peppol_edi_format
 #: model:ir.model.fields,field_description:account_peppol.field_res_users__is_peppol_edi_format
 msgid "Is Peppol Edi Format"
@@ -397,19 +387,9 @@ msgid "Not registered"
 msgstr "ثبت نشده"
 
 #. module: account_peppol
-#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__not_valid
-msgid "Not valid"
-msgstr "غیر معتبر"
-
-#. module: account_peppol
 #: model:ir.model.fields.selection,name:account_peppol.selection__res_company__account_peppol_proxy_state__not_verified
 msgid "Not verified"
 msgstr "بررسی نشده"
-
-#. module: account_peppol
-#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__not_verified
-msgid "Not verified yet"
-msgstr "هنوز بررسی نشده"
 
 #. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.mail_notification_layout_with_responsible_signature_and_peppol
@@ -471,6 +451,21 @@ msgid "PEPPOL: update participant status"
 msgstr "PEPPOL: به روزرسانی وضعیت شرکت‌کننده‌ها"
 
 #. module: account_peppol
+#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__not_valid_format
+msgid "Partner cannot receive format"
+msgstr ""
+
+#. module: account_peppol
+#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__not_valid
+msgid "Partner is not on Peppol"
+msgstr ""
+
+#. module: account_peppol
+#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__valid
+msgid "Partner is on Peppol"
+msgstr ""
+
+#. module: account_peppol
 #: model:ir.model.fields.selection,name:account_peppol.selection__res_company__account_peppol_proxy_state__pending
 msgid "Pending"
 msgstr "معلق"
@@ -514,6 +509,11 @@ msgid "Peppol Ready invoices"
 msgstr "فاکتور های آماده‌ی Peppol"
 
 #. module: account_peppol
+#: model:ir.model.fields,field_description:account_peppol.field_res_config_settings__peppol_use_parent_company
+msgid "Peppol Use Parent Company"
+msgstr ""
+
+#. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.res_partner_view_tree
 msgid "Peppol Validity"
 msgstr "اعتبار Peppol"
@@ -532,12 +532,6 @@ msgid "Peppol e-address (EAS)"
 msgstr "نشانی الکترونیک Peppol (EAS)"
 
 #. module: account_peppol
-#: model:ir.model.fields,field_description:account_peppol.field_res_partner__account_peppol_verification_label
-#: model:ir.model.fields,field_description:account_peppol.field_res_users__account_peppol_verification_label
-msgid "Peppol endpoint validity"
-msgstr "اعتبار مقصد Peppol"
-
-#. module: account_peppol
 #. odoo-python
 #: code:addons/account_peppol/models/account_edi_proxy_user.py:0
 #, python-format
@@ -550,6 +544,8 @@ msgid "Peppol ready invoices"
 msgstr "فاکتور های آماده‌ی Peppol"
 
 #. module: account_peppol
+#: model:ir.model.fields,field_description:account_peppol.field_res_partner__account_peppol_verification_label
+#: model:ir.model.fields,field_description:account_peppol.field_res_users__account_peppol_verification_label
 #: model_terms:ir.ui.view,arch_db:account_peppol.account_peppol_view_account_invoice_filter
 msgid "Peppol status"
 msgstr "وضعیت Peppol"
@@ -587,12 +583,8 @@ msgstr "لطفاً یک نشانی ایمیل را برای تأیید اعتب�
 #, python-format
 msgid ""
 "Please enter the mobile number in the correct international format.\n"
-"For example: +32123456789, where +32 is the country code.\n"
-"Currently, only European countries are supported."
+"For example: +32123456789, where +32 is the country code."
 msgstr ""
-"لطفاً شماره موبایل را در قالب صحیح بین‌المللی وارد کنید.\n"
-"به عنوان مثال: +32123456789، که در آن +32 کد کشور است.\n"
-"در حال حاضر، تنها کشورهای اروپایی پشتیبانی می‌شوند."
 
 #. module: account_peppol
 #. odoo-python
@@ -682,6 +674,13 @@ msgid "Skipped"
 msgstr "گذر شده"
 
 #. module: account_peppol
+#. odoo-python
+#: code:addons/account_peppol/wizard/account_move_send.py:0
+#, python-format
+msgid "Some attachments could not be sent with the XML:"
+msgstr ""
+
+#. module: account_peppol
 #: model_terms:ir.ui.view,arch_db:account_peppol.res_config_settings_view_form
 msgid ""
 "Start sending and receiving documents via Peppol as soon as your "
@@ -730,13 +729,6 @@ msgstr "خدمات Peppol مورداستفاده احتمالاً %s است. "
 
 #. module: account_peppol
 #. odoo-python
-#: code:addons/account_peppol/wizard/account_move_send.py:0
-#, python-format
-msgid "The document has been sent to the Peppol Access Point for processing"
-msgstr "سند برای پردازش به نقطه‌ی دسترسی Peppol ارسال شد"
-
-#. module: account_peppol
-#. odoo-python
 #: code:addons/account_peppol/models/res_config_settings.py:0
 #, python-format
 msgid ""
@@ -757,6 +749,24 @@ msgid ""
 msgstr ""
 "همکاران زیر برای دریافت اسناد Peppol به درستی وارد نشده‌اند. لطفاً مقصد Peppol "
 "و قالب صدور فاکتور الکترونیک آنها را بررسی کنید: %s"
+
+#. module: account_peppol
+#. odoo-python
+#: code:addons/account_peppol/wizard/account_move_send.py:0
+#, python-format
+msgid ""
+"The invoice has been sent to the Peppol Access Point. The following "
+"attachments were sent with the XML:"
+msgstr ""
+
+#. module: account_peppol
+#. odoo-python
+#: code:addons/account_peppol/wizard/account_move_send.py:0
+#, python-format
+msgid ""
+"The partner has indicated it does not accept this document type, so you "
+"cannot send this invoice via Peppol."
+msgstr ""
 
 #. module: account_peppol
 #. odoo-python
@@ -825,6 +835,15 @@ msgstr ""
 #. odoo-python
 #: code:addons/account_peppol/models/res_config_settings.py:0
 #, python-format
+msgid ""
+"This peppol identification is already used by %(parent_name)s. Please use "
+"something else."
+msgstr ""
+
+#. module: account_peppol
+#. odoo-python
+#: code:addons/account_peppol/models/res_config_settings.py:0
+#, python-format
 msgid "This verification code has expired. Please request a new one."
 msgstr "کد تأیید اعتبار منقضی شده است. لطفاً درخواست جدیدی ارائه دهید."
 
@@ -842,6 +861,11 @@ msgstr ""
 #, python-format
 msgid "Too many attempts to request an SMS code. Please try again later."
 msgstr "درخواست بیش از حد برای دریافت کد از طریق پیامک. لطفاً بعداً امتحان کنید."
+
+#. module: account_peppol
+#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__not_verified
+msgid "Unchecked"
+msgstr ""
 
 #. module: account_peppol
 #: model:ir.model.fields,help:account_peppol.field_res_company__peppol_endpoint
@@ -873,11 +897,6 @@ msgid ""
 msgstr ""
 "این فیلد با استفاده از پارامترهای پیکربندی، مشخص می‌کند که کدام حالت‌های edi "
 "ممکن است از UI انتخاب شوند"
-
-#. module: account_peppol
-#: model:ir.model.fields.selection,name:account_peppol.selection__res_partner__account_peppol_verification_label__valid
-msgid "Valid"
-msgstr "معتبر"
 
 #. module: account_peppol
 #. odoo-javascript
@@ -939,6 +958,17 @@ msgid "We sent a verification code to"
 msgstr "ما کد اعتبارسنجی را به ... ارسال کردیم"
 
 #. module: account_peppol
+#. odoo-python
+#: code:addons/account_peppol/models/account_journal.py:0
+#, python-format
+msgid ""
+"You can't change the type of a journal used for Peppol invoice reception toa "
+"type different than 'Purchase'.\n"
+"Please change the journal used for Peppol reception before changing the type "
+"of this journal."
+msgstr ""
+
+#. module: account_peppol
 #. odoo-javascript
 #: code:addons/account_peppol/static/src/components/res_config_settings_buttons/res_config_settings_buttons.js:0
 #, python-format
@@ -996,6 +1026,33 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:account_peppol.mail_notification_layout_with_responsible_signature_and_peppol
 msgid "uses"
 msgstr ""
+
+#, python-format
+#~ msgid "Can't cancel registration with this status: %s"
+#~ msgstr "امکان لغو ثبت‌نام با این وضعیت وجود ندارد: %s"
+
+#, python-format
+#~ msgid "Can't deregister with this status: %s"
+#~ msgstr "امکان لغو ثبت‌نام با این وضعیت وجود ندارد: %s"
+
+#~ msgid "Cannot receive this format"
+#~ msgstr "امکان دریافت این قالب وجود ندارد"
+
+#~ msgid "Not valid"
+#~ msgstr "غیر معتبر"
+
+#~ msgid "Not verified yet"
+#~ msgstr "هنوز بررسی نشده"
+
+#~ msgid "Peppol endpoint validity"
+#~ msgstr "اعتبار مقصد Peppol"
+
+#~ msgid "Valid"
+#~ msgstr "معتبر"
+
+#, python-format
+#~ msgid "The document has been sent to the Peppol Access Point for processing"
+#~ msgstr "سند برای پردازش به نقطه‌ی دسترسی Peppol ارسال شد"
 
 #, python-format
 #~ msgid "Your confirmation code is"

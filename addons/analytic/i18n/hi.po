@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-13 18:36+0000\n"
+"POT-Creation-Date: 2026-01-29 18:35+0000\n"
 "PO-Revision-Date: 2025-11-15 17:01+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-17/analytic/"
@@ -59,6 +59,11 @@ msgstr "अकाउंट फ़ील्ड"
 #: model:ir.model.fields,field_description:analytic.field_account_analytic_plan__account_ids
 msgid "Accounts"
 msgstr "अकाउंट"
+
+#. module: analytic
+#: model:account.analytic.account,name:analytic.analytic_agrolait
+msgid "Acme Corporation"
+msgstr ""
 
 #. module: analytic
 #: model:ir.model.fields,field_description:analytic.field_account_analytic_account__message_needaction
@@ -433,11 +438,6 @@ msgid "Debit"
 msgstr "डेबिट"
 
 #. module: analytic
-#: model:account.analytic.account,name:analytic.analytic_agrolait
-msgid "Deco Addict"
-msgstr "Deco Addict"
-
-#. module: analytic
 #: model:ir.model.fields,field_description:analytic.field_account_analytic_plan__default_applicability
 msgid "Default Applicability"
 msgstr "डिफ़ॉल्ट ऐप्लिकेबिलिटी"
@@ -684,8 +684,7 @@ msgstr "डिलीवरी में गड़बड़ी वाले म�
 #: code:addons/analytic/models/analytic_mixin.py:0
 #, python-format
 msgid "One or more lines require a 100% analytic distribution."
-msgstr ""
-"एक या एक से ज़्यादा लाइनें ऐसी हैं जिनके लिए '100% विश्लेषणात्मक वितरण' ज़रूरी है।"
+msgstr "एक या एक से ज़्यादा लाइनें ऐसी हैं जिनके लिए '100% विश्लेषणात्मक वितरण' ज़रूरी है।"
 
 #. module: analytic
 #: model:account.analytic.account,name:analytic.analytic_internal
@@ -794,8 +793,8 @@ msgid ""
 msgstr ""
 "जब आप ग्राहकों के लिए इनवॉइस बनाएंगे, तो आपकी कमाई अपने-आप \n"
 "दर्ज हो जाएगी. ये ग्राहकों के बिल तीन तरीकों से बनाए जा सकते हैं: \n"
-"या तो सेल्स ऑर्डर के आधार पर (निश्चित कीमतों वाले बिल), या कर्मचारियों द्वारा किए गए का"
-"म (टाइमशीट) के हिसाब से, \n"
+"या तो सेल्स ऑर्डर के आधार पर (निश्चित कीमतों वाले बिल), या कर्मचारियों द्वारा किए गए "
+"काम (टाइमशीट) के हिसाब से, \n"
 "या फिर किए गए खर्चों (जैसे यात्रा खर्चों को दोबारा बिल करना) के आधार पर।"
 
 #. module: analytic
@@ -840,8 +839,8 @@ msgid ""
 "will automatically take this as an analytic account)"
 msgstr ""
 "कोई ऐसी कंपनी कैटगरी चुनें जिसके लिए एनालिटिक डिस्ट्रिब्यूशन का इस्तेमाल किया जाएगा. जैसे, "
-"अगर हम इस कंपनी को चुनेंगे, तो ग्राहक के बिल या सेल्स ऑर्डर में अपने आप वही एनालिटिक अकाउं"
-"ट आ जाएगा."
+"अगर हम इस कंपनी को चुनेंगे, तो ग्राहक के बिल या सेल्स ऑर्डर में अपने आप वही एनालिटिक "
+"अकाउंट आ जाएगा."
 
 #. module: analytic
 #: model:ir.model.fields,help:analytic.field_account_analytic_distribution_model__partner_category_id
@@ -850,9 +849,9 @@ msgid ""
 "(e.g. create new customer invoice or Sales order if we select this partner, "
 "it will automatically take this as an analytic account)"
 msgstr ""
-"कोई ऐसी पार्टनर कैटगरी चुनें जिसके लिए एनालिटिक डिस्ट्रिब्यूशन का इस्तेमाल किया जाएगा. जैसे"
-", अगर हम इस पार्टनर को चुनेंगे, तो ग्राहक के बिल या सेल्स ऑर्डर में अपने आप वही एनालिटिक "
-"अकाउंट आ जाएगा."
+"कोई ऐसी पार्टनर कैटगरी चुनें जिसके लिए एनालिटिक डिस्ट्रिब्यूशन का इस्तेमाल किया जाएगा. "
+"जैसे, अगर हम इस पार्टनर को चुनेंगे, तो ग्राहक के बिल या सेल्स ऑर्डर में अपने आप वही "
+"एनालिटिक अकाउंट आ जाएगा."
 
 #. module: analytic
 #: model:ir.model.fields,help:analytic.field_account_analytic_distribution_model__partner_id
@@ -964,10 +963,13 @@ msgid ""
 "You defined a distribution with analytic account(s) belonging to a specific "
 "company but a model shared between companies or with a different company"
 msgstr ""
-"आपने डिस्ट्रिब्यूशन के लिए व्यवस्था बनाई है, जिसमें एक कंपनी का हिसाब (एनालिटिक अकाउंट) है"
-", लेकिन उसका मॉडल या तो कई कंपनियों का है या किसी और कंपनी का है"
+"आपने डिस्ट्रिब्यूशन के लिए व्यवस्था बनाई है, जिसमें एक कंपनी का हिसाब (एनालिटिक अकाउंट) "
+"है, लेकिन उसका मॉडल या तो कई कंपनियों का है या किसी और कंपनी का है"
 
 #. module: analytic
 #: model_terms:ir.ui.view,arch_db:analytic.view_account_analytic_account_form
 msgid "e.g. Project XYZ"
 msgstr "जैसे, प्रोजेक्ट XYZ"
+
+#~ msgid "Deco Addict"
+#~ msgstr "Deco Addict"

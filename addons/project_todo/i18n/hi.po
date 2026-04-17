@@ -2,13 +2,13 @@
 # This file contains the translation of the following modules:
 # * project_todo
 #
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 10:26+0000\n"
-"PO-Revision-Date: 2025-11-12 14:15+0000\n"
+"POT-Creation-Date: 2025-12-29 18:37+0000\n"
+"PO-Revision-Date: 2026-04-14 14:25+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-17/"
 "project_todo/hi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
@@ -25,6 +25,8 @@ msgid ""
 "&amp;#128075; <br/>\n"
 "    Welcome to the To-do app!"
 msgstr ""
+"&amp;#128075; <br/>\n"
+"    टू-डू ऐप्लिकेशन में आपका स्वागत है!"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
@@ -34,6 +36,10 @@ msgid ""
 "                    (/<span style=\"font-style: italic;\">checklist</span>)\n"
 "                </span>"
 msgstr ""
+"<span style=\"font-size: 14px;\">\n"
+"                    चेकलिस्ट जोड़ें\n"
+"                    (/<span style=\"font-style: italic;\">चेकलिस्ट</span>)\n"
+"                </span>"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
@@ -43,6 +49,10 @@ msgid ""
 "                    (/<span style=\"font-style: italic;\">separator</span>)\n"
 "                </span>"
 msgstr ""
+"<span style=\"font-size: 14px;\">\n"
+"                    एक सेपरेटर जोड़ें\n"
+"                    (/<span style=\"font-style: italic;\">सेपरेटर</span>)\n"
+"                </span>"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
@@ -53,6 +63,11 @@ msgid ""
 "                    to convert a text into a title\n"
 "                </span>"
 msgstr ""
+"<span style=\"font-size: 14px;\">\n"
+"                    किसी टेक्स्ट को शीर्षक में बदलने के लिए\n"
+"                    /<span style=\"font-style: italic;\">हेडिंग</span>\n"
+"                    का इस्तेमाल करें\n"
+"                </span>"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
@@ -67,6 +82,16 @@ msgid ""
 "            \"<span style=\"font-weight: bolder;\">/</span>\"\n"
 "        </span>"
 msgstr ""
+"<span style=\"font-size: 14px;\">\n"
+"            इस सूची के नीचे, <span style=\"font-weight: bolder;\">\n"
+"                \"<span style=\"font-weight: bolder;\">/</span>\"<font class="
+"\"text-o-color-2\">टाइप</font>\n"
+"            </span>\n"
+"             करके \n"
+"            <span style=\"font-weight: bolder;\">कमांड</span>\n"
+"            आज़माएं\n"
+"            \n"
+"        </span>"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
@@ -74,18 +99,33 @@ msgid ""
 "<span style=\"font-size: 14px;\">\n"
 "            Select text to\n"
 "            <font class=\"bg-o-color-2\">Highlight</font>,\n"
-"            <span style=\"text-decoration-line: line-through;\">strikethrough</span>\n"
+"            <span style=\"text-decoration-line: line-through;"
+"\">strikethrough</span>\n"
 "            or\n"
 "            <span style=\"font-weight: bolder;\">style</span>\n"
-"            <span style=\"font-style: italic; text-decoration-line: underline;\">it</span>\n"
+"            <span style=\"font-style: italic; text-decoration-line: "
+"underline;\">it</span>\n"
 "        </span>"
 msgstr ""
+"<span style=\"font-size: 14px;\">\n"
+"            टेक्स्ट को\n"
+"            <font class=\"bg-o-color-2\">हाइलाइट</font>,\n"
+"            <span style=\"text-decoration-line: line-through;\""
+">स्ट्राइकथ्रू</span>\n"
+"            या\n"
+"            <span style=\"font-weight: bolder;\">स्टाइल</span>\n"
+"            <span style=\"font-style: italic; text-decoration-line: "
+"underline;\"> करने के लिए उसे चुनें</span>\n"
+"        </span>"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
 msgid ""
 "<span style=\"font-size: 14px;\">\n"
-"        During the conversion of a to-do to a task, you will be able to add or remove assignees to control who has access to the created task. Note that its visibility will also depend on the visibility settings of the project you are assigning it to.\n"
+"        During the conversion of a to-do to a task, you will be able to add "
+"or remove assignees to control who has access to the created task. Note that "
+"its visibility will also depend on the visibility settings of the project "
+"you are assigning it to.\n"
 "    </span>"
 msgstr ""
 
@@ -99,9 +139,11 @@ msgid ""
 "        </span>\n"
 "        and will appear in the Project app under \n"
 "        <span>\n"
-"            <font style=\"font-weight: bolder;\" class=\"text-o-color-2\">My Tasks</font>.\n"
+"            <font style=\"font-weight: bolder;\" class=\"text-o-color-2\">My "
+"Tasks</font>.\n"
 "        </span>\n"
-"        Similarly, private tasks created in the Project app will also appear in your to-dos.\n"
+"        Similarly, private tasks created in the Project app will also appear "
+"in your to-dos.\n"
 "    </span>"
 msgstr ""
 
@@ -109,7 +151,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
 msgid ""
 "<span style=\"font-size: 14px;\">\n"
-"        To-dos, like private tasks, are only accessible to the users specified as assignees. You can use the\n"
+"        To-dos, like private tasks, are only accessible to the users "
+"specified as assignees. You can use the\n"
 "        <span style=\"font-weight: bolder;\">\n"
 "            <font class=\"text-o-color-2\">assignees</font>\n"
 "        </span>\n"
@@ -121,7 +164,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
 msgid ""
 "<span style=\"font-size: 14px;\">\n"
-"        Use it to manage your urgent work, take notes on the go, and create tasks based on them. \n"
+"        Use it to manage your urgent work, take notes on the go, and create "
+"tasks based on them. \n"
 "    </span>"
 msgstr ""
 
@@ -129,7 +173,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
 msgid ""
 "<span style=\"font-size: 14px;\">\n"
-"        You can convert your to-dos into tasks and assign them to a project. To do this, you need to access the\n"
+"        You can convert your to-dos into tasks and assign them to a project. "
+"To do this, you need to access the\n"
 "        <span style=\"font-weight: bolder;\">\n"
 "            <font class=\"text-o-color-2\">Convert to Task</font>\n"
 "        </span>\n"
@@ -141,14 +186,14 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
 msgid ""
 "<span style=\"font-size: 14px;\">Check this box to indicate it's done</span>"
-msgstr ""
+msgstr "<span style=\"font-size: 14px;\">काम पूरा होने पर यह बॉक्स चुनें</span>"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
 msgid ""
-"<span style=\"font-size: 14px;\">Click anywhere, and just start "
-"typing</span>"
+"<span style=\"font-size: 14px;\">Click anywhere, and just start typing</span>"
 msgstr ""
+"<span style=\"font-size: 14px;\">कहीं भी क्लिक करें, और बस टाइप करना शुरू करें</span>"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
@@ -158,15 +203,20 @@ msgstr ""
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
 msgid ""
-"<span style=\"font-size: 14px;\">This private to-do is for you to play around with.</span>\n"
+"<span style=\"font-size: 14px;\">This private to-do is for you to play "
+"around with.</span>\n"
 "    <br/>\n"
 "    <span style=\"font-size: 14px;\">Ready to give it a spin?</span>"
 msgstr ""
+"<span style=\"font-size: 14px;\">यह प्राइवेट टू-डू आपके अभ्यास और आज़माने के लिए है.</"
+"span>\n"
+"    <br/>\n"
+"    <span style=\"font-size: 14px;\">क्या आप इसे शुरू करने के लिए तैयार हैं?</span>"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
 msgid "<span style=\"font-size: 14px;\">Try the following</span>"
-msgstr ""
+msgstr "<span style=\"font-size: 14px;\">इसे आज़माएं</span>"
 
 #. module: project_todo
 #: model:ir.model.fields,field_description:project_todo.field_mail_activity_type__category
@@ -179,8 +229,8 @@ msgid ""
 "Actions may trigger specific behavior like opening calendar view or "
 "automatically mark as done when a document is uploaded"
 msgstr ""
-"कुछ कार्रवाइयों से कैलेंडर खुलता है या दस्तावेज़ अपलोड होने पर काम अपने-आप 'हो गया' हो जाता"
-" है"
+"कुछ कार्रवाइयों से कैलेंडर खुलता है या दस्तावेज़ अपलोड होने पर काम अपने-आप 'हो गया' हो "
+"जाता है"
 
 #. module: project_todo
 #: model:ir.model,name:project_todo.model_mail_activity_type
@@ -190,20 +240,19 @@ msgstr "ऐक्टिविटी टाइप"
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.mail_activity_todo_create_popup
 msgid "Add To-Do"
-msgstr ""
+msgstr "टू-डू जोड़ें"
 
 #. module: project_todo
 #. odoo-javascript
 #: code:addons/project_todo/static/src/web/activity/activity_menu_patch.js:0
-#: code:addons/project_todo/static/src/web/activity/activity_menu_patch.js:0
 #, python-format
 msgid "Add a To-Do"
-msgstr ""
+msgstr "टू-डू जोड़ें"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.mail_activity_todo_create_popup
 msgid "Add details about your to-do..."
-msgstr ""
+msgstr "अपने टू-डू के बारे में जानकारी जोड़ें..।"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_form
@@ -220,22 +269,22 @@ msgstr "इनको असाइन किया गया"
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_form
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_search
 msgid "Assignees"
-msgstr ""
+msgstr "असाइन किए गए लोग"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_search
 msgid "By assigned tags"
-msgstr ""
+msgstr "असाइन किए गए टैग्स के अनुसार"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_search
 msgid "By personal stages"
-msgstr ""
+msgstr "पर्सनल स्टेज के हिसाब से"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_conversion_form
 msgid "Choose tags from the selected project"
-msgstr ""
+msgstr "चुने गए प्रोजेक्ट से टैग्स चुनें"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_search
@@ -254,7 +303,7 @@ msgstr "इस दिन बंद किया गया"
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_conversion_form
 #, python-format
 msgid "Convert to Task"
-msgstr ""
+msgstr "टास्क में बदलें"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
@@ -264,7 +313,7 @@ msgstr ""
 #. module: project_todo
 #: model:ir.model,name:project_todo.model_mail_activity_todo_create
 msgid "Create activity and todo at the same time"
-msgstr ""
+msgstr "एक्टिविटी और टू-डू एक साथ बनाएं"
 
 #. module: project_todo
 #: model:ir.model.fields,field_description:project_todo.field_mail_activity_todo_create__create_uid
@@ -310,7 +359,7 @@ msgstr "इन्होंने ग्रुप किया"
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
 msgid "Hey"
-msgstr ""
+msgstr "हेलो"
 
 #. module: project_todo
 #: model:ir.model.fields,field_description:project_todo.field_mail_activity_todo_create__id
@@ -321,8 +370,12 @@ msgstr "आईडी"
 #: model_terms:ir.actions.act_window,help:project_todo.project_task_action_todo
 msgid ""
 "Keep your work organized by using memos and to-do lists.\n"
-"                Your to-do items are private by default, but you can choose to share them with others by adding them as assignees."
+"                Your to-do items are private by default, but you can choose "
+"to share them with others by adding them as assignees."
 msgstr ""
+"मेमो और टू-डू लिस्ट का इस्तेमाल करके अपने काम को व्यवस्थित रखें.\n"
+"                आपके टू-डू आइटम डिफ़ॉल्ट रूप से प्राइवेट होते हैं, लेकिन आप दूसरों को "
+"असाइनी के रूप में जोड़कर उन्हें उनके साथ शेयर कर सकते हैं।"
 
 #. module: project_todo
 #: model:ir.model.fields,field_description:project_todo.field_mail_activity_todo_create__write_uid
@@ -342,15 +395,14 @@ msgstr "लेट एक्टिविटी"
 #. module: project_todo
 #. odoo-javascript
 #: code:addons/project_todo/static/src/components/todo_done_checkmark/todo_done_checkmark.xml:0
-#: code:addons/project_todo/static/src/components/todo_done_checkmark/todo_done_checkmark.xml:0
 #, python-format
 msgid "Mark as done"
-msgstr ""
+msgstr "'पूरा हुआ' के तौर पर मार्क करें"
 
 #. module: project_todo
 #: model_terms:ir.actions.act_window,help:project_todo.project_task_action_todo
 msgid "No to-do found. Let's create one!"
-msgstr ""
+msgstr "कोई भी टू-डू नहीं मिला. चलिए, एक टू-डू बनाते हैं!"
 
 #. module: project_todo
 #: model:ir.model.fields,field_description:project_todo.field_mail_activity_todo_create__note
@@ -360,7 +412,7 @@ msgstr "ध्यान दें"
 #. module: project_todo
 #: model:res.groups,name:project_todo.group_onboarding_todo
 msgid "Onboarding todo already generated for those users"
-msgstr ""
+msgstr "उन उपयोगकर्ताओं के लिए ऑनबोर्डिंग टू-डू पहले ही तैयार किया जा चुका है"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_search
@@ -376,7 +428,7 @@ msgstr "रिमाइंड"
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.mail_activity_todo_create_popup
 msgid "Reminder to..."
-msgstr ""
+msgstr "के लिए रिमाइंडर..।"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_conversion_form
@@ -419,14 +471,14 @@ msgstr "टू-डू"
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_quick_create_form
 msgid "To-do Title"
-msgstr ""
+msgstr "टू-डू टाइटल"
 
 #. module: project_todo
 #: model:ir.actions.act_window,name:project_todo.project_task_action_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_activity
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_tree
 msgid "To-dos"
-msgstr ""
+msgstr "टू-डू"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_search
@@ -436,7 +488,7 @@ msgstr "आज की गतिविधियां"
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_search
 msgid "Todos"
-msgstr ""
+msgstr "टू-डू"
 
 #. module: project_todo
 #. odoo-javascript
@@ -445,38 +497,38 @@ msgstr ""
 #: code:addons/project_todo/static/src/components/todo_editable_breadcrumb_name/todo_editable_breadcrumb_name.js:0
 #, python-format
 msgid "Untitled to-do"
-msgstr ""
+msgstr "बिना टाइटल वाला टू-डू"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
 msgid "Using the editor"
-msgstr ""
+msgstr "एडिटर का इस्तेमाल करना"
 
 #. module: project_todo
 #. odoo-python
 #: code:addons/project_todo/models/project_task.py:0
 #, python-format
 msgid "Welcome %s!"
-msgstr ""
+msgstr "स्वागत है %s!"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.todo_user_onboarding
 msgid "Who has access to what?"
-msgstr ""
+msgstr "किसके पास किस चीज़ का ऐक्सेस है?"
 
 #. module: project_todo
 #. odoo-python
 #: code:addons/project_todo/wizard/mail_activity_todo_create.py:0
 #, python-format
 msgid "Your to-do has been successfully added to your pipeline."
-msgstr ""
+msgstr "आपका टू-डू सफलतापूर्वक आपके पाइपलाइन में जोड़ दिया गया है।"
 
 #. module: project_todo
 #: model_terms:ir.ui.view,arch_db:project_todo.project_task_view_todo_quick_create_form
 msgid "e.g. Send Invitations"
-msgstr ""
+msgstr "जैसे, न्योते भेजना"
 
 #. module: project_todo
 #: model:ir.actions.server,name:project_todo.project_task_preload_action_todo
 msgid "menu load To-dos"
-msgstr ""
+msgstr "मेन्यू लोड टू-डू"
